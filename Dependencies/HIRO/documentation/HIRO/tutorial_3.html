@@ -1,0 +1,525 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>T3: Overview of Gadget Features &mdash; HIRO 0.4.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/hiro-fav-32.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/target-highlight.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/hiro_theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-sphinx_rtd_theme.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Shader API" href="shader_api.html" />
+    <link rel="prev" title="T2: Creating Custom Modules" href="tutorial_2.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: rgb(248, 216, 60)" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/hiro-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="tutorial_0.html">T0: Setting up Visual Studio Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_1.html">T1: Introduction to HIRO GUI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_2.html">T2: Creating Custom Modules</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">T3: Overview of Gadget Features</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#camera-focus">Camera Focus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gui-generator">GUI Generator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#text-printing">Text Printing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#events">Events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#auto-save-system">Auto-save System</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="shader_api.html">Shader API</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="global.html">Global Namespace</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">HIRO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>T3: Overview of Gadget Features</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="t3-overview-of-gadget-features">
+<h1>T3: Overview of Gadget Features<a class="headerlink" href="#t3-overview-of-gadget-features" title="Permalink to this headline">¶</a></h1>
+<p>We have already mentioned the HIRO_DRAW library in the <a class="reference internal" href="tutorial_2.html"><span class="doc">T2: Creating Custom Modules</span></a>.
+Lets now look at more possibilities to render your data beyond simple geometries.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Whenever you change the visualization without user interaction, method <code class="docutils literal notranslate"><span class="pre">Gadget::DrawOnNextUpdate</span></code> should be called to notify the system about the change.
+The method is required when you are using the <em>Optimized rendering</em> setting,
+otherwise, the system might not notice the change and the screen will not be redrawn.</p>
+</div>
+<div class="section" id="camera-focus">
+<h2>Camera Focus<a class="headerlink" href="#camera-focus" title="Permalink to this headline">¶</a></h2>
+<p>Have you seen and tryed the button with magnifying glass icon in the Gadget GUI titlebar?
+That is the camer focus feature.
+It allows users to immediately set camera pose, so that it views the data in scene correctly.
+Override the method <code class="docutils literal notranslate"><span class="pre">Gadget::FocusCamera</span></code> in order to define the custom pose of camera.</p>
+</div>
+<div class="section" id="gui-generator">
+<h2>GUI Generator<a class="headerlink" href="#gui-generator" title="Permalink to this headline">¶</a></h2>
+<p>Another functionality that HIRO offers for custom <em>gadgets</em>, is a simple creation of an interactive GUI.
+One of the possible uses is manipulation with visual settings of rendered objects.</p>
+<p>First of all, the function <code class="docutils literal notranslate"><span class="pre">Gadget::GenerateGui</span></code> must be overridden for your derived <em>gadget</em> class.
+The method is called  automatically by the system and <code class="docutils literal notranslate"><span class="pre">gui</span></code> parameter is a reference to <code class="docutils literal notranslate"><span class="pre">GuiGenerator</span></code> object that corresponds to this currently this <em>gadget</em>.
+Options in the sidebar panel can be modified using this reference.
+Explore possibilities of each GUI element in <a class="reference internal" href="namespace_hiro_gui.html#doxid-namespacehiro-1-1gui"><span class="std std-ref">namespace hiro::gui</span></a> documentation and use them to your advantage.</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">MyGadget</span><span class="o">::</span><span class="n">GenerateGui</span><span class="p">(</span><span class="n">hiro</span><span class="o">::</span><span class="n">GuiGenerator</span> <span class="o">&amp;</span><span class="n">gui</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">hiro</span><span class="o">::</span><span class="n">Gadget</span><span class="o">::</span><span class="n">GenerateGui</span><span class="p">(</span><span class="n">gui</span><span class="p">);</span>
+  <span class="n">gui</span><span class="p">.</span><span class="n">AddCheckbox</span><span class="p">(</span><span class="s">&quot;Material visible&quot;</span><span class="p">)</span>  <span class="c1">// creates a checkbox with specified caption</span>
+  <span class="o">-&gt;</span><span class="n">SetLink</span><span class="p">(</span><span class="o">&amp;</span><span class="n">is_mat_visible_</span><span class="p">)</span>          <span class="c1">// makes the variable to reflect the checkbox state</span>
+  <span class="o">-&gt;</span><span class="n">Set</span><span class="p">(</span><span class="nb">true</span><span class="p">)</span>                          <span class="c1">// changes the state of checkbox to true</span>
+  <span class="o">-&gt;</span><span class="n">Subscribe</span><span class="p">([](</span><span class="k">const</span> <span class="n">hiro</span><span class="o">::</span><span class="n">gui</span><span class="o">::</span><span class="n">Checkbox</span> <span class="o">*</span><span class="n">checkbox</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// this lambda function will be invoked every time a checkbox state is changed</span>
+  <span class="p">});</span>
+<span class="p">};</span>
+</pre></div>
+</td></tr></table></div>
+<p>It is possible to set up an element so that it will be visible only under some conditions.
+This can be done using <code class="docutils literal notranslate"><span class="pre">SetConditionFunc</span></code> or <code class="docutils literal notranslate"><span class="pre">SetConditionBool</span></code> methods.</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">...</span>
+  <span class="c1">// Class MyGadget can has a boolean member variable called &quot;is_mat_visible_&quot;.</span>
+  <span class="c1">// There are two ways how to set element to be visible only when the value is true.</span>
+
+  <span class="n">gui</span><span class="p">.</span><span class="n">AddNumericInt</span><span class="p">(</span><span class="s">&quot;Material id 1&quot;</span><span class="p">)</span>
+  <span class="o">-&gt;</span><span class="n">SetConditionBool</span><span class="p">(</span><span class="o">&amp;</span><span class="n">is_mat_visible_</span><span class="p">);</span>
+
+  <span class="n">gui</span><span class="p">.</span><span class="n">AddNumericInt</span><span class="p">(</span><span class="s">&quot;Material id 2&quot;</span><span class="p">)</span>
+  <span class="o">-&gt;</span><span class="n">SetConditionFunc</span><span class="p">([</span><span class="k">this</span><span class="p">](){</span>
+    <span class="k">return</span> <span class="n">is_mat_visible_</span><span class="p">;</span>
+  <span class="p">});</span>
+<span class="p">...</span>
+</pre></div>
+</td></tr></table></div>
+<p>Method <code class="docutils literal notranslate"><span class="pre">GenerateGui</span></code> is called automatically, and cannot be called multiple times.
+If you wish to re-generate your GUI, use method <code class="docutils literal notranslate"><span class="pre">Resource::ResetGadgets</span></code> - it refreshes all <em>gadgets</em> created by the <em>resource</em> that called this method.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>During the creation of a <em>gadget</em> object, the following functions are called in this order:</p>
+<ul class="simple">
+<li><p>Constructor</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Initialize</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">GenerateGui</span></code></p></li>
+</ul>
+<p>When overriding method <code class="docutils literal notranslate"><span class="pre">Initialize</span></code>, be sure to also call superclass method <code class="docutils literal notranslate"><span class="pre">Gadget::Initialize</span></code> at the beginning.
+Otherwise, some features of your <code class="docutils literal notranslate"><span class="pre">Gadget</span></code> will not work properly.</p>
+</div>
+</div>
+<div class="section" id="text-printing">
+<h2>Text Printing<a class="headerlink" href="#text-printing" title="Permalink to this headline">¶</a></h2>
+<p>HIRO provides a very simple interface enabling to render any 2D text in the application window.
+The <code class="docutils literal notranslate"><span class="pre">Gadget</span></code> class has a <code class="docutils literal notranslate"><span class="pre">RenderTexts</span></code> method.
+You can simply override it and feed your own text to be rendered every frame.</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">...</span>
+<span class="kt">void</span> <span class="n">MyGadget</span><span class="o">::</span><span class="n">RenderTexts</span><span class="p">(</span><span class="n">hiro</span><span class="o">::</span><span class="n">draw</span><span class="o">::</span><span class="n">TextRenderer</span> <span class="o">&amp;</span><span class="n">t_renderer</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">hiro</span><span class="o">::</span><span class="n">Gadget</span><span class="o">::</span><span class="n">RenderTexts</span><span class="p">(</span><span class="n">t_renderer</span><span class="p">);</span>
+  <span class="n">t_renderer</span><span class="p">.</span><span class="n">SetAlignment</span><span class="p">(</span><span class="n">hiro</span><span class="o">::</span><span class="n">draw</span><span class="o">::</span><span class="n">TextAlignment</span><span class="o">::</span><span class="n">center</span><span class="p">);</span>
+  <span class="n">t_renderer</span><span class="p">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">cogs</span><span class="o">::</span><span class="n">color</span><span class="o">::</span><span class="n">RED</span><span class="p">);</span>
+
+  <span class="k">const</span> <span class="k">auto</span> <span class="n">proj</span> <span class="o">=</span> <span class="n">GetProjectionParams</span><span class="p">();</span>
+  <span class="n">t_renderer</span><span class="p">.</span><span class="n">Print</span><span class="p">(</span> <span class="p">{</span><span class="n">proj</span><span class="p">.</span><span class="n">width</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">proj</span><span class="p">.</span><span class="n">height</span> <span class="o">/</span> <span class="mi">2</span><span class="p">},</span> <span class="s">&quot;Your text here!&quot;</span><span class="p">);</span>
+  <span class="n">DrawOnNextUpdate</span><span class="p">();</span>
+<span class="p">}</span>
+<span class="p">...</span>
+</pre></div>
+</td></tr></table></div>
+<p>The method <code class="docutils literal notranslate"><span class="pre">RenderTexts</span></code> is automatically called by the engine on every draw, passing in a <code class="docutils literal notranslate"><span class="pre">TextRenderer</span></code> reference.
+When overriding a method, make sure to call the parent’s method as well.
+You can set various attributes, such as text alignment and color.
+Finally, call the <code class="docutils literal notranslate"><span class="pre">Print</span></code> method providing a 2D position vector and your text.</p>
+<p>Method <code class="docutils literal notranslate"><span class="pre">TextRenderer::Print</span></code> takes text position as the first parameter.
+The position is relative to the top left corner of the <em>viewarea</em> in which the <em>gadget</em> exists.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Method <code class="docutils literal notranslate"><span class="pre">GetProjectionParams</span></code> returns <code class="docutils literal notranslate"><span class="pre">ProjectionParams</span></code> structure that describes the projection used in current <em>viewarea</em>. It holds several useful information about viewport, camera view, and projection and can be used for example to cast camera raya via <code class="docutils literal notranslate"><span class="pre">ProjectionParams::CastRay</span></code>.</p>
+</div>
+</div>
+<div class="section" id="events">
+<h2>Events<a class="headerlink" href="#events" title="Permalink to this headline">¶</a></h2>
+<p>You may find yourself in a situation, when you wish to affect the <em>renderers</em> and their <em>styles</em> by the events produced by user.
+Gadget class provides several options for processing input such as:</p>
+<ul class="simple">
+<li><p>keyboard key press/release</p></li>
+<li><p>mouse button press/release</p></li>
+<li><p>mouse wheel rotate</p></li>
+<li><p>mouse move</p></li>
+<li><p>view resize</p></li>
+</ul>
+<p>Override theese methods to define your custom behavior.
+This example shows processing keyboard key press event by overriding the method <code class="docutils literal notranslate"><span class="pre">Gadget::KeyPressed</span></code>.</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">...</span>
+<span class="n">hiro</span><span class="o">::</span><span class="n">EventStatus</span> <span class="n">MyGadget</span><span class="o">::</span><span class="n">KeyPressed</span> <span class="p">(</span>
+  <span class="n">hiro</span><span class="o">::</span><span class="n">Key</span> <span class="n">key</span><span class="p">,</span>
+  <span class="k">const</span> <span class="n">hiro</span><span class="o">::</span><span class="n">ModKeys</span> <span class="o">&amp;</span><span class="n">mods</span><span class="p">,</span>
+  <span class="n">hiro</span><span class="o">::</span><span class="n">EventStatus</span> <span class="n">status</span>
+<span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">hiro</span><span class="o">::</span><span class="n">Gadget</span><span class="o">::</span><span class="n">KeyPressed</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">mods</span><span class="p">,</span> <span class="n">status</span><span class="p">)</span> <span class="o">==</span> <span class="n">hiro</span><span class="o">::</span><span class="n">EventStatus</span><span class="o">::</span><span class="n">processed</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="k">return</span> <span class="n">hiro</span><span class="o">::</span><span class="n">EventStatus</span><span class="o">::</span><span class="n">processed</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">status</span> <span class="o">==</span> <span class="n">hiro</span><span class="o">::</span><span class="n">EventStatus</span><span class="o">::</span><span class="n">processed</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="k">return</span> <span class="n">hiro</span><span class="o">::</span><span class="n">EventStatus</span><span class="o">::</span><span class="n">unprocessed</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">key</span> <span class="o">==</span> <span class="n">hiro</span><span class="o">::</span><span class="n">Key</span><span class="o">::</span><span class="n">space</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Space key was pressed!&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">hiro</span><span class="o">::</span><span class="n">EventStatus</span><span class="o">::</span><span class="n">processed</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="n">hiro</span><span class="o">::</span><span class="n">EventStatus</span><span class="o">::</span><span class="n">unprocessed</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">...</span>
+</pre></div>
+</td></tr></table></div>
+<p>The <code class="docutils literal notranslate"><span class="pre">KeyPressed</span></code> method comes with various parameters.
+The parameter <code class="docutils literal notranslate"><span class="pre">key</span></code> simply describes which key was pressed by the user.
+You can use the <code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">hiro::ModKeys</span> <span class="pre">&amp;mods</span></code> parameter to check if any modifier keys, such as <em>CTRL</em> or <em>Shift</em>, were pressed.
+Finally, the <code class="docutils literal notranslate"><span class="pre">status</span></code> is a state flag, specifying whether this event was already processed.
+The good manners are, you should not process the event when it has status <code class="docutils literal notranslate"><span class="pre">hiro::EventStatus::processed</span></code>
+since the event was already processed by another object, however, there are exceptions.
+As before, always remember to call the parent’s method when overriding.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>The event functions should return <code class="docutils literal notranslate"><span class="pre">hiro::EventStatus::processed</span></code>, if the event was processed in the function successfully.
+This ensures the correct status within the engine.</p>
+</div>
+</div>
+<div class="section" id="auto-save-system">
+<h2>Auto-save System<a class="headerlink" href="#auto-save-system" title="Permalink to this headline">¶</a></h2>
+<p>When debugging an algorithm, changes in the code may be introduced frequently and the application is started over and over.
+Also during application runtime, users can adjust rendering, show/hide some elements or change parameter values.
+To spare debugging time, it is recommended to store the state of <em>gadget</em>, that can be restored after the next application startup.
+Lucky you! HIRO offers a save/load system that is very simple to use.</p>
+<p>If you wish to use an auto-save feature, call <code class="docutils literal notranslate"><span class="pre">Gadget::LoadState</span></code> in your <code class="docutils literal notranslate"><span class="pre">Initialization</span></code> method. This does two things.
+First, it immediately loads the previously-stored state file and invokes <code class="docutils literal notranslate"><span class="pre">ReadFromStream</span></code> method.
+Second, it tells the system that you wish to use the auto-save feature and from now on, <code class="docutils literal notranslate"><span class="pre">WriteToStream</span></code> will be triggered whenever a change to the generated GUI is introduced.</p>
+<p>To define custom state values that should be stored/loaded, override <code class="docutils literal notranslate"><span class="pre">ReadFromStream</span></code> and <code class="docutils literal notranslate"><span class="pre">WriteToStream</span></code> methods.
+Be sure to check the superclass load method as shown in the example below.
+The <em>boolean</em> result of the method tells the system whether the data has been loaded correctly.</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">...</span>
+<span class="kt">void</span> <span class="n">MyGadget</span><span class="o">::</span><span class="n">Initialize</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">Gadget</span><span class="o">::</span><span class="n">Initialize</span><span class="p">();</span>
+  <span class="n">LoadState</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kt">uint32_t</span> <span class="n">MyGadget</span><span class="o">::</span><span class="n">STATE_VERSION</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+<span class="kt">bool</span> <span class="n">MyGadget</span><span class="o">::</span><span class="n">ReadFromStream</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">istream</span> <span class="o">&amp;</span><span class="n">str</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="c1">// Read super class state. If it fails, do not continue.</span>
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">Gadget</span><span class="o">::</span><span class="n">ReadFromStream</span><span class="p">(</span><span class="n">str</span><span class="p">))</span>
+  <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+
+  <span class="c1">// Read style. If it fails, do not continue.</span>
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">style_</span><span class="o">-&gt;</span><span class="n">ReadFromStream</span><span class="p">(</span><span class="n">str</span><span class="p">))</span>
+  <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+
+  <span class="c1">// Check if the file data is not deprecated. If it is, do not continue.</span>
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">ReadStateVersion</span><span class="p">(</span><span class="n">str</span><span class="p">,</span> <span class="n">STATE_VERSION</span><span class="p">))</span>
+  <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+
+  <span class="c1">// Read custom properties.</span>
+  <span class="n">std_ext</span><span class="o">::</span><span class="n">Read</span><span class="p">(</span><span class="n">is_mat_visible_</span><span class="p">,</span> <span class="n">str</span><span class="p">);</span>
+
+  <span class="c1">// Everything went successfuly.</span>
+  <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="n">MyGadget</span><span class="o">::</span><span class="n">WriteToStream</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">str</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="c1">// This method should reflect reading, except... it is writing.</span>
+  <span class="n">Gadget</span><span class="o">::</span><span class="n">WriteToStream</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
+  <span class="n">style_</span><span class="o">-&gt;</span><span class="n">WriteToStream</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
+  <span class="n">WriteStateVersion</span><span class="p">(</span><span class="n">str</span><span class="p">,</span> <span class="n">STATE_VERSION</span><span class="p">);</span>
+  <span class="n">std_ext</span><span class="o">::</span><span class="n">Write</span><span class="p">(</span><span class="n">is_mat_visible_</span><span class="p">,</span> <span class="n">str</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="p">...</span>
+</pre></div>
+</td></tr></table></div>
+<p>Constant <code class="docutils literal notranslate"><span class="pre">STATE_VERSION</span></code> is a custom number that defines the version of your read/write code.
+It is recommended to use <code class="docutils literal notranslate"><span class="pre">ReadStateVersion</span></code> and <code class="docutils literal notranslate"><span class="pre">WriteStateVersion</span></code> to ensure that the values you read will not be corrupted when you read from file that is stale.
+You should increase the <code class="docutils literal notranslate"><span class="pre">STATE_VERSION</span></code> number every time the  changes are introduced to the read/write methods.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>When changes were introduced to the <code class="docutils literal notranslate"><span class="pre">ReadFromStream</span></code>/<code class="docutils literal notranslate"><span class="pre">WriteToStream</span></code> method a common issue with state saving can be caused by the following:</p>
+<ul class="simple">
+<li><p>changes were not reflected correctly in the other of the two methods, causing the inconsistency between the read and write code</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">STATE_VERSION</span></code> was not increased, causing the stale old files to be considered new</p></li>
+</ul>
+<p>Therefore, always take care when changing <code class="docutils literal notranslate"><span class="pre">ReadFromStream</span></code>/<code class="docutils literal notranslate"><span class="pre">WriteToStream</span></code> methods.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Skeletex Research
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

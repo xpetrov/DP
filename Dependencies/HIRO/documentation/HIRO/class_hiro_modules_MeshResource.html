@@ -1,0 +1,430 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>class hiro::modules::MeshResource &mdash; HIRO 0.4.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/hiro-fav-32.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/target-highlight.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/hiro_theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-sphinx_rtd_theme.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="struct hiro::modules::MeshResource::DataRecord" href="struct_hiro_modules_MeshResource_DataRecord.html" />
+    <link rel="prev" title="class hiro::modules::ImageResource" href="class_hiro_modules_ImageResource.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: rgb(248, 216, 60)" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/hiro-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_0.html">T0: Setting up Visual Studio Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_1.html">T1: Introduction to HIRO GUI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_2.html">T2: Creating Custom Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_3.html">T3: Overview of Gadget Features</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="shader_api.html">Shader API</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="global.html">Global Namespace</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="namespace_cegui_ext.html">namespace cegui_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_dialog.html">namespace dialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_file_types.html">namespace file_types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_fs.html">namespace fs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_func.html">namespace func</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_geom.html">namespace geom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_glm_ext.html">namespace glm_ext</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="namespace_hiro.html">namespace hiro</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro_draw.html">namespace hiro::draw</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro_gui.html">namespace hiro::gui</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="namespace_hiro_modules.html">namespace hiro::modules</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_modules_GeometryGadget.html">class hiro::modules::GeometryGadget</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_modules_GeometryResource.html">class hiro::modules::GeometryResource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_modules_GraphResource.html">class hiro::modules::GraphResource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_modules_GuiResource.html">class hiro::modules::GuiResource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_modules_ImageResource.html">class hiro::modules::ImageResource</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">class hiro::modules::MeshResource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_modules_PointCloudResource.html">class hiro::modules::PointCloudResource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_modules_ScanResource.html">class hiro::modules::ScanResource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_modules_SkeletonResource.html">class hiro::modules::SkeletonResource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_hiro_modules.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_hiro_modules.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro_shader.html">namespace hiro::shader</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_BoolFunc.html">enum hiro::BoolFunc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_EventStatus.html">enum hiro::EventStatus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_Key.html">enum hiro::Key</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_Mod.html">enum hiro::Mod</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_MouseButton.html">enum hiro::MouseButton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_hiro_ActiveResourceInfo.html">struct hiro::ActiveResourceInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_hiro_ResourceId.html">struct hiro::ResourceId</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Camera.html">class hiro::Camera</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Debugger.html">class hiro::Debugger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Exportable.html">class hiro::Exportable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Gadget.html">class hiro::Gadget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_GuiGenerator.html">class hiro::GuiGenerator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_GuiPanel.html">class hiro::GuiPanel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_ModKeys.html">class hiro::ModKeys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Resource.html">class hiro::Resource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_omp_ext.html">namespace omp_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_std_ext.html">namespace std_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_time_m.html">namespace time_m</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_ulog.html">namespace ulog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_uprogress.html">namespace uprogress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_utils.html">namespace utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_Config.html">class Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_IDialogInterface.html">class IDialogInterface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_WxWidgetsDialog.html">class WxWidgetsDialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">HIRO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="global.html">Global Namespace</a> &raquo;</li>
+        
+          <li><a href="namespace_hiro.html">namespace hiro</a> &raquo;</li>
+        
+          <li><a href="namespace_hiro_modules.html">namespace hiro::modules</a> &raquo;</li>
+        
+      <li>class hiro::modules::MeshResource</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="class-hiro-modules-meshresource">
+<span id="doxid-classhiro-1-1modules-1-1-mesh-resource"></span><span id="index-0"></span><h1>class hiro::modules::MeshResource<a class="headerlink" href="#class-hiro-modules-meshresource" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="class_hiro_Resource.html#doxid-classhiro-1-1-resource"><span class="std std-ref">Resource</span></a> that allows visualization of a cogs::Mesh structure. <a class="reference internal" href="#details-classhiro-1-1modules-1-1-mesh-resource"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;MeshResource.h&gt;</span><span class="cp"></span>
+
+<span class="k">class</span> <span class="nl">MeshResource</span><span class="p">:</span> <span class="k">public</span> <a class="reference internal" href="class_hiro_Resource.html#doxid-classhiro-1-1-resource"><span class="std std-ref">hiro::Resource</span></a><span></span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="c1">// structs</span>
+
+    <span class="k">struct</span> <a class="reference internal" href="struct_hiro_modules_MeshResource_DataRecord.html#doxid-structhiro-1-1modules-1-1-mesh-resource-1-1-data-record"><span class="std std-ref">DataRecord</span></a><span></span><span class="p">;</span>
+
+    <span class="c1">// construction</span>
+
+    <a class="reference internal" href="#doxid-classhiro-1-1modules-1-1-mesh-resource-1a2858b890428fd4d37a3cc7f46f73c234"><span class="std std-ref">MeshResource</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">name</span><span class="p">,</span> <span class="k">const</span> <span class="n">cogs</span><span class="o">::</span><span class="n">Mesh</span><span class="o">&amp;</span> <span class="n">mesh</span><span class="p">);</span>
+
+    <span class="c1">// methods</span>
+
+    <span class="kt">uint32_t</span> <a class="reference internal" href="#doxid-classhiro-1-1modules-1-1-mesh-resource-1a50984a404c7f0b24240c4fe36840ecca"><span class="std std-ref">GetFaceCount</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="k">const</span> <span class="n">cogs</span><span class="o">::</span><span class="n">MaterialModel</span><span class="o">*</span> <a class="reference internal" href="#doxid-classhiro-1-1modules-1-1-mesh-resource-1a65227d04223694487e3827a58a08ee5a"><span class="std std-ref">GetMaterial</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_hiro.html#doxid-namespacehiro-1af5a611ffe07b4678a72ce9b00e78f724"><span class="std std-ref">hiro::PGadget</span></a><span></span> <a class="reference internal" href="#doxid-classhiro-1-1modules-1-1-mesh-resource-1a1ceace733ac593d6b88952b26659b199"><span class="std std-ref">CreateGadget</span></a><span></span><span class="p">();</span>
+    <span class="kt">uint32_t</span> <a class="reference internal" href="#doxid-classhiro-1-1modules-1-1-mesh-resource-1acfc4ab4c73f6a8fc16266dfdc41549a5"><span class="std std-ref">GetPointCount</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="k">const</span> <a class="reference internal" href="namespace_hiro_draw.html#doxid-namespacehiro-1-1draw-1afe7dec42819fe41529555520db19fbe9"><span class="std std-ref">hiro::draw::PMeshRenderer</span></a><span></span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-classhiro-1-1modules-1-1-mesh-resource-1a230aeb0de12e84a791303045051c74e3"><span class="std std-ref">GetRenderer</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-classhiro-1-1modules-1-1-mesh-resource-1aa160f26dfe35cc8eb862a085f8aeeb16"><span class="std std-ref">GetCenterOfMass</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-classhiro-1-1modules-1-1-mesh-resource-1a1e35cc3a42d7bdcdedb56e290724d641"><span class="std std-ref">GetCameraPos</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">bool</span> <a class="reference internal" href="#doxid-classhiro-1-1modules-1-1-mesh-resource-1aea535ce292e1e4df652975bc0c0b6d05"><span class="std std-ref">IsUvMappingAvailable</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">bool</span> <a class="reference internal" href="#doxid-classhiro-1-1modules-1-1-mesh-resource-1a7f76a1ae1019e4409f79d50b5028141e"><span class="std std-ref">IsColoringAvailable</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">cogs</span><span class="o">::</span><span class="n">Color3f</span><span class="o">&gt;&amp;</span> <a class="reference internal" href="#doxid-classhiro-1-1modules-1-1-mesh-resource-1ae78f0eec97654142b83850fd1507436f"><span class="std std-ref">GetColoringOption</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="kt">size_t</span> <span class="n">id</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;&amp;</span> <a class="reference internal" href="#doxid-classhiro-1-1modules-1-1-mesh-resource-1aa4d202730c596a67d76ec4046647ffe0"><span class="std std-ref">GetColoringOptionNames</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">bool</span> <a class="reference internal" href="#doxid-classhiro-1-1modules-1-1-mesh-resource-1ad4b78db8820b63341df8335901b04fb4"><span class="std std-ref">IsFDataAvailable</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="k">const</span> <a class="reference internal" href="struct_hiro_modules_MeshResource_DataRecord.html#doxid-structhiro-1-1modules-1-1-mesh-resource-1-1-data-record"><span class="std std-ref">hiro::modules::MeshResource::DataRecord</span></a><span></span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-classhiro-1-1modules-1-1-mesh-resource-1acf881e77217f2b118f3a1602dd5fa9f1"><span class="std std-ref">GetFDataOption</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="kt">size_t</span> <span class="n">id</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;&amp;</span> <a class="reference internal" href="#doxid-classhiro-1-1modules-1-1-mesh-resource-1a00ab834cb689451123d906a93c700299"><span class="std std-ref">GetFDataOptionNames</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+
+<span class="k">protected</span><span class="o">:</span>
+    <span class="c1">// fields</span>
+
+    <span class="kt">uint32_t</span> <span class="doxyrest-code-target target" id="doxid-classhiro-1-1modules-1-1-mesh-resource-1a90ef57c92f68c63989459a24db513db0"><span></span><span class="n">face_count_</span></span><span></span> <span class="p">{</span> <span class="mi">0u</span> <span class="p">};</span>
+    <span class="kt">uint32_t</span> <span class="doxyrest-code-target target" id="doxid-classhiro-1-1modules-1-1-mesh-resource-1a273bfee961bef5acb92b565e47e84537"><span></span><span class="n">point_count_</span></span><span></span> <span class="p">{</span> <span class="mi">0u</span> <span class="p">};</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">cogs</span><span class="o">::</span><span class="n">MaterialModel</span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-classhiro-1-1modules-1-1-mesh-resource-1a23e9870c301f753a7f42c42617d08e6c"><span></span><span class="n">material_</span></span><span></span><span class="p">;</span>
+    <span class="kt">bool</span> <span class="doxyrest-code-target target" id="doxid-classhiro-1-1modules-1-1-mesh-resource-1a62a2aba62416036d50fdcbe3e9d0e9c4"><span></span><span class="n">is_uv_mapping_available_</span></span><span></span><span class="p">;</span>
+    <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span> <span class="doxyrest-code-target target" id="doxid-classhiro-1-1modules-1-1-mesh-resource-1aab48f5f607dee7f22947bcdf8221fc6e"><span></span><span class="n">center_of_mass_</span></span><span></span><span class="p">;</span>
+    <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span> <span class="doxyrest-code-target target" id="doxid-classhiro-1-1modules-1-1-mesh-resource-1a1b1f057954ebe7e4bb499d4d99363eb7"><span></span><span class="n">camera_pos_</span></span><span></span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">cogs</span><span class="o">::</span><span class="n">Color3f</span><span class="o">&gt;&gt;</span> <span class="doxyrest-code-target target" id="doxid-classhiro-1-1modules-1-1-mesh-resource-1a9c9af9874a08013a1067edcdf51406a6"><span></span><span class="n">coloring_options_</span></span><span></span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-classhiro-1-1modules-1-1-mesh-resource-1ab1789226a8d1a1ca3b85874b826ba053"><span></span><span class="n">coloring_option_names_</span></span><span></span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><a class="reference internal" href="struct_hiro_modules_MeshResource_DataRecord.html#doxid-structhiro-1-1modules-1-1-mesh-resource-1-1-data-record"><span class="std std-ref">hiro::modules::MeshResource::DataRecord</span></a><span></span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-classhiro-1-1modules-1-1-mesh-resource-1a83e122d67ebaf6e8981d91acd5717a1e"><span></span><span class="n">fdata_options_</span></span><span></span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-classhiro-1-1modules-1-1-mesh-resource-1adf3974e4fef1e72b7f8e803300739d0e"><span></span><span class="n">fdata_option_names_</span></span><span></span><span class="p">;</span>
+    <a class="reference internal" href="namespace_hiro_draw.html#doxid-namespacehiro-1-1draw-1afe7dec42819fe41529555520db19fbe9"><span class="std std-ref">hiro::draw::PMeshRenderer</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-classhiro-1-1modules-1-1-mesh-resource-1ab66ca8568af4f4cb3fa01f95133f905f"><span></span><span class="n">renderer_</span></span><span></span><span class="p">;</span>
+
+    <span class="c1">// methods</span>
+
+    <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-classhiro-1-1modules-1-1-mesh-resource-1aa00ae6751a3794da890858551513dbd5"><span></span><span class="n">StoreNeededData</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="n">cogs</span><span class="o">::</span><span class="n">Mesh</span><span class="o">&amp;</span> <span class="n">mesh</span><span class="p">);</span>
+    <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-classhiro-1-1modules-1-1-mesh-resource-1a92ccd453993fab05e1603c8065795d10"><span></span><span class="n">CalculateCenterOfMass</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="n">cogs</span><span class="o">::</span><span class="n">Mesh</span><span class="o">&amp;</span> <span class="n">mesh</span><span class="p">);</span>
+<span class="p">};</span></pre>
+<div class="section" id="inherited-members">
+<h3>Inherited Members<a class="headerlink" href="#inherited-members" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-overview-inherited-code-block literal-block"><span></span><span class="k">public</span><span class="o">:</span>
+    <span class="c1">// fields</span>
+
+    <span class="k">const</span> <a class="reference internal" href="struct_hiro_ResourceId.html#doxid-structhiro-1-1-resource-id"><span class="std std-ref">hiro::ResourceId</span></a><span></span> <a class="reference internal" href="class_hiro_Resource.html#doxid-classhiro-1-1-resource-1a0e656cf372ec4e055570ef821ed5655b"><span class="std std-ref">ID</span></a><span></span><span class="p">;</span>
+
+    <span class="c1">// methods</span>
+
+    <span class="k">virtual</span> <a class="reference internal" href="namespace_hiro.html#doxid-namespacehiro-1af5a611ffe07b4678a72ce9b00e78f724"><span class="std std-ref">hiro::PGadget</span></a><span></span> <a class="reference internal" href="class_hiro_Resource.html#doxid-classhiro-1-1-resource-1a413f846fad07794e890874a7e0a7d84b"><span class="std std-ref">CreateGadget</span></a><span></span><span class="p">()</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">void</span> <a class="reference internal" href="class_hiro_Resource.html#doxid-classhiro-1-1-resource-1a189126e3591f3068c8f0e112375d3746"><span class="std std-ref">ResetGadgets</span></a><span></span><span class="p">();</span>
+    <span class="k">virtual</span> <span class="kt">void</span> <a class="reference internal" href="class_hiro_Resource.html#doxid-classhiro-1-1-resource-1a217b34a5283099a2efba0b7ff9941f5f"><span class="std std-ref">Update</span></a><span></span><span class="p">(</span><span class="kt">float</span> <span class="n">delta_time</span><span class="p">);</span>
+
+<span class="k">protected</span><span class="o">:</span>
+    <span class="c1">// methods</span>
+
+    <span class="kt">void</span> <a class="reference internal" href="class_hiro_Resource.html#doxid-classhiro-1-1-resource-1acd1c037b844fd87fd115bf4b7260ce30"><span class="std std-ref">DrawOnNextUpdate</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span></pre>
+</div>
+</div>
+<div class="section" id="detailed-documentation">
+<span id="details-classhiro-1-1modules-1-1-mesh-resource"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="class_hiro_Resource.html#doxid-classhiro-1-1-resource"><span class="std std-ref">Resource</span></a> that allows visualization of a cogs::Mesh structure.</p>
+<div class="section" id="construction">
+<h3>Construction<a class="headerlink" href="#construction" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1modules-1-1-mesh-resource-1a2858b890428fd4d37a3cc7f46f73c234"><span id="index-1"></span><span></span><span class="n">MeshResource</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">name</span><span class="p">,</span> <span class="k">const</span> <span class="n">cogs</span><span class="o">::</span><span class="n">Mesh</span><span class="o">&amp;</span> <span class="n">mesh</span><span class="p">)</span></pre>
+<p>Constructor of mesh resource.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>name</p></td>
+<td><p>The name of the mesh.</p></td>
+</tr>
+<tr class="row-even"><td><p>mesh</p></td>
+<td><p>Input mesh data.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1modules-1-1-mesh-resource-1a50984a404c7f0b24240c4fe36840ecca"><span id="index-2"></span><span></span><span class="kt">uint32_t</span> <span class="n">GetFaceCount</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Returns number of faces.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1modules-1-1-mesh-resource-1a65227d04223694487e3827a58a08ee5a"><span id="index-3"></span><span></span><span class="k">const</span> <span class="n">cogs</span><span class="o">::</span><span class="n">MaterialModel</span><span class="o">*</span> <span class="n">GetMaterial</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Returns material assigned to mesh.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1modules-1-1-mesh-resource-1a1ceace733ac593d6b88952b26659b199"><span id="index-4"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="namespace_hiro.html#doxid-namespacehiro-1af5a611ffe07b4678a72ce9b00e78f724"><span class="std std-ref">hiro::PGadget</span></a><span></span> <span class="n">CreateGadget</span><span class="p">()</span></pre>
+<p>Creates <a class="reference internal" href="class_hiro_Gadget.html#doxid-classhiro-1-1-gadget"><span class="std std-ref">Gadget</span></a> for this <a class="reference internal" href="class_hiro_Resource.html#doxid-classhiro-1-1-resource"><span class="std std-ref">Resource</span></a> object.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1modules-1-1-mesh-resource-1acfc4ab4c73f6a8fc16266dfdc41549a5"><span id="index-5"></span><span></span><span class="kt">uint32_t</span> <span class="n">GetPointCount</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Returns number of points.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1modules-1-1-mesh-resource-1a230aeb0de12e84a791303045051c74e3"><span id="index-6"></span><span></span><span class="k">const</span> <a class="reference internal" href="namespace_hiro_draw.html#doxid-namespacehiro-1-1draw-1afe7dec42819fe41529555520db19fbe9"><span class="std std-ref">hiro::draw::PMeshRenderer</span></a><span></span><span class="o">&amp;</span> <span class="n">GetRenderer</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Returns a PointCloudObject pointer.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1modules-1-1-mesh-resource-1aa160f26dfe35cc8eb862a085f8aeeb16"><span id="index-7"></span><span></span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <span class="n">GetCenterOfMass</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Returns calculated center of mass.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1modules-1-1-mesh-resource-1a1e35cc3a42d7bdcdedb56e290724d641"><span id="index-8"></span><span></span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <span class="n">GetCameraPos</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Returns camera position based on center of mass.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1modules-1-1-mesh-resource-1aea535ce292e1e4df652975bc0c0b6d05"><span id="index-9"></span><span></span><span class="kt">bool</span> <span class="n">IsUvMappingAvailable</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Returns if uvs are available for a mesh.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1modules-1-1-mesh-resource-1a7f76a1ae1019e4409f79d50b5028141e"><span id="index-10"></span><span></span><span class="kt">bool</span> <span class="n">IsColoringAvailable</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Returns if coloring options for points are available.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1modules-1-1-mesh-resource-1ae78f0eec97654142b83850fd1507436f"><span id="index-11"></span><span></span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">cogs</span><span class="o">::</span><span class="n">Color3f</span><span class="o">&gt;&amp;</span> <span class="n">GetColoringOption</span><span class="p">(</span><span class="k">const</span> <span class="kt">size_t</span> <span class="n">id</span><span class="p">)</span> <span class="k">const</span></pre>
+<p>Returns current coloring option. It returns available RGB color values for one point with given id.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>id</p></td>
+<td><p>id of the given point</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1modules-1-1-mesh-resource-1aa4d202730c596a67d76ec4046647ffe0"><span id="index-12"></span><span></span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;&amp;</span> <span class="n">GetColoringOptionNames</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Returns names of coloring properties.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1modules-1-1-mesh-resource-1ad4b78db8820b63341df8335901b04fb4"><span id="index-13"></span><span></span><span class="kt">bool</span> <span class="n">IsFDataAvailable</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Returns if float data for points is available.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1modules-1-1-mesh-resource-1acf881e77217f2b118f3a1602dd5fa9f1"><span id="index-14"></span><span></span><span class="k">const</span> <a class="reference internal" href="struct_hiro_modules_MeshResource_DataRecord.html#doxid-structhiro-1-1modules-1-1-mesh-resource-1-1-data-record"><span class="std std-ref">hiro::modules::MeshResource::DataRecord</span></a><span></span><span class="o">&amp;</span> <span class="n">GetFDataOption</span><span class="p">(</span><span class="k">const</span> <span class="kt">size_t</span> <span class="n">id</span><span class="p">)</span> <span class="k">const</span></pre>
+<p>Returns a <a class="reference internal" href="struct_hiro_modules_MeshResource_DataRecord.html#doxid-structhiro-1-1modules-1-1-mesh-resource-1-1-data-record"><span class="std std-ref">DataRecord</span></a> value for point. It returns available <a class="reference internal" href="struct_hiro_modules_MeshResource_DataRecord.html#doxid-structhiro-1-1modules-1-1-mesh-resource-1-1-data-record"><span class="std std-ref">DataRecord</span></a> value for one point with given id.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>id</p></td>
+<td><p>id of the given point</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1modules-1-1-mesh-resource-1a00ab834cb689451123d906a93c700299"><span id="index-15"></span><span></span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;&amp;</span> <span class="n">GetFDataOptionNames</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Returns names of float data properties.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Skeletex Research
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

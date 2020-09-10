@@ -1,0 +1,316 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>namespace ulog &mdash; HIRO 0.4.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/hiro-fav-32.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/target-highlight.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/hiro_theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-sphinx_rtd_theme.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="class ulog::Entry" href="class_ulog_Entry.html" />
+    <link rel="prev" title="struct time_m::TimeLogger::Measurement" href="struct_time_m_TimeLogger_Measurement.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: rgb(248, 216, 60)" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/hiro-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_0.html">T0: Setting up Visual Studio Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_1.html">T1: Introduction to HIRO GUI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_2.html">T2: Creating Custom Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_3.html">T3: Overview of Gadget Features</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="shader_api.html">Shader API</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="global.html">Global Namespace</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="namespace_cegui_ext.html">namespace cegui_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_dialog.html">namespace dialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_file_types.html">namespace file_types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_fs.html">namespace fs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_func.html">namespace func</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_geom.html">namespace geom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_glm_ext.html">namespace glm_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_hiro.html">namespace hiro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_omp_ext.html">namespace omp_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_std_ext.html">namespace std_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_time_m.html">namespace time_m</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">namespace ulog</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_ulog_Entry.html">class ulog::Entry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_ulog_LogHandler.html">class ulog::LogHandler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_ulog_PoolLogHandler.html">class ulog::PoolLogHandler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#detailed-documentation">Detailed Documentation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#global-functions">Global Functions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_uprogress.html">namespace uprogress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_utils.html">namespace utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_Config.html">class Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_IDialogInterface.html">class IDialogInterface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_WxWidgetsDialog.html">class WxWidgetsDialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">HIRO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="global.html">Global Namespace</a> &raquo;</li>
+        
+      <li>namespace ulog</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="namespace-ulog">
+<span id="doxid-namespaceulog"></span><span id="index-0"></span><h1>namespace ulog<a class="headerlink" href="#namespace-ulog" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="k">namespace</span> <span class="n">ulog</span> <span class="p">{</span>
+
+<span class="c1">// typedefs</span>
+
+<span class="k">typedef</span> <a class="reference internal" href="struct_utils_StrongType.html#doxid-structutils-1-1-strong-type"><span class="std std-ref">utils::StrongType</span></a><span></span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="k">class</span> <a class="reference internal" href="class_ulog_Entry.html#doxid-classulog-1-1-entry"><span class="std std-ref">Entry</span></a><span></span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-namespaceulog-1ab2157f31255eb41ef3d960f37adac771"><span></span><span class="n">Category</span></span><span></span><span class="p">;</span>
+
+<span class="c1">// classes</span>
+
+<span class="k">class</span> <a class="reference internal" href="class_ulog_Entry.html#doxid-classulog-1-1-entry"><span class="std std-ref">Entry</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_ulog_LogHandler.html#doxid-classulog-1-1-log-handler"><span class="std std-ref">LogHandler</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_ulog_PoolLogHandler.html#doxid-classulog-1-1-pool-log-handler"><span class="std std-ref">PoolLogHandler</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// global variables</span>
+
+<span class="k">static</span> <span class="k">const</span> <a class="reference internal" href="#doxid-namespaceulog-1ab2157f31255eb41ef3d960f37adac771"><span class="std std-ref">Category</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespaceulog-1a8e56596ce6f8456ec09a380d15416169"><span></span><span class="n">DEFAULT_CATEGORY</span></span><span></span> <span class="p">{</span> <span class="s">&quot;Default&quot;</span> <span class="p">};</span>
+
+<span class="c1">// global functions</span>
+
+<a class="reference internal" href="global.html#doxid-utils-2include-2-utils-2-a-p-i-8h-1a0644fef940e460e58c347f3c1d6fe4d8"><span class="std std-ref">UTILS_API</span></a><span></span> <span class="kt">void</span> <a class="reference internal" href="#doxid-namespaceulog-1ad32c737f96bf08bdcc77567da4658d54"><span class="std std-ref">InstallHandler</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="class_ulog_LogHandler.html#doxid-classulog-1-1-log-handler"><span class="std std-ref">LogHandler</span></a><span></span><span class="o">&gt;&amp;</span> <span class="n">sink_to_use</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-utils-2include-2-utils-2-a-p-i-8h-1a0644fef940e460e58c347f3c1d6fe4d8"><span class="std std-ref">UTILS_API</span></a><span></span> <span class="kt">void</span> <a class="reference internal" href="#doxid-namespaceulog-1ad2f523f5d4042ee373a580ab2a976f3f"><span class="std std-ref">ResetHandler</span></a><span></span><span class="p">();</span>
+<a class="reference internal" href="global.html#doxid-utils-2include-2-utils-2-a-p-i-8h-1a0644fef940e460e58c347f3c1d6fe4d8"><span class="std std-ref">UTILS_API</span></a><span></span> <span class="kt">void</span> <a class="reference internal" href="#doxid-namespaceulog-1ab60c9243292b0544a5f3a5c46a716d22"><span class="std std-ref">Debug</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">msg</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">caller</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-utils-2include-2-utils-2-a-p-i-8h-1a0644fef940e460e58c347f3c1d6fe4d8"><span class="std std-ref">UTILS_API</span></a><span></span> <span class="kt">void</span> <a class="reference internal" href="#doxid-namespaceulog-1a135dc2546cd85700956dcb78d8e6285e"><span class="std std-ref">Info</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">msg</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">caller</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-utils-2include-2-utils-2-a-p-i-8h-1a0644fef940e460e58c347f3c1d6fe4d8"><span class="std std-ref">UTILS_API</span></a><span></span> <span class="kt">void</span> <a class="reference internal" href="#doxid-namespaceulog-1ab2c4ad66e4b0620bbb3d70f2172427b5"><span class="std std-ref">Warn</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">msg</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">caller</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-utils-2include-2-utils-2-a-p-i-8h-1a0644fef940e460e58c347f3c1d6fe4d8"><span class="std std-ref">UTILS_API</span></a><span></span> <span class="kt">void</span> <a class="reference internal" href="#doxid-namespaceulog-1a9c0decc365c41cf07217e02747c43b12"><span class="std std-ref">Fail</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">msg</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">caller</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-utils-2include-2-utils-2-a-p-i-8h-1a0644fef940e460e58c347f3c1d6fe4d8"><span class="std std-ref">UTILS_API</span></a><span></span> <span class="kt">void</span> <a class="reference internal" href="#doxid-namespaceulog-1a6e1b3b00fec60348e4e2026d8c0f018a"><span class="std std-ref">Crash</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">msg</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">caller</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-utils-2include-2-utils-2-a-p-i-8h-1a0644fef940e460e58c347f3c1d6fe4d8"><span class="std std-ref">UTILS_API</span></a><span></span> <span class="kt">void</span> <a class="reference internal" href="#doxid-namespaceulog-1aa421701e50de882d9aeef1e6c7bd1baa"><span class="std std-ref">DebugC</span></a><span></span><span class="p">(</span><a class="reference internal" href="#doxid-namespaceulog-1ab2157f31255eb41ef3d960f37adac771"><span class="std std-ref">Category</span></a><span></span> <span class="n">msg_category</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">msg</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">caller</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-utils-2include-2-utils-2-a-p-i-8h-1a0644fef940e460e58c347f3c1d6fe4d8"><span class="std std-ref">UTILS_API</span></a><span></span> <span class="kt">void</span> <a class="reference internal" href="#doxid-namespaceulog-1add607fa6efc3faa07030d495c7d5af9f"><span class="std std-ref">InfoC</span></a><span></span><span class="p">(</span><a class="reference internal" href="#doxid-namespaceulog-1ab2157f31255eb41ef3d960f37adac771"><span class="std std-ref">Category</span></a><span></span> <span class="n">msg_category</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">msg</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">caller</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-utils-2include-2-utils-2-a-p-i-8h-1a0644fef940e460e58c347f3c1d6fe4d8"><span class="std std-ref">UTILS_API</span></a><span></span> <span class="kt">void</span> <a class="reference internal" href="#doxid-namespaceulog-1a41bee053021d1fd4a1e9f1a6726e4f11"><span class="std std-ref">WarnC</span></a><span></span><span class="p">(</span><a class="reference internal" href="#doxid-namespaceulog-1ab2157f31255eb41ef3d960f37adac771"><span class="std std-ref">Category</span></a><span></span> <span class="n">msg_category</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">msg</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">caller</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-utils-2include-2-utils-2-a-p-i-8h-1a0644fef940e460e58c347f3c1d6fe4d8"><span class="std std-ref">UTILS_API</span></a><span></span> <span class="kt">void</span> <a class="reference internal" href="#doxid-namespaceulog-1ac3b09ff616126c72b36d575b70fae866"><span class="std std-ref">FailC</span></a><span></span><span class="p">(</span><a class="reference internal" href="#doxid-namespaceulog-1ab2157f31255eb41ef3d960f37adac771"><span class="std std-ref">Category</span></a><span></span> <span class="n">msg_category</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">msg</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">caller</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-utils-2include-2-utils-2-a-p-i-8h-1a0644fef940e460e58c347f3c1d6fe4d8"><span class="std std-ref">UTILS_API</span></a><span></span> <span class="kt">void</span> <a class="reference internal" href="#doxid-namespaceulog-1a432b71f62c41b22f0712d3f6c4cbb2df"><span class="std std-ref">CrashC</span></a><span></span><span class="p">(</span><a class="reference internal" href="#doxid-namespaceulog-1ab2157f31255eb41ef3d960f37adac771"><span class="std std-ref">Category</span></a><span></span> <span class="n">msg_category</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">msg</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">caller</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">);</span>
+
+<span class="p">}</span> <span class="c1">// namespace ulog</span></pre>
+</div>
+<div class="section" id="detailed-documentation">
+<span id="details-namespaceulog"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="global-functions">
+<h3>Global Functions<a class="headerlink" href="#global-functions" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceulog-1ad32c737f96bf08bdcc77567da4658d54"><span id="index-1"></span><a class="reference internal" href="global.html#doxid-utils-2include-2-utils-2-a-p-i-8h-1a0644fef940e460e58c347f3c1d6fe4d8"><span class="std std-ref">UTILS_API</span></a><span></span> <span class="kt">void</span> <span class="n">InstallHandler</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="class_ulog_LogHandler.html#doxid-classulog-1-1-log-handler"><span class="std std-ref">LogHandler</span></a><span></span><span class="o">&gt;&amp;</span> <span class="n">sink_to_use</span><span class="p">)</span></pre>
+<p>Replaces current log handler with the new one. By default, messages are logged to std::cerr.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceulog-1ad2f523f5d4042ee373a580ab2a976f3f"><span id="index-2"></span><a class="reference internal" href="global.html#doxid-utils-2include-2-utils-2-a-p-i-8h-1a0644fef940e460e58c347f3c1d6fe4d8"><span class="std std-ref">UTILS_API</span></a><span></span> <span class="kt">void</span> <span class="n">ResetHandler</span><span class="p">()</span></pre>
+<p>Replaces current log handler with the default one.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceulog-1ab60c9243292b0544a5f3a5c46a716d22"><span id="index-3"></span><a class="reference internal" href="global.html#doxid-utils-2include-2-utils-2-a-p-i-8h-1a0644fef940e460e58c347f3c1d6fe4d8"><span class="std std-ref">UTILS_API</span></a><span></span> <span class="kt">void</span> <span class="n">Debug</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">msg</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">caller</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">)</span></pre>
+<p>Creates a debug log message. Thread safe function.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceulog-1a135dc2546cd85700956dcb78d8e6285e"><span id="index-4"></span><a class="reference internal" href="global.html#doxid-utils-2include-2-utils-2-a-p-i-8h-1a0644fef940e460e58c347f3c1d6fe4d8"><span class="std std-ref">UTILS_API</span></a><span></span> <span class="kt">void</span> <span class="n">Info</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">msg</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">caller</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">)</span></pre>
+<p>Creates an info log message. Thread safe function.</p>
+<p>Creates an info log message. Thread safe function.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceulog-1ab2c4ad66e4b0620bbb3d70f2172427b5"><span id="index-5"></span><a class="reference internal" href="global.html#doxid-utils-2include-2-utils-2-a-p-i-8h-1a0644fef940e460e58c347f3c1d6fe4d8"><span class="std std-ref">UTILS_API</span></a><span></span> <span class="kt">void</span> <span class="n">Warn</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">msg</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">caller</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">)</span></pre>
+<p>Creates a warning log message. Thread safe function.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceulog-1a9c0decc365c41cf07217e02747c43b12"><span id="index-6"></span><a class="reference internal" href="global.html#doxid-utils-2include-2-utils-2-a-p-i-8h-1a0644fef940e460e58c347f3c1d6fe4d8"><span class="std std-ref">UTILS_API</span></a><span></span> <span class="kt">void</span> <span class="n">Fail</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">msg</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">caller</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">)</span></pre>
+<p>Creates an error log message. Thread safe function.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceulog-1a6e1b3b00fec60348e4e2026d8c0f018a"><span id="index-7"></span><a class="reference internal" href="global.html#doxid-utils-2include-2-utils-2-a-p-i-8h-1a0644fef940e460e58c347f3c1d6fe4d8"><span class="std std-ref">UTILS_API</span></a><span></span> <span class="kt">void</span> <span class="n">Crash</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">msg</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">caller</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">)</span></pre>
+<p>Creates a critical log message. Thread safe function.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceulog-1aa421701e50de882d9aeef1e6c7bd1baa"><span id="index-8"></span><a class="reference internal" href="global.html#doxid-utils-2include-2-utils-2-a-p-i-8h-1a0644fef940e460e58c347f3c1d6fe4d8"><span class="std std-ref">UTILS_API</span></a><span></span> <span class="kt">void</span> <span class="n">DebugC</span><span class="p">(</span><a class="reference internal" href="#doxid-namespaceulog-1ab2157f31255eb41ef3d960f37adac771"><span class="std std-ref">Category</span></a><span></span> <span class="n">msg_category</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">msg</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">caller</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">)</span></pre>
+<p>Creates a debug log message. Thread safe function.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceulog-1add607fa6efc3faa07030d495c7d5af9f"><span id="index-9"></span><a class="reference internal" href="global.html#doxid-utils-2include-2-utils-2-a-p-i-8h-1a0644fef940e460e58c347f3c1d6fe4d8"><span class="std std-ref">UTILS_API</span></a><span></span> <span class="kt">void</span> <span class="n">InfoC</span><span class="p">(</span><a class="reference internal" href="#doxid-namespaceulog-1ab2157f31255eb41ef3d960f37adac771"><span class="std std-ref">Category</span></a><span></span> <span class="n">msg_category</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">msg</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">caller</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">)</span></pre>
+<p>Creates an info log message. Thread safe function.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceulog-1a41bee053021d1fd4a1e9f1a6726e4f11"><span id="index-10"></span><a class="reference internal" href="global.html#doxid-utils-2include-2-utils-2-a-p-i-8h-1a0644fef940e460e58c347f3c1d6fe4d8"><span class="std std-ref">UTILS_API</span></a><span></span> <span class="kt">void</span> <span class="n">WarnC</span><span class="p">(</span><a class="reference internal" href="#doxid-namespaceulog-1ab2157f31255eb41ef3d960f37adac771"><span class="std std-ref">Category</span></a><span></span> <span class="n">msg_category</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">msg</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">caller</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">)</span></pre>
+<p>Creates a warning log message. Thread safe function.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceulog-1ac3b09ff616126c72b36d575b70fae866"><span id="index-11"></span><a class="reference internal" href="global.html#doxid-utils-2include-2-utils-2-a-p-i-8h-1a0644fef940e460e58c347f3c1d6fe4d8"><span class="std std-ref">UTILS_API</span></a><span></span> <span class="kt">void</span> <span class="n">FailC</span><span class="p">(</span><a class="reference internal" href="#doxid-namespaceulog-1ab2157f31255eb41ef3d960f37adac771"><span class="std std-ref">Category</span></a><span></span> <span class="n">msg_category</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">msg</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">caller</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">)</span></pre>
+<p>Creates an error log message. Thread safe function.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceulog-1a432b71f62c41b22f0712d3f6c4cbb2df"><span id="index-12"></span><a class="reference internal" href="global.html#doxid-utils-2include-2-utils-2-a-p-i-8h-1a0644fef940e460e58c347f3c1d6fe4d8"><span class="std std-ref">UTILS_API</span></a><span></span> <span class="kt">void</span> <span class="n">CrashC</span><span class="p">(</span><a class="reference internal" href="#doxid-namespaceulog-1ab2157f31255eb41ef3d960f37adac771"><span class="std std-ref">Category</span></a><span></span> <span class="n">msg_category</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">msg</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">caller</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">)</span></pre>
+<p>Creates a critical log message. Thread safe function.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Skeletex Research
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

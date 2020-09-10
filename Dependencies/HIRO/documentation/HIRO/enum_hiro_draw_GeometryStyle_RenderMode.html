@@ -1,0 +1,344 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>enum hiro::draw::GeometryStyle::RenderMode &mdash; HIRO 0.4.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/hiro-fav-32.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/target-highlight.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/hiro_theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-sphinx_rtd_theme.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="struct hiro::draw::GraphStyle" href="struct_hiro_draw_GraphStyle.html" />
+    <link rel="prev" title="enum hiro::draw::GeometryStyle::PresetType" href="enum_hiro_draw_GeometryStyle_PresetType.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: rgb(248, 216, 60)" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/hiro-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_0.html">T0: Setting up Visual Studio Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_1.html">T1: Introduction to HIRO GUI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_2.html">T2: Creating Custom Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_3.html">T3: Overview of Gadget Features</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="shader_api.html">Shader API</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="global.html">Global Namespace</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="namespace_cegui_ext.html">namespace cegui_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_dialog.html">namespace dialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_file_types.html">namespace file_types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_fs.html">namespace fs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_func.html">namespace func</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_geom.html">namespace geom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_glm_ext.html">namespace glm_ext</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="namespace_hiro.html">namespace hiro</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="namespace_hiro_draw.html">namespace hiro::draw</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="enum_hiro_draw_AntiAliasing.html">enum hiro::draw::AntiAliasing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_hiro_draw_CameraMode.html">enum hiro::draw::CameraMode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_hiro_draw_ColorSource.html">enum hiro::draw::ColorSource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_hiro_draw_GeometryName.html">enum hiro::draw::GeometryName</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_hiro_draw_GroundGrid.html">enum hiro::draw::GroundGrid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_hiro_draw_PrimitiveName.html">enum hiro::draw::PrimitiveName</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_hiro_draw_TextAlignment.html">enum hiro::draw::TextAlignment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_draw_BillboardStyle.html">struct hiro::draw::BillboardStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_draw_FacesStyle.html">struct hiro::draw::FacesStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_draw_FrustumStyle.html">struct hiro::draw::FrustumStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_draw_Geometry.html">struct hiro::draw::Geometry</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="struct_hiro_draw_GeometryStyle.html">struct hiro::draw::GeometryStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_draw_GraphStyle.html">struct hiro::draw::GraphStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_draw_ImageStyle.html">struct hiro::draw::ImageStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_draw_LineFieldStyle.html">struct hiro::draw::LineFieldStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_draw_NormalsStyle.html">struct hiro::draw::NormalsStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_draw_PointCloudStyle.html">struct hiro::draw::PointCloudStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_draw_PointsStyle.html">struct hiro::draw::PointsStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_draw_ProjectionParams.html">struct hiro::draw::ProjectionParams</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_draw_SkeletonStyle.html">struct hiro::draw::SkeletonStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_draw_Style.html">struct hiro::draw::Style</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_BillboardRenderer.html">class hiro::draw::BillboardRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_CircleRenderer.html">class hiro::draw::CircleRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_CircleStyle.html">class hiro::draw::CircleStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_ElementRenderer.html">class hiro::draw::ElementRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_FrustumRenderer.html">class hiro::draw::FrustumRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_GeometryRenderer.html">class hiro::draw::GeometryRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_GraphRenderer.html">class hiro::draw::GraphRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_ImageRenderer.html">class hiro::draw::ImageRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_LineFieldRenderer.html">class hiro::draw::LineFieldRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_MeshRenderer.html">class hiro::draw::MeshRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_PointCloudRenderer.html">class hiro::draw::PointCloudRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_PrimitiveDatabase.html">class hiro::draw::PrimitiveDatabase</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_RasterRenderer.html">class hiro::draw::RasterRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_RenderSystem.html">class hiro::draw::RenderSystem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_Renderer.html">class hiro::draw::Renderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_Scene.html">class hiro::draw::Scene</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_SkeletonRenderer.html">class hiro::draw::SkeletonRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_SkinnedMeshRenderer.html">class hiro::draw::SkinnedMeshRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_TextPrinter.html">class hiro::draw::TextPrinter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_TextRenderer.html">class hiro::draw::TextRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_VisualCamera.html">class hiro::draw::VisualCamera</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_VisualCameraController.html">class hiro::draw::VisualCameraController</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_hiro_draw.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_hiro_draw.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro_gui.html">namespace hiro::gui</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro_modules.html">namespace hiro::modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro_shader.html">namespace hiro::shader</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_BoolFunc.html">enum hiro::BoolFunc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_EventStatus.html">enum hiro::EventStatus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_Key.html">enum hiro::Key</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_Mod.html">enum hiro::Mod</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_MouseButton.html">enum hiro::MouseButton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_hiro_ActiveResourceInfo.html">struct hiro::ActiveResourceInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_hiro_ResourceId.html">struct hiro::ResourceId</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Camera.html">class hiro::Camera</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Debugger.html">class hiro::Debugger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Exportable.html">class hiro::Exportable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Gadget.html">class hiro::Gadget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_GuiGenerator.html">class hiro::GuiGenerator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_GuiPanel.html">class hiro::GuiPanel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_ModKeys.html">class hiro::ModKeys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Resource.html">class hiro::Resource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_omp_ext.html">namespace omp_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_std_ext.html">namespace std_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_time_m.html">namespace time_m</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_ulog.html">namespace ulog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_uprogress.html">namespace uprogress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_utils.html">namespace utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_Config.html">class Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_IDialogInterface.html">class IDialogInterface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_WxWidgetsDialog.html">class WxWidgetsDialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">HIRO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="global.html">Global Namespace</a> &raquo;</li>
+        
+          <li><a href="namespace_hiro.html">namespace hiro</a> &raquo;</li>
+        
+          <li><a href="namespace_hiro_draw.html">namespace hiro::draw</a> &raquo;</li>
+        
+          <li><a href="struct_hiro_draw_GeometryStyle.html">struct hiro::draw::GeometryStyle</a> &raquo;</li>
+        
+      <li>enum hiro::draw::GeometryStyle::RenderMode</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="enum-hiro-draw-geometrystyle-rendermode">
+<span id="doxid-structhiro-1-1draw-1-1-geometry-style-1ae80d899701d95a9f2983364064a3cc75"></span><span id="index-0"></span><h1>enum hiro::draw::GeometryStyle::RenderMode<a class="headerlink" href="#enum-hiro-draw-geometrystyle-rendermode" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Available modes for rendering geometry. <a class="reference internal" href="#details-structhiro-1-1draw-1-1-geometry-style-1ae80d899701d95a9f2983364064a3cc75"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;GeometryRenderer.h&gt;</span><span class="cp"></span>
+
+<span class="k">enum</span> <span class="n">RenderMode</span> <span class="p">{</span>
+    <a class="reference internal" href="#doxid-structhiro-1-1draw-1-1-geometry-style-1ae80d899701d95a9f2983364064a3cc75a0aab81de5c4c87021772015efc184d67"><span class="std std-ref">points</span></a><span></span>       <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-structhiro-1-1draw-1-1-geometry-style-1ae80d899701d95a9f2983364064a3cc75acb333571817f5cf6aad99cb0bb634cd3"><span class="std std-ref">wires</span></a><span></span>        <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-structhiro-1-1draw-1-1-geometry-style-1ae80d899701d95a9f2983364064a3cc75ae7fffce5d50748e8e28549aa8a091665"><span class="std std-ref">wired_points</span></a><span></span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-structhiro-1-1draw-1-1-geometry-style-1ae80d899701d95a9f2983364064a3cc75adc7871988dc34c43a1660a1dfc23d990"><span class="std std-ref">faces</span></a><span></span>        <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-structhiro-1-1draw-1-1-geometry-style-1ae80d899701d95a9f2983364064a3cc75adb1bd412b6552b38ef6ba248aab45ef9"><span class="std std-ref">wired_faces</span></a><span></span>  <span class="o">=</span> <span class="mi">4</span><span class="p">,</span>
+<span class="p">};</span></pre>
+</div>
+<div class="section" id="detailed-documentation">
+<span id="details-structhiro-1-1draw-1-1-geometry-style-1ae80d899701d95a9f2983364064a3cc75"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
+<p>Available modes for rendering geometry.</p>
+<div class="section" id="enum-values">
+<h3>Enum Values<a class="headerlink" href="#enum-values" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-structhiro-1-1draw-1-1-geometry-style-1ae80d899701d95a9f2983364064a3cc75a0aab81de5c4c87021772015efc184d67"><span id="index-1"></span><span></span><span class="n">points</span></pre>
+<p>Renders only vertices.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-structhiro-1-1draw-1-1-geometry-style-1ae80d899701d95a9f2983364064a3cc75acb333571817f5cf6aad99cb0bb634cd3"><span id="index-2"></span><span></span><span class="n">wires</span></pre>
+<p>Renders only edges.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-structhiro-1-1draw-1-1-geometry-style-1ae80d899701d95a9f2983364064a3cc75ae7fffce5d50748e8e28549aa8a091665"><span id="index-3"></span><span></span><span class="n">wired_points</span></pre>
+<p>Renders vertices and edges.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-structhiro-1-1draw-1-1-geometry-style-1ae80d899701d95a9f2983364064a3cc75adc7871988dc34c43a1660a1dfc23d990"><span id="index-4"></span><span></span><span class="n">faces</span></pre>
+<p>Renders only solid faces.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-structhiro-1-1draw-1-1-geometry-style-1ae80d899701d95a9f2983364064a3cc75adb1bd412b6552b38ef6ba248aab45ef9"><span id="index-5"></span><span></span><span class="n">wired_faces</span></pre>
+<p>Renders solid faces with edges on top.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Skeletex Research
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

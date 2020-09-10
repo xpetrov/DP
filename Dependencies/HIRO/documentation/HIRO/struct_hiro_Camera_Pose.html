@@ -1,0 +1,307 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>struct hiro::Camera::Pose &mdash; HIRO 0.4.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/hiro-fav-32.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/target-highlight.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/hiro_theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-sphinx_rtd_theme.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="class hiro::Debugger" href="class_hiro_Debugger.html" />
+    <link rel="prev" title="class hiro::Camera" href="class_hiro_Camera.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: rgb(248, 216, 60)" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/hiro-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_0.html">T0: Setting up Visual Studio Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_1.html">T1: Introduction to HIRO GUI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_2.html">T2: Creating Custom Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_3.html">T3: Overview of Gadget Features</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="shader_api.html">Shader API</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="global.html">Global Namespace</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="namespace_cegui_ext.html">namespace cegui_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_dialog.html">namespace dialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_file_types.html">namespace file_types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_fs.html">namespace fs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_func.html">namespace func</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_geom.html">namespace geom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_glm_ext.html">namespace glm_ext</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="namespace_hiro.html">namespace hiro</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro_draw.html">namespace hiro::draw</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro_gui.html">namespace hiro::gui</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro_modules.html">namespace hiro::modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro_shader.html">namespace hiro::shader</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_BoolFunc.html">enum hiro::BoolFunc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_EventStatus.html">enum hiro::EventStatus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_Key.html">enum hiro::Key</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_Mod.html">enum hiro::Mod</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_MouseButton.html">enum hiro::MouseButton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_hiro_ActiveResourceInfo.html">struct hiro::ActiveResourceInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_hiro_ResourceId.html">struct hiro::ResourceId</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="class_hiro_Camera.html">class hiro::Camera</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">struct hiro::Camera::Pose</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_Camera.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_Camera.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Debugger.html">class hiro::Debugger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Exportable.html">class hiro::Exportable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Gadget.html">class hiro::Gadget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_GuiGenerator.html">class hiro::GuiGenerator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_GuiPanel.html">class hiro::GuiPanel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_ModKeys.html">class hiro::ModKeys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Resource.html">class hiro::Resource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_omp_ext.html">namespace omp_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_std_ext.html">namespace std_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_time_m.html">namespace time_m</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_ulog.html">namespace ulog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_uprogress.html">namespace uprogress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_utils.html">namespace utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_Config.html">class Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_IDialogInterface.html">class IDialogInterface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_WxWidgetsDialog.html">class WxWidgetsDialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">HIRO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="global.html">Global Namespace</a> &raquo;</li>
+        
+          <li><a href="namespace_hiro.html">namespace hiro</a> &raquo;</li>
+        
+          <li><a href="class_hiro_Camera.html">class hiro::Camera</a> &raquo;</li>
+        
+      <li>struct hiro::Camera::Pose</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="struct-hiro-camera-pose">
+<span id="doxid-structhiro-1-1-camera-1-1-pose"></span><span id="index-0"></span><h1>struct hiro::Camera::Pose<a class="headerlink" href="#struct-hiro-camera-pose" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Holds information about camera pose. <a class="reference internal" href="#details-structhiro-1-1-camera-1-1-pose"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;Camera.h&gt;</span><span class="cp"></span>
+
+<span class="k">struct</span> <span class="n">Pose</span> <span class="p">{</span>
+    <span class="c1">// fields</span>
+
+    <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span> <a class="reference internal" href="#doxid-structhiro-1-1-camera-1-1-pose-1a7a37c649b48ed2b6f7729f8f89b8f197"><span class="std std-ref">target</span></a><span></span><span class="p">;</span>
+    <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span> <a class="reference internal" href="#doxid-structhiro-1-1-camera-1-1-pose-1a92b969d7c4f553228067375847641441"><span class="std std-ref">position</span></a><span></span><span class="p">;</span>
+    <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span> <a class="reference internal" href="#doxid-structhiro-1-1-camera-1-1-pose-1a67d23ee88b849c6c5623dd88b581e9cb"><span class="std std-ref">up</span></a><span></span><span class="p">;</span>
+
+    <span class="c1">// methods</span>
+
+    <span class="n">glm</span><span class="o">::</span><span class="n">mat4</span> <a class="reference internal" href="#doxid-structhiro-1-1-camera-1-1-pose-1a92d616d4df5da32c0c3a811b93daad91"><span class="std std-ref">GetViewMatrix</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+<span class="p">};</span></pre>
+</div>
+<div class="section" id="detailed-documentation">
+<span id="details-structhiro-1-1-camera-1-1-pose"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
+<p>Holds information about camera pose.</p>
+<div class="section" id="fields">
+<h3>Fields<a class="headerlink" href="#fields" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-structhiro-1-1-camera-1-1-pose-1a7a37c649b48ed2b6f7729f8f89b8f197"><span id="index-1"></span><span></span><span class="n">glm</span><span class="o">::</span><span class="n">vec3</span> <span class="n">target</span></pre>
+<p>Point at which camera looks at.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-structhiro-1-1-camera-1-1-pose-1a92b969d7c4f553228067375847641441"><span id="index-2"></span><span></span><span class="n">glm</span><span class="o">::</span><span class="n">vec3</span> <span class="n">position</span></pre>
+<p>Position of a camera.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-structhiro-1-1-camera-1-1-pose-1a67d23ee88b849c6c5623dd88b581e9cb"><span id="index-3"></span><span></span><span class="n">glm</span><span class="o">::</span><span class="n">vec3</span> <span class="n">up</span></pre>
+<p><a class="reference internal" href="class_hiro_Camera.html#doxid-classhiro-1-1-camera"><span class="std std-ref">Camera</span></a> up direction.</p>
+</div>
+<div class="section" id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-structhiro-1-1-camera-1-1-pose-1a92d616d4df5da32c0c3a811b93daad91"><span id="index-4"></span><span></span><span class="n">glm</span><span class="o">::</span><span class="n">mat4</span> <span class="n">GetViewMatrix</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Calculates view matrix of current pose.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Skeletex Research
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

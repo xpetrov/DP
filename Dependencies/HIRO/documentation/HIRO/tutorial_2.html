@@ -1,0 +1,620 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>T2: Creating Custom Modules &mdash; HIRO 0.4.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/hiro-fav-32.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/target-highlight.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/hiro_theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-sphinx_rtd_theme.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="T3: Overview of Gadget Features" href="tutorial_3.html" />
+    <link rel="prev" title="T1: Introduction to HIRO GUI" href="tutorial_1.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: rgb(248, 216, 60)" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/hiro-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="tutorial_0.html">T0: Setting up Visual Studio Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_1.html">T1: Introduction to HIRO GUI</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">T2: Creating Custom Modules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#architecture">Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#simplest-of-modules">Simplest of Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rendering">Rendering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#resource-as-program-interface">Resource as Program Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_3.html">T3: Overview of Gadget Features</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="shader_api.html">Shader API</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="global.html">Global Namespace</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">HIRO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>T2: Creating Custom Modules</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="t2-creating-custom-modules">
+<h1>T2: Creating Custom Modules<a class="headerlink" href="#t2-creating-custom-modules" title="Permalink to this headline">¶</a></h1>
+<p>The true power of HIRO comes with the ability to create custom <em>data modules</em>.
+However, before you can learn that, you must know the basic architecture, which describes how HIRO modules communicate with the engine.
+This tutorial guides you through this process.</p>
+<div class="section" id="architecture">
+<h2>Architecture<a class="headerlink" href="#architecture" title="Permalink to this headline">¶</a></h2>
+<p>As we saw in the first section, the main window of HIRO can have one or more <em>viewareas</em>, each consisting of viewport and sidebar.
+Each <em>viewarea</em> visualizes on its own, but sometimes, it may render the same data as the other <em>viewarea</em>, but with different settings.
+Therefore, HIRO uses the concept of <strong>resource</strong> and <strong>gadget</strong>, existing together as the main building block of every data module.
+Since these are only abstract concepts, you can imagine <code class="docutils literal notranslate"><span class="pre">GeometryResource</span></code> and <code class="docutils literal notranslate"><span class="pre">GeometryGadget</span></code> as specific class examples instead.</p>
+<div class="figure align-center" id="id1">
+<img alt="_images/architecture_1.svg" src="_images/architecture_1.svg" /><p class="caption"><span class="caption-text">Object responsibilities.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>The user program creates the desired <em>resource</em> object which is added to HIRO as we have shown in the previous tutorial.
+<em>Gadget</em>, however, is never created by the user directly.
+When the user selects a <em>resource</em> in the <em>resource inspector</em>, corresponding <em>viewarea</em> requests the <em>resource</em> to create a <em>gadget</em>.
+This new <em>gadget</em> exists in the context of current <em>viewarea</em> only.
+A <em>gadget</em> is never shared between multiple <em>viewareas</em>, while all <em>resources</em> are shared in the whole engine (and user application).</p>
+<div class="figure align-center" id="id2">
+<img alt="_images/architecture_2.svg" src="_images/architecture_2.svg" /><p class="caption"><span class="caption-text">An example of a possible application state.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>In the example above, there were two <em>resource</em> objects created by the user program and the window currently has three viawareas.
+The first <em>viewarea</em> requested both <em>resource</em> objects to instantiate, and therefore manages two <em>gadget</em> objects,
+while the second <em>viewarea</em> has instanced only <em>resource</em> object B.
+Third <em>viewarea</em> has currently no <em>gadget</em> object.</p>
+</div>
+<div class="section" id="simplest-of-modules">
+<h2>Simplest of Modules<a class="headerlink" href="#simplest-of-modules" title="Permalink to this headline">¶</a></h2>
+<p>To create a custom <em>data module</em>, the <code class="docutils literal notranslate"><span class="pre">Resource</span></code> and <code class="docutils literal notranslate"><span class="pre">Gadget</span></code> classes must be derived.
+The following code shows an example of a really simple <em>data module</em>, which does nothing apart from being shown in the <em>resource inspector</em>.</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;HIRO/Resource.h&gt;</span><span class="cp"></span>
+
+<span class="k">class</span> <span class="nl">MyGadget</span> <span class="p">:</span> <span class="k">public</span> <span class="n">hiro</span><span class="o">::</span><span class="n">Gadget</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+  <span class="n">MyGadget</span><span class="p">(</span><span class="k">const</span> <span class="n">hiro</span><span class="o">::</span><span class="n">Resource</span> <span class="o">*</span><span class="n">res</span><span class="p">)</span> <span class="o">:</span> <span class="n">hiro</span><span class="o">::</span><span class="n">Gadget</span><span class="p">(</span><span class="n">res</span><span class="p">)</span> <span class="p">{}</span>
+<span class="p">};</span>
+
+<span class="k">class</span> <span class="nl">MyResource</span> <span class="p">:</span> <span class="k">public</span> <span class="n">hiro</span><span class="o">::</span><span class="n">Resource</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+  <span class="n">MyResource</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">)</span>
+    <span class="o">:</span> <span class="n">hiro</span><span class="o">::</span><span class="n">Resource</span><span class="p">(</span><span class="n">hiro</span><span class="o">::</span><span class="n">ResourceId</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="s">&quot;MyResource&quot;</span><span class="p">))</span>
+  <span class="p">{</span>
+  <span class="p">}</span>
+  <span class="n">hiro</span><span class="o">::</span><span class="n">PGadget</span> <span class="n">CreateGadget</span><span class="p">()</span> <span class="k">override</span>
+  <span class="p">{</span>
+    <span class="k">return</span> <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">MyGadget</span><span class="o">&gt;</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+</pre></div>
+</td></tr></table></div>
+<p>The constructor of derived <code class="docutils literal notranslate"><span class="pre">Resource</span></code> class requires an identifier, specifying how should be this <em>resource</em> recognized in the system.
+Abstract method <code class="docutils literal notranslate"><span class="pre">Resource::CreateGadget</span></code> is overridden, to define the specific <em>gadget</em> class that should be created for the <em>resource</em>.
+In this example, for <code class="docutils literal notranslate"><span class="pre">MyResource</span></code> we want to create the <code class="docutils literal notranslate"><span class="pre">MyGadget</span></code> just by creating a <em>shared pointer</em> to a new object instance, which is something you do in most cases.</p>
+</div>
+<div class="section" id="rendering">
+<h2>Rendering<a class="headerlink" href="#rendering" title="Permalink to this headline">¶</a></h2>
+<p>To render data, HIRO uses the HIRO_DRAW library.
+It provides several <strong>renderers</strong> that can be used to render a specific type of data. For example:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">GeometryRenderer</span></code> renders geometry (internally used by <code class="docutils literal notranslate"><span class="pre">GeometryResource</span></code>, mentioned in the previous tutorial <a class="reference internal" href="tutorial_1.html"><span class="doc">T1: Introduction to HIRO GUI</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">LineFieldRenderer</span></code> renders many lines as when visualizing vector fields</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BillboardRenderer</span></code> renders 2D textures on 3D planes</p></li>
+</ul>
+<p>These and many other <em>renderers</em> are available for you to use in your custom <em>module</em>.
+You can learn more about all provided structures in <a class="reference internal" href="namespace_hiro_draw.html#doxid-namespacehiro-1-1draw"><span class="std std-ref">namespace hiro::draw</span></a> documentation.</p>
+<p>Each <em>renderer</em> has a corresponding <strong>style</strong> object assigned.
+The <em>style</em> defines rendering properties, such as a material.
+To use HIRO_DRAW renderers in the custom <em>module</em>, you must register specific <em>renderer</em> and <em>style</em> object pair using the <code class="docutils literal notranslate"><span class="pre">Gadget::AddRenderer</span></code> method.
+It is recommended to do this in the <code class="docutils literal notranslate"><span class="pre">Gadget::Initialize</span></code> method.</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">...</span>
+<span class="cp">#include</span> <span class="cpf">&lt;HIRO_DRAW\renderers\GeometryRenderer.h&gt;</span><span class="cp"></span>
+
+<span class="k">class</span> <span class="nl">MyGadget</span> <span class="p">:</span> <span class="k">public</span> <span class="n">hiro</span><span class="o">::</span><span class="n">Gadget</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+  <span class="n">MyGadget</span><span class="p">(</span><span class="k">const</span> <span class="n">hiro</span><span class="o">::</span><span class="n">Resource</span> <span class="o">*</span><span class="n">res</span><span class="p">)</span> <span class="o">:</span> <span class="n">hiro</span><span class="o">::</span><span class="n">Gadget</span><span class="p">(</span><span class="n">res</span><span class="p">)</span> <span class="p">{}</span>
+
+  <span class="k">virtual</span> <span class="kt">void</span> <span class="n">Initialize</span><span class="p">()</span> <span class="k">override</span>
+  <span class="p">{</span>
+    <span class="n">Gadget</span><span class="o">::</span><span class="n">Initialize</span><span class="p">();</span>
+    <span class="n">renderer_</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">hiro</span><span class="o">::</span><span class="n">draw</span><span class="o">::</span><span class="n">GeometryRenderer</span><span class="o">&gt;</span><span class="p">(</span>
+      <span class="n">hiro</span><span class="o">::</span><span class="n">draw</span><span class="o">::</span><span class="n">GeometryName</span><span class="o">::</span><span class="n">sphere_s1</span>
+    <span class="p">);</span>
+    <span class="n">style_</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">hiro</span><span class="o">::</span><span class="n">draw</span><span class="o">::</span><span class="n">GeometryStyle</span><span class="o">&gt;</span><span class="p">();</span>
+    <span class="k">this</span><span class="o">-&gt;</span><span class="n">AddRenderer</span><span class="p">(</span><span class="n">renderer_</span><span class="p">,</span> <span class="n">style_</span><span class="p">);</span>
+  <span class="p">}</span>
+
+<span class="k">private</span><span class="o">:</span>
+    <span class="n">hiro</span><span class="o">::</span><span class="n">draw</span><span class="o">::</span><span class="n">PGeometryRenderer</span> <span class="n">renderer_</span><span class="p">;</span>
+    <span class="n">hiro</span><span class="o">::</span><span class="n">draw</span><span class="o">::</span><span class="n">PGeometryStyle</span> <span class="n">style_</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="p">...</span>
+</pre></div>
+</td></tr></table></div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>This piece of code uses also <em>HIRO_DRAW</em> library.
+It must be included in project linker input for successful linking.
+See page <a class="reference internal" href="tutorial_0.html"><span class="doc">T0: Setting up Visual Studio Project</span></a> for more information.</p>
+</div>
+<p>There is also a possibility to define custom <em>renderer</em> by inheriting the <code class="docutils literal notranslate"><span class="pre">Renderer</span></code> class and overriding some of its methods.
+Optionally, you can inherit from the more specified <code class="docutils literal notranslate"><span class="pre">ElementRenderer</span></code> class, if you are creating a <em>renderer</em> designed to visualize geometry data.</p>
+</div>
+<div class="section" id="resource-as-program-interface">
+<h2>Resource as Program Interface<a class="headerlink" href="#resource-as-program-interface" title="Permalink to this headline">¶</a></h2>
+<p>This section describes how to create a proper interface between the <em>user program</em> and <em>gadget</em>, using the <em>resource</em> objects.
+The goal is being able to create a custom mesh in the <em>user program</em> and visualize it in the HIRO window via our custom module.</p>
+<p><strong>main.cpp</strong></p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;HIRO/HIRO.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;MyResource.h&quot;</span><span class="cp"></span>
+
+<span class="n">cogs</span><span class="o">::</span><span class="n">Mesh</span> <span class="n">CreatePyramid</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">cogs</span><span class="o">::</span><span class="n">Mesh</span> <span class="n">pyramid</span><span class="p">;</span>
+  <span class="n">pyramid</span><span class="p">.</span><span class="n">points</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">cogs</span><span class="o">::</span><span class="n">PointCloud</span><span class="o">&gt;</span><span class="p">();</span>
+  <span class="n">pyramid</span><span class="p">.</span><span class="n">points</span><span class="o">-&gt;</span><span class="n">Resize</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+  <span class="k">auto</span> <span class="n">positions</span> <span class="o">=</span> <span class="n">pyramid</span><span class="p">.</span><span class="n">points</span><span class="o">-&gt;</span><span class="n">GetPositions</span><span class="p">();</span>
+  <span class="n">positions</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+  <span class="n">positions</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">);</span>
+  <span class="n">positions</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">);</span>
+  <span class="n">positions</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">);</span>
+  <span class="n">positions</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">);</span>
+
+  <span class="n">pyramid</span><span class="p">.</span><span class="n">faces</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">cogs</span><span class="o">::</span><span class="n">Triangulation</span><span class="o">&gt;</span><span class="p">();</span>
+  <span class="n">pyramid</span><span class="p">.</span><span class="n">faces</span><span class="o">-&gt;</span><span class="n">SetFaces</span><span class="p">(</span>
+  <span class="p">{</span>
+    <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">},</span>
+    <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">},</span>
+    <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">},</span>
+    <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">},</span>
+    <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">},</span>
+    <span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">},</span>
+  <span class="p">});</span>
+  <span class="k">return</span> <span class="n">pyramid</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="n">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">hiro</span><span class="o">::</span><span class="n">SetAssetDirectory</span><span class="p">(</span><span class="s">&quot;./hiro_libs/assets/&quot;</span><span class="p">);</span>
+  <span class="n">hiro</span><span class="o">::</span><span class="n">SetIntermediateDirectory</span><span class="p">(</span><span class="s">&quot;./temp/&quot;</span><span class="p">);</span>
+
+  <span class="n">hiro</span><span class="o">::</span><span class="n">Initialize</span><span class="p">();</span>
+
+  <span class="k">auto</span> <span class="n">pyramid</span> <span class="o">=</span> <span class="n">CreatePyramid</span><span class="p">();</span>
+  <span class="k">auto</span> <span class="n">pyramid_res</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">MyResource</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;Pyramid&quot;</span><span class="p">,</span> <span class="n">pyramid</span><span class="p">);</span>
+  <span class="n">hiro</span><span class="o">::</span><span class="n">AddResource</span><span class="p">(</span><span class="n">pyramid_res</span><span class="p">);</span>
+
+  <span class="k">while</span> <span class="p">(</span><span class="n">hiro</span><span class="o">::</span><span class="n">IsOpen</span><span class="p">())</span>
+  <span class="p">{</span>
+    <span class="n">hiro</span><span class="o">::</span><span class="n">Update</span><span class="p">();</span>
+  <span class="p">}</span>
+
+  <span class="n">hiro</span><span class="o">::</span><span class="n">Terminate</span><span class="p">();</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>To the main file, we add a function <code class="docutils literal notranslate"><span class="pre">CreatePyramid()</span></code> that will initialize <code class="docutils literal notranslate"><span class="pre">cogs::Mesh</span></code> structure by defining proper vertices and faces.
+The code shows you how to define your own <em>mesh</em> right in the code.
+The mesh consists of a set of vertices also known as a <em>pointcloud</em>.
+Additionaly, a vector of triplets is supplied specifying which points (by index) should form triangles, wrapped in the <code class="docutils literal notranslate"><span class="pre">cogs::Triangulation</span></code> class.
+Alternatively, <code class="docutils literal notranslate"><span class="pre">cogs::Mesh</span></code> class has an <code class="docutils literal notranslate"><span class="pre">Import</span></code> method, supporting a several mesh file formats.</p>
+<p>Apart from that, we created an instance of object <code class="docutils literal notranslate"><span class="pre">MyResource</span></code> which now takes the second parameter that corresponds to a mesh object we want to visualize.
+Sure, this can not be done without changing the implementation of class <code class="docutils literal notranslate"><span class="pre">MyResource</span></code> itself, now residing in a separate file.</p>
+<p><strong>MyResource.h</strong></p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">#pragma once</span>
+<span class="cp">#include</span> <span class="cpf">&lt;COGS/Mesh.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;HIRO/Resource.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;HIRO_DRAW/renderers/MeshRenderer.h&gt;</span><span class="cp"></span>
+
+<span class="k">class</span> <span class="nl">MyResource</span> <span class="p">:</span> <span class="k">public</span> <span class="n">hiro</span><span class="o">::</span><span class="n">Resource</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+  <span class="n">MyResource</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">,</span> <span class="k">const</span> <span class="n">cogs</span><span class="o">::</span><span class="n">Mesh</span> <span class="o">&amp;</span><span class="n">mesh</span><span class="p">);</span>
+  <span class="n">hiro</span><span class="o">::</span><span class="n">PGadget</span> <span class="n">CreateGadget</span><span class="p">()</span> <span class="k">override</span><span class="p">;</span>
+  <span class="n">hiro</span><span class="o">::</span><span class="n">draw</span><span class="o">::</span><span class="n">PMeshRenderer</span> <span class="n">GetMeshRenderer</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+<span class="k">private</span><span class="o">:</span>
+  <span class="n">hiro</span><span class="o">::</span><span class="n">draw</span><span class="o">::</span><span class="n">PMeshRenderer</span> <span class="n">mesh_renderer_</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</td></tr></table></div>
+<p>As mentioned, <code class="docutils literal notranslate"><span class="pre">MyResource</span></code> now takes the second parameter, that specifies a mesh we want to visualize.
+The class creates and stores <code class="docutils literal notranslate"><span class="pre">MeshRenderer</span></code> object only since we no not need the whole mesh object for visualization.
+The interface of <code class="docutils literal notranslate"><span class="pre">MyResource</span></code> allows getting the <code class="docutils literal notranslate"><span class="pre">MeshRenderer</span></code> object via method <code class="docutils literal notranslate"><span class="pre">GetMeshRenderer</span></code>.</p>
+<p><strong>MyResource.cpp</strong></p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;MyGadget.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;MyResource.h&quot;</span><span class="cp"></span>
+
+<span class="n">MyResource</span><span class="o">::</span><span class="n">MyResource</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">,</span> <span class="k">const</span> <span class="n">cogs</span><span class="o">::</span><span class="n">Mesh</span> <span class="o">&amp;</span><span class="n">mesh</span><span class="p">)</span>
+  <span class="o">:</span> <span class="n">hiro</span><span class="o">::</span><span class="n">Resource</span><span class="p">(</span><span class="n">hiro</span><span class="o">::</span><span class="n">ResourceId</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="s">&quot;MyResource&quot;</span><span class="p">))</span>
+<span class="p">{</span>
+  <span class="n">mesh_renderer_</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">hiro</span><span class="o">::</span><span class="n">draw</span><span class="o">::</span><span class="n">MeshRenderer</span><span class="o">&gt;</span><span class="p">(</span><span class="n">mesh</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="n">hiro</span><span class="o">::</span><span class="n">PGadget</span> <span class="n">MyResource</span><span class="o">::</span><span class="n">CreateGadget</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="k">return</span> <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">MyGadget</span><span class="o">&gt;</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="n">hiro</span><span class="o">::</span><span class="n">draw</span><span class="o">::</span><span class="n">PMeshRenderer</span> <span class="n">MyResource</span><span class="o">::</span><span class="n">GetMeshRenderer</span><span class="p">()</span> <span class="k">const</span>
+<span class="p">{</span>
+  <span class="k">return</span> <span class="n">mesh_renderer_</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>Nothing fancy going on in here.</p>
+<p><strong>MyGadget.h</strong></p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">#pragma once</span>
+<span class="cp">#include</span> <span class="cpf">&lt;HIRO/Gadget.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;HIRO_DRAW/renderers/MeshRenderer.h&gt;</span><span class="cp"></span>
+
+<span class="k">class</span> <span class="nl">MyGadget</span> <span class="p">:</span> <span class="k">public</span> <span class="n">hiro</span><span class="o">::</span><span class="n">Gadget</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+  <span class="n">MyGadget</span><span class="p">(</span><span class="k">const</span> <span class="n">hiro</span><span class="o">::</span><span class="n">Resource</span> <span class="o">*</span><span class="n">res</span><span class="p">);</span>
+  <span class="kt">void</span> <span class="nf">Initialize</span><span class="p">()</span> <span class="k">override</span><span class="p">;</span>
+<span class="k">private</span><span class="o">:</span>
+  <span class="n">hiro</span><span class="o">::</span><span class="n">draw</span><span class="o">::</span><span class="n">PMeshStyle</span> <span class="n">style_</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</td></tr></table></div>
+<p>Nothing fancy going on in here either.</p>
+<p><strong>MyGadget.cpp</strong></p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;MyResource.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;MyGadget.h&quot;</span><span class="cp"></span>
+
+<span class="n">MyGadget</span><span class="o">::</span><span class="n">MyGadget</span><span class="p">(</span><span class="k">const</span> <span class="n">hiro</span><span class="o">::</span><span class="n">Resource</span> <span class="o">*</span><span class="n">res</span><span class="p">)</span> <span class="o">:</span> <span class="n">hiro</span><span class="o">::</span><span class="n">Gadget</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="n">MyGadget</span><span class="o">::</span><span class="n">Initialize</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">hiro</span><span class="o">::</span><span class="n">Gadget</span><span class="o">::</span><span class="n">Initialize</span><span class="p">();</span>
+  <span class="n">style_</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">hiro</span><span class="o">::</span><span class="n">draw</span><span class="o">::</span><span class="n">MeshStyle</span><span class="o">&gt;</span><span class="p">();</span>
+  <span class="n">style_</span><span class="o">-&gt;</span><span class="n">render_mode</span> <span class="o">=</span> <span class="n">hiro</span><span class="o">::</span><span class="n">draw</span><span class="o">::</span><span class="n">MeshStyle</span><span class="o">::</span><span class="n">RenderMode</span><span class="o">::</span><span class="n">wired_faces</span><span class="p">;</span>
+  <span class="n">AddRenderer</span><span class="p">(</span><span class="n">GetResource</span><span class="o">&lt;</span><span class="n">MyResource</span><span class="o">&gt;</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">GetMeshRenderer</span><span class="p">(),</span> <span class="n">style_</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p><em>Gadget</em> classes remember the <em>resource</em> objects that they were constructed from automatically.
+The <em>resource</em> can be accessed using the template method <code class="docutils literal notranslate"><span class="pre">GetResource</span></code> in which you can specify the exact <em>resource</em> class if known.
+To get the renderer object stored in <code class="docutils literal notranslate"><span class="pre">MyResource</span></code>, use the method <code class="docutils literal notranslate"><span class="pre">GetResource&lt;MyResource&gt;</span></code> to the <em>resource</em> that created this <em>gadget</em> and call the interface method <code class="docutils literal notranslate"><span class="pre">GetMeshRenderer</span></code> we created earlier.</p>
+<p>Following a similar procedure, you can create other setter and getter methods to <em>resource</em> classes and use them to set the data the <em>gadgets</em>.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>To simplify class interfaces, <strong>do not store gadget objects</strong> created by a resource in the resource object.
+It may be especially tempting when you wish to update some gadget parameters on <em>resource</em> setter called by the <em>user program</em>.
+Instead, you can use method <code class="docutils literal notranslate"><span class="pre">Resource::ResetGadgets</span></code> that effectively destroys and creates <em>gadget</em> objects that were created by the <em>resource</em> that called this method.</p>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>It is a good practice to <strong>split data storage</strong> between <em>resource</em> and <em>gadget</em> objects, as done in this tutorial.
+The <em>resource</em> is used to store the large data, shared among several <em>gadget</em> objects persistently.
+The <em>gadget</em> stores only data, that can be different in every <em>viewarea</em> or changed during runtime.
+Both efficiency and code readability will benefit.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Skeletex Research
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

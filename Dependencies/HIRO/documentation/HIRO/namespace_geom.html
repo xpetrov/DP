@@ -1,0 +1,456 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>namespace geom &mdash; HIRO 0.4.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/hiro-fav-32.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/target-highlight.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/hiro_theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-sphinx_rtd_theme.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="namespace geom::quadrics" href="namespace_geom_quadrics.html" />
+    <link rel="prev" title="namespace func" href="namespace_func.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: rgb(248, 216, 60)" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/hiro-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_0.html">T0: Setting up Visual Studio Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_1.html">T1: Introduction to HIRO GUI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_2.html">T2: Creating Custom Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_3.html">T3: Overview of Gadget Features</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="shader_api.html">Shader API</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="global.html">Global Namespace</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="namespace_cegui_ext.html">namespace cegui_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_dialog.html">namespace dialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_file_types.html">namespace file_types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_fs.html">namespace fs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_func.html">namespace func</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">namespace geom</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="namespace_geom_quadrics.html">namespace geom::quadrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_geom_Axis.html">enum geom::Axis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_geom_Capsule.html">struct geom::Capsule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_geom_CollisionResult.html">struct geom::CollisionResult</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_geom_ConicalCapsule.html">struct geom::ConicalCapsule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_geom_Graph.html">struct geom::Graph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_geom_HalfPlane.html">struct geom::HalfPlane</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_geom_Line.html">template struct geom::Line</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_geom_LineSegment.html">template struct geom::LineSegment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_geom_LineSegment2.html">struct geom::LineSegment2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_geom_LineSegment3.html">struct geom::LineSegment3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_geom_Plane.html">struct geom::Plane</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_geom_Ray.html">template struct geom::Ray</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_geom_TAabb.html">template struct geom::TAabb</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_geom_TRect.html">template struct geom::TRect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_geom_TSphere.html">template struct geom::TSphere</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_geom_TTriangle.html">template struct geom::TTriangle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_geom_Triangle2.html">struct geom::Triangle2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_geom_Triangle3.html">struct geom::Triangle3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_geom_KalmanFilterObject.html">class geom::KalmanFilterObject</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#detailed-documentation">Detailed Documentation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#typedefs">Typedefs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#global-variables">Global Variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#global-functions">Global Functions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_glm_ext.html">namespace glm_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_hiro.html">namespace hiro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_omp_ext.html">namespace omp_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_std_ext.html">namespace std_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_time_m.html">namespace time_m</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_ulog.html">namespace ulog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_uprogress.html">namespace uprogress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_utils.html">namespace utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_Config.html">class Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_IDialogInterface.html">class IDialogInterface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_WxWidgetsDialog.html">class WxWidgetsDialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">HIRO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="global.html">Global Namespace</a> &raquo;</li>
+        
+      <li>namespace geom</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="namespace-geom">
+<span id="doxid-namespacegeom"></span><span id="index-0"></span><h1>namespace geom<a class="headerlink" href="#namespace-geom" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Set of structures for geometry and linear algebra. <a class="reference internal" href="#details-namespacegeom"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="k">namespace</span> <span class="n">geom</span> <span class="p">{</span>
+
+<span class="c1">// namespaces</span>
+
+<span class="k">namespace</span> <a class="reference internal" href="namespace_geom_quadrics.html#doxid-namespacegeom-1-1quadrics"><span class="std std-ref">geom::quadrics</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// typedefs</span>
+
+<span class="k">typedef</span> <a class="reference internal" href="struct_geom_Line.html#doxid-structgeom-1-1-line"><span class="std std-ref">Line</span></a><span></span><span class="o">&lt;</span><span class="mi">2</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacegeom-1aec911905f03b416ede693d28cf43d3ba"><span class="std std-ref">Line2</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="struct_geom_Line.html#doxid-structgeom-1-1-line"><span class="std std-ref">Line</span></a><span></span><span class="o">&lt;</span><span class="mi">3</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacegeom-1a36306473f61ddd18d67f0e23a2999287"><span class="std std-ref">Line3</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="struct_geom_Ray.html#doxid-structgeom-1-1-ray"><span class="std std-ref">Ray</span></a><span></span><span class="o">&lt;</span><span class="mi">2</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacegeom-1a380742d368936b1287313c76e9854d88"><span class="std std-ref">Ray2</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="struct_geom_Ray.html#doxid-structgeom-1-1-ray"><span class="std std-ref">Ray</span></a><span></span><span class="o">&lt;</span><span class="mi">3</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacegeom-1a4c6a493600f6763020caf7ab0f1cb9cc"><span class="std std-ref">Ray3</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="struct_geom_TSphere.html#doxid-structgeom-1-1-t-sphere"><span class="std std-ref">TSphere</span></a><span></span><span class="o">&lt;</span><span class="mi">2</span><span class="p">,</span> <span class="kt">float</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacegeom-1a24e70f36f92b318e8943ac7e264cf9b2"><span class="std std-ref">Circle</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="struct_geom_TSphere.html#doxid-structgeom-1-1-t-sphere"><span class="std std-ref">TSphere</span></a><span></span><span class="o">&lt;</span><span class="mi">3</span><span class="p">,</span> <span class="kt">float</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacegeom-1ab32ddc49905a23aace3465200f6ca756"><span class="std std-ref">Sphere</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="struct_geom_TRect.html#doxid-structgeom-1-1-t-rect"><span class="std std-ref">TRect</span></a><span></span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacegeom-1aae970993b7fa668a5db522cf7afd8ee8"><span class="std std-ref">Rect</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="struct_geom_TRect.html#doxid-structgeom-1-1-t-rect"><span class="std std-ref">TRect</span></a><span></span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacegeom-1adb3a7eb15bd929c7e195e8977b1cf345"><span class="std std-ref">IRect</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="struct_geom_TRect.html#doxid-structgeom-1-1-t-rect"><span class="std std-ref">TRect</span></a><span></span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacegeom-1afab8414dc489f74855bec90a1211d2c5"><span class="std std-ref">URect</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="struct_geom_TAabb.html#doxid-structgeom-1-1-t-aabb"><span class="std std-ref">TAabb</span></a><span></span><span class="o">&lt;</span><span class="mi">2</span><span class="p">,</span> <span class="kt">float</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacegeom-1ada1b518d6c7ba0efea7fbcee83e90e6e"><span class="std std-ref">Aabb2</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="struct_geom_TAabb.html#doxid-structgeom-1-1-t-aabb"><span class="std std-ref">TAabb</span></a><span></span><span class="o">&lt;</span><span class="mi">3</span><span class="p">,</span> <span class="kt">float</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacegeom-1a2d9f62f7d5b83591e36151a050ba75be"><span class="std std-ref">Aabb3</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// enums</span>
+
+<span class="k">enum</span> <a class="reference internal" href="enum_geom_Axis.html#doxid-namespacegeom-1a583d7c1a69ddc030c80e2970caaa5fbe"><span class="std std-ref">Axis</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// structs</span>
+
+<span class="k">struct</span> <a class="reference internal" href="struct_geom_Capsule.html#doxid-structgeom-1-1-capsule"><span class="std std-ref">Capsule</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_geom_CollisionResult.html#doxid-structgeom-1-1-collision-result"><span class="std std-ref">CollisionResult</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_geom_ConicalCapsule.html#doxid-structgeom-1-1-conical-capsule"><span class="std std-ref">ConicalCapsule</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_geom_Graph.html#doxid-structgeom-1-1-graph"><span class="std std-ref">Graph</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_geom_HalfPlane.html#doxid-structgeom-1-1-half-plane"><span class="std std-ref">HalfPlane</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="kt">size_t</span> <span class="n">N</span><span class="o">&gt;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_geom_Line.html#doxid-structgeom-1-1-line"><span class="std std-ref">Line</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="kt">size_t</span> <span class="n">N</span><span class="o">&gt;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_geom_LineSegment.html#doxid-structgeom-1-1-line-segment"><span class="std std-ref">LineSegment</span></a><span></span><span class="p">;</span>
+
+<span class="k">struct</span> <a class="reference internal" href="struct_geom_LineSegment2.html#doxid-structgeom-1-1-line-segment2"><span class="std std-ref">LineSegment2</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_geom_LineSegment3.html#doxid-structgeom-1-1-line-segment3"><span class="std std-ref">LineSegment3</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_geom_Plane.html#doxid-structgeom-1-1-plane"><span class="std std-ref">Plane</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="kt">size_t</span> <span class="n">N</span><span class="o">&gt;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_geom_Ray.html#doxid-structgeom-1-1-ray"><span class="std std-ref">Ray</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="kt">int</span> <span class="n">dimensions</span><span class="p">,</span> <span class="k">typename</span> <span class="n">Type</span><span class="o">&gt;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_geom_TAabb.html#doxid-structgeom-1-1-t-aabb"><span class="std std-ref">TAabb</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_geom_TRect.html#doxid-structgeom-1-1-t-rect"><span class="std std-ref">TRect</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="kt">int</span> <span class="n">N</span><span class="p">,</span> <span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_geom_TSphere.html#doxid-structgeom-1-1-t-sphere"><span class="std std-ref">TSphere</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="kt">size_t</span> <span class="n">D</span><span class="o">&gt;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_geom_TTriangle.html#doxid-structgeom-1-1-t-triangle"><span class="std std-ref">TTriangle</span></a><span></span><span class="p">;</span>
+
+<span class="k">struct</span> <a class="reference internal" href="struct_geom_Triangle2.html#doxid-structgeom-1-1-triangle2"><span class="std std-ref">Triangle2</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_geom_Triangle3.html#doxid-structgeom-1-1-triangle3"><span class="std std-ref">Triangle3</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// classes</span>
+
+<span class="k">class</span> <a class="reference internal" href="class_geom_KalmanFilterObject.html#doxid-classgeom-1-1-kalman-filter-object"><span class="std std-ref">KalmanFilterObject</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// global variables</span>
+
+<span class="k">static</span> <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span> <a class="reference internal" href="#doxid-namespacegeom-1aa84a39535c5aadbec87390c2a24ac725"><span class="std std-ref">Vec3X</span></a><span></span> <span class="o">=</span> <span class="n">AxisToVec3</span><span class="p">(</span><a class="reference internal" href="enum_geom_Axis.html#doxid-namespacegeom-1a583d7c1a69ddc030c80e2970caaa5fbea9dd4e461268c8034f5c8564e155c67a6"><span class="std std-ref">Axis::x</span></a><span></span><span class="p">);</span>
+<span class="k">static</span> <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span> <a class="reference internal" href="#doxid-namespacegeom-1aadac929555f16bbf355624375d241fa9"><span class="std std-ref">Vec3Y</span></a><span></span> <span class="o">=</span> <span class="n">AxisToVec3</span><span class="p">(</span><a class="reference internal" href="enum_geom_Axis.html#doxid-namespacegeom-1a583d7c1a69ddc030c80e2970caaa5fbea415290769594460e2e485922904f345d"><span class="std std-ref">Axis::y</span></a><span></span><span class="p">);</span>
+<span class="k">static</span> <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span> <a class="reference internal" href="#doxid-namespacegeom-1a1c4d8be97d1eb1e5a592b82d26b5c61a"><span class="std std-ref">Vec3Z</span></a><span></span> <span class="o">=</span> <span class="n">AxisToVec3</span><span class="p">(</span><a class="reference internal" href="enum_geom_Axis.html#doxid-namespacegeom-1a583d7c1a69ddc030c80e2970caaa5fbeafbade9e36a3f36d3d676c1b808451dd7"><span class="std std-ref">Axis::z</span></a><span></span><span class="p">);</span>
+<span class="k">static</span> <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec4</span> <a class="reference internal" href="#doxid-namespacegeom-1affcfcb99e0cb43ecb907eb6dc8a95e71"><span class="std std-ref">Vec4X</span></a><span></span> <span class="o">=</span> <span class="n">AxisToVec4</span><span class="p">(</span><a class="reference internal" href="enum_geom_Axis.html#doxid-namespacegeom-1a583d7c1a69ddc030c80e2970caaa5fbea9dd4e461268c8034f5c8564e155c67a6"><span class="std std-ref">Axis::x</span></a><span></span><span class="p">);</span>
+<span class="k">static</span> <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec4</span> <a class="reference internal" href="#doxid-namespacegeom-1a69297e6c1bbf338fae0996edb3fb8f42"><span class="std std-ref">Vec4Y</span></a><span></span> <span class="o">=</span> <span class="n">AxisToVec4</span><span class="p">(</span><a class="reference internal" href="enum_geom_Axis.html#doxid-namespacegeom-1a583d7c1a69ddc030c80e2970caaa5fbea415290769594460e2e485922904f345d"><span class="std std-ref">Axis::y</span></a><span></span><span class="p">);</span>
+<span class="k">static</span> <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec4</span> <a class="reference internal" href="#doxid-namespacegeom-1a9c1b444ff855942f89fe58c960da1a5e"><span class="std std-ref">Vec4Z</span></a><span></span> <span class="o">=</span> <span class="n">AxisToVec4</span><span class="p">(</span><a class="reference internal" href="enum_geom_Axis.html#doxid-namespacegeom-1a583d7c1a69ddc030c80e2970caaa5fbeafbade9e36a3f36d3d676c1b808451dd7"><span class="std std-ref">Axis::z</span></a><span></span><span class="p">);</span>
+
+<span class="c1">// global functions</span>
+
+<span class="k">static</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span> <a class="reference internal" href="#doxid-namespacegeom-1a2525ca7a2ccd2c36a9130f33a56b9bf9"><span class="std std-ref">AxisToVec3</span></a><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="enum_geom_Axis.html#doxid-namespacegeom-1a583d7c1a69ddc030c80e2970caaa5fbe"><span class="std std-ref">geom::Axis</span></a><span></span> <span class="n">axis</span><span class="p">);</span>
+<span class="k">static</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec4</span> <a class="reference internal" href="#doxid-namespacegeom-1a2387a0a9d6c1eaee0067ce1493aaa18e"><span class="std std-ref">AxisToVec4</span></a><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="enum_geom_Axis.html#doxid-namespacegeom-1a583d7c1a69ddc030c80e2970caaa5fbe"><span class="std std-ref">geom::Axis</span></a><span></span> <span class="n">axis</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-g-e-o-m-2include-2-g-e-o-m-2-a-p-i-8h-1a323a363c36c1a28803781de5a53efb05"><span class="std std-ref">GEOM_API</span></a><span></span> <a class="reference internal" href="#doxid-namespacegeom-1a2d9f62f7d5b83591e36151a050ba75be"><span class="std std-ref">Aabb3</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespacegeom-1a37d8b1776202ac8ab470851743ebd3c7"><span></span><span class="n">GetAabb</span></span><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_geom_ConicalCapsule.html#doxid-structgeom-1-1-conical-capsule"><span class="std std-ref">ConicalCapsule</span></a><span></span><span class="o">&amp;</span> <span class="n">conical_capsule</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-g-e-o-m-2include-2-g-e-o-m-2-a-p-i-8h-1a323a363c36c1a28803781de5a53efb05"><span class="std std-ref">GEOM_API</span></a><span></span> <a class="reference internal" href="#doxid-namespacegeom-1a36306473f61ddd18d67f0e23a2999287"><span class="std std-ref">Line3</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespacegeom-1acb7785671d8855bae977dcbee78eaa7f"><span></span><span class="n">ToLine</span></span><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_geom_LineSegment3.html#doxid-structgeom-1-1-line-segment3"><span class="std std-ref">LineSegment3</span></a><span></span><span class="o">&amp;</span> <span class="n">segment</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-g-e-o-m-2include-2-g-e-o-m-2-a-p-i-8h-1a323a363c36c1a28803781de5a53efb05"><span class="std std-ref">GEOM_API</span></a><span></span> <a class="reference internal" href="struct_geom_Plane.html#doxid-structgeom-1-1-plane"><span class="std std-ref">Plane</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespacegeom-1ac3229a8a79ab2866f69ab63eb0879acb"><span></span><span class="n">ToPlane</span></span><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_geom_HalfPlane.html#doxid-structgeom-1-1-half-plane"><span class="std std-ref">HalfPlane</span></a><span></span><span class="o">&amp;</span> <span class="n">halfplane</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-g-e-o-m-2include-2-g-e-o-m-2-a-p-i-8h-1a323a363c36c1a28803781de5a53efb05"><span class="std std-ref">GEOM_API</span></a><span></span> <a class="reference internal" href="struct_geom_Plane.html#doxid-structgeom-1-1-plane"><span class="std std-ref">Plane</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespacegeom-1ae5acbcd6db2ffd04dc2872bb60181c02"><span></span><span class="n">ToPlane</span></span><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_geom_Triangle3.html#doxid-structgeom-1-1-triangle3"><span class="std std-ref">Triangle3</span></a><span></span><span class="o">&amp;</span> <span class="n">triangle</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-g-e-o-m-2include-2-g-e-o-m-2-a-p-i-8h-1a323a363c36c1a28803781de5a53efb05"><span class="std std-ref">GEOM_API</span></a><span></span> <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-namespacegeom-1afc3cd923fd258c11abc128afefeaba9c"><span></span><span class="n">CalculatePCA</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&gt;&amp;</span> <span class="n">vertices</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&gt;&amp;</span> <span class="n">principalComponents</span><span class="p">,</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <span class="n">pointCloudCenter</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-g-e-o-m-2include-2-g-e-o-m-2-a-p-i-8h-1a323a363c36c1a28803781de5a53efb05"><span class="std std-ref">GEOM_API</span></a><span></span> <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-namespacegeom-1a328afee05aafa897ecc39ca86d928f6c"><span></span><span class="n">GetTangentPlanePCA</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&gt;&amp;</span> <span class="n">points</span><span class="p">,</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <span class="n">nn</span><span class="p">,</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <span class="n">ev_1</span><span class="p">,</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <span class="n">ev_2</span><span class="p">,</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <span class="n">ev_3</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-g-e-o-m-2include-2-g-e-o-m-2-a-p-i-8h-1a323a363c36c1a28803781de5a53efb05"><span class="std std-ref">GEOM_API</span></a><span></span> <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-namespacegeom-1a3c9b1147792e431529a58a735dba396b"><span></span><span class="n">PlaneProjectionUsingPCA</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&gt;&amp;</span> <span class="n">points</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;&amp;</span> <span class="n">pointsInPlane</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;&amp;</span> <span class="n">vec1</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;&amp;</span> <span class="n">vec2</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-g-e-o-m-2include-2-g-e-o-m-2-a-p-i-8h-1a323a363c36c1a28803781de5a53efb05"><span class="std std-ref">GEOM_API</span></a><span></span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span> <span class="doxyrest-code-target target" id="doxid-namespacegeom-1aeb465bb5b6ad2a2fe099ca54920621a0"><span></span><span class="n">ProjectPointIntoPlane</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <span class="n">q</span><span class="p">,</span> <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <span class="n">o</span><span class="p">,</span> <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <span class="n">n</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-g-e-o-m-2include-2-g-e-o-m-2-a-p-i-8h-1a323a363c36c1a28803781de5a53efb05"><span class="std std-ref">GEOM_API</span></a><span></span> <span class="n">glm</span><span class="o">::</span><span class="n">vec2</span> <span class="doxyrest-code-target target" id="doxid-namespacegeom-1a5e3a94e19439fce334d5974e0a38e8d7"><span></span><span class="n">Space2Plane</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <span class="n">q</span><span class="p">,</span> <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <span class="n">o</span><span class="p">,</span> <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <span class="n">e1</span><span class="p">,</span> <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <span class="n">e2</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-g-e-o-m-2include-2-g-e-o-m-2-a-p-i-8h-1a323a363c36c1a28803781de5a53efb05"><span class="std std-ref">GEOM_API</span></a><span></span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span> <span class="doxyrest-code-target target" id="doxid-namespacegeom-1a1e31adb3b037283d276d9a5f00311bc1"><span></span><span class="n">Plane2Space</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec2</span><span class="o">&amp;</span> <span class="n">q</span><span class="p">,</span> <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <span class="n">o</span><span class="p">,</span> <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <span class="n">e1</span><span class="p">,</span> <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <span class="n">e2</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-g-e-o-m-2include-2-g-e-o-m-2-a-p-i-8h-1a323a363c36c1a28803781de5a53efb05"><span class="std std-ref">GEOM_API</span></a><span></span> <span class="kt">float</span> <span class="doxyrest-code-target target" id="doxid-namespacegeom-1add6afc84fa33808122c004f03f8a09d3"><span></span><span class="n">DeterminantInPlane</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <span class="n">vVector1</span><span class="p">,</span> <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <span class="n">vVector2</span><span class="p">,</span> <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <span class="n">vVector3</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-namespacegeom-1ab07898f23072d6d97a86d958d5eddcb3"><span></span><span class="n">InflateRectangle</span></span><span></span><span class="p">(</span><a class="reference internal" href="struct_geom_TRect.html#doxid-structgeom-1-1-t-rect"><span class="std std-ref">geom::TRect</span></a><span></span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">rect</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span> <span class="n">margin</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-namespacegeom-1aecd7d1fbdb5bd226921b99b0245a8e66"><span></span><span class="n">DeflateRectangle</span></span><span></span><span class="p">(</span><a class="reference internal" href="struct_geom_TRect.html#doxid-structgeom-1-1-t-rect"><span class="std std-ref">geom::TRect</span></a><span></span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">rect</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span> <span class="n">margin</span><span class="p">);</span>
+
+<a class="reference internal" href="global.html#doxid-g-e-o-m-2include-2-g-e-o-m-2-a-p-i-8h-1a323a363c36c1a28803781de5a53efb05"><span class="std std-ref">GEOM_API</span></a><span></span> <span class="kt">float</span> <span class="doxyrest-code-target target" id="doxid-namespacegeom-1a57bb6fbbf02c4f32cedba4d8c4f5f60d"><span></span><span class="n">GetProjectionParameter</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <span class="n">point</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="struct_geom_LineSegment3.html#doxid-structgeom-1-1-line-segment3"><span class="std std-ref">geom::LineSegment3</span></a><span></span><span class="o">&amp;</span> <span class="n">line_segment</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-g-e-o-m-2include-2-g-e-o-m-2-a-p-i-8h-1a323a363c36c1a28803781de5a53efb05"><span class="std std-ref">GEOM_API</span></a><span></span> <span class="kt">float</span> <span class="doxyrest-code-target target" id="doxid-namespacegeom-1aea3427463302fb609fc1b5da651c0730"><span></span><span class="n">GetProjectionParameterClamped</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <span class="n">point</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="struct_geom_LineSegment3.html#doxid-structgeom-1-1-line-segment3"><span class="std std-ref">geom::LineSegment3</span></a><span></span><span class="o">&amp;</span> <span class="n">line_segment</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-g-e-o-m-2include-2-g-e-o-m-2-a-p-i-8h-1a323a363c36c1a28803781de5a53efb05"><span class="std std-ref">GEOM_API</span></a><span></span> <span class="kt">float</span> <a class="reference internal" href="#doxid-namespacegeom-1a25395986282d7a4f3fb2a42cc7342238"><span class="std std-ref">GetOrientedDistance</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <span class="n">point</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="struct_geom_Plane.html#doxid-structgeom-1-1-plane"><span class="std std-ref">Plane</span></a><span></span><span class="o">&amp;</span> <span class="n">plane</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-g-e-o-m-2include-2-g-e-o-m-2-a-p-i-8h-1a323a363c36c1a28803781de5a53efb05"><span class="std std-ref">GEOM_API</span></a><span></span> <span class="kt">float</span> <span class="doxyrest-code-target target" id="doxid-namespacegeom-1a2e1bbbbae124e6fe474d77b33e1bd13f"><span></span><span class="n">GetDistance</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <span class="n">point</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="struct_geom_LineSegment3.html#doxid-structgeom-1-1-line-segment3"><span class="std std-ref">geom::LineSegment3</span></a><span></span><span class="o">&amp;</span> <span class="n">line</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-g-e-o-m-2include-2-g-e-o-m-2-a-p-i-8h-1a323a363c36c1a28803781de5a53efb05"><span class="std std-ref">GEOM_API</span></a><span></span> <span class="kt">float</span> <a class="reference internal" href="#doxid-namespacegeom-1aace444f14c39468737439a767e176a36"><span class="std std-ref">GetDistance</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <span class="n">point</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="struct_geom_Plane.html#doxid-structgeom-1-1-plane"><span class="std std-ref">Plane</span></a><span></span><span class="o">&amp;</span> <span class="n">plane</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-g-e-o-m-2include-2-g-e-o-m-2-a-p-i-8h-1a323a363c36c1a28803781de5a53efb05"><span class="std std-ref">GEOM_API</span></a><span></span> <span class="kt">float</span> <span class="doxyrest-code-target target" id="doxid-namespacegeom-1aefebb9eed55c320e47524d7b97c02021"><span></span><span class="n">GetDistance</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <span class="n">point</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="#doxid-namespacegeom-1a36306473f61ddd18d67f0e23a2999287"><span class="std std-ref">geom::Line3</span></a><span></span><span class="o">&amp;</span> <span class="n">line</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-g-e-o-m-2include-2-g-e-o-m-2-a-p-i-8h-1a323a363c36c1a28803781de5a53efb05"><span class="std std-ref">GEOM_API</span></a><span></span> <span class="kt">float</span> <span class="doxyrest-code-target target" id="doxid-namespacegeom-1a590020834057e3b11b5ae83df206e555"><span></span><span class="n">GetDistance</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <span class="n">point</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="struct_geom_ConicalCapsule.html#doxid-structgeom-1-1-conical-capsule"><span class="std std-ref">ConicalCapsule</span></a><span></span><span class="o">&amp;</span> <span class="n">conical_capsuile</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-g-e-o-m-2include-2-g-e-o-m-2-a-p-i-8h-1a323a363c36c1a28803781de5a53efb05"><span class="std std-ref">GEOM_API</span></a><span></span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span> <span class="doxyrest-code-target target" id="doxid-namespacegeom-1ae1db764c4c602744dae350efdc90d135"><span></span><span class="n">GetProjection</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <span class="n">point</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="struct_geom_ConicalCapsule.html#doxid-structgeom-1-1-conical-capsule"><span class="std std-ref">ConicalCapsule</span></a><span></span><span class="o">&amp;</span> <span class="n">capsule</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-g-e-o-m-2include-2-g-e-o-m-2-a-p-i-8h-1a323a363c36c1a28803781de5a53efb05"><span class="std std-ref">GEOM_API</span></a><span></span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span> <span class="doxyrest-code-target target" id="doxid-namespacegeom-1aff6fa91f67f4e3b5d65dc81d654f3037"><span></span><span class="n">GetProjection</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <span class="n">point</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="struct_geom_LineSegment3.html#doxid-structgeom-1-1-line-segment3"><span class="std std-ref">LineSegment3</span></a><span></span><span class="o">&amp;</span> <span class="n">line_segment</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-g-e-o-m-2include-2-g-e-o-m-2-a-p-i-8h-1a323a363c36c1a28803781de5a53efb05"><span class="std std-ref">GEOM_API</span></a><span></span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span> <span class="doxyrest-code-target target" id="doxid-namespacegeom-1a53afb0e05551a7df09eb86e5bdaa448e"><span></span><span class="n">GetProjection</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <span class="n">point</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="#doxid-namespacegeom-1a36306473f61ddd18d67f0e23a2999287"><span class="std std-ref">Line3</span></a><span></span><span class="o">&amp;</span> <span class="n">line</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-g-e-o-m-2include-2-g-e-o-m-2-a-p-i-8h-1a323a363c36c1a28803781de5a53efb05"><span class="std std-ref">GEOM_API</span></a><span></span> <span class="kt">bool</span> <span class="doxyrest-code-target target" id="doxid-namespacegeom-1aaef19753f86427eb9443b4b99aa0312e"><span></span><span class="n">Contains</span></span><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="#doxid-namespacegeom-1a2d9f62f7d5b83591e36151a050ba75be"><span class="std std-ref">Aabb3</span></a><span></span><span class="o">&amp;</span> <span class="n">aabb</span><span class="p">,</span> <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <span class="n">point</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-g-e-o-m-2include-2-g-e-o-m-2-a-p-i-8h-1a323a363c36c1a28803781de5a53efb05"><span class="std std-ref">GEOM_API</span></a><span></span> <span class="n">std</span><span class="o">::</span><span class="n">optional</span><span class="o">&lt;</span><span class="n">glm</span><span class="o">::</span><span class="n">vec2</span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-namespacegeom-1af7de9bfaf4f5453b1b409f940e68816c"><span></span><span class="n">GetIntersection</span></span><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="#doxid-namespacegeom-1aec911905f03b416ede693d28cf43d3ba"><span class="std std-ref">geom::Line2</span></a><span></span><span class="o">&amp;</span> <span class="n">line1</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="#doxid-namespacegeom-1aec911905f03b416ede693d28cf43d3ba"><span class="std std-ref">geom::Line2</span></a><span></span><span class="o">&amp;</span> <span class="n">line2</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-g-e-o-m-2include-2-g-e-o-m-2-a-p-i-8h-1a323a363c36c1a28803781de5a53efb05"><span class="std std-ref">GEOM_API</span></a><span></span> <span class="kt">bool</span> <span class="doxyrest-code-target target" id="doxid-namespacegeom-1aea69583068031e06f558fbd2bac934db"><span></span><span class="n">GetIntersection</span></span><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="#doxid-namespacegeom-1aec911905f03b416ede693d28cf43d3ba"><span class="std std-ref">geom::Line2</span></a><span></span><span class="o">&amp;</span> <span class="n">line1</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="#doxid-namespacegeom-1aec911905f03b416ede693d28cf43d3ba"><span class="std std-ref">geom::Line2</span></a><span></span><span class="o">&amp;</span> <span class="n">line2</span><span class="p">,</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec2</span><span class="o">*</span> <span class="n">out_intersection_point</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-g-e-o-m-2include-2-g-e-o-m-2-a-p-i-8h-1a323a363c36c1a28803781de5a53efb05"><span class="std std-ref">GEOM_API</span></a><span></span> <span class="kt">bool</span> <span class="doxyrest-code-target target" id="doxid-namespacegeom-1aff74377b002590ae6626920f45226631"><span></span><span class="n">GetIntersection</span></span><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="#doxid-namespacegeom-1a36306473f61ddd18d67f0e23a2999287"><span class="std std-ref">geom::Line3</span></a><span></span><span class="o">&amp;</span> <span class="n">line</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="struct_geom_Plane.html#doxid-structgeom-1-1-plane"><span class="std std-ref">geom::Plane</span></a><span></span><span class="o">&amp;</span> <span class="n">plane</span><span class="p">,</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">*</span> <span class="n">out_intersection_point</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-g-e-o-m-2include-2-g-e-o-m-2-a-p-i-8h-1a323a363c36c1a28803781de5a53efb05"><span class="std std-ref">GEOM_API</span></a><span></span> <span class="kt">bool</span> <span class="doxyrest-code-target target" id="doxid-namespacegeom-1a433e3d28b986a613ba3f84655d4f1f18"><span></span><span class="n">GetIntersection</span></span><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_geom_LineSegment3.html#doxid-structgeom-1-1-line-segment3"><span class="std std-ref">geom::LineSegment3</span></a><span></span><span class="o">&amp;</span> <span class="n">linesegment</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="struct_geom_Plane.html#doxid-structgeom-1-1-plane"><span class="std std-ref">geom::Plane</span></a><span></span><span class="o">&amp;</span> <span class="n">plane</span><span class="p">,</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">*</span> <span class="n">out_intersection_point</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-g-e-o-m-2include-2-g-e-o-m-2-a-p-i-8h-1a323a363c36c1a28803781de5a53efb05"><span class="std std-ref">GEOM_API</span></a><span></span> <span class="kt">bool</span> <span class="doxyrest-code-target target" id="doxid-namespacegeom-1a4f5e63862f9d2254eabcd91e260e859d"><span></span><span class="n">GetIntersection</span></span><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="#doxid-namespacegeom-1a36306473f61ddd18d67f0e23a2999287"><span class="std std-ref">geom::Line3</span></a><span></span><span class="o">&amp;</span> <span class="n">line</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="struct_geom_HalfPlane.html#doxid-structgeom-1-1-half-plane"><span class="std std-ref">geom::HalfPlane</span></a><span></span><span class="o">&amp;</span> <span class="n">half_plane</span><span class="p">,</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">*</span> <span class="n">out_intersection_point</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-g-e-o-m-2include-2-g-e-o-m-2-a-p-i-8h-1a323a363c36c1a28803781de5a53efb05"><span class="std std-ref">GEOM_API</span></a><span></span> <span class="kt">bool</span> <span class="doxyrest-code-target target" id="doxid-namespacegeom-1a08c517987126e67255e386c943238703"><span></span><span class="n">GetIntersection</span></span><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_geom_LineSegment3.html#doxid-structgeom-1-1-line-segment3"><span class="std std-ref">geom::LineSegment3</span></a><span></span><span class="o">&amp;</span> <span class="n">linesegment</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="struct_geom_HalfPlane.html#doxid-structgeom-1-1-half-plane"><span class="std std-ref">geom::HalfPlane</span></a><span></span><span class="o">&amp;</span> <span class="n">half_plane</span><span class="p">,</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">*</span> <span class="n">out_intersection_point</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-g-e-o-m-2include-2-g-e-o-m-2-a-p-i-8h-1a323a363c36c1a28803781de5a53efb05"><span class="std std-ref">GEOM_API</span></a><span></span> <span class="kt">bool</span> <span class="doxyrest-code-target target" id="doxid-namespacegeom-1a3c0adab697c452fc39335de39f71aa88"><span></span><span class="n">GetIntersection</span></span><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_geom_Triangle3.html#doxid-structgeom-1-1-triangle3"><span class="std std-ref">geom::Triangle3</span></a><span></span><span class="o">&amp;</span> <span class="n">triangle</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="struct_geom_HalfPlane.html#doxid-structgeom-1-1-half-plane"><span class="std std-ref">geom::HalfPlane</span></a><span></span><span class="o">&amp;</span> <span class="n">halfplane</span><span class="p">,</span> <a class="reference internal" href="struct_geom_LineSegment3.html#doxid-structgeom-1-1-line-segment3"><span class="std std-ref">geom::LineSegment3</span></a><span></span><span class="o">*</span> <span class="n">out_intersection</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-g-e-o-m-2include-2-g-e-o-m-2-a-p-i-8h-1a323a363c36c1a28803781de5a53efb05"><span class="std std-ref">GEOM_API</span></a><span></span> <span class="kt">bool</span> <span class="doxyrest-code-target target" id="doxid-namespacegeom-1a9f3f89025a5dc6c16e7ac24bda9d530e"><span></span><span class="n">GetIntersection</span></span><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="#doxid-namespacegeom-1a36306473f61ddd18d67f0e23a2999287"><span class="std std-ref">geom::Line3</span></a><span></span><span class="o">&amp;</span> <span class="n">line</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="#doxid-namespacegeom-1a2d9f62f7d5b83591e36151a050ba75be"><span class="std std-ref">geom::Aabb3</span></a><span></span><span class="o">&amp;</span> <span class="n">aabb</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-g-e-o-m-2include-2-g-e-o-m-2-a-p-i-8h-1a323a363c36c1a28803781de5a53efb05"><span class="std std-ref">GEOM_API</span></a><span></span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span> <span class="doxyrest-code-target target" id="doxid-namespacegeom-1aeddfe351dd0968e18777ababa8b888a2"><span></span><span class="n">Barycentric</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <span class="n">p</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="struct_geom_Triangle3.html#doxid-structgeom-1-1-triangle3"><span class="std std-ref">Triangle3</span></a><span></span><span class="o">&amp;</span> <span class="n">triangle</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-g-e-o-m-2include-2-g-e-o-m-2-a-p-i-8h-1a323a363c36c1a28803781de5a53efb05"><span class="std std-ref">GEOM_API</span></a><span></span> <a class="reference internal" href="struct_geom_CollisionResult.html#doxid-structgeom-1-1-collision-result"><span class="std std-ref">CollisionResult</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespacegeom-1a2aac0bf03a825531717b876ac86a233b"><span></span><span class="n">GetCollision</span></span><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_geom_Capsule.html#doxid-structgeom-1-1-capsule"><span class="std std-ref">geom::Capsule</span></a><span></span><span class="o">&amp;</span> <span class="n">capsule_1</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="struct_geom_Capsule.html#doxid-structgeom-1-1-capsule"><span class="std std-ref">geom::Capsule</span></a><span></span><span class="o">&amp;</span> <span class="n">capsule_2</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-g-e-o-m-2include-2-g-e-o-m-2-a-p-i-8h-1a323a363c36c1a28803781de5a53efb05"><span class="std std-ref">GEOM_API</span></a><span></span> <span class="kt">bool</span> <span class="doxyrest-code-target target" id="doxid-namespacegeom-1aefeab4af8ec5b110a4ad0400f76f4fc7"><span></span><span class="n">IsTriangleFacingToPoint</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <span class="n">point</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="struct_geom_Triangle3.html#doxid-structgeom-1-1-triangle3"><span class="std std-ref">geom::Triangle3</span></a><span></span><span class="o">&amp;</span> <span class="n">triangle</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-g-e-o-m-2include-2-g-e-o-m-2-a-p-i-8h-1a323a363c36c1a28803781de5a53efb05"><span class="std std-ref">GEOM_API</span></a><span></span> <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-namespacegeom-1a68a7a0ec4d3aec704fa57987dcb5a88f"><span></span><span class="n">DijkstraAlgorithm</span></span><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_geom_Graph.html#doxid-structgeom-1-1-graph"><span class="std std-ref">Graph</span></a><span></span><span class="o">&amp;</span> <span class="n">graph</span><span class="p">,</span> <span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">start_vertex</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;&amp;</span> <span class="n">distances</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">previous</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-g-e-o-m-2include-2-g-e-o-m-2-a-p-i-8h-1a323a363c36c1a28803781de5a53efb05"><span class="std std-ref">GEOM_API</span></a><span></span> <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-namespacegeom-1ac01875c8ffc4a3db6479290f4613e074"><span></span><span class="n">DijkstraAlgorithm</span></span><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_geom_Graph.html#doxid-structgeom-1-1-graph"><span class="std std-ref">Graph</span></a><span></span><span class="o">&amp;</span> <span class="n">graph</span><span class="p">,</span> <span class="k">const</span> <span class="kt">unsigned</span> <span class="n">start_vertex</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;&amp;</span> <span class="n">vertex_weights</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;&amp;</span> <span class="n">out_distances</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">out_previous</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-g-e-o-m-2include-2-g-e-o-m-2-a-p-i-8h-1a323a363c36c1a28803781de5a53efb05"><span class="std std-ref">GEOM_API</span></a><span></span> <span class="kt">float</span> <span class="doxyrest-code-target target" id="doxid-namespacegeom-1a7c60b6ed49805f754054cfacab2cc35e"><span></span><span class="n">GetTriangleVolume</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec2</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec2</span><span class="o">&amp;</span> <span class="n">b</span><span class="p">,</span> <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec2</span><span class="o">&amp;</span> <span class="n">c</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-g-e-o-m-2include-2-g-e-o-m-2-a-p-i-8h-1a323a363c36c1a28803781de5a53efb05"><span class="std std-ref">GEOM_API</span></a><span></span> <span class="kt">float</span> <span class="doxyrest-code-target target" id="doxid-namespacegeom-1abd50baee667591718d8942a6472677e7"><span></span><span class="n">GetTriangleVolume</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <span class="n">b</span><span class="p">,</span> <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <span class="n">c</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-g-e-o-m-2include-2-g-e-o-m-2-a-p-i-8h-1a323a363c36c1a28803781de5a53efb05"><span class="std std-ref">GEOM_API</span></a><span></span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span> <span class="doxyrest-code-target target" id="doxid-namespacegeom-1ad45af1a47b0d762e995383a77f125cf7"><span></span><span class="n">GetTriangleNormalCW</span></span><span></span><span class="p">(</span><span class="n">glm</span><span class="o">::</span><span class="n">vec3</span> <span class="n">p0</span><span class="p">,</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span> <span class="n">p1</span><span class="p">,</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span> <span class="n">p2</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-g-e-o-m-2include-2-g-e-o-m-2-a-p-i-8h-1a323a363c36c1a28803781de5a53efb05"><span class="std std-ref">GEOM_API</span></a><span></span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span> <span class="doxyrest-code-target target" id="doxid-namespacegeom-1a4d818fb30b36536e389cd567066605bd"><span></span><span class="n">GetTriangleNormalCCW</span></span><span></span><span class="p">(</span><span class="n">glm</span><span class="o">::</span><span class="n">vec3</span> <span class="n">p0</span><span class="p">,</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span> <span class="n">p1</span><span class="p">,</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span> <span class="n">p2</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-g-e-o-m-2include-2-g-e-o-m-2-a-p-i-8h-1a323a363c36c1a28803781de5a53efb05"><span class="std std-ref">GEOM_API</span></a><span></span> <span class="kt">bool</span> <span class="doxyrest-code-target target" id="doxid-namespacegeom-1a34bf3c3f8f02c85fa3a81ac254b2c94b"><span></span><span class="n">LineTriangleIntersection</span></span><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_geom_Triangle3.html#doxid-structgeom-1-1-triangle3"><span class="std std-ref">geom::Triangle3</span></a><span></span> <span class="n">triangle</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="#doxid-namespacegeom-1a36306473f61ddd18d67f0e23a2999287"><span class="std std-ref">geom::Line3</span></a><span></span><span class="o">&amp;</span> <span class="n">line</span><span class="p">,</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <span class="n">out_intersection</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-g-e-o-m-2include-2-g-e-o-m-2-a-p-i-8h-1a323a363c36c1a28803781de5a53efb05"><span class="std std-ref">GEOM_API</span></a><span></span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span> <span class="doxyrest-code-target target" id="doxid-namespacegeom-1ac55c2cd9d23a0000be81a91106b62ab3"><span></span><span class="n">GetCentroid</span></span><span></span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;&amp;</span> <span class="n">vertices</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-g-e-o-m-2include-2-g-e-o-m-2-a-p-i-8h-1a323a363c36c1a28803781de5a53efb05"><span class="std std-ref">GEOM_API</span></a><span></span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span> <span class="doxyrest-code-target target" id="doxid-namespacegeom-1a59c2b0c46a1d59f518fa5e51539cde46"><span></span><span class="n">GetVertexLowestY</span></span><span></span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;&amp;</span> <span class="n">vertices</span><span class="p">);</span>
+
+<span class="p">}</span> <span class="c1">// namespace geom</span></pre>
+</div>
+<div class="section" id="detailed-documentation">
+<span id="details-namespacegeom"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
+<p>Set of structures for geometry and linear algebra.</p>
+<div class="section" id="typedefs">
+<h3>Typedefs<a class="headerlink" href="#typedefs" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacegeom-1aec911905f03b416ede693d28cf43d3ba"><span id="index-1"></span><span></span><span class="k">typedef</span> <a class="reference internal" href="struct_geom_Line.html#doxid-structgeom-1-1-line"><span class="std std-ref">Line</span></a><span></span><span class="o">&lt;</span><span class="mi">2</span><span class="o">&gt;</span> <span class="n">Line2</span></pre>
+<p>Definition of a line in a 2 dimensional space.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacegeom-1a36306473f61ddd18d67f0e23a2999287"><span id="index-2"></span><span></span><span class="k">typedef</span> <a class="reference internal" href="struct_geom_Line.html#doxid-structgeom-1-1-line"><span class="std std-ref">Line</span></a><span></span><span class="o">&lt;</span><span class="mi">3</span><span class="o">&gt;</span> <span class="n">Line3</span></pre>
+<p>Definition of a line in a 3 dimensional space.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacegeom-1a380742d368936b1287313c76e9854d88"><span id="index-3"></span><span></span><span class="k">typedef</span> <a class="reference internal" href="struct_geom_Ray.html#doxid-structgeom-1-1-ray"><span class="std std-ref">Ray</span></a><span></span><span class="o">&lt;</span><span class="mi">2</span><span class="o">&gt;</span> <span class="n">Ray2</span></pre>
+<p>Definition of a ray in a 2 dimensional space.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacegeom-1a4c6a493600f6763020caf7ab0f1cb9cc"><span id="index-4"></span><span></span><span class="k">typedef</span> <a class="reference internal" href="struct_geom_Ray.html#doxid-structgeom-1-1-ray"><span class="std std-ref">Ray</span></a><span></span><span class="o">&lt;</span><span class="mi">3</span><span class="o">&gt;</span> <span class="n">Ray3</span></pre>
+<p>Definition of a ray in a 3 dimensional space.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacegeom-1a24e70f36f92b318e8943ac7e264cf9b2"><span id="index-5"></span><span></span><span class="k">typedef</span> <a class="reference internal" href="struct_geom_TSphere.html#doxid-structgeom-1-1-t-sphere"><span class="std std-ref">TSphere</span></a><span></span><span class="o">&lt;</span><span class="mi">2</span><span class="p">,</span> <span class="kt">float</span><span class="o">&gt;</span> <span class="n">Circle</span></pre>
+<p>Definition of a float type circle.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacegeom-1ab32ddc49905a23aace3465200f6ca756"><span id="index-6"></span><span></span><span class="k">typedef</span> <a class="reference internal" href="struct_geom_TSphere.html#doxid-structgeom-1-1-t-sphere"><span class="std std-ref">TSphere</span></a><span></span><span class="o">&lt;</span><span class="mi">3</span><span class="p">,</span> <span class="kt">float</span><span class="o">&gt;</span> <span class="n">Sphere</span></pre>
+<p>Definition of a float type sphere.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacegeom-1aae970993b7fa668a5db522cf7afd8ee8"><span id="index-7"></span><span></span><span class="k">typedef</span> <a class="reference internal" href="struct_geom_TRect.html#doxid-structgeom-1-1-t-rect"><span class="std std-ref">TRect</span></a><span></span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span> <span class="n">Rect</span></pre>
+<p>Definition of a float type rectangle.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacegeom-1adb3a7eb15bd929c7e195e8977b1cf345"><span id="index-8"></span><span></span><span class="k">typedef</span> <a class="reference internal" href="struct_geom_TRect.html#doxid-structgeom-1-1-t-rect"><span class="std std-ref">TRect</span></a><span></span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">IRect</span></pre>
+<p>Definition of an integer type rectangle.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacegeom-1afab8414dc489f74855bec90a1211d2c5"><span id="index-9"></span><span></span><span class="k">typedef</span> <a class="reference internal" href="struct_geom_TRect.html#doxid-structgeom-1-1-t-rect"><span class="std std-ref">TRect</span></a><span></span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="o">&gt;</span> <span class="n">URect</span></pre>
+<p>Definition of an unsigned integer type rectangle.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacegeom-1ada1b518d6c7ba0efea7fbcee83e90e6e"><span id="index-10"></span><span></span><span class="k">typedef</span> <a class="reference internal" href="struct_geom_TAabb.html#doxid-structgeom-1-1-t-aabb"><span class="std std-ref">TAabb</span></a><span></span><span class="o">&lt;</span><span class="mi">2</span><span class="p">,</span> <span class="kt">float</span><span class="o">&gt;</span> <span class="n">Aabb2</span></pre>
+<p>Two dimensional axis aligned bounding box.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacegeom-1a2d9f62f7d5b83591e36151a050ba75be"><span id="index-11"></span><span></span><span class="k">typedef</span> <a class="reference internal" href="struct_geom_TAabb.html#doxid-structgeom-1-1-t-aabb"><span class="std std-ref">TAabb</span></a><span></span><span class="o">&lt;</span><span class="mi">3</span><span class="p">,</span> <span class="kt">float</span><span class="o">&gt;</span> <span class="n">Aabb3</span></pre>
+<p>Three dimensional axis aligned bounding box.</p>
+</div>
+<div class="section" id="global-variables">
+<h3>Global Variables<a class="headerlink" href="#global-variables" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacegeom-1aa84a39535c5aadbec87390c2a24ac725"><span id="index-12"></span><span></span><span class="k">static</span> <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span> <span class="n">Vec3X</span> <span class="o">=</span> <span class="n">AxisToVec3</span><span class="p">(</span><a class="reference internal" href="enum_geom_Axis.html#doxid-namespacegeom-1a583d7c1a69ddc030c80e2970caaa5fbea9dd4e461268c8034f5c8564e155c67a6"><span class="std std-ref">Axis::x</span></a><span></span><span class="p">)</span></pre>
+<p>Definition of a unit 3D vector in X axis.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacegeom-1aadac929555f16bbf355624375d241fa9"><span id="index-13"></span><span></span><span class="k">static</span> <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span> <span class="n">Vec3Y</span> <span class="o">=</span> <span class="n">AxisToVec3</span><span class="p">(</span><a class="reference internal" href="enum_geom_Axis.html#doxid-namespacegeom-1a583d7c1a69ddc030c80e2970caaa5fbea415290769594460e2e485922904f345d"><span class="std std-ref">Axis::y</span></a><span></span><span class="p">)</span></pre>
+<p>Definition of a unit 3D vector in Y axis.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacegeom-1a1c4d8be97d1eb1e5a592b82d26b5c61a"><span id="index-14"></span><span></span><span class="k">static</span> <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span> <span class="n">Vec3Z</span> <span class="o">=</span> <span class="n">AxisToVec3</span><span class="p">(</span><a class="reference internal" href="enum_geom_Axis.html#doxid-namespacegeom-1a583d7c1a69ddc030c80e2970caaa5fbeafbade9e36a3f36d3d676c1b808451dd7"><span class="std std-ref">Axis::z</span></a><span></span><span class="p">)</span></pre>
+<p>Definition of a unit 3D vector in Z axis.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacegeom-1affcfcb99e0cb43ecb907eb6dc8a95e71"><span id="index-15"></span><span></span><span class="k">static</span> <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec4</span> <span class="n">Vec4X</span> <span class="o">=</span> <span class="n">AxisToVec4</span><span class="p">(</span><a class="reference internal" href="enum_geom_Axis.html#doxid-namespacegeom-1a583d7c1a69ddc030c80e2970caaa5fbea9dd4e461268c8034f5c8564e155c67a6"><span class="std std-ref">Axis::x</span></a><span></span><span class="p">)</span></pre>
+<p>Definition of a unit 4D vector in X axis.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacegeom-1a69297e6c1bbf338fae0996edb3fb8f42"><span id="index-16"></span><span></span><span class="k">static</span> <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec4</span> <span class="n">Vec4Y</span> <span class="o">=</span> <span class="n">AxisToVec4</span><span class="p">(</span><a class="reference internal" href="enum_geom_Axis.html#doxid-namespacegeom-1a583d7c1a69ddc030c80e2970caaa5fbea415290769594460e2e485922904f345d"><span class="std std-ref">Axis::y</span></a><span></span><span class="p">)</span></pre>
+<p>Definition of a unit 4D vector in Y axis.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacegeom-1a9c1b444ff855942f89fe58c960da1a5e"><span id="index-17"></span><span></span><span class="k">static</span> <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec4</span> <span class="n">Vec4Z</span> <span class="o">=</span> <span class="n">AxisToVec4</span><span class="p">(</span><a class="reference internal" href="enum_geom_Axis.html#doxid-namespacegeom-1a583d7c1a69ddc030c80e2970caaa5fbeafbade9e36a3f36d3d676c1b808451dd7"><span class="std std-ref">Axis::z</span></a><span></span><span class="p">)</span></pre>
+<p>Definition of a unit 4D vector in Z axis.</p>
+</div>
+<div class="section" id="global-functions">
+<h3>Global Functions<a class="headerlink" href="#global-functions" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacegeom-1a2525ca7a2ccd2c36a9130f33a56b9bf9"><span id="index-18"></span><span></span><span class="k">static</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span> <span class="n">AxisToVec3</span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="enum_geom_Axis.html#doxid-namespacegeom-1a583d7c1a69ddc030c80e2970caaa5fbe"><span class="std std-ref">geom::Axis</span></a><span></span> <span class="n">axis</span><span class="p">)</span></pre>
+<p>Converts an Axis to the glm::vec3.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacegeom-1a2387a0a9d6c1eaee0067ce1493aaa18e"><span id="index-19"></span><span></span><span class="k">static</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec4</span> <span class="n">AxisToVec4</span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="enum_geom_Axis.html#doxid-namespacegeom-1a583d7c1a69ddc030c80e2970caaa5fbe"><span class="std std-ref">geom::Axis</span></a><span></span> <span class="n">axis</span><span class="p">)</span></pre>
+<p>Converts an Axis to the glm::vec4. Homogenic (w) coordinate is zero.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacegeom-1a25395986282d7a4f3fb2a42cc7342238"><span id="index-20"></span><a class="reference internal" href="global.html#doxid-g-e-o-m-2include-2-g-e-o-m-2-a-p-i-8h-1a323a363c36c1a28803781de5a53efb05"><span class="std std-ref">GEOM_API</span></a><span></span> <span class="kt">float</span> <span class="n">GetOrientedDistance</span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <span class="n">point</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="struct_geom_Plane.html#doxid-structgeom-1-1-plane"><span class="std std-ref">Plane</span></a><span></span><span class="o">&amp;</span> <span class="n">plane</span><span class="p">)</span></pre>
+<p>Calculates the oriented distance of point to a plane. The value is positive if the point lies in the half-space pointed to by the plane normal.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacegeom-1aace444f14c39468737439a767e176a36"><span id="index-21"></span><a class="reference internal" href="global.html#doxid-g-e-o-m-2include-2-g-e-o-m-2-a-p-i-8h-1a323a363c36c1a28803781de5a53efb05"><span class="std std-ref">GEOM_API</span></a><span></span> <span class="kt">float</span> <span class="n">GetDistance</span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <span class="n">point</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="struct_geom_Plane.html#doxid-structgeom-1-1-plane"><span class="std std-ref">Plane</span></a><span></span><span class="o">&amp;</span> <span class="n">plane</span><span class="p">)</span></pre>
+<p>Calculate the distance of a point from plane.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Skeletex Research
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

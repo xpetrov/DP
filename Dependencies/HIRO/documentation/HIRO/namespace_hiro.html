@@ -1,0 +1,441 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>namespace hiro &mdash; HIRO 0.4.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/hiro-fav-32.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/target-highlight.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/hiro_theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-sphinx_rtd_theme.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="namespace hiro::draw" href="namespace_hiro_draw.html" />
+    <link rel="prev" title="template class glm_ext::TransMat" href="class_glm_ext_TransMat.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: rgb(248, 216, 60)" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/hiro-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_0.html">T0: Setting up Visual Studio Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_1.html">T1: Introduction to HIRO GUI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_2.html">T2: Creating Custom Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_3.html">T3: Overview of Gadget Features</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="shader_api.html">Shader API</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="global.html">Global Namespace</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="namespace_cegui_ext.html">namespace cegui_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_dialog.html">namespace dialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_file_types.html">namespace file_types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_fs.html">namespace fs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_func.html">namespace func</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_geom.html">namespace geom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_glm_ext.html">namespace glm_ext</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">namespace hiro</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro_draw.html">namespace hiro::draw</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro_gui.html">namespace hiro::gui</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro_modules.html">namespace hiro::modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro_shader.html">namespace hiro::shader</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_BoolFunc.html">enum hiro::BoolFunc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_EventStatus.html">enum hiro::EventStatus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_Key.html">enum hiro::Key</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_Mod.html">enum hiro::Mod</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_MouseButton.html">enum hiro::MouseButton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_hiro_ActiveResourceInfo.html">struct hiro::ActiveResourceInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_hiro_ResourceId.html">struct hiro::ResourceId</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Camera.html">class hiro::Camera</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Debugger.html">class hiro::Debugger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Exportable.html">class hiro::Exportable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Gadget.html">class hiro::Gadget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_GuiGenerator.html">class hiro::GuiGenerator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_GuiPanel.html">class hiro::GuiPanel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_ModKeys.html">class hiro::ModKeys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Resource.html">class hiro::Resource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#detailed-documentation">Detailed Documentation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#typedefs">Typedefs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#global-functions">Global Functions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_omp_ext.html">namespace omp_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_std_ext.html">namespace std_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_time_m.html">namespace time_m</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_ulog.html">namespace ulog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_uprogress.html">namespace uprogress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_utils.html">namespace utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_Config.html">class Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_IDialogInterface.html">class IDialogInterface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_WxWidgetsDialog.html">class WxWidgetsDialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">HIRO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="global.html">Global Namespace</a> &raquo;</li>
+        
+      <li>namespace hiro</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="namespace-hiro">
+<span id="doxid-namespacehiro"></span><span id="index-0"></span><h1>namespace hiro<a class="headerlink" href="#namespace-hiro" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Global engine namespace containing core definitions. <a class="reference internal" href="#details-namespacehiro"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="k">namespace</span> <span class="n">hiro</span> <span class="p">{</span>
+
+<span class="c1">// namespaces</span>
+
+<span class="k">namespace</span> <a class="reference internal" href="namespace_hiro_draw.html#doxid-namespacehiro-1-1draw"><span class="std std-ref">hiro::draw</span></a><span></span><span class="p">;</span>
+<span class="k">namespace</span> <a class="reference internal" href="namespace_hiro_gui.html#doxid-namespacehiro-1-1gui"><span class="std std-ref">hiro::gui</span></a><span></span><span class="p">;</span>
+<span class="k">namespace</span> <a class="reference internal" href="namespace_hiro_modules.html#doxid-namespacehiro-1-1modules"><span class="std std-ref">hiro::modules</span></a><span></span><span class="p">;</span>
+<span class="k">namespace</span> <a class="reference internal" href="namespace_hiro_shader.html#doxid-namespacehiro-1-1shader"><span class="std std-ref">hiro::shader</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// typedefs</span>
+
+<span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="class_hiro_Gadget.html#doxid-classhiro-1-1-gadget"><span class="std std-ref">hiro::Gadget</span></a><span></span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacehiro-1af5a611ffe07b4678a72ce9b00e78f724"><span class="std std-ref">PGadget</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">function</span><span class="o">&lt;</span><span class="kt">void</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;&amp;</span><span class="p">)</span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-namespacehiro-1a30af8decb39284ac8f55d5baf5e51d33"><span></span><span class="n">FileDropCallback</span></span><span></span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">function</span><span class="o">&lt;</span><span class="kt">void</span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="enum_hiro_Key.html#doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27b"><span class="std std-ref">hiro::Key</span></a><span></span><span class="o">&amp;</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="class_hiro_ModKeys.html#doxid-classhiro-1-1-mod-keys"><span class="std std-ref">hiro::ModKeys</span></a><span></span><span class="o">&amp;</span><span class="p">)</span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-namespacehiro-1acb1a876ce345ffe7a29bacba381f1841"><span></span><span class="n">KeyCallback</span></span><span></span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="class_hiro_Resource.html#doxid-classhiro-1-1-resource"><span class="std std-ref">hiro::Resource</span></a><span></span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacehiro-1abf34651d31855eb0226d49c716b6c526"><span class="std std-ref">PResource</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// enums</span>
+
+<span class="k">enum</span> <a class="reference internal" href="enum_hiro_BoolFunc.html#doxid-namespacehiro-1a2ef2e3950be34c55304e31ea622361dc"><span class="std std-ref">BoolFunc</span></a><span></span><span class="p">;</span>
+<span class="k">enum</span> <a class="reference internal" href="enum_hiro_EventStatus.html#doxid-namespacehiro-1ae38b69923d5ce1a05fc7ea77caeffd84"><span class="std std-ref">EventStatus</span></a><span></span><span class="p">;</span>
+<span class="k">enum</span> <a class="reference internal" href="enum_hiro_Key.html#doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27b"><span class="std std-ref">Key</span></a><span></span><span class="p">;</span>
+<span class="k">enum</span> <a class="reference internal" href="enum_hiro_Mod.html#doxid-namespacehiro-1a72fb0eb77eb950a49ac83a94c59075d5"><span class="std std-ref">Mod</span></a><span></span><span class="p">;</span>
+<span class="k">enum</span> <a class="reference internal" href="enum_hiro_MouseButton.html#doxid-namespacehiro-1ac10e402e841e732c46666de2ea1c1b79"><span class="std std-ref">MouseButton</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// structs</span>
+
+<span class="k">struct</span> <a class="reference internal" href="struct_hiro_ActiveResourceInfo.html#doxid-structhiro-1-1-active-resource-info"><span class="std std-ref">ActiveResourceInfo</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_hiro_ResourceId.html#doxid-structhiro-1-1-resource-id"><span class="std std-ref">ResourceId</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// classes</span>
+
+<span class="k">class</span> <a class="reference internal" href="class_hiro_Camera.html#doxid-classhiro-1-1-camera"><span class="std std-ref">Camera</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_hiro_Debugger.html#doxid-classhiro-1-1-debugger"><span class="std std-ref">Debugger</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_hiro_Exportable.html#doxid-classhiro-1-1-exportable"><span class="std std-ref">Exportable</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_hiro_Gadget.html#doxid-classhiro-1-1-gadget"><span class="std std-ref">Gadget</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_hiro_GuiGenerator.html#doxid-classhiro-1-1-gui-generator"><span class="std std-ref">GuiGenerator</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_hiro_GuiPanel.html#doxid-classhiro-1-1-gui-panel"><span class="std std-ref">GuiPanel</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_hiro_ModKeys.html#doxid-classhiro-1-1-mod-keys"><span class="std std-ref">ModKeys</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_hiro_Resource.html#doxid-classhiro-1-1-resource"><span class="std std-ref">Resource</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// global functions</span>
+
+<a class="reference internal" href="struct_hiro_Camera_Pose.html#doxid-structhiro-1-1-camera-1-1-pose"><span class="std std-ref">hiro::Camera::Pose</span></a><span></span> <a class="reference internal" href="#doxid-namespacehiro-1a2c4084c1a07bf82f97719027776c77a4"><span class="std std-ref">Interpolate</span></a><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_hiro_Camera_Pose.html#doxid-structhiro-1-1-camera-1-1-pose"><span class="std std-ref">hiro::Camera::Pose</span></a><span></span><span class="o">&amp;</span> <span class="n">p0</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="struct_hiro_Camera_Pose.html#doxid-structhiro-1-1-camera-1-1-pose"><span class="std std-ref">hiro::Camera::Pose</span></a><span></span><span class="o">&amp;</span> <span class="n">p1</span><span class="p">,</span> <span class="kt">float</span> <span class="n">t</span><span class="p">);</span>
+<a class="reference internal" href="struct_hiro_Camera_Pose.html#doxid-structhiro-1-1-camera-1-1-pose"><span class="std std-ref">hiro::Camera::Pose</span></a><span></span> <a class="reference internal" href="#doxid-namespacehiro-1ae4ea43a6af53bda52da85ea338ff8f5c"><span class="std std-ref">InterpolateCubic</span></a><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_hiro_Camera_Pose.html#doxid-structhiro-1-1-camera-1-1-pose"><span class="std std-ref">hiro::Camera::Pose</span></a><span></span><span class="o">&amp;</span> <span class="n">p0</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="struct_hiro_Camera_Pose.html#doxid-structhiro-1-1-camera-1-1-pose"><span class="std std-ref">hiro::Camera::Pose</span></a><span></span><span class="o">&amp;</span> <span class="n">p1</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="struct_hiro_Camera_Pose.html#doxid-structhiro-1-1-camera-1-1-pose"><span class="std std-ref">hiro::Camera::Pose</span></a><span></span><span class="o">&amp;</span> <span class="n">p2</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="struct_hiro_Camera_Pose.html#doxid-structhiro-1-1-camera-1-1-pose"><span class="std std-ref">hiro::Camera::Pose</span></a><span></span><span class="o">&amp;</span> <span class="n">p3</span><span class="p">,</span> <span class="kt">float</span> <span class="n">t</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-h-i-r-o-2include-2-h-i-r-o-2-a-p-i-8h-1aa31852fc640a6776e1c8bc676bfb48a7"><span class="std std-ref">HIRO_API</span></a><span></span> <a class="reference internal" href="struct_utils_Version.html#doxid-structutils-1-1-version"><span class="std std-ref">utils::Version</span></a><span></span> <a class="reference internal" href="#doxid-namespacehiro-1a80af2c2ef6e1ac647bd52a2bb552fd1c"><span class="std std-ref">GetVersion</span></a><span></span><span class="p">();</span>
+<a class="reference internal" href="global.html#doxid-h-i-r-o-2include-2-h-i-r-o-2-a-p-i-8h-1aa31852fc640a6776e1c8bc676bfb48a7"><span class="std std-ref">HIRO_API</span></a><span></span> <span class="kt">void</span> <a class="reference internal" href="#doxid-namespacehiro-1a64e83d62f49ccf76168b201988291e46"><span class="std std-ref">SetIntermediateDirectory</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">dir</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-h-i-r-o-2include-2-h-i-r-o-2-a-p-i-8h-1aa31852fc640a6776e1c8bc676bfb48a7"><span class="std std-ref">HIRO_API</span></a><span></span> <span class="kt">void</span> <a class="reference internal" href="#doxid-namespacehiro-1a6df80d25872263c6f74422d61314ed77"><span class="std std-ref">SetAssetDirectory</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">dir</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-h-i-r-o-2include-2-h-i-r-o-2-a-p-i-8h-1aa31852fc640a6776e1c8bc676bfb48a7"><span class="std std-ref">HIRO_API</span></a><span></span> <span class="kt">void</span> <a class="reference internal" href="#doxid-namespacehiro-1aab599446fded6d2fa110bf375635a1fe"><span class="std std-ref">Initialize</span></a><span></span><span class="p">();</span>
+<a class="reference internal" href="global.html#doxid-h-i-r-o-2include-2-h-i-r-o-2-a-p-i-8h-1aa31852fc640a6776e1c8bc676bfb48a7"><span class="std std-ref">HIRO_API</span></a><span></span> <span class="kt">void</span> <a class="reference internal" href="#doxid-namespacehiro-1aa893a7b0a07490de096bcb96a833293e"><span class="std std-ref">Initialize</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">custom_look</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-h-i-r-o-2include-2-h-i-r-o-2-a-p-i-8h-1aa31852fc640a6776e1c8bc676bfb48a7"><span class="std std-ref">HIRO_API</span></a><span></span> <span class="kt">void</span> <a class="reference internal" href="#doxid-namespacehiro-1adf337d4483752ce627fd5a2a70a78055"><span class="std std-ref">Terminate</span></a><span></span><span class="p">();</span>
+<a class="reference internal" href="global.html#doxid-h-i-r-o-2include-2-h-i-r-o-2-a-p-i-8h-1aa31852fc640a6776e1c8bc676bfb48a7"><span class="std std-ref">HIRO_API</span></a><span></span> <span class="kt">bool</span> <a class="reference internal" href="#doxid-namespacehiro-1a9193197027a7cb0dc4b6d68106e2ffe1"><span class="std std-ref">IsOpen</span></a><span></span><span class="p">();</span>
+<a class="reference internal" href="global.html#doxid-h-i-r-o-2include-2-h-i-r-o-2-a-p-i-8h-1aa31852fc640a6776e1c8bc676bfb48a7"><span class="std std-ref">HIRO_API</span></a><span></span> <span class="kt">void</span> <a class="reference internal" href="#doxid-namespacehiro-1ab4bfbc35dd2eeb8b7e433564c729f4a5"><span class="std std-ref">Update</span></a><span></span><span class="p">();</span>
+<a class="reference internal" href="global.html#doxid-h-i-r-o-2include-2-h-i-r-o-2-a-p-i-8h-1aa31852fc640a6776e1c8bc676bfb48a7"><span class="std std-ref">HIRO_API</span></a><span></span> <span class="kt">void</span> <a class="reference internal" href="#doxid-namespacehiro-1a8f41034a79cdba98d99db8249ce87ee2"><span class="std std-ref">AddResource</span></a><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="#doxid-namespacehiro-1abf34651d31855eb0226d49c716b6c526"><span class="std std-ref">hiro::PResource</span></a><span></span><span class="o">&amp;</span> <span class="n">resource</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-h-i-r-o-2include-2-h-i-r-o-2-a-p-i-8h-1aa31852fc640a6776e1c8bc676bfb48a7"><span class="std std-ref">HIRO_API</span></a><span></span> <span class="kt">void</span> <a class="reference internal" href="#doxid-namespacehiro-1a035715b225e5114aed392c86b62a94d4"><span class="std std-ref">RemoveAllResources</span></a><span></span><span class="p">();</span>
+<span class="kt">void</span> <a class="reference internal" href="#doxid-namespacehiro-1a2806d485b36a67bad1cc7e74b8b9e31c"><span class="std std-ref">RemoveResourcesWithPrefix</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">prefix</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-h-i-r-o-2include-2-h-i-r-o-2-a-p-i-8h-1aa31852fc640a6776e1c8bc676bfb48a7"><span class="std std-ref">HIRO_API</span></a><span></span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><a class="reference internal" href="struct_hiro_ActiveResourceInfo.html#doxid-structhiro-1-1-active-resource-info"><span class="std std-ref">hiro::ActiveResourceInfo</span></a><span></span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacehiro-1a1a7ebf3f75b74dc0860dadcabb19b8f7"><span class="std std-ref">GetActiveResources</span></a><span></span><span class="p">();</span>
+<a class="reference internal" href="global.html#doxid-h-i-r-o-2include-2-h-i-r-o-2-a-p-i-8h-1aa31852fc640a6776e1c8bc676bfb48a7"><span class="std std-ref">HIRO_API</span></a><span></span> <a class="reference internal" href="class_hiro_Debugger.html#doxid-classhiro-1-1-debugger"><span class="std std-ref">hiro::Debugger</span></a><span></span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-namespacehiro-1ac9016623ea548c154394b66d852cf64a"><span class="std std-ref">Debug</span></a><span></span><span class="p">();</span>
+<a class="reference internal" href="global.html#doxid-h-i-r-o-2include-2-h-i-r-o-2-a-p-i-8h-1aa31852fc640a6776e1c8bc676bfb48a7"><span class="std std-ref">HIRO_API</span></a><span></span> <span class="kt">void</span> <a class="reference internal" href="#doxid-namespacehiro-1a901c910d4d8620cb9501cac6558a2a3d"><span class="std std-ref">SetFileDropCallback</span></a><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="#doxid-namespacehiro-1a30af8decb39284ac8f55d5baf5e51d33"><span class="std std-ref">FileDropCallback</span></a><span></span><span class="o">&amp;</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-h-i-r-o-2include-2-h-i-r-o-2-a-p-i-8h-1aa31852fc640a6776e1c8bc676bfb48a7"><span class="std std-ref">HIRO_API</span></a><span></span> <span class="kt">void</span> <a class="reference internal" href="#doxid-namespacehiro-1aac1e150c7ab9a9999083e95dce32f03e"><span class="std std-ref">SetKeyDownCallback</span></a><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="#doxid-namespacehiro-1acb1a876ce345ffe7a29bacba381f1841"><span class="std std-ref">KeyCallback</span></a><span></span><span class="o">&amp;</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-h-i-r-o-2include-2-h-i-r-o-2-a-p-i-8h-1aa31852fc640a6776e1c8bc676bfb48a7"><span class="std std-ref">HIRO_API</span></a><span></span> <span class="kt">void</span> <a class="reference internal" href="#doxid-namespacehiro-1a4b27ed7d64799e780d45856b250fd57f"><span class="std std-ref">SetKeyUpCallback</span></a><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="#doxid-namespacehiro-1acb1a876ce345ffe7a29bacba381f1841"><span class="std std-ref">KeyCallback</span></a><span></span><span class="o">&amp;</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-h-i-r-o-2include-2-h-i-r-o-2-a-p-i-8h-1aa31852fc640a6776e1c8bc676bfb48a7"><span class="std std-ref">HIRO_API</span></a><span></span> <span class="kt">bool</span> <a class="reference internal" href="#doxid-namespacehiro-1a6cf760acf4c2c55d75709e3ec95f99d1"><span class="std std-ref">IsAxesVisible</span></a><span></span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">viewarea_id</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-h-i-r-o-2include-2-h-i-r-o-2-a-p-i-8h-1aa31852fc640a6776e1c8bc676bfb48a7"><span class="std std-ref">HIRO_API</span></a><span></span> <span class="kt">void</span> <a class="reference internal" href="#doxid-namespacehiro-1ad2f5fbd7613f273d2525c0401b132564"><span class="std std-ref">SetAxesVisible</span></a><span></span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">viewarea_id</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">visible</span><span class="p">);</span>
+
+<span class="p">}</span> <span class="c1">// namespace hiro</span></pre>
+</div>
+<div class="section" id="detailed-documentation">
+<span id="details-namespacehiro"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
+<p>Global engine namespace containing core definitions.</p>
+<div class="section" id="typedefs">
+<h3>Typedefs<a class="headerlink" href="#typedefs" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1af5a611ffe07b4678a72ce9b00e78f724"><span id="index-1"></span><span></span><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="class_hiro_Gadget.html#doxid-classhiro-1-1-gadget"><span class="std std-ref">hiro::Gadget</span></a><span></span><span class="o">&gt;</span> <span class="n">PGadget</span></pre>
+<p>Shared pointer to <a class="reference internal" href="class_hiro_Gadget.html#doxid-classhiro-1-1-gadget"><span class="std std-ref">Gadget</span></a>.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1abf34651d31855eb0226d49c716b6c526"><span id="index-2"></span><span></span><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="class_hiro_Resource.html#doxid-classhiro-1-1-resource"><span class="std std-ref">hiro::Resource</span></a><span></span><span class="o">&gt;</span> <span class="n">PResource</span></pre>
+<p>Shared pointer to <a class="reference internal" href="class_hiro_Resource.html#doxid-classhiro-1-1-resource"><span class="std std-ref">Resource</span></a>.</p>
+</div>
+<div class="section" id="global-functions">
+<h3>Global Functions<a class="headerlink" href="#global-functions" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1a2c4084c1a07bf82f97719027776c77a4"><span id="index-3"></span><a class="reference internal" href="struct_hiro_Camera_Pose.html#doxid-structhiro-1-1-camera-1-1-pose"><span class="std std-ref">hiro::Camera::Pose</span></a><span></span> <span class="n">Interpolate</span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_hiro_Camera_Pose.html#doxid-structhiro-1-1-camera-1-1-pose"><span class="std std-ref">hiro::Camera::Pose</span></a><span></span><span class="o">&amp;</span> <span class="n">p0</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="struct_hiro_Camera_Pose.html#doxid-structhiro-1-1-camera-1-1-pose"><span class="std std-ref">hiro::Camera::Pose</span></a><span></span><span class="o">&amp;</span> <span class="n">p1</span><span class="p">,</span> <span class="kt">float</span> <span class="n">t</span><span class="p">)</span></pre>
+<p>Interpolates two camera poses using linear interpolation.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>p0</p></td>
+<td><p>Start pose.</p></td>
+</tr>
+<tr class="row-even"><td><p>p1</p></td>
+<td><p>End pose.</p></td>
+</tr>
+<tr class="row-odd"><td><p>t</p></td>
+<td><p>Interpolation factor in range &lt;0,1&gt;, where 0 returns p0 and 1 returns p1.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Returns:</p>
+<p>Interpolated pose.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1ae4ea43a6af53bda52da85ea338ff8f5c"><span id="index-4"></span><a class="reference internal" href="struct_hiro_Camera_Pose.html#doxid-structhiro-1-1-camera-1-1-pose"><span class="std std-ref">hiro::Camera::Pose</span></a><span></span> <span class="n">InterpolateCubic</span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_hiro_Camera_Pose.html#doxid-structhiro-1-1-camera-1-1-pose"><span class="std std-ref">hiro::Camera::Pose</span></a><span></span><span class="o">&amp;</span> <span class="n">p0</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="struct_hiro_Camera_Pose.html#doxid-structhiro-1-1-camera-1-1-pose"><span class="std std-ref">hiro::Camera::Pose</span></a><span></span><span class="o">&amp;</span> <span class="n">p1</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="struct_hiro_Camera_Pose.html#doxid-structhiro-1-1-camera-1-1-pose"><span class="std std-ref">hiro::Camera::Pose</span></a><span></span><span class="o">&amp;</span> <span class="n">p2</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="struct_hiro_Camera_Pose.html#doxid-structhiro-1-1-camera-1-1-pose"><span class="std std-ref">hiro::Camera::Pose</span></a><span></span><span class="o">&amp;</span> <span class="n">p3</span><span class="p">,</span> <span class="kt">float</span> <span class="n">t</span><span class="p">)</span></pre>
+<p>Interpolates camera poses using cubic spline interpolation.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>p0</p></td>
+<td><p>Pose before start pose.</p></td>
+</tr>
+<tr class="row-even"><td><p>p1</p></td>
+<td><p>Start pose.</p></td>
+</tr>
+<tr class="row-odd"><td><p>p2</p></td>
+<td><p>End pose.</p></td>
+</tr>
+<tr class="row-even"><td><p>p3</p></td>
+<td><p>Pose after end pose.</p></td>
+</tr>
+<tr class="row-odd"><td><p>t</p></td>
+<td><p>Interpolation factor in range &lt;0,1&gt;.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Returns:</p>
+<p>Interpolated pose.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1a80af2c2ef6e1ac647bd52a2bb552fd1c"><span id="index-5"></span><a class="reference internal" href="global.html#doxid-h-i-r-o-2include-2-h-i-r-o-2-a-p-i-8h-1aa31852fc640a6776e1c8bc676bfb48a7"><span class="std std-ref">HIRO_API</span></a><span></span> <a class="reference internal" href="struct_utils_Version.html#doxid-structutils-1-1-version"><span class="std std-ref">utils::Version</span></a><span></span> <span class="n">GetVersion</span><span class="p">()</span></pre>
+<p>Returns current library version.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1a64e83d62f49ccf76168b201988291e46"><span id="index-6"></span><a class="reference internal" href="global.html#doxid-h-i-r-o-2include-2-h-i-r-o-2-a-p-i-8h-1aa31852fc640a6776e1c8bc676bfb48a7"><span class="std std-ref">HIRO_API</span></a><span></span> <span class="kt">void</span> <span class="n">SetIntermediateDirectory</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">dir</span><span class="p">)</span></pre>
+<p>Sets directory where hiro stores temporal cache data.</p>
+<p>Needs to be called before initialization using <a class="reference internal" href="#doxid-namespacehiro-1aab599446fded6d2fa110bf375635a1fe"><span class="std std-ref">hiro::Initialize()</span></a>.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1a6df80d25872263c6f74422d61314ed77"><span id="index-7"></span><a class="reference internal" href="global.html#doxid-h-i-r-o-2include-2-h-i-r-o-2-a-p-i-8h-1aa31852fc640a6776e1c8bc676bfb48a7"><span class="std std-ref">HIRO_API</span></a><span></span> <span class="kt">void</span> <span class="n">SetAssetDirectory</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">dir</span><span class="p">)</span></pre>
+<p>Sets directory where are sub-folders “resources” and “shaders” present.</p>
+<p>Needs to be called before initialization using <a class="reference internal" href="#doxid-namespacehiro-1aab599446fded6d2fa110bf375635a1fe"><span class="std std-ref">hiro::Initialize()</span></a>.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1aab599446fded6d2fa110bf375635a1fe"><span id="index-8"></span><a class="reference internal" href="global.html#doxid-h-i-r-o-2include-2-h-i-r-o-2-a-p-i-8h-1aa31852fc640a6776e1c8bc676bfb48a7"><span class="std std-ref">HIRO_API</span></a><span></span> <span class="kt">void</span> <span class="n">Initialize</span><span class="p">()</span></pre>
+<p>Initializes the library. From this moment the library can be fully used.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1aa893a7b0a07490de096bcb96a833293e"><span id="index-9"></span><a class="reference internal" href="global.html#doxid-h-i-r-o-2include-2-h-i-r-o-2-a-p-i-8h-1aa31852fc640a6776e1c8bc676bfb48a7"><span class="std std-ref">HIRO_API</span></a><span></span> <span class="kt">void</span> <span class="n">Initialize</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">custom_look</span><span class="p">)</span></pre>
+<p>Initializes the library with custom look visuals of application on startup.</p>
+<p>Not available in educational version of HIRO library.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1adf337d4483752ce627fd5a2a70a78055"><span id="index-10"></span><a class="reference internal" href="global.html#doxid-h-i-r-o-2include-2-h-i-r-o-2-a-p-i-8h-1aa31852fc640a6776e1c8bc676bfb48a7"><span class="std std-ref">HIRO_API</span></a><span></span> <span class="kt">void</span> <span class="n">Terminate</span><span class="p">()</span></pre>
+<p>Terminates the library. Call to release all HIRO related data.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1a9193197027a7cb0dc4b6d68106e2ffe1"><span id="index-11"></span><a class="reference internal" href="global.html#doxid-h-i-r-o-2include-2-h-i-r-o-2-a-p-i-8h-1aa31852fc640a6776e1c8bc676bfb48a7"><span class="std std-ref">HIRO_API</span></a><span></span> <span class="kt">bool</span> <span class="n">IsOpen</span><span class="p">()</span></pre>
+<p>Check whether hiro window has not been closed.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1ab4bfbc35dd2eeb8b7e433564c729f4a5"><span id="index-12"></span><a class="reference internal" href="global.html#doxid-h-i-r-o-2include-2-h-i-r-o-2-a-p-i-8h-1aa31852fc640a6776e1c8bc676bfb48a7"><span class="std std-ref">HIRO_API</span></a><span></span> <span class="kt">void</span> <span class="n">Update</span><span class="p">()</span></pre>
+<p>Updates window and redraws if required.</p>
+<p>Ensure that this function is called regularly in your application. If not, it may cause window freezing and lag.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1a8f41034a79cdba98d99db8249ce87ee2"><span id="index-13"></span><a class="reference internal" href="global.html#doxid-h-i-r-o-2include-2-h-i-r-o-2-a-p-i-8h-1aa31852fc640a6776e1c8bc676bfb48a7"><span class="std std-ref">HIRO_API</span></a><span></span> <span class="kt">void</span> <span class="n">AddResource</span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="#doxid-namespacehiro-1abf34651d31855eb0226d49c716b6c526"><span class="std std-ref">hiro::PResource</span></a><span></span><span class="o">&amp;</span> <span class="n">resource</span><span class="p">)</span></pre>
+<p>Add specified resource to the list of available resources.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1a035715b225e5114aed392c86b62a94d4"><span id="index-14"></span><a class="reference internal" href="global.html#doxid-h-i-r-o-2include-2-h-i-r-o-2-a-p-i-8h-1aa31852fc640a6776e1c8bc676bfb48a7"><span class="std std-ref">HIRO_API</span></a><span></span> <span class="kt">void</span> <span class="n">RemoveAllResources</span><span class="p">()</span></pre>
+<p>Remove all resources from the list of available resources.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1a2806d485b36a67bad1cc7e74b8b9e31c"><span id="index-15"></span><span></span><span class="kt">void</span> <span class="n">RemoveResourcesWithPrefix</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">prefix</span><span class="p">)</span></pre>
+<p>Remove all resources whose name includes prefix from the list of available resources.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1a1a7ebf3f75b74dc0860dadcabb19b8f7"><span id="index-16"></span><a class="reference internal" href="global.html#doxid-h-i-r-o-2include-2-h-i-r-o-2-a-p-i-8h-1aa31852fc640a6776e1c8bc676bfb48a7"><span class="std std-ref">HIRO_API</span></a><span></span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><a class="reference internal" href="struct_hiro_ActiveResourceInfo.html#doxid-structhiro-1-1-active-resource-info"><span class="std std-ref">hiro::ActiveResourceInfo</span></a><span></span><span class="o">&gt;</span> <span class="n">GetActiveResources</span><span class="p">()</span></pre>
+<p>Returns information about all resources currently active in context.</p>
+<p>Active <a class="reference internal" href="class_hiro_Resource.html#doxid-classhiro-1-1-resource"><span class="std std-ref">Resource</span></a> objects are the ones that were used to create at least one <a class="reference internal" href="class_hiro_Gadget.html#doxid-classhiro-1-1-gadget"><span class="std std-ref">Gadget</span></a> ant it still exists.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1ac9016623ea548c154394b66d852cf64a"><span id="index-17"></span><a class="reference internal" href="global.html#doxid-h-i-r-o-2include-2-h-i-r-o-2-a-p-i-8h-1aa31852fc640a6776e1c8bc676bfb48a7"><span class="std std-ref">HIRO_API</span></a><span></span> <a class="reference internal" href="class_hiro_Debugger.html#doxid-classhiro-1-1-debugger"><span class="std std-ref">hiro::Debugger</span></a><span></span><span class="o">&amp;</span> <span class="n">Debug</span><span class="p">()</span></pre>
+<p>Returns handle to visual debugger.</p>
+<p>The visual debugger provides visualization of debug objects, useful fo visual feedback. When the library is not initialized yet, this function throws std::runtime_error.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1a901c910d4d8620cb9501cac6558a2a3d"><span id="index-18"></span><a class="reference internal" href="global.html#doxid-h-i-r-o-2include-2-h-i-r-o-2-a-p-i-8h-1aa31852fc640a6776e1c8bc676bfb48a7"><span class="std std-ref">HIRO_API</span></a><span></span> <span class="kt">void</span> <span class="n">SetFileDropCallback</span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="#doxid-namespacehiro-1a30af8decb39284ac8f55d5baf5e51d33"><span class="std std-ref">FileDropCallback</span></a><span></span><span class="o">&amp;</span><span class="p">)</span></pre>
+<p>Sets a unique function called when files are dropped onto an active HIRO window.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1aac1e150c7ab9a9999083e95dce32f03e"><span id="index-19"></span><a class="reference internal" href="global.html#doxid-h-i-r-o-2include-2-h-i-r-o-2-a-p-i-8h-1aa31852fc640a6776e1c8bc676bfb48a7"><span class="std std-ref">HIRO_API</span></a><span></span> <span class="kt">void</span> <span class="n">SetKeyDownCallback</span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="#doxid-namespacehiro-1acb1a876ce345ffe7a29bacba381f1841"><span class="std std-ref">KeyCallback</span></a><span></span><span class="o">&amp;</span><span class="p">)</span></pre>
+<p>Sets a unique function called when a key is pressed in an active HIRO window.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1a4b27ed7d64799e780d45856b250fd57f"><span id="index-20"></span><a class="reference internal" href="global.html#doxid-h-i-r-o-2include-2-h-i-r-o-2-a-p-i-8h-1aa31852fc640a6776e1c8bc676bfb48a7"><span class="std std-ref">HIRO_API</span></a><span></span> <span class="kt">void</span> <span class="n">SetKeyUpCallback</span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="#doxid-namespacehiro-1acb1a876ce345ffe7a29bacba381f1841"><span class="std std-ref">KeyCallback</span></a><span></span><span class="o">&amp;</span><span class="p">)</span></pre>
+<p>Sets a unique function called when a key is released in an active HIRO window.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1a6cf760acf4c2c55d75709e3ec95f99d1"><span id="index-21"></span><a class="reference internal" href="global.html#doxid-h-i-r-o-2include-2-h-i-r-o-2-a-p-i-8h-1aa31852fc640a6776e1c8bc676bfb48a7"><span class="std std-ref">HIRO_API</span></a><span></span> <span class="kt">bool</span> <span class="n">IsAxesVisible</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">viewarea_id</span><span class="p">)</span></pre>
+<p>Returns axes visibility state in the viewarea with the given id.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1ad2f5fbd7613f273d2525c0401b132564"><span id="index-22"></span><a class="reference internal" href="global.html#doxid-h-i-r-o-2include-2-h-i-r-o-2-a-p-i-8h-1aa31852fc640a6776e1c8bc676bfb48a7"><span class="std std-ref">HIRO_API</span></a><span></span> <span class="kt">void</span> <span class="n">SetAxesVisible</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">viewarea_id</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">visible</span><span class="p">)</span></pre>
+<p>Sets axes visibility in the viewarea with the given id.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Skeletex Research
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

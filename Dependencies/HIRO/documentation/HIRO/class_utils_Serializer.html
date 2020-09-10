@@ -1,0 +1,332 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>template class utils::Serializer &mdash; HIRO 0.4.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/hiro-fav-32.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/target-highlight.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/hiro_theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-sphinx_rtd_theme.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="template class utils::Statistics" href="class_utils_Statistics.html" />
+    <link rel="prev" title="class utils::OnEnd" href="class_utils_OnEnd.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: rgb(248, 216, 60)" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/hiro-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_0.html">T0: Setting up Visual Studio Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_1.html">T1: Introduction to HIRO GUI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_2.html">T2: Creating Custom Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_3.html">T3: Overview of Gadget Features</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="shader_api.html">Shader API</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="global.html">Global Namespace</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="namespace_cegui_ext.html">namespace cegui_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_dialog.html">namespace dialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_file_types.html">namespace file_types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_fs.html">namespace fs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_func.html">namespace func</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_geom.html">namespace geom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_glm_ext.html">namespace glm_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_hiro.html">namespace hiro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_omp_ext.html">namespace omp_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_std_ext.html">namespace std_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_time_m.html">namespace time_m</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_ulog.html">namespace ulog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_uprogress.html">namespace uprogress</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="namespace_utils.html">namespace utils</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="enum_utils_BaseAxis.html">enum utils::BaseAxis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_utils_Handedness.html">enum utils::Handedness</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_utils_LicenseState.html">enum utils::LicenseState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_utils_Units.html">enum utils::Units</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_utils_IntrinsicParams.html">struct utils::IntrinsicParams</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_utils_Property.html">template struct utils::Property</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_utils_PropertyByValue.html">template struct utils::PropertyByValue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_utils_SpaceDefinition.html">struct utils::SpaceDefinition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_utils_StrongId.html">template struct utils::StrongId</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_utils_StrongOptionalType.html">template struct utils::StrongOptionalType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_utils_StrongType.html">template struct utils::StrongType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_utils_Version.html">struct utils::Version</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_CallbackTimer.html">class utils::CallbackTimer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_ConcurrentBinding.html">template class utils::ConcurrentBinding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_Couple.html">template class utils::Couple</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_DelegatedNotifier.html">template class utils::DelegatedNotifier</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_Dictionary.html">class utils::Dictionary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_EnumFlags.html">template class utils::EnumFlags</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_EventHandler.html">class utils::EventHandler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_GlmQuatSerializable.html">class utils::GlmQuatSerializable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_GlmVec3Serializable.html">class utils::GlmVec3Serializable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_Identifiable.html">template class utils::Identifiable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_IniParser.html">class utils::IniParser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_Interval.html">class utils::Interval</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_LicenseChecker.html">class utils::LicenseChecker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_LogEntry.html">class utils::LogEntry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_LogReader.html">class utils::LogReader</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_LogWriter.html">class utils::LogWriter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_Logger.html">class utils::Logger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_NamedClass.html">template class utils::NamedClass</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_Notifier.html">template class utils::Notifier</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_OnEnd.html">class utils::OnEnd</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">template class utils::Serializer</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_Statistics.html">template class utils::Statistics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_Triplet.html">template class utils::Triplet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_utils.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_utils.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_Config.html">class Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_IDialogInterface.html">class IDialogInterface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_WxWidgetsDialog.html">class WxWidgetsDialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">HIRO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="global.html">Global Namespace</a> &raquo;</li>
+        
+          <li><a href="namespace_utils.html">namespace utils</a> &raquo;</li>
+        
+      <li>template class utils::Serializer</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="template-class-utils-serializer">
+<span id="doxid-classutils-1-1-serializer"></span><span id="index-0"></span><h1>template class utils::Serializer<a class="headerlink" href="#template-class-utils-serializer" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Serialization utility class. Can perform automatic read and write. <a class="reference internal" href="#details-classutils-1-1-serializer"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;Serializer.h&gt;</span><span class="cp"></span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Type</span><span class="p">,</span> <span class="k">typename</span> <span class="n">SerializableType</span><span class="o">&gt;</span>
+<span class="k">class</span> <span class="n">Serializer</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="c1">// construction</span>
+
+    <span class="doxyrest-code-target target" id="doxid-classutils-1-1-serializer-1a2df0543f023344efdda9e24b3f479511"><span></span><span class="n">Serializer</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">root_name</span><span class="p">);</span>
+
+    <span class="c1">// methods</span>
+
+    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-classutils-1-1-serializer-1a2002c00ca972c171eb346849f32efcde"><span class="std std-ref">FromJsonString</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">json_string</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&gt;</span> <a class="reference internal" href="#doxid-classutils-1-1-serializer-1ad85b39e5d8cc47c5d241f2fd0c12e22a"><span class="std std-ref">FromJsonStringAsPtr</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">json_string</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">string</span> <a class="reference internal" href="#doxid-classutils-1-1-serializer-1a9817bf5f806f629b8c144cc452095a56"><span class="std std-ref">ToJsonString</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">objects</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-classutils-1-1-serializer-1a1a94188a29d6375e74b69616593030e3"><span class="std std-ref">FromJsonFile</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">file_path</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&gt;</span> <a class="reference internal" href="#doxid-classutils-1-1-serializer-1aa8c47f0ba703cc3f03e2adaf3a7057b8"><span class="std std-ref">FromJsonFileAsPtr</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">file_path</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">bool</span> <a class="reference internal" href="#doxid-classutils-1-1-serializer-1a545a7e7ef0f3629f72142edae9b9ccc3"><span class="std std-ref">ToJsonFile</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">objects</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">file_path</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+<span class="p">};</span></pre>
+</div>
+<div class="section" id="detailed-documentation">
+<span id="details-classutils-1-1-serializer"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
+<p>Serialization utility class. Can perform automatic read and write.</p>
+<p>Uses the “cereal” serialization library - <a class="reference external" href="https://uscilab.github.io/cereal/index.html">https://uscilab.github.io/cereal/index.html</a>. Cereal allows the possibility to save-load in formats:</p>
+<ul class="simple">
+<li><p>Binary</p></li>
+<li><p>JSON</p></li>
+<li><p>XML So far this library only makes use of the “JSON” option.</p></li>
+</ul>
+<div class="section" id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classutils-1-1-serializer-1a2002c00ca972c171eb346849f32efcde"><span id="index-1"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span> <span class="n">FromJsonString</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">json_string</span><span class="p">)</span> <span class="k">const</span></pre>
+<p>Read JSON string.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classutils-1-1-serializer-1ad85b39e5d8cc47c5d241f2fd0c12e22a"><span id="index-2"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&gt;</span> <span class="n">FromJsonStringAsPtr</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">json_string</span><span class="p">)</span> <span class="k">const</span></pre>
+<p>Read JSON string, return as shared pointers.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classutils-1-1-serializer-1a9817bf5f806f629b8c144cc452095a56"><span id="index-3"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">ToJsonString</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">objects</span><span class="p">)</span> <span class="k">const</span></pre>
+<p>Serialize to JSON string.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classutils-1-1-serializer-1a1a94188a29d6375e74b69616593030e3"><span id="index-4"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span> <span class="n">FromJsonFile</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">file_path</span><span class="p">)</span> <span class="k">const</span></pre>
+<p>Read from JSON file by path.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classutils-1-1-serializer-1aa8c47f0ba703cc3f03e2adaf3a7057b8"><span id="index-5"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&gt;</span> <span class="n">FromJsonFileAsPtr</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">file_path</span><span class="p">)</span> <span class="k">const</span></pre>
+<p>Read from JSON file by path, return as shared pointers.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classutils-1-1-serializer-1a545a7e7ef0f3629f72142edae9b9ccc3"><span id="index-6"></span><span></span><span class="kt">bool</span> <span class="n">ToJsonFile</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">objects</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">file_path</span><span class="p">)</span> <span class="k">const</span></pre>
+<p>Serialize to JSON string and save to file.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Skeletex Research
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

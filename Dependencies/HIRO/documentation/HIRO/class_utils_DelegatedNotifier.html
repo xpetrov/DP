@@ -1,0 +1,346 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>template class utils::DelegatedNotifier &mdash; HIRO 0.4.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/hiro-fav-32.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/target-highlight.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/hiro_theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-sphinx_rtd_theme.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="class utils::Dictionary" href="class_utils_Dictionary.html" />
+    <link rel="prev" title="template class utils::Couple" href="class_utils_Couple.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: rgb(248, 216, 60)" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/hiro-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_0.html">T0: Setting up Visual Studio Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_1.html">T1: Introduction to HIRO GUI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_2.html">T2: Creating Custom Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_3.html">T3: Overview of Gadget Features</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="shader_api.html">Shader API</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="global.html">Global Namespace</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="namespace_cegui_ext.html">namespace cegui_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_dialog.html">namespace dialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_file_types.html">namespace file_types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_fs.html">namespace fs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_func.html">namespace func</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_geom.html">namespace geom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_glm_ext.html">namespace glm_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_hiro.html">namespace hiro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_omp_ext.html">namespace omp_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_std_ext.html">namespace std_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_time_m.html">namespace time_m</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_ulog.html">namespace ulog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_uprogress.html">namespace uprogress</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="namespace_utils.html">namespace utils</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="enum_utils_BaseAxis.html">enum utils::BaseAxis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_utils_Handedness.html">enum utils::Handedness</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_utils_LicenseState.html">enum utils::LicenseState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_utils_Units.html">enum utils::Units</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_utils_IntrinsicParams.html">struct utils::IntrinsicParams</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_utils_Property.html">template struct utils::Property</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_utils_PropertyByValue.html">template struct utils::PropertyByValue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_utils_SpaceDefinition.html">struct utils::SpaceDefinition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_utils_StrongId.html">template struct utils::StrongId</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_utils_StrongOptionalType.html">template struct utils::StrongOptionalType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_utils_StrongType.html">template struct utils::StrongType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_utils_Version.html">struct utils::Version</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_CallbackTimer.html">class utils::CallbackTimer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_ConcurrentBinding.html">template class utils::ConcurrentBinding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_Couple.html">template class utils::Couple</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">template class utils::DelegatedNotifier</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_Dictionary.html">class utils::Dictionary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_EnumFlags.html">template class utils::EnumFlags</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_EventHandler.html">class utils::EventHandler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_GlmQuatSerializable.html">class utils::GlmQuatSerializable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_GlmVec3Serializable.html">class utils::GlmVec3Serializable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_Identifiable.html">template class utils::Identifiable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_IniParser.html">class utils::IniParser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_Interval.html">class utils::Interval</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_LicenseChecker.html">class utils::LicenseChecker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_LogEntry.html">class utils::LogEntry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_LogReader.html">class utils::LogReader</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_LogWriter.html">class utils::LogWriter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_Logger.html">class utils::Logger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_NamedClass.html">template class utils::NamedClass</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_Notifier.html">template class utils::Notifier</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_OnEnd.html">class utils::OnEnd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_Serializer.html">template class utils::Serializer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_Statistics.html">template class utils::Statistics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_Triplet.html">template class utils::Triplet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_utils.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_utils.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_Config.html">class Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_IDialogInterface.html">class IDialogInterface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_WxWidgetsDialog.html">class WxWidgetsDialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">HIRO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="global.html">Global Namespace</a> &raquo;</li>
+        
+          <li><a href="namespace_utils.html">namespace utils</a> &raquo;</li>
+        
+      <li>template class utils::DelegatedNotifier</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="template-class-utils-delegatednotifier">
+<span id="doxid-classutils-1-1-delegated-notifier"></span><span id="index-0"></span><h1>template class utils::DelegatedNotifier<a class="headerlink" href="#template-class-utils-delegatednotifier" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>An extension to <a class="reference internal" href="class_utils_Notifier.html#doxid-classutils-1-1-notifier"><span class="std std-ref">Notifier</span></a> - does not notify by itself. Instead it collects notifications and allows external code to call them when it pleases. <a class="reference internal" href="#details-classutils-1-1-delegated-notifier"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;Notifier.h&gt;</span><span class="cp"></span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span><span class="p">...</span> <span class="n">Args</span><span class="o">&gt;</span>
+<span class="k">class</span> <span class="nl">DelegatedNotifier</span><span class="p">:</span> <span class="k">public</span> <a class="reference internal" href="class_utils_Notifier.html#doxid-classutils-1-1-notifier"><span class="std std-ref">utils::Notifier</span></a><span></span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="c1">// methods</span>
+
+    <span class="k">virtual</span> <span class="kt">void</span> <a class="reference internal" href="#doxid-classutils-1-1-delegated-notifier-1a1333b7fc71a5caa97367d19ef1209697"><span class="std std-ref">Notify</span></a><span></span><span class="p">(</span><span class="n">Args</span><span class="p">...</span> <span class="n">args</span><span class="p">);</span>
+    <span class="k">virtual</span> <span class="kt">void</span> <a class="reference internal" href="#doxid-classutils-1-1-delegated-notifier-1a055df5d1e71f3a318c4b2c3bfaf70188"><span class="std std-ref">SendAllNotifications</span></a><span></span><span class="p">();</span>
+    <span class="k">virtual</span> <span class="kt">void</span> <a class="reference internal" href="#doxid-classutils-1-1-delegated-notifier-1aebad655bdeb2e838c69eb5f2bcf2864d"><span class="std std-ref">WaitUntilAllSent</span></a><span></span><span class="p">();</span>
+
+<span class="k">protected</span><span class="o">:</span>
+    <span class="c1">// fields</span>
+
+    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="n">Args</span><span class="p">...</span><span class="o">&gt;&gt;</span> <a class="reference internal" href="#doxid-classutils-1-1-delegated-notifier-1a19087e05ff6f84801b34ae3ac05bfaba"><span class="std std-ref">tuples_</span></a><span></span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">condition_variable</span> <a class="reference internal" href="#doxid-classutils-1-1-delegated-notifier-1a90a3a460dbda9667a151f4f9317bea7e"><span class="std std-ref">notifier_condition_</span></a><span></span><span class="p">;</span>
+<span class="p">};</span></pre>
+<div class="section" id="inherited-members">
+<h3>Inherited Members<a class="headerlink" href="#inherited-members" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-overview-inherited-code-block literal-block"><span></span><span class="k">public</span><span class="o">:</span>
+    <span class="c1">// typedefs</span>
+
+    <span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">function</span><span class="o">&lt;</span><span class="kt">void</span><span class="p">(</span><span class="n">Args</span><span class="p">...)</span><span class="o">&gt;</span> <a class="reference internal" href="class_utils_Notifier.html#doxid-classutils-1-1-notifier-1a9176b1ba821fee4f5eb70da3ebd20f99"><span class="std std-ref">CallbackType</span></a><span></span><span class="p">;</span>
+
+    <span class="c1">// methods</span>
+
+    <span class="kt">void</span> <a class="reference internal" href="class_utils_Notifier.html#doxid-classutils-1-1-notifier-1a94beb78e01fec48e1d0e14811c076b75"><span class="std std-ref">AddCallback</span></a><span></span><span class="p">(</span><a class="reference internal" href="class_utils_Notifier.html#doxid-classutils-1-1-notifier-1a9176b1ba821fee4f5eb70da3ebd20f99"><span class="std std-ref">CallbackType</span></a><span></span> <span class="n">callback</span><span class="p">);</span>
+    <span class="k">virtual</span> <span class="kt">void</span> <a class="reference internal" href="class_utils_Notifier.html#doxid-classutils-1-1-notifier-1affa9d5ccf481c7aebdc5a7fad7151ee4"><span class="std std-ref">Notify</span></a><span></span><span class="p">(</span><span class="n">Args</span><span class="p">...</span> <span class="n">args</span><span class="p">);</span>
+    <span class="kt">bool</span> <a class="reference internal" href="class_utils_Notifier.html#doxid-classutils-1-1-notifier-1a76fbd8b75d2d2e175a652f14302876e1"><span class="std std-ref">HasCallback</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+
+<span class="k">protected</span><span class="o">:</span>
+    <span class="c1">// fields</span>
+
+    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><a class="reference internal" href="class_utils_Notifier.html#doxid-classutils-1-1-notifier-1a9176b1ba821fee4f5eb70da3ebd20f99"><span class="std std-ref">CallbackType</span></a><span></span><span class="o">&gt;</span> <a class="reference internal" href="class_utils_Notifier.html#doxid-classutils-1-1-notifier-1ad63cb63ad8ebc69d12a82a70d105c3dd"><span class="std std-ref">callbacks_</span></a><span></span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">mutex</span> <a class="reference internal" href="class_utils_Notifier.html#doxid-classutils-1-1-notifier-1abd84a797c394702f85760742628609bf"><span class="std std-ref">notifier_access_</span></a><span></span><span class="p">;</span></pre>
+</div>
+</div>
+<div class="section" id="detailed-documentation">
+<span id="details-classutils-1-1-delegated-notifier"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
+<p>An extension to <a class="reference internal" href="class_utils_Notifier.html#doxid-classutils-1-1-notifier"><span class="std std-ref">Notifier</span></a> - does not notify by itself. Instead it collects notifications and allows external code to call them when it pleases.</p>
+<p>The motivation is thread safety. The usage is that the owner (to whom the notification functionality is delegated), must call the SendAllNotifications function at the appropriate moment.</p>
+<div class="section" id="fields">
+<h3>Fields<a class="headerlink" href="#fields" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classutils-1-1-delegated-notifier-1a19087e05ff6f84801b34ae3ac05bfaba"><span id="index-1"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="n">Args</span><span class="p">...</span><span class="o">&gt;&gt;</span> <span class="n">tuples_</span></pre>
+<p>The collected arguments to be executed on the next execution loop call.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classutils-1-1-delegated-notifier-1a90a3a460dbda9667a151f4f9317bea7e"><span id="index-2"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">condition_variable</span> <span class="n">notifier_condition_</span></pre>
+<p>Condition variable to trigger rechecking conditions.</p>
+</div>
+<div class="section" id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classutils-1-1-delegated-notifier-1a1333b7fc71a5caa97367d19ef1209697"><span id="index-3"></span><span></span><span class="k">virtual</span> <span class="kt">void</span> <span class="n">Notify</span><span class="p">(</span><span class="n">Args</span><span class="p">...</span> <span class="n">args</span><span class="p">)</span></pre>
+<p>Notify does not execute all notifications - it merely collects the arguments and allows the Owner to execute them when it pleases.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classutils-1-1-delegated-notifier-1a055df5d1e71f3a318c4b2c3bfaf70188"><span id="index-4"></span><span></span><span class="k">virtual</span> <span class="kt">void</span> <span class="n">SendAllNotifications</span><span class="p">()</span></pre>
+<p>Send all collected notifications at this moment.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classutils-1-1-delegated-notifier-1aebad655bdeb2e838c69eb5f2bcf2864d"><span id="index-5"></span><span></span><span class="k">virtual</span> <span class="kt">void</span> <span class="n">WaitUntilAllSent</span><span class="p">()</span></pre>
+<p>Wait until all notifications are sent.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Skeletex Research
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

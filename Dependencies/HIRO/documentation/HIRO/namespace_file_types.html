@@ -1,0 +1,321 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>namespace file_types &mdash; HIRO 0.4.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/hiro-fav-32.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/target-highlight.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/hiro_theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-sphinx_rtd_theme.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="enum file_types::Type" href="enum_file_types_Type.html" />
+    <link rel="prev" title="namespace dialog" href="namespace_dialog.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: rgb(248, 216, 60)" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/hiro-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_0.html">T0: Setting up Visual Studio Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_1.html">T1: Introduction to HIRO GUI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_2.html">T2: Creating Custom Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_3.html">T3: Overview of Gadget Features</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="shader_api.html">Shader API</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="global.html">Global Namespace</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="namespace_cegui_ext.html">namespace cegui_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_dialog.html">namespace dialog</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">namespace file_types</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="enum_file_types_Type.html">enum file_types::Type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#detailed-documentation">Detailed Documentation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#global-variables">Global Variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#global-functions">Global Functions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_fs.html">namespace fs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_func.html">namespace func</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_geom.html">namespace geom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_glm_ext.html">namespace glm_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_hiro.html">namespace hiro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_omp_ext.html">namespace omp_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_std_ext.html">namespace std_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_time_m.html">namespace time_m</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_ulog.html">namespace ulog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_uprogress.html">namespace uprogress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_utils.html">namespace utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_Config.html">class Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_IDialogInterface.html">class IDialogInterface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_WxWidgetsDialog.html">class WxWidgetsDialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">HIRO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="global.html">Global Namespace</a> &raquo;</li>
+        
+      <li>namespace file_types</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="namespace-file-types">
+<span id="doxid-namespacefile-types"></span><span id="index-0"></span><h1>namespace file_types<a class="headerlink" href="#namespace-file-types" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Definitions and functions for file types supported by codebase. <a class="reference internal" href="#details-namespacefile-types"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="k">namespace</span> <span class="n">file_types</span> <span class="p">{</span>
+
+<span class="c1">// enums</span>
+
+<span class="k">enum</span> <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640"><span class="std std-ref">Type</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// global variables</span>
+
+<span class="k">static</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640"><span class="std std-ref">Type</span></a><span></span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacefile-types-1a1b5b7ef70d17ab5f41622fd990cc0ccc"><span class="std std-ref">file_extensions</span></a><span></span> <span class="o">=</span>   <span class="p">{</span>     <span class="p">{</span> <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640a2c171a2fd58e214f70dc505a979e239b"><span class="std std-ref">Type::praw</span></a><span></span><span class="p">,</span> <span class="s">&quot;praw&quot;</span> <span class="p">},</span>     <span class="p">{</span> <span class="n">Type</span><span class="o">::</span><span class="n">cogs</span><span class="p">,</span> <span class="s">&quot;cogs&quot;</span> <span class="p">},</span>     <span class="p">{</span> <span class="n">Type</span><span class="o">::</span><span class="n">ply</span><span class="p">,</span> <span class="s">&quot;ply&quot;</span> <span class="p">},</span>     <span class="p">{</span> <span class="n">Type</span><span class="o">::</span><span class="n">obj</span><span class="p">,</span> <span class="s">&quot;obj&quot;</span> <span class="p">},</span>     <span class="p">{</span> <span class="n">Type</span><span class="o">::</span><span class="n">dae</span><span class="p">,</span> <span class="s">&quot;dae&quot;</span> <span class="p">},</span>     <span class="p">{</span> <span class="n">Type</span><span class="o">::</span><span class="n">stl</span><span class="p">,</span> <span class="s">&quot;stl&quot;</span> <span class="p">},</span>     <span class="p">{</span> <span class="n">Type</span><span class="o">::</span><span class="n">fbx</span><span class="p">,</span> <span class="s">&quot;fbx&quot;</span> <span class="p">},</span>     <span class="p">{</span> <span class="n">Type</span><span class="o">::</span><span class="n">bvh</span><span class="p">,</span> <span class="s">&quot;bvh&quot;</span> <span class="p">},</span>     <span class="p">{</span> <span class="n">Type</span><span class="o">::</span><span class="n">jpg</span><span class="p">,</span> <span class="s">&quot;jpg&quot;</span> <span class="p">},</span>     <span class="p">{</span> <span class="n">Type</span><span class="o">::</span><span class="n">png</span><span class="p">,</span> <span class="s">&quot;png&quot;</span> <span class="p">},</span>     <span class="p">{</span> <span class="n">Type</span><span class="o">::</span><span class="n">gif</span><span class="p">,</span> <span class="s">&quot;gif&quot;</span> <span class="p">},</span>     <span class="p">{</span> <span class="n">Type</span><span class="o">::</span><span class="n">bmp</span><span class="p">,</span> <span class="s">&quot;bmp&quot;</span> <span class="p">},</span>     <span class="p">{</span> <span class="n">Type</span><span class="o">::</span><span class="n">exr</span><span class="p">,</span> <span class="s">&quot;exr&quot;</span> <span class="p">},</span>   <span class="p">};</span>
+<span class="k">static</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640"><span class="std std-ref">Type</span></a><span></span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacefile-types-1a428f890de8aad816d690400bf6d9dcad"><span class="std std-ref">all_types</span></a><span></span> <span class="o">=</span> <a class="reference internal" href="namespace_std_ext.html#doxid-namespacestd-ext-1ad8e5d9a078ec4af6f5828e57d7fa9e07"><span class="std std-ref">std_ext::Transformed</span></a><span></span><span class="p">(</span><span class="n">file_extensions</span><span class="p">,</span>       <span class="p">[](</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640"><span class="std std-ref">Type</span></a><span></span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;&amp;</span><span class="n">pair</span><span class="p">)</span><span class="o">-&gt;</span><a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640"><span class="std std-ref">Type</span></a><span></span> <span class="p">{</span> <span class="k">return</span> <span class="n">pair</span><span class="p">.</span><span class="n">first</span><span class="p">;</span> <span class="p">});</span>
+<span class="k">static</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640"><span class="std std-ref">Type</span></a><span></span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacefile-types-1a5f1e4e47d0126ebb8720dec231407755"><span class="std std-ref">importable_scan_types</span></a><span></span> <span class="p">{</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640a2c171a2fd58e214f70dc505a979e239b"><span class="std std-ref">Type::praw</span></a><span></span><span class="p">,</span>     <span class="n">Type</span><span class="o">::</span><span class="n">cogs</span><span class="p">,</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640a19ff467e4707b6c70f89f2d7396bc5e4"><span class="std std-ref">Type::ply</span></a><span></span><span class="p">,</span>   <span class="p">};</span>
+<span class="k">static</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640"><span class="std std-ref">Type</span></a><span></span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacefile-types-1a756c1d155565add9e6956612b97f1aff"><span class="std std-ref">exportable_scan_types</span></a><span></span> <span class="p">{</span>     <span class="n">Type</span><span class="o">::</span><span class="n">cogs</span><span class="p">,</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640a19ff467e4707b6c70f89f2d7396bc5e4"><span class="std std-ref">Type::ply</span></a><span></span>   <span class="p">};</span>
+<span class="k">static</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640"><span class="std std-ref">Type</span></a><span></span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacefile-types-1a8e38cf37df455c246f3da9a673c722af"><span class="std std-ref">importable_point_cloud_types</span></a><span></span> <span class="p">{</span>     <span class="n">Type</span><span class="o">::</span><span class="n">cogs</span><span class="p">,</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640abe8f80182e0c983916da7338c2c1c040"><span class="std std-ref">Type::obj</span></a><span></span><span class="p">,</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640a7e6b605a0aea67d9a78043a0fcc1d2a4"><span class="std std-ref">Type::fbx</span></a><span></span><span class="p">,</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640a19ff467e4707b6c70f89f2d7396bc5e4"><span class="std std-ref">Type::ply</span></a><span></span><span class="p">,</span>   <span class="p">};</span>
+<span class="k">static</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640"><span class="std std-ref">Type</span></a><span></span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacefile-types-1af1102458979f7015e6abc7db768c6cfb"><span class="std std-ref">exportable_point_cloud_types</span></a><span></span> <span class="p">{</span>     <span class="n">Type</span><span class="o">::</span><span class="n">cogs</span><span class="p">,</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640abe8f80182e0c983916da7338c2c1c040"><span class="std std-ref">Type::obj</span></a><span></span><span class="p">,</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640a7e6b605a0aea67d9a78043a0fcc1d2a4"><span class="std std-ref">Type::fbx</span></a><span></span><span class="p">,</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640a19ff467e4707b6c70f89f2d7396bc5e4"><span class="std std-ref">Type::ply</span></a><span></span><span class="p">,</span>   <span class="p">};</span>
+<span class="k">static</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640"><span class="std std-ref">Type</span></a><span></span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacefile-types-1a020f5f9440850bb916a7b720c3513dc6"><span class="std std-ref">importable_mesh_types</span></a><span></span> <span class="p">{</span>     <span class="n">Type</span><span class="o">::</span><span class="n">cogs</span><span class="p">,</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640a39c0b36f38aed3bd87307bb554c74d74"><span class="std std-ref">Type::dae</span></a><span></span><span class="p">,</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640abe8f80182e0c983916da7338c2c1c040"><span class="std std-ref">Type::obj</span></a><span></span><span class="p">,</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640a7e6b605a0aea67d9a78043a0fcc1d2a4"><span class="std std-ref">Type::fbx</span></a><span></span><span class="p">,</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640a19ff467e4707b6c70f89f2d7396bc5e4"><span class="std std-ref">Type::ply</span></a><span></span><span class="p">,</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640a7646b54bb4e9ecea20a0ca57e3b2f794"><span class="std std-ref">Type::stl</span></a><span></span><span class="p">,</span>   <span class="p">};</span>
+<span class="k">static</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640"><span class="std std-ref">Type</span></a><span></span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacefile-types-1afb2529e00f073184284bb6eab4d738f6"><span class="std std-ref">exportable_mesh_types</span></a><span></span> <span class="p">{</span>     <span class="n">Type</span><span class="o">::</span><span class="n">cogs</span><span class="p">,</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640a39c0b36f38aed3bd87307bb554c74d74"><span class="std std-ref">Type::dae</span></a><span></span><span class="p">,</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640abe8f80182e0c983916da7338c2c1c040"><span class="std std-ref">Type::obj</span></a><span></span><span class="p">,</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640a7e6b605a0aea67d9a78043a0fcc1d2a4"><span class="std std-ref">Type::fbx</span></a><span></span><span class="p">,</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640a19ff467e4707b6c70f89f2d7396bc5e4"><span class="std std-ref">Type::ply</span></a><span></span><span class="p">,</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640a7646b54bb4e9ecea20a0ca57e3b2f794"><span class="std std-ref">Type::stl</span></a><span></span><span class="p">,</span>   <span class="p">};</span>
+<span class="k">static</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640"><span class="std std-ref">Type</span></a><span></span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacefile-types-1a516887694953580283ed05b8ddd11c0d"><span class="std std-ref">image_types</span></a><span></span> <span class="p">{</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640ac36bbd258b7ee694eb987221b2b197b0"><span class="std std-ref">Type::jpg</span></a><span></span><span class="p">,</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640abff139fa05ac583f685a523ab3d110a0"><span class="std std-ref">Type::png</span></a><span></span><span class="p">,</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640ad38252762d3d4fd229faae637fd13f4e"><span class="std std-ref">Type::gif</span></a><span></span><span class="p">,</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640a96a75bdbf222c58cabde08ebe2172c9f"><span class="std std-ref">Type::bmp</span></a><span></span><span class="p">,</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640a8fc5e5597263242327211c5f858c4ba8"><span class="std std-ref">Type::exr</span></a><span></span><span class="p">,</span>   <span class="p">};</span>
+<span class="k">static</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640"><span class="std std-ref">Type</span></a><span></span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacefile-types-1a105a61c07c6f847d1ce6f3584142b32f"><span class="std std-ref">assimp_importable_types</span></a><span></span> <span class="p">{</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640a67bc905a4dd7e71f8cfe850e6340608e"><span class="std std-ref">Type::bvh</span></a><span></span><span class="p">,</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640a39c0b36f38aed3bd87307bb554c74d74"><span class="std std-ref">Type::dae</span></a><span></span><span class="p">,</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640abe8f80182e0c983916da7338c2c1c040"><span class="std std-ref">Type::obj</span></a><span></span><span class="p">,</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640a7e6b605a0aea67d9a78043a0fcc1d2a4"><span class="std std-ref">Type::fbx</span></a><span></span><span class="p">,</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640a19ff467e4707b6c70f89f2d7396bc5e4"><span class="std std-ref">Type::ply</span></a><span></span><span class="p">,</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640a7646b54bb4e9ecea20a0ca57e3b2f794"><span class="std std-ref">Type::stl</span></a><span></span>   <span class="p">};</span>
+<span class="k">static</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640"><span class="std std-ref">Type</span></a><span></span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacefile-types-1aec685e3446cfbdd2e4561e0a952b4959"><span class="std std-ref">cogs_types</span></a><span></span> <span class="p">{</span>     <span class="n">Type</span><span class="o">::</span><span class="n">cogs</span><span class="p">,</span>   <span class="p">};</span>
+
+<span class="c1">// global functions</span>
+
+<span class="k">static</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <a class="reference internal" href="#doxid-namespacefile-types-1a27daa0a31424a4c38fb7d97f518ca348"><span class="std std-ref">GetExt</span></a><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640"><span class="std std-ref">Type</span></a><span></span> <span class="n">type</span><span class="p">);</span>
+<span class="k">static</span> <span class="n">std</span><span class="o">::</span><span class="n">optional</span><span class="o">&lt;</span><a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640"><span class="std std-ref">file_types::Type</span></a><span></span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacefile-types-1aa2a328ee6811a12e25c9637950eeed27"><span class="std std-ref">GetType</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">filename</span><span class="p">);</span>
+<span class="k">static</span> <span class="kt">bool</span> <a class="reference internal" href="#doxid-namespacefile-types-1a61662dd11e7feb55ea57ff589ac4e4f8"><span class="std std-ref">IsType</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">ext</span><span class="p">,</span> <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640"><span class="std std-ref">file_types::Type</span></a><span></span> <span class="n">type</span><span class="p">);</span>
+
+<span class="p">}</span> <span class="c1">// namespace file_types</span></pre>
+</div>
+<div class="section" id="detailed-documentation">
+<span id="details-namespacefile-types"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
+<p>Definitions and functions for file types supported by codebase.</p>
+<div class="section" id="global-variables">
+<h3>Global Variables<a class="headerlink" href="#global-variables" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefile-types-1a1b5b7ef70d17ab5f41622fd990cc0ccc"><span id="index-1"></span><span></span><span class="k">static</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640"><span class="std std-ref">Type</span></a><span></span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">file_extensions</span> <span class="o">=</span>   <span class="p">{</span>     <span class="p">{</span> <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640a2c171a2fd58e214f70dc505a979e239b"><span class="std std-ref">Type::praw</span></a><span></span><span class="p">,</span> <span class="s">&quot;praw&quot;</span> <span class="p">},</span>     <span class="p">{</span> <span class="n">Type</span><span class="o">::</span><span class="n">cogs</span><span class="p">,</span> <span class="s">&quot;cogs&quot;</span> <span class="p">},</span>     <span class="p">{</span> <span class="n">Type</span><span class="o">::</span><span class="n">ply</span><span class="p">,</span> <span class="s">&quot;ply&quot;</span> <span class="p">},</span>     <span class="p">{</span> <span class="n">Type</span><span class="o">::</span><span class="n">obj</span><span class="p">,</span> <span class="s">&quot;obj&quot;</span> <span class="p">},</span>     <span class="p">{</span> <span class="n">Type</span><span class="o">::</span><span class="n">dae</span><span class="p">,</span> <span class="s">&quot;dae&quot;</span> <span class="p">},</span>     <span class="p">{</span> <span class="n">Type</span><span class="o">::</span><span class="n">stl</span><span class="p">,</span> <span class="s">&quot;stl&quot;</span> <span class="p">},</span>     <span class="p">{</span> <span class="n">Type</span><span class="o">::</span><span class="n">fbx</span><span class="p">,</span> <span class="s">&quot;fbx&quot;</span> <span class="p">},</span>     <span class="p">{</span> <span class="n">Type</span><span class="o">::</span><span class="n">bvh</span><span class="p">,</span> <span class="s">&quot;bvh&quot;</span> <span class="p">},</span>     <span class="p">{</span> <span class="n">Type</span><span class="o">::</span><span class="n">jpg</span><span class="p">,</span> <span class="s">&quot;jpg&quot;</span> <span class="p">},</span>     <span class="p">{</span> <span class="n">Type</span><span class="o">::</span><span class="n">png</span><span class="p">,</span> <span class="s">&quot;png&quot;</span> <span class="p">},</span>     <span class="p">{</span> <span class="n">Type</span><span class="o">::</span><span class="n">gif</span><span class="p">,</span> <span class="s">&quot;gif&quot;</span> <span class="p">},</span>     <span class="p">{</span> <span class="n">Type</span><span class="o">::</span><span class="n">bmp</span><span class="p">,</span> <span class="s">&quot;bmp&quot;</span> <span class="p">},</span>     <span class="p">{</span> <span class="n">Type</span><span class="o">::</span><span class="n">exr</span><span class="p">,</span> <span class="s">&quot;exr&quot;</span> <span class="p">},</span>   <span class="p">}</span></pre>
+<p>A map of all file types and their extensions.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefile-types-1a428f890de8aad816d690400bf6d9dcad"><span id="index-2"></span><span></span><span class="k">static</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640"><span class="std std-ref">Type</span></a><span></span><span class="o">&gt;</span> <span class="n">all_types</span> <span class="o">=</span> <a class="reference internal" href="namespace_std_ext.html#doxid-namespacestd-ext-1ad8e5d9a078ec4af6f5828e57d7fa9e07"><span class="std std-ref">std_ext::Transformed</span></a><span></span><span class="p">(</span><span class="n">file_extensions</span><span class="p">,</span>       <span class="p">[](</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640"><span class="std std-ref">Type</span></a><span></span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;&amp;</span><span class="n">pair</span><span class="p">)</span><span class="o">-&gt;</span><a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640"><span class="std std-ref">Type</span></a><span></span> <span class="p">{</span> <span class="k">return</span> <span class="n">pair</span><span class="p">.</span><span class="n">first</span><span class="p">;</span> <span class="p">})</span></pre>
+<p>All file types defined.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefile-types-1a5f1e4e47d0126ebb8720dec231407755"><span id="index-3"></span><span></span><span class="k">static</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640"><span class="std std-ref">Type</span></a><span></span><span class="o">&gt;</span> <span class="n">importable_scan_types</span> <span class="p">{</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640a2c171a2fd58e214f70dc505a979e239b"><span class="std std-ref">Type::praw</span></a><span></span><span class="p">,</span>     <span class="n">Type</span><span class="o">::</span><span class="n">cogs</span><span class="p">,</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640a19ff467e4707b6c70f89f2d7396bc5e4"><span class="std std-ref">Type::ply</span></a><span></span><span class="p">,</span>   <span class="p">}</span></pre>
+<p>Recognized file types that can have a scan and that we can import.</p>
+<p>Whether they do contain a scan or not is not guaranteed!</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefile-types-1a756c1d155565add9e6956612b97f1aff"><span id="index-4"></span><span></span><span class="k">static</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640"><span class="std std-ref">Type</span></a><span></span><span class="o">&gt;</span> <span class="n">exportable_scan_types</span> <span class="p">{</span>     <span class="n">Type</span><span class="o">::</span><span class="n">cogs</span><span class="p">,</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640a19ff467e4707b6c70f89f2d7396bc5e4"><span class="std std-ref">Type::ply</span></a><span></span>   <span class="p">}</span></pre>
+<p>Recognized file types that can have a scan and that we can export.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefile-types-1a8e38cf37df455c246f3da9a673c722af"><span id="index-5"></span><span></span><span class="k">static</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640"><span class="std std-ref">Type</span></a><span></span><span class="o">&gt;</span> <span class="n">importable_point_cloud_types</span> <span class="p">{</span>     <span class="n">Type</span><span class="o">::</span><span class="n">cogs</span><span class="p">,</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640abe8f80182e0c983916da7338c2c1c040"><span class="std std-ref">Type::obj</span></a><span></span><span class="p">,</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640a7e6b605a0aea67d9a78043a0fcc1d2a4"><span class="std std-ref">Type::fbx</span></a><span></span><span class="p">,</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640a19ff467e4707b6c70f89f2d7396bc5e4"><span class="std std-ref">Type::ply</span></a><span></span><span class="p">,</span>   <span class="p">}</span></pre>
+<p>Recognized file types that can have a point cloud and that we can import.</p>
+<p>Whether they do contain a point cloud or not is not guaranteed!</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefile-types-1af1102458979f7015e6abc7db768c6cfb"><span id="index-6"></span><span></span><span class="k">static</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640"><span class="std std-ref">Type</span></a><span></span><span class="o">&gt;</span> <span class="n">exportable_point_cloud_types</span> <span class="p">{</span>     <span class="n">Type</span><span class="o">::</span><span class="n">cogs</span><span class="p">,</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640abe8f80182e0c983916da7338c2c1c040"><span class="std std-ref">Type::obj</span></a><span></span><span class="p">,</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640a7e6b605a0aea67d9a78043a0fcc1d2a4"><span class="std std-ref">Type::fbx</span></a><span></span><span class="p">,</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640a19ff467e4707b6c70f89f2d7396bc5e4"><span class="std std-ref">Type::ply</span></a><span></span><span class="p">,</span>   <span class="p">}</span></pre>
+<p>Recognized file types that can have a point cloud and that we can export.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefile-types-1a020f5f9440850bb916a7b720c3513dc6"><span id="index-7"></span><span></span><span class="k">static</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640"><span class="std std-ref">Type</span></a><span></span><span class="o">&gt;</span> <span class="n">importable_mesh_types</span> <span class="p">{</span>     <span class="n">Type</span><span class="o">::</span><span class="n">cogs</span><span class="p">,</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640a39c0b36f38aed3bd87307bb554c74d74"><span class="std std-ref">Type::dae</span></a><span></span><span class="p">,</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640abe8f80182e0c983916da7338c2c1c040"><span class="std std-ref">Type::obj</span></a><span></span><span class="p">,</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640a7e6b605a0aea67d9a78043a0fcc1d2a4"><span class="std std-ref">Type::fbx</span></a><span></span><span class="p">,</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640a19ff467e4707b6c70f89f2d7396bc5e4"><span class="std std-ref">Type::ply</span></a><span></span><span class="p">,</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640a7646b54bb4e9ecea20a0ca57e3b2f794"><span class="std std-ref">Type::stl</span></a><span></span><span class="p">,</span>   <span class="p">}</span></pre>
+<p>Recognized file types that can have a mesh and that we can import.</p>
+<p>Whether they do have a mesh or not is not guaranteed!</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefile-types-1afb2529e00f073184284bb6eab4d738f6"><span id="index-8"></span><span></span><span class="k">static</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640"><span class="std std-ref">Type</span></a><span></span><span class="o">&gt;</span> <span class="n">exportable_mesh_types</span> <span class="p">{</span>     <span class="n">Type</span><span class="o">::</span><span class="n">cogs</span><span class="p">,</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640a39c0b36f38aed3bd87307bb554c74d74"><span class="std std-ref">Type::dae</span></a><span></span><span class="p">,</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640abe8f80182e0c983916da7338c2c1c040"><span class="std std-ref">Type::obj</span></a><span></span><span class="p">,</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640a7e6b605a0aea67d9a78043a0fcc1d2a4"><span class="std std-ref">Type::fbx</span></a><span></span><span class="p">,</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640a19ff467e4707b6c70f89f2d7396bc5e4"><span class="std std-ref">Type::ply</span></a><span></span><span class="p">,</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640a7646b54bb4e9ecea20a0ca57e3b2f794"><span class="std std-ref">Type::stl</span></a><span></span><span class="p">,</span>   <span class="p">}</span></pre>
+<p>Recognized file types that can have a mesh and that we can export.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefile-types-1a516887694953580283ed05b8ddd11c0d"><span id="index-9"></span><span></span><span class="k">static</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640"><span class="std std-ref">Type</span></a><span></span><span class="o">&gt;</span> <span class="n">image_types</span> <span class="p">{</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640ac36bbd258b7ee694eb987221b2b197b0"><span class="std std-ref">Type::jpg</span></a><span></span><span class="p">,</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640abff139fa05ac583f685a523ab3d110a0"><span class="std std-ref">Type::png</span></a><span></span><span class="p">,</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640ad38252762d3d4fd229faae637fd13f4e"><span class="std std-ref">Type::gif</span></a><span></span><span class="p">,</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640a96a75bdbf222c58cabde08ebe2172c9f"><span class="std std-ref">Type::bmp</span></a><span></span><span class="p">,</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640a8fc5e5597263242327211c5f858c4ba8"><span class="std std-ref">Type::exr</span></a><span></span><span class="p">,</span>   <span class="p">}</span></pre>
+<p>Recognized file types that can store images.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefile-types-1a105a61c07c6f847d1ce6f3584142b32f"><span id="index-10"></span><span></span><span class="k">static</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640"><span class="std std-ref">Type</span></a><span></span><span class="o">&gt;</span> <span class="n">assimp_importable_types</span> <span class="p">{</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640a67bc905a4dd7e71f8cfe850e6340608e"><span class="std std-ref">Type::bvh</span></a><span></span><span class="p">,</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640a39c0b36f38aed3bd87307bb554c74d74"><span class="std std-ref">Type::dae</span></a><span></span><span class="p">,</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640abe8f80182e0c983916da7338c2c1c040"><span class="std std-ref">Type::obj</span></a><span></span><span class="p">,</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640a7e6b605a0aea67d9a78043a0fcc1d2a4"><span class="std std-ref">Type::fbx</span></a><span></span><span class="p">,</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640a19ff467e4707b6c70f89f2d7396bc5e4"><span class="std std-ref">Type::ply</span></a><span></span><span class="p">,</span>     <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640a7646b54bb4e9ecea20a0ca57e3b2f794"><span class="std std-ref">Type::stl</span></a><span></span>   <span class="p">}</span></pre>
+<p>Recognized assimp file types that can have a scan and/or mesh.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefile-types-1aec685e3446cfbdd2e4561e0a952b4959"><span id="index-11"></span><span></span><span class="k">static</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640"><span class="std std-ref">Type</span></a><span></span><span class="o">&gt;</span> <span class="n">cogs_types</span> <span class="p">{</span>     <span class="n">Type</span><span class="o">::</span><span class="n">cogs</span><span class="p">,</span>   <span class="p">}</span></pre>
+<p>Cogs (internal) types.</p>
+</div>
+<div class="section" id="global-functions">
+<h3>Global Functions<a class="headerlink" href="#global-functions" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefile-types-1a27daa0a31424a4c38fb7d97f518ca348"><span id="index-12"></span><span></span><span class="k">static</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">GetExt</span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640"><span class="std std-ref">Type</span></a><span></span> <span class="n">type</span><span class="p">)</span></pre>
+<p>Get extension from a file type. If can not deduce extension from type, returns empty string.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefile-types-1aa2a328ee6811a12e25c9637950eeed27"><span id="index-13"></span><span></span><span class="k">static</span> <span class="n">std</span><span class="o">::</span><span class="n">optional</span><span class="o">&lt;</span><a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640"><span class="std std-ref">file_types::Type</span></a><span></span><span class="o">&gt;</span> <span class="n">GetType</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">filename</span><span class="p">)</span></pre>
+<p>Get extension from a file type.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefile-types-1a61662dd11e7feb55ea57ff589ac4e4f8"><span id="index-14"></span><span></span><span class="k">static</span> <span class="kt">bool</span> <span class="n">IsType</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">ext</span><span class="p">,</span> <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640"><span class="std std-ref">file_types::Type</span></a><span></span> <span class="n">type</span><span class="p">)</span></pre>
+<p>Checks if specified extension corresponds with specified type.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Skeletex Research
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

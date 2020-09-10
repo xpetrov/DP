@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="98.29892"
+   height="154.72841"
+   viewBox="0 0 26.008255 40.938559"
+   version="1.1"
+   id="svg1634"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="hiro-logo.svg">
+  <defs
+     id="defs1628" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="3.959798"
+     inkscape:cx="58.143872"
+     inkscape:cy="74.355154"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="5"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1299"
+     inkscape:window-height="961"
+     inkscape:window-x="3761"
+     inkscape:window-y="221"
+     inkscape:window-maximized="0"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     units="px">
+    <sodipodi:guide
+       position="211.46622,53.92163"
+       orientation="1,0"
+       id="guide2062"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       position="13.028714,48.843509"
+       orientation="1,0"
+       id="guide2064"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata1631">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-27.023413,-127.45295)">
+    <g
+       aria-label="HIRO"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.77324295px;line-height:1.25;font-family:Impact;-inkscape-font-specification:Impact;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.44433105"
+       id="text5909"
+       transform="translate(0.20045215)">
+      <path
+         d="m 31.150359,168.39151 h -1.2364 v -6.33655 H 28.05936 v 6.33655 h -1.236399 v -13.90949 h 1.236399 v 6.33654 h 1.854599 v -6.33654 h 1.2364 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'SF Movie Poster';-inkscape-font-specification:'SF Movie Poster';letter-spacing:1.45296252px;stroke-width:0.44433105"
+         id="path5183"
+         inkscape:connector-curvature="0" />
+      <path
+         d="m 36.316143,168.39151 h -1.2364 v -13.90949 h 1.2364 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'SF Movie Poster';-inkscape-font-specification:'SF Movie Poster';letter-spacing:1.45296252px;stroke-width:0.44433105"
+         id="path5185"
+         inkscape:connector-curvature="0" />
+      <path
+         d="m 44.574433,168.39151 h -1.236399 v -5.40925 q 0,-0.38637 -0.27819,-0.64911 -0.262735,-0.27819 -0.64911,-0.27819 h -0.9273 v 6.33655 h -1.236399 v -13.90949 h 2.163699 q 0.89639,0 1.530044,0.63365 0.633655,0.63366 0.633655,1.53004 v 3.24555 q 0,0.91185 -0.64911,1.5455 0.64911,0.63366 0.64911,1.5455 z m -1.236399,-8.50025 v -3.24555 q 0,-0.38637 -0.27819,-0.64911 -0.262735,-0.27818 -0.64911,-0.27818 h -0.9273 v 5.10014 h 0.9273 q 0.386375,0 0.64911,-0.26273 0.27819,-0.27819 0.27819,-0.66457 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'SF Movie Poster';-inkscape-font-specification:'SF Movie Poster';letter-spacing:1.45296252px;stroke-width:0.44433105"
+         id="path5187"
+         inkscape:connector-curvature="0" />
+      <path
+         d="m 52.831216,166.22781 q 0,0.89639 -0.633655,1.53005 -0.633655,0.63365 -1.530044,0.63365 -0.89639,0 -1.530045,-0.63365 -0.633655,-0.63366 -0.633655,-1.53005 v -9.5821 q 0,-0.89638 0.633655,-1.53004 0.633655,-0.63365 1.530045,-0.63365 0.896389,0 1.530044,0.63365 0.633655,0.63366 0.633655,1.53004 z m -1.2364,0 v -9.5821 q 0,-0.38637 -0.27819,-0.64911 -0.262735,-0.27818 -0.649109,-0.27818 -0.386375,0 -0.664565,0.27818 -0.262735,0.26274 -0.262735,0.64911 v 9.5821 q 0,0.38638 0.262735,0.66457 0.27819,0.26273 0.664565,0.26273 0.386374,0 0.649109,-0.26273 0.27819,-0.27819 0.27819,-0.66457 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'SF Movie Poster';-inkscape-font-specification:'SF Movie Poster';letter-spacing:1.45296252px;stroke-width:0.44433105"
+         id="path5189"
+         inkscape:connector-curvature="0" />
+    </g>
+    <path
+       style="display:inline;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.38827729;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 39.148163,128.77587 -3.69914,1.52295 -2.395624,6.43639 c 0.633427,0.21311 1.060427,0.80644 1.061245,1.47475 -4.33e-4,0.79688 -0.601943,1.46505 -1.394417,1.54875 v 6.10364 l 6.742506,3.4945 -0.02072,-7.37037 -4.591264,-2.56771 0.299771,-1.26631 3.382458,1.83329 v 0.85534 l 1.519146,0.87691 1.519145,-0.87691 v -0.85534 l 3.382457,-1.83329 0.299771,1.26631 -4.591262,2.56771 -0.02072,7.37037 6.742507,-3.4945 v -6.10364 c -0.79247,-0.0837 -1.394062,-0.75187 -1.394419,-1.54875 9e-4,-0.66831 0.427817,-1.26164 1.061245,-1.47475 l -2.395626,-6.43639 -3.69914,-1.52295 h -0.903963 z"
+       id="path1428"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

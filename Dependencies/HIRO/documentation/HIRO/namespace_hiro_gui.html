@@ -1,0 +1,329 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>namespace hiro::gui &mdash; HIRO 0.4.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/hiro-fav-32.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/target-highlight.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/hiro_theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-sphinx_rtd_theme.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="class hiro::gui::Button" href="class_hiro_gui_Button.html" />
+    <link rel="prev" title="class hiro::draw::VisualCameraController" href="class_hiro_draw_VisualCameraController.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: rgb(248, 216, 60)" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/hiro-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_0.html">T0: Setting up Visual Studio Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_1.html">T1: Introduction to HIRO GUI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_2.html">T2: Creating Custom Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_3.html">T3: Overview of Gadget Features</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="shader_api.html">Shader API</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="global.html">Global Namespace</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="namespace_cegui_ext.html">namespace cegui_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_dialog.html">namespace dialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_file_types.html">namespace file_types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_fs.html">namespace fs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_func.html">namespace func</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_geom.html">namespace geom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_glm_ext.html">namespace glm_ext</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="namespace_hiro.html">namespace hiro</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro_draw.html">namespace hiro::draw</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">namespace hiro::gui</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_gui_Button.html">class hiro::gui::Button</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_gui_Checkbox.html">class hiro::gui::Checkbox</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_gui_CheckboxList.html">class hiro::gui::CheckboxList</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_gui_Droplist.html">class hiro::gui::Droplist</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_gui_Element.html">class hiro::gui::Element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_gui_Label.html">class hiro::gui::Label</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_gui_LinkedElement.html">template class hiro::gui::LinkedElement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_gui_NumericFloat.html">class hiro::gui::NumericFloat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_gui_NumericInt.html">class hiro::gui::NumericInt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_gui_Panel.html">class hiro::gui::Panel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_gui_SlidingFloat.html">class hiro::gui::SlidingFloat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_gui_SlidingInt.html">class hiro::gui::SlidingInt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_gui_TElement.html">template class hiro::gui::TElement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro_modules.html">namespace hiro::modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro_shader.html">namespace hiro::shader</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_BoolFunc.html">enum hiro::BoolFunc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_EventStatus.html">enum hiro::EventStatus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_Key.html">enum hiro::Key</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_Mod.html">enum hiro::Mod</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_MouseButton.html">enum hiro::MouseButton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_hiro_ActiveResourceInfo.html">struct hiro::ActiveResourceInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_hiro_ResourceId.html">struct hiro::ResourceId</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Camera.html">class hiro::Camera</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Debugger.html">class hiro::Debugger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Exportable.html">class hiro::Exportable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Gadget.html">class hiro::Gadget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_GuiGenerator.html">class hiro::GuiGenerator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_GuiPanel.html">class hiro::GuiPanel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_ModKeys.html">class hiro::ModKeys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Resource.html">class hiro::Resource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_omp_ext.html">namespace omp_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_std_ext.html">namespace std_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_time_m.html">namespace time_m</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_ulog.html">namespace ulog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_uprogress.html">namespace uprogress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_utils.html">namespace utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_Config.html">class Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_IDialogInterface.html">class IDialogInterface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_WxWidgetsDialog.html">class WxWidgetsDialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">HIRO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="global.html">Global Namespace</a> &raquo;</li>
+        
+          <li><a href="namespace_hiro.html">namespace hiro</a> &raquo;</li>
+        
+      <li>namespace hiro::gui</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="namespace-hiro-gui">
+<span id="doxid-namespacehiro-1-1gui"></span><span id="index-0"></span><h1>namespace hiro::gui<a class="headerlink" href="#namespace-hiro-gui" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Control structures for customization and automatic generation of GUI. <a class="reference internal" href="#details-namespacehiro-1-1gui"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="k">namespace</span> <span class="n">gui</span> <span class="p">{</span>
+
+<span class="c1">// classes</span>
+
+<span class="k">class</span> <a class="reference internal" href="class_hiro_gui_Button.html#doxid-classhiro-1-1gui-1-1-button"><span class="std std-ref">Button</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_hiro_gui_Checkbox.html#doxid-classhiro-1-1gui-1-1-checkbox"><span class="std std-ref">Checkbox</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_hiro_gui_CheckboxList.html#doxid-classhiro-1-1gui-1-1-checkbox-list"><span class="std std-ref">CheckboxList</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_hiro_gui_Droplist.html#doxid-classhiro-1-1gui-1-1-droplist"><span class="std std-ref">Droplist</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_hiro_gui_Element.html#doxid-classhiro-1-1gui-1-1-element"><span class="std std-ref">Element</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_hiro_gui_Label.html#doxid-classhiro-1-1gui-1-1-label"><span class="std std-ref">Label</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="k">typename</span> <span class="n">C</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_hiro_gui_LinkedElement.html#doxid-classhiro-1-1gui-1-1-linked-element"><span class="std std-ref">LinkedElement</span></a><span></span><span class="p">;</span>
+
+<span class="k">class</span> <a class="reference internal" href="class_hiro_gui_NumericFloat.html#doxid-classhiro-1-1gui-1-1-numeric-float"><span class="std std-ref">NumericFloat</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_hiro_gui_NumericInt.html#doxid-classhiro-1-1gui-1-1-numeric-int"><span class="std std-ref">NumericInt</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_hiro_gui_Panel.html#doxid-classhiro-1-1gui-1-1-panel"><span class="std std-ref">Panel</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_hiro_gui_SlidingFloat.html#doxid-classhiro-1-1gui-1-1-sliding-float"><span class="std std-ref">SlidingFloat</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_hiro_gui_SlidingInt.html#doxid-classhiro-1-1gui-1-1-sliding-int"><span class="std std-ref">SlidingInt</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">C</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_hiro_gui_TElement.html#doxid-classhiro-1-1gui-1-1-t-element"><span class="std std-ref">TElement</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// global functions</span>
+
+<span class="kt">void</span> <a class="reference internal" href="#doxid-namespacehiro-1-1gui-1ade2918e11d6161f1a61e164c9ebadbe2"><span class="std std-ref">AddColorGui</span></a><span></span><span class="p">(</span><a class="reference internal" href="class_hiro_GuiGenerator.html#doxid-classhiro-1-1-gui-generator"><span class="std std-ref">hiro::GuiGenerator</span></a><span></span><span class="o">&amp;</span> <span class="n">gui</span><span class="p">,</span> <span class="n">cogs</span><span class="o">::</span><span class="n">Color3f</span><span class="o">&amp;</span> <span class="n">color</span><span class="p">);</span>
+<span class="kt">void</span> <a class="reference internal" href="#doxid-namespacehiro-1-1gui-1a65f27e214502f54bf202dddec5120c66"><span class="std std-ref">AddMaterialGui</span></a><span></span><span class="p">(</span><a class="reference internal" href="class_hiro_GuiGenerator.html#doxid-classhiro-1-1-gui-generator"><span class="std std-ref">hiro::GuiGenerator</span></a><span></span><span class="o">&amp;</span> <span class="n">gui</span><span class="p">,</span> <a class="reference internal" href="struct_hiro_shader_Material.html#doxid-structhiro-1-1shader-1-1-material"><span class="std std-ref">hiro::shader::Material</span></a><span></span><span class="o">&amp;</span> <span class="n">material</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">include_color</span> <span class="o">=</span> <span class="nb">true</span><span class="p">);</span>
+<a class="reference internal" href="class_hiro_gui_Droplist.html#doxid-classhiro-1-1gui-1-1-droplist"><span class="std std-ref">hiro::gui::Droplist</span></a><span></span><span class="o">*</span> <a class="reference internal" href="#doxid-namespacehiro-1-1gui-1a8f47314611680e74a35857ced3f23791"><span class="std std-ref">AddColorMapSelector</span></a><span></span><span class="p">(</span><a class="reference internal" href="class_hiro_GuiGenerator.html#doxid-classhiro-1-1-gui-generator"><span class="std std-ref">hiro::GuiGenerator</span></a><span></span><span class="o">&amp;</span> <span class="n">gui</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">title</span> <span class="o">=</span> <span class="s">&quot;Color map&quot;</span><span class="p">);</span>
+
+<span class="p">}</span> <span class="c1">// namespace gui</span></pre>
+</div>
+<div class="section" id="detailed-documentation">
+<span id="details-namespacehiro-1-1gui"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
+<p>Control structures for customization and automatic generation of GUI.</p>
+<div class="section" id="global-functions">
+<h3>Global Functions<a class="headerlink" href="#global-functions" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1gui-1ade2918e11d6161f1a61e164c9ebadbe2"><span id="index-1"></span><span></span><span class="kt">void</span> <span class="n">AddColorGui</span><span class="p">(</span><a class="reference internal" href="class_hiro_GuiGenerator.html#doxid-classhiro-1-1-gui-generator"><span class="std std-ref">hiro::GuiGenerator</span></a><span></span><span class="o">&amp;</span> <span class="n">gui</span><span class="p">,</span> <span class="n">cogs</span><span class="o">::</span><span class="n">Color3f</span><span class="o">&amp;</span> <span class="n">color</span><span class="p">)</span></pre>
+<p>Adds color selection elements to gui. Object color should not be destroyed while gui exists.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1gui-1a65f27e214502f54bf202dddec5120c66"><span id="index-2"></span><span></span><span class="kt">void</span> <span class="n">AddMaterialGui</span><span class="p">(</span><a class="reference internal" href="class_hiro_GuiGenerator.html#doxid-classhiro-1-1-gui-generator"><span class="std std-ref">hiro::GuiGenerator</span></a><span></span><span class="o">&amp;</span> <span class="n">gui</span><span class="p">,</span> <a class="reference internal" href="struct_hiro_shader_Material.html#doxid-structhiro-1-1shader-1-1-material"><span class="std std-ref">hiro::shader::Material</span></a><span></span><span class="o">&amp;</span> <span class="n">material</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">include_color</span> <span class="o">=</span> <span class="nb">true</span><span class="p">)</span></pre>
+<p>Adds material parameters to gui. Object color should not be destroyed while gui exists.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1gui-1a8f47314611680e74a35857ced3f23791"><span id="index-3"></span><a class="reference internal" href="class_hiro_gui_Droplist.html#doxid-classhiro-1-1gui-1-1-droplist"><span class="std std-ref">hiro::gui::Droplist</span></a><span></span><span class="o">*</span> <span class="n">AddColorMapSelector</span><span class="p">(</span><a class="reference internal" href="class_hiro_GuiGenerator.html#doxid-classhiro-1-1-gui-generator"><span class="std std-ref">hiro::GuiGenerator</span></a><span></span><span class="o">&amp;</span> <span class="n">gui</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">title</span> <span class="o">=</span> <span class="s">&quot;Color map&quot;</span><span class="p">)</span></pre>
+<p>Adds droplist control iwth items corresponding to cogs::ColorMap elements.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Skeletex Research
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

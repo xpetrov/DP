@@ -1,0 +1,430 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>namespace fs &mdash; HIRO 0.4.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/hiro-fav-32.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/target-highlight.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/hiro_theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-sphinx_rtd_theme.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="struct fs::FileDirContent" href="struct_fs_FileDirContent.html" />
+    <link rel="prev" title="enum file_types::Type" href="enum_file_types_Type.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: rgb(248, 216, 60)" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/hiro-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_0.html">T0: Setting up Visual Studio Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_1.html">T1: Introduction to HIRO GUI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_2.html">T2: Creating Custom Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_3.html">T3: Overview of Gadget Features</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="shader_api.html">Shader API</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="global.html">Global Namespace</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="namespace_cegui_ext.html">namespace cegui_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_dialog.html">namespace dialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_file_types.html">namespace file_types</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">namespace fs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="struct_fs_FileDirContent.html">struct fs::FileDirContent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#detailed-documentation">Detailed Documentation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#global-functions">Global Functions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_func.html">namespace func</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_geom.html">namespace geom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_glm_ext.html">namespace glm_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_hiro.html">namespace hiro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_omp_ext.html">namespace omp_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_std_ext.html">namespace std_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_time_m.html">namespace time_m</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_ulog.html">namespace ulog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_uprogress.html">namespace uprogress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_utils.html">namespace utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_Config.html">class Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_IDialogInterface.html">class IDialogInterface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_WxWidgetsDialog.html">class WxWidgetsDialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">HIRO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="global.html">Global Namespace</a> &raquo;</li>
+        
+      <li>namespace fs</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="namespace-fs">
+<span id="doxid-namespacefs"></span><span id="index-0"></span><h1>namespace fs<a class="headerlink" href="#namespace-fs" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>An essential interface for manipulation with files and directories. Wraps file managing system calls. <a class="reference internal" href="#details-namespacefs"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="k">namespace</span> <span class="n">fs</span> <span class="p">{</span>
+
+<span class="c1">// structs</span>
+
+<span class="k">struct</span> <a class="reference internal" href="struct_fs_FileDirContent.html#doxid-structfs-1-1-file-dir-content"><span class="std std-ref">FileDirContent</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// global functions</span>
+
+<span class="kt">bool</span> <a class="reference internal" href="#doxid-namespacefs-1afba223b84f347047c0b81d72485e1e5a"><span class="std std-ref">FileExists</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">filename</span><span class="p">);</span>
+<span class="kt">bool</span> <a class="reference internal" href="#doxid-namespacefs-1a4e32d3f9bffd04aafc554f9c02ccf67f"><span class="std std-ref">FileExists</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">filename</span><span class="p">);</span>
+<span class="kt">bool</span> <a class="reference internal" href="#doxid-namespacefs-1a722f81f426736383a21c22f0634c13b5"><span class="std std-ref">FileCopy</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">src</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">dest</span><span class="p">);</span>
+<span class="kt">bool</span> <a class="reference internal" href="#doxid-namespacefs-1a93f9929eac74494264d86ef0bc66d57d"><span class="std std-ref">FileRename</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">src_file</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">new_name</span><span class="p">);</span>
+<span class="kt">bool</span> <a class="reference internal" href="#doxid-namespacefs-1a687604dba22391d55461a8d24051df8f"><span class="std std-ref">FileRemove</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">file</span><span class="p">);</span>
+<span class="kt">bool</span> <a class="reference internal" href="#doxid-namespacefs-1aaab81cd4ea3b0d530b953a40681acc80"><span class="std std-ref">DirectoryExists</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">dir_path</span><span class="p">);</span>
+<span class="kt">bool</span> <a class="reference internal" href="#doxid-namespacefs-1a93c58e38ee0b94ec0b798985dba2b1fe"><span class="std std-ref">CreateDir</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">dir_path</span><span class="p">);</span>
+<span class="kt">bool</span> <a class="reference internal" href="#doxid-namespacefs-1ad055d3bb31e6d254bf0da15ed62299ae"><span class="std std-ref">CreateDirHierarchy</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">dir_path</span><span class="p">);</span>
+<span class="kt">bool</span> <a class="reference internal" href="#doxid-namespacefs-1ae1f12647f113682fb0a9a19ce4a69f65"><span class="std std-ref">RemoveDir</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">dir_path</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">recursive</span> <span class="o">=</span> <span class="nb">true</span><span class="p">);</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <a class="reference internal" href="#doxid-namespacefs-1a552b598a9a9077a094c106610477e472"><span class="std std-ref">GetExtension</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">filename</span><span class="p">);</span>
+<span class="kt">bool</span> <a class="reference internal" href="#doxid-namespacefs-1a563d1af3cc48f584c9d2c11e210c3619"><span class="std std-ref">HasExtenstion</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">filename</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">extenstion</span><span class="p">);</span>
+<span class="kt">bool</span> <a class="reference internal" href="#doxid-namespacefs-1a7c7893c8980d9710ca82aff26f665ecd"><span class="std std-ref">IsFileType</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">filename</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640"><span class="std std-ref">file_types::Type</span></a><span></span> <span class="n">type</span><span class="p">);</span>
+<span class="kt">bool</span> <a class="reference internal" href="#doxid-namespacefs-1a9faa5b6154feffc87cad6920ece5a496"><span class="std std-ref">IsFileType</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">filename</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640"><span class="std std-ref">file_types::Type</span></a><span></span><span class="o">&gt;&amp;</span> <span class="n">types</span><span class="p">);</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <a class="reference internal" href="#doxid-namespacefs-1abfcc09f5ca03cf917604f3377fab7046"><span class="std std-ref">FileToString</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">file_name</span><span class="p">);</span>
+<span class="kt">void</span> <a class="reference internal" href="#doxid-namespacefs-1aa70798286b514212d8374c3e3c1f69df"><span class="std std-ref">StringToFile</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">file_name</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">str</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacefs-1a610db611433b542a094375f3a2ab2e94"><span class="std std-ref">FileToVector</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">file_name</span><span class="p">);</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><a class="reference internal" href="struct_fs_FileDirContent.html#doxid-structfs-1-1-file-dir-content"><span class="std std-ref">FileDirContent</span></a><span></span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacefs-1aea51a7159bbd858f1043dfd1e99a49fe"><span class="std std-ref">ListDirectoryContents</span></a><span></span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">direcory_path</span><span class="p">,</span> <span class="k">const</span> <span class="kt">bool</span> <span class="n">recursive</span> <span class="o">=</span> <span class="nb">false</span><span class="p">);</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacefs-1a40143429b5b5c09ac90502f4e5594c91"><span class="std std-ref">ListDirectoryFileNames</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">direcory_path</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">extension</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">);</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacefs-1a7fc62e5c87c1534044749b85297cf46e"><span class="std std-ref">ListDirectoryFileNames</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">direcory_path</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640"><span class="std std-ref">file_types::Type</span></a><span></span> <span class="n">file_type</span><span class="p">);</span>
+<span class="kt">bool</span> <a class="reference internal" href="#doxid-namespacefs-1a75dcbd710e2563de6fef7a601a5bc8dc"><span class="std std-ref">DirectoryContainsAny</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">direcory_path</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640"><span class="std std-ref">file_types::Type</span></a><span></span> <span class="n">file_type</span><span class="p">);</span>
+<span class="kt">bool</span> <a class="reference internal" href="#doxid-namespacefs-1aaf7da96db9818cd2e27d8fc6f55834c4"><span class="std std-ref">DirectoryContainsAny</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">direcory_path</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640"><span class="std std-ref">file_types::Type</span></a><span></span><span class="o">&gt;&amp;</span> <span class="n">file_types</span><span class="p">);</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <a class="reference internal" href="#doxid-namespacefs-1a923f331c1e491a486a638a3e82186e44"><span class="std std-ref">GetDirectoryPathOfFile</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">file_name_with_path</span><span class="p">);</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <a class="reference internal" href="#doxid-namespacefs-1a1430b071a564f27f73302133ba15ebf5"><span class="std std-ref">GetFileName</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">file_name_with_path</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">strip_extension</span> <span class="o">=</span> <span class="nb">false</span><span class="p">);</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <a class="reference internal" href="#doxid-namespacefs-1a4df8c642dbe7823d233bbf23d1f0140d"><span class="std std-ref">GetAbsolutePath</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">local_path</span><span class="p">);</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <a class="reference internal" href="#doxid-namespacefs-1aee21f792cd6052cec1dc87c2cb8c518a"><span class="std std-ref">Execute</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">command</span><span class="p">,</span> <span class="k">const</span> <span class="kt">size_t</span> <span class="n">buffer_size</span> <span class="o">=</span> <span class="mi">128</span><span class="p">);</span>
+<span class="kt">int</span> <a class="reference internal" href="#doxid-namespacefs-1a647c78f33a1a5eff133eb4806f868ba3"><span class="std std-ref">RunExe</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">exe_path</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">cmd_arguments</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">);</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <a class="reference internal" href="#doxid-namespacefs-1aa67256763f079ea0697337cbd6c50755"><span class="std std-ref">StripExtension</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">file_name_with_extension</span><span class="p">);</span>
+<span class="kt">bool</span> <a class="reference internal" href="#doxid-namespacefs-1a218ee0f608551418a478623f8cc5de32"><span class="std std-ref">FileExistsInDirectory</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">dir_path</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">filename</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">strip_extension</span> <span class="o">=</span> <span class="nb">false</span><span class="p">);</span>
+
+<span class="p">}</span> <span class="c1">// namespace fs</span></pre>
+</div>
+<div class="section" id="detailed-documentation">
+<span id="details-namespacefs"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
+<p>An essential interface for manipulation with files and directories. Wraps file managing system calls.</p>
+<div class="section" id="global-functions">
+<h3>Global Functions<a class="headerlink" href="#global-functions" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefs-1afba223b84f347047c0b81d72485e1e5a"><span id="index-1"></span><span></span><span class="kt">bool</span> <span class="n">FileExists</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">filename</span><span class="p">)</span></pre>
+<p>Checks if the specified file exist.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefs-1a4e32d3f9bffd04aafc554f9c02ccf67f"><span id="index-2"></span><span></span><span class="kt">bool</span> <span class="n">FileExists</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">filename</span><span class="p">)</span></pre>
+<p>Checks if the specified file exist.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefs-1a722f81f426736383a21c22f0634c13b5"><span id="index-3"></span><span></span><span class="kt">bool</span> <span class="n">FileCopy</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">src</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">dest</span><span class="p">)</span></pre>
+<p>Makes a copy of a source file to a destination file. Destination directory must exist.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefs-1a93f9929eac74494264d86ef0bc66d57d"><span id="index-4"></span><span></span><span class="kt">bool</span> <span class="n">FileRename</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">src_file</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">new_name</span><span class="p">)</span></pre>
+<p>Changes name of a source file to a new name.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefs-1a687604dba22391d55461a8d24051df8f"><span id="index-5"></span><span></span><span class="kt">bool</span> <span class="n">FileRemove</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">file</span><span class="p">)</span></pre>
+<p>Deletes a specified file from the system. Deleted file will not appear in recycle bin.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefs-1aaab81cd4ea3b0d530b953a40681acc80"><span id="index-6"></span><span></span><span class="kt">bool</span> <span class="n">DirectoryExists</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">dir_path</span><span class="p">)</span></pre>
+<p>Checks whether a specified directory exists. May contain the last slash but is not required.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefs-1a93c58e38ee0b94ec0b798985dba2b1fe"><span id="index-7"></span><span></span><span class="kt">bool</span> <span class="n">CreateDir</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">dir_path</span><span class="p">)</span></pre>
+<p>Creates a specified directory.</p>
+<p>This function does not create directory hierarchies. If you wish to create hierarchy, use CreateDirHierarchy function instead.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>dir_path</p></td>
+<td><p>Specifies path and name of directory. May contain the last slash but is not required.</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefs-1ad055d3bb31e6d254bf0da15ed62299ae"><span id="index-8"></span><span></span><span class="kt">bool</span> <span class="n">CreateDirHierarchy</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">dir_path</span><span class="p">)</span></pre>
+<p>Creates a specified directory hierarchy.</p>
+<p>This function creates directory hierarchies. If parent folder does not exists, function creates it recursively.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>file_path</p></td>
+<td><p>Specifies path and name of directory. May contain the last slash but is not required.</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefs-1ae1f12647f113682fb0a9a19ce4a69f65"><span id="index-9"></span><span></span><span class="kt">bool</span> <span class="n">RemoveDir</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">dir_path</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">recursive</span> <span class="o">=</span> <span class="nb">true</span><span class="p">)</span></pre>
+<p>Removes input directory if it is empty or if recursive is set to true.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefs-1a552b598a9a9077a094c106610477e472"><span id="index-10"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">GetExtension</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">filename</span><span class="p">)</span></pre>
+<p>Returns string representing file extension, in lower case with no dot.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefs-1a563d1af3cc48f584c9d2c11e210c3619"><span id="index-11"></span><span></span><span class="kt">bool</span> <span class="n">HasExtenstion</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">filename</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">extenstion</span><span class="p">)</span></pre>
+<p>Checks whether the file has a specific extension. An extension parameter is case sensitive and can be specified with or without a dot.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefs-1a7c7893c8980d9710ca82aff26f665ecd"><span id="index-12"></span><span></span><span class="kt">bool</span> <span class="n">IsFileType</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">filename</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640"><span class="std std-ref">file_types::Type</span></a><span></span> <span class="n">type</span><span class="p">)</span></pre>
+<p>Checks whether the file is of a specified type.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefs-1a9faa5b6154feffc87cad6920ece5a496"><span id="index-13"></span><span></span><span class="kt">bool</span> <span class="n">IsFileType</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">filename</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640"><span class="std std-ref">file_types::Type</span></a><span></span><span class="o">&gt;&amp;</span> <span class="n">types</span><span class="p">)</span></pre>
+<p>Checks whether the file is any of the specified types.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefs-1abfcc09f5ca03cf917604f3377fab7046"><span id="index-14"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">FileToString</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">file_name</span><span class="p">)</span></pre>
+<p>Loads contents of a text-based file and stores it in a string.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefs-1aa70798286b514212d8374c3e3c1f69df"><span id="index-15"></span><span></span><span class="kt">void</span> <span class="n">StringToFile</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">file_name</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">str</span><span class="p">)</span></pre>
+<p>Exports the string to a text file.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefs-1a610db611433b542a094375f3a2ab2e94"><span id="index-16"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">FileToVector</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">file_name</span><span class="p">)</span></pre>
+<p>Loads contents of a text-based file and stores it in a vector. The file must contain only elements of templated type.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefs-1aea51a7159bbd858f1043dfd1e99a49fe"><span id="index-17"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><a class="reference internal" href="struct_fs_FileDirContent.html#doxid-structfs-1-1-file-dir-content"><span class="std std-ref">FileDirContent</span></a><span></span><span class="o">&gt;</span> <span class="n">ListDirectoryContents</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">direcory_path</span><span class="p">,</span> <span class="k">const</span> <span class="kt">bool</span> <span class="n">recursive</span> <span class="o">=</span> <span class="nb">false</span><span class="p">)</span></pre>
+<p>Returns list of all contents in a specified directory.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefs-1a40143429b5b5c09ac90502f4e5594c91"><span id="index-18"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">ListDirectoryFileNames</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">direcory_path</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">extension</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">)</span></pre>
+<p>Returns list of all file contents in a specified directory (ignores directories). Providing extension parameter returns only files with specified extension.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefs-1a7fc62e5c87c1534044749b85297cf46e"><span id="index-19"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">ListDirectoryFileNames</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">direcory_path</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640"><span class="std std-ref">file_types::Type</span></a><span></span> <span class="n">file_type</span><span class="p">)</span></pre>
+<p>Returns list of all file contents in a specified directory (ignores directories) with extension of the specified file type.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefs-1a75dcbd710e2563de6fef7a601a5bc8dc"><span id="index-20"></span><span></span><span class="kt">bool</span> <span class="n">DirectoryContainsAny</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">direcory_path</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640"><span class="std std-ref">file_types::Type</span></a><span></span> <span class="n">file_type</span><span class="p">)</span></pre>
+<p>Checks specified directory if it contains file(s) of specified type.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefs-1aaf7da96db9818cd2e27d8fc6f55834c4"><span id="index-21"></span><span></span><span class="kt">bool</span> <span class="n">DirectoryContainsAny</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">direcory_path</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><a class="reference internal" href="enum_file_types_Type.html#doxid-namespacefile-types-1ab15b17b87ac07d53a0e27deb654fe640"><span class="std std-ref">file_types::Type</span></a><span></span><span class="o">&gt;&amp;</span> <span class="n">file_types</span><span class="p">)</span></pre>
+<p>Checks specified directory if it contains file(s) of any of the specified types.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefs-1a923f331c1e491a486a638a3e82186e44"><span id="index-22"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">GetDirectoryPathOfFile</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">file_name_with_path</span><span class="p">)</span></pre>
+<p>Takes specified file path and returns its directory path. Strips everything after the last directory separator.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefs-1a1430b071a564f27f73302133ba15ebf5"><span id="index-23"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">GetFileName</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">file_name_with_path</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">strip_extension</span> <span class="o">=</span> <span class="nb">false</span><span class="p">)</span></pre>
+<p>Strips everything before the last directory separator, including the separator. If parameter strip_extension is true, strips also extension from resulting file name.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefs-1a4df8c642dbe7823d233bbf23d1f0140d"><span id="index-24"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">GetAbsolutePath</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">local_path</span><span class="p">)</span></pre>
+<p>Retrieves full system path to a specified local file or directory. Specified local path may contain non existing directories and files.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefs-1aee21f792cd6052cec1dc87c2cb8c518a"><span id="index-25"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">Execute</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">command</span><span class="p">,</span> <span class="k">const</span> <span class="kt">size_t</span> <span class="n">buffer_size</span> <span class="o">=</span> <span class="mi">128</span><span class="p">)</span></pre>
+<p>Executes command as if it was called from the command line.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>command</p></td>
+<td><p>Command to be called.</p></td>
+</tr>
+<tr class="row-even"><td><p>buffer_size</p></td>
+<td><p>Determines size of temporal buffer used to obtain output.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Returns:</p>
+<p>Standard output generated by the executed command.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefs-1a647c78f33a1a5eff133eb4806f868ba3"><span id="index-26"></span><span></span><span class="kt">int</span> <span class="n">RunExe</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">exe_path</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">cmd_arguments</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">)</span></pre>
+<p>Runs executable in command line.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefs-1aa67256763f079ea0697337cbd6c50755"><span id="index-27"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">StripExtension</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">file_name_with_extension</span><span class="p">)</span></pre>
+<p>Strips the extension from a file name.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>file_name_with_extension</p></td>
+<td><p>Specifies name of the file.</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefs-1a218ee0f608551418a478623f8cc5de32"><span id="index-28"></span><span></span><span class="kt">bool</span> <span class="n">FileExistsInDirectory</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">dir_path</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">filename</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">strip_extension</span> <span class="o">=</span> <span class="nb">false</span><span class="p">)</span></pre>
+<p>Checks whether a specified file exists in directory.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>dir_path</p></td>
+<td><p>Specifies path and name of directory. May contain the last slash but is not required.</p></td>
+</tr>
+<tr class="row-even"><td><p>filename</p></td>
+<td><p>Specifies name of file. May contain the extension.</p></td>
+</tr>
+<tr class="row-odd"><td><p>strip_extension</p></td>
+<td><p>If it is true, strips also extension from file name. Default is false.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Skeletex Research
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

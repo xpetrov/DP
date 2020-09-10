@@ -1,0 +1,444 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>namespace hiro::shader &mdash; HIRO 0.4.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/hiro-fav-32.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/target-highlight.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/hiro_theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-sphinx_rtd_theme.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="struct hiro::shader::Light" href="struct_hiro_shader_Light.html" />
+    <link rel="prev" title="class hiro::modules::SkeletonResource" href="class_hiro_modules_SkeletonResource.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: rgb(248, 216, 60)" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/hiro-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_0.html">T0: Setting up Visual Studio Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_1.html">T1: Introduction to HIRO GUI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_2.html">T2: Creating Custom Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_3.html">T3: Overview of Gadget Features</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="shader_api.html">Shader API</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="global.html">Global Namespace</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="namespace_cegui_ext.html">namespace cegui_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_dialog.html">namespace dialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_file_types.html">namespace file_types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_fs.html">namespace fs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_func.html">namespace func</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_geom.html">namespace geom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_glm_ext.html">namespace glm_ext</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="namespace_hiro.html">namespace hiro</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro_draw.html">namespace hiro::draw</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro_gui.html">namespace hiro::gui</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro_modules.html">namespace hiro::modules</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">namespace hiro::shader</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_shader_Light.html">struct hiro::shader::Light</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_shader_MatAndInv.html">struct hiro::shader::MatAndInv</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_shader_Material.html">struct hiro::shader::Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_shader_SceneData.html">struct hiro::shader::SceneData</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_BoolFunc.html">enum hiro::BoolFunc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_EventStatus.html">enum hiro::EventStatus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_Key.html">enum hiro::Key</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_Mod.html">enum hiro::Mod</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_MouseButton.html">enum hiro::MouseButton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_hiro_ActiveResourceInfo.html">struct hiro::ActiveResourceInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_hiro_ResourceId.html">struct hiro::ResourceId</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Camera.html">class hiro::Camera</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Debugger.html">class hiro::Debugger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Exportable.html">class hiro::Exportable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Gadget.html">class hiro::Gadget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_GuiGenerator.html">class hiro::GuiGenerator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_GuiPanel.html">class hiro::GuiPanel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_ModKeys.html">class hiro::ModKeys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Resource.html">class hiro::Resource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_omp_ext.html">namespace omp_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_std_ext.html">namespace std_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_time_m.html">namespace time_m</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_ulog.html">namespace ulog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_uprogress.html">namespace uprogress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_utils.html">namespace utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_Config.html">class Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_IDialogInterface.html">class IDialogInterface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_WxWidgetsDialog.html">class WxWidgetsDialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">HIRO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="global.html">Global Namespace</a> &raquo;</li>
+        
+          <li><a href="namespace_hiro.html">namespace hiro</a> &raquo;</li>
+        
+      <li>namespace hiro::shader</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="namespace-hiro-shader">
+<span id="doxid-namespacehiro-1-1shader"></span><span id="index-0"></span><h1>namespace hiro::shader<a class="headerlink" href="#namespace-hiro-shader" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Interface for writing shaders. Contains C++ definitions equivalent to GLSL definitions. <a class="reference internal" href="#details-namespacehiro-1-1shader"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="k">namespace</span> <span class="n">shader</span> <span class="p">{</span>
+
+<span class="c1">// structs</span>
+
+<span class="k">struct</span> <a class="reference internal" href="struct_hiro_shader_Light.html#doxid-structhiro-1-1shader-1-1-light"><span class="std std-ref">Light</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_hiro_shader_MatAndInv.html#doxid-structhiro-1-1shader-1-1-mat-and-inv"><span class="std std-ref">MatAndInv</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_hiro_shader_Material.html#doxid-structhiro-1-1shader-1-1-material"><span class="std std-ref">Material</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_hiro_shader_SceneData.html#doxid-structhiro-1-1shader-1-1-scene-data"><span class="std std-ref">SceneData</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// global variables</span>
+
+<span class="k">const</span> <span class="kt">int</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a0e8699ba233803cca059a3e15ea35655"><span class="std std-ref">MAX_SCENE_COUNT</span></a><span></span> <span class="p">{</span> <span class="mi">16</span> <span class="p">};</span>
+<span class="k">const</span> <span class="kt">int</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a988f90f729de8124181767b11887bb36"><span class="std std-ref">MAX_CAMERA_COUNT</span></a><span></span> <span class="p">{</span> <span class="mi">16</span> <span class="p">};</span>
+<span class="k">const</span> <span class="kt">int</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1aa4a06dbc4a1133ed9a38f775a2d0f4da"><span class="std std-ref">MAX_LIGHT_COUNT</span></a><span></span> <span class="p">{</span> <span class="mi">16</span> <span class="p">};</span>
+<span class="k">const</span> <span class="kt">int</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a2e0c9addf9bd40d24b68a43473b75d73"><span class="std std-ref">MAX_LIGHT_COUNT_PER_SCENE</span></a><span></span> <span class="p">{</span> <span class="mi">4</span> <span class="p">};</span>
+<span class="k">const</span> <span class="kt">int</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1abddb86a5c5552049af9502f01d306909"><span class="std std-ref">MAX_INSTANCE_COUNT</span></a><span></span> <span class="p">{</span> <span class="mi">32</span> <span class="p">};</span>
+<span class="k">const</span> <span class="kt">int</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1aec396dec7a3d81d2c0250ca129bf77ff"><span class="std std-ref">ULOC_RENDER_PASS</span></a><span></span> <span class="p">{</span> <span class="mi">0</span> <span class="p">};</span>
+<span class="k">const</span> <span class="kt">int</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a884a9311c35706446d8289c5260d5b2a"><span class="std std-ref">ULOC_SHADOWING_METHOD</span></a><span></span> <span class="p">{</span> <span class="mi">1</span> <span class="p">};</span>
+<span class="k">const</span> <span class="kt">int</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a619ac85a5277000330f5b855c5d583a1"><span class="std std-ref">ULOC_MODEL_MATRIX</span></a><span></span> <span class="p">{</span> <span class="mi">2</span> <span class="p">};</span>
+<span class="k">const</span> <span class="kt">int</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a7f6c34cdb92e6f25e03e4a48fc70d47f"><span class="std std-ref">ULOC_SCENE_ID</span></a><span></span> <span class="p">{</span> <span class="mi">6</span> <span class="p">};</span>
+<span class="k">const</span> <span class="kt">int</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a45630c09b2db691a1d0603c1c6506290"><span class="std std-ref">ULOC_USE_INSTANCING</span></a><span></span> <span class="p">{</span> <span class="mi">7</span> <span class="p">};</span>
+<span class="k">const</span> <span class="kt">int</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a87ea96b250a281f2cc7fd53b929334d8"><span class="std std-ref">ULOC_PRE_INSTANCING_MATRIX</span></a><span></span> <span class="p">{</span> <span class="mi">8</span> <span class="p">};</span>
+<span class="k">const</span> <span class="kt">int</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a55908360718715843f19e78bc1601bb3"><span class="std std-ref">ULOC_CUSTOM_BEGIN</span></a><span></span> <span class="p">{</span> <span class="mi">12</span> <span class="p">};</span>
+<span class="k">const</span> <span class="kt">int</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a90114d566e2ba51e66bc09f96608cb24"><span class="std std-ref">ULOC_CUSTOM_0</span></a><span></span> <span class="p">{</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a55908360718715843f19e78bc1601bb3"><span class="std std-ref">ULOC_CUSTOM_BEGIN</span></a><span></span> <span class="o">+</span> <span class="mi">0</span> <span class="p">};</span>
+<span class="k">const</span> <span class="kt">int</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1abce1f90aa69724a3d36f389556144bc6"><span class="std std-ref">ULOC_CUSTOM_1</span></a><span></span> <span class="p">{</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a55908360718715843f19e78bc1601bb3"><span class="std std-ref">ULOC_CUSTOM_BEGIN</span></a><span></span> <span class="o">+</span> <span class="mi">1</span> <span class="p">};</span>
+<span class="k">const</span> <span class="kt">int</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a6720c5eabc0f488acf395acb3a89a942"><span class="std std-ref">ULOC_CUSTOM_2</span></a><span></span> <span class="p">{</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a55908360718715843f19e78bc1601bb3"><span class="std std-ref">ULOC_CUSTOM_BEGIN</span></a><span></span> <span class="o">+</span> <span class="mi">2</span> <span class="p">};</span>
+<span class="k">const</span> <span class="kt">int</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a0fda1830bc0022bd6687f446970f2a29"><span class="std std-ref">ULOC_CUSTOM_3</span></a><span></span> <span class="p">{</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a55908360718715843f19e78bc1601bb3"><span class="std std-ref">ULOC_CUSTOM_BEGIN</span></a><span></span> <span class="o">+</span> <span class="mi">3</span> <span class="p">};</span>
+<span class="k">const</span> <span class="kt">int</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1ae46ce9e9714f8a208992ccf54be025ec"><span class="std std-ref">ULOC_CUSTOM_4</span></a><span></span> <span class="p">{</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a55908360718715843f19e78bc1601bb3"><span class="std std-ref">ULOC_CUSTOM_BEGIN</span></a><span></span> <span class="o">+</span> <span class="mi">4</span> <span class="p">};</span>
+<span class="k">const</span> <span class="kt">int</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a629f9c62c595aa48ab36b455e6de0c2b"><span class="std std-ref">ULOC_CUSTOM_5</span></a><span></span> <span class="p">{</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a55908360718715843f19e78bc1601bb3"><span class="std std-ref">ULOC_CUSTOM_BEGIN</span></a><span></span> <span class="o">+</span> <span class="mi">5</span> <span class="p">};</span>
+<span class="k">const</span> <span class="kt">int</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1ae48aa63d78c01920610d67807088b3e6"><span class="std std-ref">ULOC_CUSTOM_6</span></a><span></span> <span class="p">{</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a55908360718715843f19e78bc1601bb3"><span class="std std-ref">ULOC_CUSTOM_BEGIN</span></a><span></span> <span class="o">+</span> <span class="mi">6</span> <span class="p">};</span>
+<span class="k">const</span> <span class="kt">int</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a53f8c7ab6a0a62df042e464d73f76b52"><span class="std std-ref">ULOC_CUSTOM_7</span></a><span></span> <span class="p">{</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a55908360718715843f19e78bc1601bb3"><span class="std std-ref">ULOC_CUSTOM_BEGIN</span></a><span></span> <span class="o">+</span> <span class="mi">7</span> <span class="p">};</span>
+<span class="k">const</span> <span class="kt">int</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a6cc9773f958cfeddb744f7f99f1cd2b8"><span class="std std-ref">ULOC_CUSTOM_8</span></a><span></span> <span class="p">{</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a55908360718715843f19e78bc1601bb3"><span class="std std-ref">ULOC_CUSTOM_BEGIN</span></a><span></span> <span class="o">+</span> <span class="mi">8</span> <span class="p">};</span>
+<span class="k">const</span> <span class="kt">int</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1ac957be3bfbf9d42c128d20adb18769b2"><span class="std std-ref">ULOC_CUSTOM_9</span></a><span></span> <span class="p">{</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a55908360718715843f19e78bc1601bb3"><span class="std std-ref">ULOC_CUSTOM_BEGIN</span></a><span></span> <span class="o">+</span> <span class="mi">9</span> <span class="p">};</span>
+<span class="k">const</span> <span class="kt">int</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a24026585effe6eebcb426d57dcfae689"><span class="std std-ref">ULOC_CUSTOM_10</span></a><span></span> <span class="p">{</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a55908360718715843f19e78bc1601bb3"><span class="std std-ref">ULOC_CUSTOM_BEGIN</span></a><span></span> <span class="o">+</span> <span class="mi">10</span> <span class="p">};</span>
+<span class="k">const</span> <span class="kt">int</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a5998a1a95faa5a6440fa4267f49c1014"><span class="std std-ref">ULOC_CUSTOM_11</span></a><span></span> <span class="p">{</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a55908360718715843f19e78bc1601bb3"><span class="std std-ref">ULOC_CUSTOM_BEGIN</span></a><span></span> <span class="o">+</span> <span class="mi">11</span> <span class="p">};</span>
+<span class="k">const</span> <span class="kt">int</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a848a59a68543cb782196ca9fbc16bdee"><span class="std std-ref">ULOC_CUSTOM_12</span></a><span></span> <span class="p">{</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a55908360718715843f19e78bc1601bb3"><span class="std std-ref">ULOC_CUSTOM_BEGIN</span></a><span></span> <span class="o">+</span> <span class="mi">12</span> <span class="p">};</span>
+<span class="k">const</span> <span class="kt">int</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1ae3d409037569e62a05447a55f2ee6cb9"><span class="std std-ref">ULOC_CUSTOM_13</span></a><span></span> <span class="p">{</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a55908360718715843f19e78bc1601bb3"><span class="std std-ref">ULOC_CUSTOM_BEGIN</span></a><span></span> <span class="o">+</span> <span class="mi">13</span> <span class="p">};</span>
+<span class="k">const</span> <span class="kt">int</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a537e6a45328d34f97deb2fd61c734fc2"><span class="std std-ref">ULOC_CUSTOM_14</span></a><span></span> <span class="p">{</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a55908360718715843f19e78bc1601bb3"><span class="std std-ref">ULOC_CUSTOM_BEGIN</span></a><span></span> <span class="o">+</span> <span class="mi">14</span> <span class="p">};</span>
+<span class="k">const</span> <span class="kt">int</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1aedceb26df874c3444025c8d549aeb6cd"><span class="std std-ref">ULOC_CUSTOM_15</span></a><span></span> <span class="p">{</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a55908360718715843f19e78bc1601bb3"><span class="std std-ref">ULOC_CUSTOM_BEGIN</span></a><span></span> <span class="o">+</span> <span class="mi">15</span> <span class="p">};</span>
+<span class="k">const</span> <span class="kt">int</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1aba8d555237e2c96c3274948d6724e6d1"><span class="std std-ref">ULOC_CUSTOM_16</span></a><span></span> <span class="p">{</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a55908360718715843f19e78bc1601bb3"><span class="std std-ref">ULOC_CUSTOM_BEGIN</span></a><span></span> <span class="o">+</span> <span class="mi">16</span> <span class="p">};</span>
+<span class="k">const</span> <span class="kt">int</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a7a9a0641adddd79a15608d407b37bd19"><span class="std std-ref">ULOC_CUSTOM_17</span></a><span></span> <span class="p">{</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a55908360718715843f19e78bc1601bb3"><span class="std std-ref">ULOC_CUSTOM_BEGIN</span></a><span></span> <span class="o">+</span> <span class="mi">17</span> <span class="p">};</span>
+<span class="k">const</span> <span class="kt">int</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1acd9cfe07ebfc5d7c19c8fb0de6d976ab"><span class="std std-ref">ULOC_CUSTOM_18</span></a><span></span> <span class="p">{</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a55908360718715843f19e78bc1601bb3"><span class="std std-ref">ULOC_CUSTOM_BEGIN</span></a><span></span> <span class="o">+</span> <span class="mi">18</span> <span class="p">};</span>
+<span class="k">const</span> <span class="kt">int</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1ad2761052449e8d90846d1f922b06450f"><span class="std std-ref">ULOC_CUSTOM_19</span></a><span></span> <span class="p">{</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a55908360718715843f19e78bc1601bb3"><span class="std std-ref">ULOC_CUSTOM_BEGIN</span></a><span></span> <span class="o">+</span> <span class="mi">19</span> <span class="p">};</span>
+<span class="k">const</span> <span class="kt">int</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a3b4df5142ac70bea5eab8f5a42e9e138"><span class="std std-ref">UBIND_INSTANCING_MATRICES</span></a><span></span> <span class="p">{</span> <span class="mi">0</span> <span class="p">};</span>
+<span class="k">const</span> <span class="kt">int</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a83bfaec6c629044bcb92fa873f05ee59"><span class="std std-ref">UBIND_VIEW_MATRICES</span></a><span></span> <span class="p">{</span> <span class="mi">1</span> <span class="p">};</span>
+<span class="k">const</span> <span class="kt">int</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a206896dff647a6f15d0f309ad47797c8"><span class="std std-ref">UBIND_SCENE_DATA</span></a><span></span> <span class="p">{</span> <span class="mi">2</span> <span class="p">};</span>
+<span class="k">const</span> <span class="kt">int</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a815a6cd18724bd752b1601fa5ed7ce14"><span class="std std-ref">UBIND_LIGHTS</span></a><span></span> <span class="p">{</span> <span class="mi">3</span> <span class="p">};</span>
+<span class="k">const</span> <span class="kt">int</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a1608a4226156e2ac030cb5c2fd2a8ec4"><span class="std std-ref">UBIND_CUSTOM_0</span></a><span></span> <span class="p">{</span> <span class="mi">4</span> <span class="p">};</span>
+<span class="k">const</span> <span class="kt">int</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1aeb12fddde207cf82c9c94d1bb4881590"><span class="std std-ref">UBIND_CUSTOM_1</span></a><span></span> <span class="p">{</span> <span class="mi">5</span> <span class="p">};</span>
+<span class="k">const</span> <span class="kt">int</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1aa68034d11495a88b28271db36a07675f"><span class="std std-ref">UBIND_CUSTOM_2</span></a><span></span> <span class="p">{</span> <span class="mi">6</span> <span class="p">};</span>
+<span class="k">const</span> <span class="kt">int</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a21e05cba05f94bba4303f99b66562507"><span class="std std-ref">UBIND_CUSTOM_3</span></a><span></span> <span class="p">{</span> <span class="mi">7</span> <span class="p">};</span>
+<span class="k">const</span> <span class="kt">int</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1acee55113f3284321567b0ddd613aa9d3"><span class="std std-ref">UBIND_CUSTOM_4</span></a><span></span> <span class="p">{</span> <span class="mi">8</span> <span class="p">};</span>
+<span class="k">const</span> <span class="kt">int</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1ad8c4c37c3c09d850db2061579dce8fc9"><span class="std std-ref">UBIND_CUSTOM_5</span></a><span></span> <span class="p">{</span> <span class="mi">9</span> <span class="p">};</span>
+<span class="k">const</span> <span class="kt">int</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1afaa0ccfe36ad1037123930baad760990"><span class="std std-ref">UBIND_CUSTOM_6</span></a><span></span> <span class="p">{</span> <span class="mi">10</span> <span class="p">};</span>
+<span class="k">const</span> <span class="kt">int</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a2e442bd5569374d86d02d6a156fc6829"><span class="std std-ref">UBIND_CUSTOM_7</span></a><span></span> <span class="p">{</span> <span class="mi">11</span> <span class="p">};</span>
+<span class="k">const</span> <span class="kt">int</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1ab27ff83f36c720ff773e3ac47a621087"><span class="std std-ref">UBIND_CUSTOM_8</span></a><span></span> <span class="p">{</span> <span class="mi">12</span> <span class="p">};</span>
+<span class="k">const</span> <span class="kt">int</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a32079887fcf1d96ba7e0c500cbe8541f"><span class="std std-ref">UBIND_CUSTOM_9</span></a><span></span> <span class="p">{</span> <span class="mi">13</span> <span class="p">};</span>
+
+<span class="c1">// global functions</span>
+
+<span class="kt">void</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a6301524b12f7fbf1331677a135ff35c4"><span class="std std-ref">DrawFullscreen</span></a><span></span><span class="p">();</span>
+
+<span class="p">}</span> <span class="c1">// namespace shader</span></pre>
+</div>
+<div class="section" id="detailed-documentation">
+<span id="details-namespacehiro-1-1shader"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
+<p>Interface for writing shaders. Contains C++ definitions equivalent to GLSL definitions.</p>
+<div class="section" id="global-variables">
+<h3>Global Variables<a class="headerlink" href="#global-variables" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1shader-1a0e8699ba233803cca059a3e15ea35655"><span id="index-1"></span><span></span><span class="k">const</span> <span class="kt">int</span> <span class="n">MAX_SCENE_COUNT</span> <span class="p">{</span> <span class="mi">16</span> <span class="p">}</span></pre>
+<p>Maximal usable number of scenes.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1shader-1a988f90f729de8124181767b11887bb36"><span id="index-2"></span><span></span><span class="k">const</span> <span class="kt">int</span> <span class="n">MAX_CAMERA_COUNT</span> <span class="p">{</span> <span class="mi">16</span> <span class="p">}</span></pre>
+<p>Maximal usable number of cameras.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1shader-1aa4a06dbc4a1133ed9a38f775a2d0f4da"><span id="index-3"></span><span></span><span class="k">const</span> <span class="kt">int</span> <span class="n">MAX_LIGHT_COUNT</span> <span class="p">{</span> <span class="mi">16</span> <span class="p">}</span></pre>
+<p>Maximal usable number of lights.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1shader-1a2e0c9addf9bd40d24b68a43473b75d73"><span id="index-4"></span><span></span><span class="k">const</span> <span class="kt">int</span> <span class="n">MAX_LIGHT_COUNT_PER_SCENE</span> <span class="p">{</span> <span class="mi">4</span> <span class="p">}</span></pre>
+<p>Maximal usable number of lights per scene.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1shader-1abddb86a5c5552049af9502f01d306909"><span id="index-5"></span><span></span><span class="k">const</span> <span class="kt">int</span> <span class="n">MAX_INSTANCE_COUNT</span> <span class="p">{</span> <span class="mi">32</span> <span class="p">}</span></pre>
+<p>Maximal usable number of Renderer-Style pairs per scene.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1shader-1aec396dec7a3d81d2c0250ca129bf77ff"><span id="index-6"></span><span></span><span class="k">const</span> <span class="kt">int</span> <span class="n">ULOC_RENDER_PASS</span> <span class="p">{</span> <span class="mi">0</span> <span class="p">}</span></pre>
+<p>Location of integer identifier of current render system pass.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1shader-1a884a9311c35706446d8289c5260d5b2a"><span id="index-7"></span><span></span><span class="k">const</span> <span class="kt">int</span> <span class="n">ULOC_SHADOWING_METHOD</span> <span class="p">{</span> <span class="mi">1</span> <span class="p">}</span></pre>
+<p>Location of integer identifier of shadowing method.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1shader-1a619ac85a5277000330f5b855c5d583a1"><span id="index-8"></span><span></span><span class="k">const</span> <span class="kt">int</span> <span class="n">ULOC_MODEL_MATRIX</span> <span class="p">{</span> <span class="mi">2</span> <span class="p">}</span></pre>
+<p>Location of model matrix stored in <a class="reference internal" href="struct_hiro_draw_Style.html#doxid-structhiro-1-1draw-1-1-style-1ace924813fe0c4df0b8a8f44b9cc7f3a6"><span class="std std-ref">hiro::draw::Style::transform</span></a>.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1shader-1a7f6c34cdb92e6f25e03e4a48fc70d47f"><span id="index-9"></span><span></span><span class="k">const</span> <span class="kt">int</span> <span class="n">ULOC_SCENE_ID</span> <span class="p">{</span> <span class="mi">6</span> <span class="p">}</span></pre>
+<p>Location of scene index, that currently renders.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1shader-1a45630c09b2db691a1d0603c1c6506290"><span id="index-10"></span><span></span><span class="k">const</span> <span class="kt">int</span> <span class="n">ULOC_USE_INSTANCING</span> <span class="p">{</span> <span class="mi">7</span> <span class="p">}</span></pre>
+<p>Location of boolean deciding whether instanced rendering is used.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1shader-1a87ea96b250a281f2cc7fd53b929334d8"><span id="index-11"></span><span></span><span class="k">const</span> <span class="kt">int</span> <span class="n">ULOC_PRE_INSTANCING_MATRIX</span> <span class="p">{</span> <span class="mi">8</span> <span class="p">}</span></pre>
+<p>Location of a pre-instance matrix.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1shader-1a55908360718715843f19e78bc1601bb3"><span id="index-12"></span><span></span><span class="k">const</span> <span class="kt">int</span> <span class="n">ULOC_CUSTOM_BEGIN</span> <span class="p">{</span> <span class="mi">12</span> <span class="p">}</span></pre>
+<p>First location usable for custom uniform.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1shader-1a90114d566e2ba51e66bc09f96608cb24"><span id="index-13"></span><span></span><span class="k">const</span> <span class="kt">int</span> <span class="n">ULOC_CUSTOM_0</span> <span class="p">{</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a55908360718715843f19e78bc1601bb3"><span class="std std-ref">ULOC_CUSTOM_BEGIN</span></a><span></span> <span class="o">+</span> <span class="mi">0</span> <span class="p">}</span></pre>
+<p>Location usable for custom uniform.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1shader-1abce1f90aa69724a3d36f389556144bc6"><span id="index-14"></span><span></span><span class="k">const</span> <span class="kt">int</span> <span class="n">ULOC_CUSTOM_1</span> <span class="p">{</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a55908360718715843f19e78bc1601bb3"><span class="std std-ref">ULOC_CUSTOM_BEGIN</span></a><span></span> <span class="o">+</span> <span class="mi">1</span> <span class="p">}</span></pre>
+<p>Location usable for custom uniform.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1shader-1a6720c5eabc0f488acf395acb3a89a942"><span id="index-15"></span><span></span><span class="k">const</span> <span class="kt">int</span> <span class="n">ULOC_CUSTOM_2</span> <span class="p">{</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a55908360718715843f19e78bc1601bb3"><span class="std std-ref">ULOC_CUSTOM_BEGIN</span></a><span></span> <span class="o">+</span> <span class="mi">2</span> <span class="p">}</span></pre>
+<p>Location usable for custom uniform.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1shader-1a0fda1830bc0022bd6687f446970f2a29"><span id="index-16"></span><span></span><span class="k">const</span> <span class="kt">int</span> <span class="n">ULOC_CUSTOM_3</span> <span class="p">{</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a55908360718715843f19e78bc1601bb3"><span class="std std-ref">ULOC_CUSTOM_BEGIN</span></a><span></span> <span class="o">+</span> <span class="mi">3</span> <span class="p">}</span></pre>
+<p>Location usable for custom uniform.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1shader-1ae46ce9e9714f8a208992ccf54be025ec"><span id="index-17"></span><span></span><span class="k">const</span> <span class="kt">int</span> <span class="n">ULOC_CUSTOM_4</span> <span class="p">{</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a55908360718715843f19e78bc1601bb3"><span class="std std-ref">ULOC_CUSTOM_BEGIN</span></a><span></span> <span class="o">+</span> <span class="mi">4</span> <span class="p">}</span></pre>
+<p>Location usable for custom uniform.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1shader-1a629f9c62c595aa48ab36b455e6de0c2b"><span id="index-18"></span><span></span><span class="k">const</span> <span class="kt">int</span> <span class="n">ULOC_CUSTOM_5</span> <span class="p">{</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a55908360718715843f19e78bc1601bb3"><span class="std std-ref">ULOC_CUSTOM_BEGIN</span></a><span></span> <span class="o">+</span> <span class="mi">5</span> <span class="p">}</span></pre>
+<p>Location usable for custom uniform.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1shader-1ae48aa63d78c01920610d67807088b3e6"><span id="index-19"></span><span></span><span class="k">const</span> <span class="kt">int</span> <span class="n">ULOC_CUSTOM_6</span> <span class="p">{</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a55908360718715843f19e78bc1601bb3"><span class="std std-ref">ULOC_CUSTOM_BEGIN</span></a><span></span> <span class="o">+</span> <span class="mi">6</span> <span class="p">}</span></pre>
+<p>Location usable for custom uniform.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1shader-1a53f8c7ab6a0a62df042e464d73f76b52"><span id="index-20"></span><span></span><span class="k">const</span> <span class="kt">int</span> <span class="n">ULOC_CUSTOM_7</span> <span class="p">{</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a55908360718715843f19e78bc1601bb3"><span class="std std-ref">ULOC_CUSTOM_BEGIN</span></a><span></span> <span class="o">+</span> <span class="mi">7</span> <span class="p">}</span></pre>
+<p>Location usable for custom uniform.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1shader-1a6cc9773f958cfeddb744f7f99f1cd2b8"><span id="index-21"></span><span></span><span class="k">const</span> <span class="kt">int</span> <span class="n">ULOC_CUSTOM_8</span> <span class="p">{</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a55908360718715843f19e78bc1601bb3"><span class="std std-ref">ULOC_CUSTOM_BEGIN</span></a><span></span> <span class="o">+</span> <span class="mi">8</span> <span class="p">}</span></pre>
+<p>Location usable for custom uniform.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1shader-1ac957be3bfbf9d42c128d20adb18769b2"><span id="index-22"></span><span></span><span class="k">const</span> <span class="kt">int</span> <span class="n">ULOC_CUSTOM_9</span> <span class="p">{</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a55908360718715843f19e78bc1601bb3"><span class="std std-ref">ULOC_CUSTOM_BEGIN</span></a><span></span> <span class="o">+</span> <span class="mi">9</span> <span class="p">}</span></pre>
+<p>Location usable for custom uniform.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1shader-1a24026585effe6eebcb426d57dcfae689"><span id="index-23"></span><span></span><span class="k">const</span> <span class="kt">int</span> <span class="n">ULOC_CUSTOM_10</span> <span class="p">{</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a55908360718715843f19e78bc1601bb3"><span class="std std-ref">ULOC_CUSTOM_BEGIN</span></a><span></span> <span class="o">+</span> <span class="mi">10</span> <span class="p">}</span></pre>
+<p>Location usable for custom uniform.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1shader-1a5998a1a95faa5a6440fa4267f49c1014"><span id="index-24"></span><span></span><span class="k">const</span> <span class="kt">int</span> <span class="n">ULOC_CUSTOM_11</span> <span class="p">{</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a55908360718715843f19e78bc1601bb3"><span class="std std-ref">ULOC_CUSTOM_BEGIN</span></a><span></span> <span class="o">+</span> <span class="mi">11</span> <span class="p">}</span></pre>
+<p>Location usable for custom uniform.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1shader-1a848a59a68543cb782196ca9fbc16bdee"><span id="index-25"></span><span></span><span class="k">const</span> <span class="kt">int</span> <span class="n">ULOC_CUSTOM_12</span> <span class="p">{</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a55908360718715843f19e78bc1601bb3"><span class="std std-ref">ULOC_CUSTOM_BEGIN</span></a><span></span> <span class="o">+</span> <span class="mi">12</span> <span class="p">}</span></pre>
+<p>Location usable for custom uniform.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1shader-1ae3d409037569e62a05447a55f2ee6cb9"><span id="index-26"></span><span></span><span class="k">const</span> <span class="kt">int</span> <span class="n">ULOC_CUSTOM_13</span> <span class="p">{</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a55908360718715843f19e78bc1601bb3"><span class="std std-ref">ULOC_CUSTOM_BEGIN</span></a><span></span> <span class="o">+</span> <span class="mi">13</span> <span class="p">}</span></pre>
+<p>Location usable for custom uniform.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1shader-1a537e6a45328d34f97deb2fd61c734fc2"><span id="index-27"></span><span></span><span class="k">const</span> <span class="kt">int</span> <span class="n">ULOC_CUSTOM_14</span> <span class="p">{</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a55908360718715843f19e78bc1601bb3"><span class="std std-ref">ULOC_CUSTOM_BEGIN</span></a><span></span> <span class="o">+</span> <span class="mi">14</span> <span class="p">}</span></pre>
+<p>Location usable for custom uniform.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1shader-1aedceb26df874c3444025c8d549aeb6cd"><span id="index-28"></span><span></span><span class="k">const</span> <span class="kt">int</span> <span class="n">ULOC_CUSTOM_15</span> <span class="p">{</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a55908360718715843f19e78bc1601bb3"><span class="std std-ref">ULOC_CUSTOM_BEGIN</span></a><span></span> <span class="o">+</span> <span class="mi">15</span> <span class="p">}</span></pre>
+<p>Location usable for custom uniform.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1shader-1aba8d555237e2c96c3274948d6724e6d1"><span id="index-29"></span><span></span><span class="k">const</span> <span class="kt">int</span> <span class="n">ULOC_CUSTOM_16</span> <span class="p">{</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a55908360718715843f19e78bc1601bb3"><span class="std std-ref">ULOC_CUSTOM_BEGIN</span></a><span></span> <span class="o">+</span> <span class="mi">16</span> <span class="p">}</span></pre>
+<p>Location usable for custom uniform.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1shader-1a7a9a0641adddd79a15608d407b37bd19"><span id="index-30"></span><span></span><span class="k">const</span> <span class="kt">int</span> <span class="n">ULOC_CUSTOM_17</span> <span class="p">{</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a55908360718715843f19e78bc1601bb3"><span class="std std-ref">ULOC_CUSTOM_BEGIN</span></a><span></span> <span class="o">+</span> <span class="mi">17</span> <span class="p">}</span></pre>
+<p>Location usable for custom uniform.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1shader-1acd9cfe07ebfc5d7c19c8fb0de6d976ab"><span id="index-31"></span><span></span><span class="k">const</span> <span class="kt">int</span> <span class="n">ULOC_CUSTOM_18</span> <span class="p">{</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a55908360718715843f19e78bc1601bb3"><span class="std std-ref">ULOC_CUSTOM_BEGIN</span></a><span></span> <span class="o">+</span> <span class="mi">18</span> <span class="p">}</span></pre>
+<p>Location usable for custom uniform.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1shader-1ad2761052449e8d90846d1f922b06450f"><span id="index-32"></span><span></span><span class="k">const</span> <span class="kt">int</span> <span class="n">ULOC_CUSTOM_19</span> <span class="p">{</span> <a class="reference internal" href="#doxid-namespacehiro-1-1shader-1a55908360718715843f19e78bc1601bb3"><span class="std std-ref">ULOC_CUSTOM_BEGIN</span></a><span></span> <span class="o">+</span> <span class="mi">19</span> <span class="p">}</span></pre>
+<p>Location usable for custom uniform.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1shader-1a3b4df5142ac70bea5eab8f5a42e9e138"><span id="index-33"></span><span></span><span class="k">const</span> <span class="kt">int</span> <span class="n">UBIND_INSTANCING_MATRICES</span> <span class="p">{</span> <span class="mi">0</span> <span class="p">}</span></pre>
+<p>Uniform binding location for instance matrices.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1shader-1a83bfaec6c629044bcb92fa873f05ee59"><span id="index-34"></span><span></span><span class="k">const</span> <span class="kt">int</span> <span class="n">UBIND_VIEW_MATRICES</span> <span class="p">{</span> <span class="mi">1</span> <span class="p">}</span></pre>
+<p>Uniform binding location for camera view matrices.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1shader-1a206896dff647a6f15d0f309ad47797c8"><span id="index-35"></span><span></span><span class="k">const</span> <span class="kt">int</span> <span class="n">UBIND_SCENE_DATA</span> <span class="p">{</span> <span class="mi">2</span> <span class="p">}</span></pre>
+<p>Uniform binding location for scene data structures.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1shader-1a815a6cd18724bd752b1601fa5ed7ce14"><span id="index-36"></span><span></span><span class="k">const</span> <span class="kt">int</span> <span class="n">UBIND_LIGHTS</span> <span class="p">{</span> <span class="mi">3</span> <span class="p">}</span></pre>
+<p>Uniform binding location for light structures.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1shader-1a1608a4226156e2ac030cb5c2fd2a8ec4"><span id="index-37"></span><span></span><span class="k">const</span> <span class="kt">int</span> <span class="n">UBIND_CUSTOM_0</span> <span class="p">{</span> <span class="mi">4</span> <span class="p">}</span></pre>
+<p>Uniform binding location for custom data.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1shader-1aeb12fddde207cf82c9c94d1bb4881590"><span id="index-38"></span><span></span><span class="k">const</span> <span class="kt">int</span> <span class="n">UBIND_CUSTOM_1</span> <span class="p">{</span> <span class="mi">5</span> <span class="p">}</span></pre>
+<p>Uniform binding location for custom data.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1shader-1aa68034d11495a88b28271db36a07675f"><span id="index-39"></span><span></span><span class="k">const</span> <span class="kt">int</span> <span class="n">UBIND_CUSTOM_2</span> <span class="p">{</span> <span class="mi">6</span> <span class="p">}</span></pre>
+<p>Uniform binding location for custom data.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1shader-1a21e05cba05f94bba4303f99b66562507"><span id="index-40"></span><span></span><span class="k">const</span> <span class="kt">int</span> <span class="n">UBIND_CUSTOM_3</span> <span class="p">{</span> <span class="mi">7</span> <span class="p">}</span></pre>
+<p>Uniform binding location for custom data.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1shader-1acee55113f3284321567b0ddd613aa9d3"><span id="index-41"></span><span></span><span class="k">const</span> <span class="kt">int</span> <span class="n">UBIND_CUSTOM_4</span> <span class="p">{</span> <span class="mi">8</span> <span class="p">}</span></pre>
+<p>Uniform binding location for custom data.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1shader-1ad8c4c37c3c09d850db2061579dce8fc9"><span id="index-42"></span><span></span><span class="k">const</span> <span class="kt">int</span> <span class="n">UBIND_CUSTOM_5</span> <span class="p">{</span> <span class="mi">9</span> <span class="p">}</span></pre>
+<p>Uniform binding location for custom data.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1shader-1afaa0ccfe36ad1037123930baad760990"><span id="index-43"></span><span></span><span class="k">const</span> <span class="kt">int</span> <span class="n">UBIND_CUSTOM_6</span> <span class="p">{</span> <span class="mi">10</span> <span class="p">}</span></pre>
+<p>Uniform binding location for custom data.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1shader-1a2e442bd5569374d86d02d6a156fc6829"><span id="index-44"></span><span></span><span class="k">const</span> <span class="kt">int</span> <span class="n">UBIND_CUSTOM_7</span> <span class="p">{</span> <span class="mi">11</span> <span class="p">}</span></pre>
+<p>Uniform binding location for custom data.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1shader-1ab27ff83f36c720ff773e3ac47a621087"><span id="index-45"></span><span></span><span class="k">const</span> <span class="kt">int</span> <span class="n">UBIND_CUSTOM_8</span> <span class="p">{</span> <span class="mi">12</span> <span class="p">}</span></pre>
+<p>Uniform binding location for custom data.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1shader-1a32079887fcf1d96ba7e0c500cbe8541f"><span id="index-46"></span><span></span><span class="k">const</span> <span class="kt">int</span> <span class="n">UBIND_CUSTOM_9</span> <span class="p">{</span> <span class="mi">13</span> <span class="p">}</span></pre>
+<p>Uniform binding location for custom data.</p>
+</div>
+<div class="section" id="global-functions">
+<h3>Global Functions<a class="headerlink" href="#global-functions" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1shader-1a6301524b12f7fbf1331677a135ff35c4"><span id="index-47"></span><span></span><span class="kt">void</span> <span class="n">DrawFullscreen</span><span class="p">()</span></pre>
+<p>Invokes draw for fullscreen.vert shader.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Skeletex Research
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

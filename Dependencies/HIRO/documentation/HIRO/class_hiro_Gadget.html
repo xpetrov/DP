@@ -1,0 +1,621 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>class hiro::Gadget &mdash; HIRO 0.4.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/hiro-fav-32.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/target-highlight.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/hiro_theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-sphinx_rtd_theme.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="class hiro::GuiGenerator" href="class_hiro_GuiGenerator.html" />
+    <link rel="prev" title="class hiro::Exportable" href="class_hiro_Exportable.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: rgb(248, 216, 60)" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/hiro-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_0.html">T0: Setting up Visual Studio Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_1.html">T1: Introduction to HIRO GUI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_2.html">T2: Creating Custom Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_3.html">T3: Overview of Gadget Features</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="shader_api.html">Shader API</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="global.html">Global Namespace</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="namespace_cegui_ext.html">namespace cegui_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_dialog.html">namespace dialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_file_types.html">namespace file_types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_fs.html">namespace fs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_func.html">namespace func</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_geom.html">namespace geom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_glm_ext.html">namespace glm_ext</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="namespace_hiro.html">namespace hiro</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro_draw.html">namespace hiro::draw</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro_gui.html">namespace hiro::gui</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro_modules.html">namespace hiro::modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro_shader.html">namespace hiro::shader</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_BoolFunc.html">enum hiro::BoolFunc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_EventStatus.html">enum hiro::EventStatus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_Key.html">enum hiro::Key</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_Mod.html">enum hiro::Mod</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_MouseButton.html">enum hiro::MouseButton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_hiro_ActiveResourceInfo.html">struct hiro::ActiveResourceInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_hiro_ResourceId.html">struct hiro::ResourceId</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Camera.html">class hiro::Camera</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Debugger.html">class hiro::Debugger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Exportable.html">class hiro::Exportable</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">class hiro::Gadget</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_GuiGenerator.html">class hiro::GuiGenerator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_GuiPanel.html">class hiro::GuiPanel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_ModKeys.html">class hiro::ModKeys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Resource.html">class hiro::Resource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_omp_ext.html">namespace omp_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_std_ext.html">namespace std_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_time_m.html">namespace time_m</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_ulog.html">namespace ulog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_uprogress.html">namespace uprogress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_utils.html">namespace utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_Config.html">class Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_IDialogInterface.html">class IDialogInterface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_WxWidgetsDialog.html">class WxWidgetsDialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">HIRO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="global.html">Global Namespace</a> &raquo;</li>
+        
+          <li><a href="namespace_hiro.html">namespace hiro</a> &raquo;</li>
+        
+      <li>class hiro::Gadget</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="class-hiro-gadget">
+<span id="doxid-classhiro-1-1-gadget"></span><span id="index-0"></span><h1>class hiro::Gadget<a class="headerlink" href="#class-hiro-gadget" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Visual part of module. Provides options for visualization, that do not interfere with data stored in <a class="reference internal" href="class_hiro_Resource.html#doxid-classhiro-1-1-resource"><span class="std std-ref">Resource</span></a>. <a class="reference internal" href="#details-classhiro-1-1-gadget"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;Gadget.h&gt;</span><span class="cp"></span>
+
+<span class="k">class</span> <span class="n">Gadget</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="c1">// fields</span>
+
+    <span class="k">const</span> <a class="reference internal" href="struct_hiro_ResourceId.html#doxid-structhiro-1-1-resource-id"><span class="std std-ref">hiro::ResourceId</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-classhiro-1-1-gadget-1a91361ba13236077986b298efe1e69b11"><span></span><span class="n">RESOURCE_ID</span></span><span></span><span class="p">;</span>
+
+    <span class="c1">// construction</span>
+
+    <span class="doxyrest-code-target target" id="doxid-classhiro-1-1-gadget-1a92c72fff9f07e795a247c12d77e0ae6c"><span></span><span class="n">Gadget</span></span><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="class_hiro_Resource.html#doxid-classhiro-1-1-resource"><span class="std std-ref">hiro::Resource</span></a><span></span><span class="o">*</span> <span class="n">res</span><span class="p">);</span>
+    <span class="k">virtual</span> <span class="doxyrest-code-target target" id="doxid-classhiro-1-1-gadget-1a2b6d38b35e9abe386d27070d1c5d7166"><span></span><span class="o">~</span><span class="n">Gadget</span></span><span></span><span class="p">();</span>
+
+    <span class="c1">// methods</span>
+
+    <span class="k">virtual</span> <span class="kt">void</span> <a class="reference internal" href="#doxid-classhiro-1-1-gadget-1a4dc696046bfa24330b4739ee93567fcf"><span class="std std-ref">Initialize</span></a><span></span><span class="p">();</span>
+    <span class="k">virtual</span> <span class="kt">void</span> <a class="reference internal" href="#doxid-classhiro-1-1-gadget-1a5eb706cfa99841100632bdfa1291fcea"><span class="std std-ref">Terminate</span></a><span></span><span class="p">();</span>
+    <span class="k">virtual</span> <span class="kt">void</span> <a class="reference internal" href="#doxid-classhiro-1-1-gadget-1ab31e47815a97c7c9775dbe34fc635bff"><span class="std std-ref">GenerateGui</span></a><span></span><span class="p">(</span><a class="reference internal" href="class_hiro_GuiGenerator.html#doxid-classhiro-1-1-gui-generator"><span class="std std-ref">hiro::GuiGenerator</span></a><span></span><span class="o">&amp;</span> <span class="n">gui</span><span class="p">);</span>
+    <span class="k">virtual</span> <span class="kt">void</span> <a class="reference internal" href="#doxid-classhiro-1-1-gadget-1aab34793c1e74e64e62b2c0eb25944f92"><span class="std std-ref">Update</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="kt">float</span> <span class="n">time_delta</span><span class="p">);</span>
+    <span class="k">virtual</span> <span class="kt">bool</span> <a class="reference internal" href="#doxid-classhiro-1-1-gadget-1a9da1e176f98e5d5f2aaac9ce24baf792"><span class="std std-ref">FocusCamera</span></a><span></span><span class="p">(</span><span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <span class="n">focus_point</span><span class="p">,</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <span class="n">cam_position</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="enum_hiro_EventStatus.html#doxid-namespacehiro-1ae38b69923d5ce1a05fc7ea77caeffd84"><span class="std std-ref">hiro::EventStatus</span></a><span></span> <a class="reference internal" href="#doxid-classhiro-1-1-gadget-1a2a8a3495be636ebb8e2c9c3eeba79cc8"><span class="std std-ref">KeyPressed</span></a><span></span><span class="p">(</span><a class="reference internal" href="enum_hiro_Key.html#doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27b"><span class="std std-ref">hiro::Key</span></a><span></span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="class_hiro_ModKeys.html#doxid-classhiro-1-1-mod-keys"><span class="std std-ref">hiro::ModKeys</span></a><span></span><span class="o">&amp;</span> <span class="n">mods</span><span class="p">,</span> <a class="reference internal" href="enum_hiro_EventStatus.html#doxid-namespacehiro-1ae38b69923d5ce1a05fc7ea77caeffd84"><span class="std std-ref">hiro::EventStatus</span></a><span></span> <span class="n">status</span><span class="p">);</span>
+    <span class="k">virtual</span> <a class="reference internal" href="enum_hiro_EventStatus.html#doxid-namespacehiro-1ae38b69923d5ce1a05fc7ea77caeffd84"><span class="std std-ref">hiro::EventStatus</span></a><span></span> <a class="reference internal" href="#doxid-classhiro-1-1-gadget-1a5291c71b4aa2ffb427bf2ba8f5266903"><span class="std std-ref">KeyReleased</span></a><span></span><span class="p">(</span><a class="reference internal" href="enum_hiro_Key.html#doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27b"><span class="std std-ref">hiro::Key</span></a><span></span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="class_hiro_ModKeys.html#doxid-classhiro-1-1-mod-keys"><span class="std std-ref">hiro::ModKeys</span></a><span></span><span class="o">&amp;</span> <span class="n">mods</span><span class="p">,</span> <a class="reference internal" href="enum_hiro_EventStatus.html#doxid-namespacehiro-1ae38b69923d5ce1a05fc7ea77caeffd84"><span class="std std-ref">hiro::EventStatus</span></a><span></span> <span class="n">status</span><span class="p">);</span>
+    <span class="k">virtual</span> <a class="reference internal" href="enum_hiro_EventStatus.html#doxid-namespacehiro-1ae38b69923d5ce1a05fc7ea77caeffd84"><span class="std std-ref">hiro::EventStatus</span></a><span></span> <a class="reference internal" href="#doxid-classhiro-1-1-gadget-1a2b8760d0da11bc75ef41b7c7e821132a"><span class="std std-ref">MouseButtonPressed</span></a><span></span><span class="p">(</span><a class="reference internal" href="enum_hiro_MouseButton.html#doxid-namespacehiro-1ac10e402e841e732c46666de2ea1c1b79"><span class="std std-ref">hiro::MouseButton</span></a><span></span> <span class="n">button</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="class_hiro_ModKeys.html#doxid-classhiro-1-1-mod-keys"><span class="std std-ref">hiro::ModKeys</span></a><span></span><span class="o">&amp;</span> <span class="n">mods</span><span class="p">,</span> <a class="reference internal" href="enum_hiro_EventStatus.html#doxid-namespacehiro-1ae38b69923d5ce1a05fc7ea77caeffd84"><span class="std std-ref">hiro::EventStatus</span></a><span></span> <span class="n">status</span><span class="p">);</span>
+    <span class="k">virtual</span> <a class="reference internal" href="enum_hiro_EventStatus.html#doxid-namespacehiro-1ae38b69923d5ce1a05fc7ea77caeffd84"><span class="std std-ref">hiro::EventStatus</span></a><span></span> <a class="reference internal" href="#doxid-classhiro-1-1-gadget-1ad9e1a38ea0180d5012662d1ecfa06a2b"><span class="std std-ref">MouseButtonReleased</span></a><span></span><span class="p">(</span><a class="reference internal" href="enum_hiro_MouseButton.html#doxid-namespacehiro-1ac10e402e841e732c46666de2ea1c1b79"><span class="std std-ref">hiro::MouseButton</span></a><span></span> <span class="n">button</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="class_hiro_ModKeys.html#doxid-classhiro-1-1-mod-keys"><span class="std std-ref">hiro::ModKeys</span></a><span></span><span class="o">&amp;</span> <span class="n">mods</span><span class="p">,</span> <a class="reference internal" href="enum_hiro_EventStatus.html#doxid-namespacehiro-1ae38b69923d5ce1a05fc7ea77caeffd84"><span class="std std-ref">hiro::EventStatus</span></a><span></span> <span class="n">status</span><span class="p">);</span>
+    <span class="k">virtual</span> <a class="reference internal" href="enum_hiro_EventStatus.html#doxid-namespacehiro-1ae38b69923d5ce1a05fc7ea77caeffd84"><span class="std std-ref">hiro::EventStatus</span></a><span></span> <a class="reference internal" href="#doxid-classhiro-1-1-gadget-1ac1790c9342969ff81232bfbf13b79cdd"><span class="std std-ref">MouseWheel</span></a><span></span><span class="p">(</span><span class="kt">float</span> <span class="n">offset</span><span class="p">,</span> <a class="reference internal" href="enum_hiro_EventStatus.html#doxid-namespacehiro-1ae38b69923d5ce1a05fc7ea77caeffd84"><span class="std std-ref">hiro::EventStatus</span></a><span></span> <span class="n">status</span><span class="p">);</span>
+    <span class="k">virtual</span> <a class="reference internal" href="enum_hiro_EventStatus.html#doxid-namespacehiro-1ae38b69923d5ce1a05fc7ea77caeffd84"><span class="std std-ref">hiro::EventStatus</span></a><span></span> <a class="reference internal" href="#doxid-classhiro-1-1-gadget-1ab585a371f283f35967741825c3dd1b54"><span class="std std-ref">MouseMoved</span></a><span></span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">,</span> <span class="kt">float</span> <span class="n">y</span><span class="p">,</span> <a class="reference internal" href="enum_hiro_EventStatus.html#doxid-namespacehiro-1ae38b69923d5ce1a05fc7ea77caeffd84"><span class="std std-ref">hiro::EventStatus</span></a><span></span> <span class="n">status</span><span class="p">);</span>
+    <span class="k">virtual</span> <a class="reference internal" href="enum_hiro_EventStatus.html#doxid-namespacehiro-1ae38b69923d5ce1a05fc7ea77caeffd84"><span class="std std-ref">hiro::EventStatus</span></a><span></span> <a class="reference internal" href="#doxid-classhiro-1-1-gadget-1a1ea8af394cb23f4b5b33ec5aaa0b08de"><span class="std std-ref">ViewResized</span></a><span></span><span class="p">(</span><span class="kt">uint32_t</span> <span class="n">width</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">height</span><span class="p">,</span> <a class="reference internal" href="enum_hiro_EventStatus.html#doxid-namespacehiro-1ae38b69923d5ce1a05fc7ea77caeffd84"><span class="std std-ref">hiro::EventStatus</span></a><span></span> <span class="n">status</span><span class="p">);</span>
+    <span class="k">virtual</span> <span class="kt">void</span> <a class="reference internal" href="#doxid-classhiro-1-1-gadget-1a2f4e0e007f586dca0b0e87349cd16d92"><span class="std std-ref">RenderTexts</span></a><span></span><span class="p">(</span><a class="reference internal" href="class_hiro_draw_TextRenderer.html#doxid-classhiro-1-1draw-1-1-text-renderer"><span class="std std-ref">hiro::draw::TextRenderer</span></a><span></span><span class="o">&amp;</span> <span class="n">t_renderer</span><span class="p">);</span>
+    <a class="reference internal" href="class_hiro_Camera.html#doxid-classhiro-1-1-camera"><span class="std std-ref">hiro::Camera</span></a><span></span><span class="o">*</span> <a class="reference internal" href="#doxid-classhiro-1-1-gadget-1acfbb02acb610ec0d95558c581611da18"><span class="std std-ref">GetCamera</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">int32_t</span> <a class="reference internal" href="#doxid-classhiro-1-1-gadget-1aa5317d967e4c39d2c01e930b30dd1577"><span class="std std-ref">AddRenderer</span></a><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="namespace_hiro_draw.html#doxid-namespacehiro-1-1draw-1a32115b3c69160fb20f512117c802e0f5"><span class="std std-ref">hiro::draw::PRenderer</span></a><span></span><span class="o">&amp;</span> <span class="n">renderer</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="namespace_hiro_draw.html#doxid-namespacehiro-1-1draw-1a66403c2b89928adf30309388f29d18c9"><span class="std std-ref">hiro::draw::PStyle</span></a><span></span><span class="o">&amp;</span> <span class="n">style</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="n">layer</span> <span class="o">=</span> <span class="mi">0u</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-classhiro-1-1-gadget-1a4d4c6f80cee67140973eb91d5e99912f"><span class="std std-ref">RemoveRenderer</span></a><span></span><span class="p">(</span><span class="kt">int32_t</span> <span class="n">renderer_id</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="struct_hiro_draw_ProjectionParams.html#doxid-structhiro-1-1draw-1-1-projection-params"><span class="std std-ref">hiro::draw::ProjectionParams</span></a><span></span> <a class="reference internal" href="#doxid-classhiro-1-1-gadget-1aeca46599406868ef17b69588b1c45a4b"><span class="std std-ref">GetProjectionParams</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+
+    <span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">UnitType</span> <span class="o">=</span> <span class="n">Resource</span><span class="o">&gt;</span>
+    <span class="k">const</span> <span class="n">UnitType</span><span class="o">*</span> <a class="reference internal" href="#doxid-classhiro-1-1-gadget-1a9c532d5eb0be17c2c70745e8102fee99"><span class="std std-ref">GetResource</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-classhiro-1-1-gadget-1ac0a6d69fa1c70a39935391a09e3a6d3f"><span class="std std-ref">SetViewarea</span></a><span></span><span class="p">(</span><span class="n">hiro</span><span class="o">::</span><span class="n">Viewarea</span><span class="o">*</span> <span class="n">viewarea</span><span class="p">);</span>
+    <span class="kt">bool</span> <a class="reference internal" href="#doxid-classhiro-1-1-gadget-1aabd17a6855a00b12911d01aff4869778"><span class="std std-ref">SaveState</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-classhiro-1-1-gadget-1ad07a64e7e7a1b3a7ea7d1b7bea2d283a"><span class="std std-ref">SetNearFar</span></a><span></span><span class="p">(</span><span class="kt">float</span> <span class="n">near</span><span class="p">,</span> <span class="kt">float</span> <span class="n">far</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+
+<span class="k">protected</span><span class="o">:</span>
+    <span class="c1">// methods</span>
+
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-classhiro-1-1-gadget-1a75638476efd46598675ec83c704d90b8"><span class="std std-ref">LoadState</span></a><span></span><span class="p">();</span>
+    <span class="k">virtual</span> <span class="kt">bool</span> <a class="reference internal" href="#doxid-classhiro-1-1-gadget-1a3cf338c38e94db8fba9e0e99296f880b"><span class="std std-ref">ReadFromStream</span></a><span></span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">istream</span><span class="o">&amp;</span> <span class="n">str</span><span class="p">);</span>
+    <span class="k">virtual</span> <span class="kt">void</span> <a class="reference internal" href="#doxid-classhiro-1-1-gadget-1a2950f2ae7335a319b9f514370f6d4637"><span class="std std-ref">WriteToStream</span></a><span></span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">str</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-classhiro-1-1-gadget-1a2406732e562de62d53e454db167bf81f"><span class="std std-ref">DrawOnNextUpdate</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="k">static</span> <span class="kt">bool</span> <a class="reference internal" href="#doxid-classhiro-1-1-gadget-1a8b072e01524a3f37fd077e9e2b73040b"><span class="std std-ref">ReadStateVersion</span></a><span></span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">istream</span><span class="o">&amp;</span> <span class="n">str</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">expected_version</span><span class="p">);</span>
+    <span class="k">static</span> <span class="kt">void</span> <a class="reference internal" href="#doxid-classhiro-1-1-gadget-1ac70db6cc0410308b3cc904f4e0ee53d2"><span class="std std-ref">WriteStateVersion</span></a><span></span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">str</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">version</span><span class="p">);</span>
+<span class="p">};</span></pre>
+</div>
+<div class="section" id="detailed-documentation">
+<span id="details-classhiro-1-1-gadget"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
+<p>Visual part of module. Provides options for visualization, that do not interfere with data stored in <a class="reference internal" href="class_hiro_Resource.html#doxid-classhiro-1-1-resource"><span class="std std-ref">Resource</span></a>.</p>
+<p>To unlock its powers, derive your custom <a class="reference internal" href="#doxid-classhiro-1-1-gadget"><span class="std std-ref">Gadget</span></a> and override functionality that you require.</p>
+<div class="section" id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-gadget-1a4dc696046bfa24330b4739ee93567fcf"><span id="index-1"></span><span></span><span class="k">virtual</span> <span class="kt">void</span> <span class="n">Initialize</span><span class="p">()</span></pre>
+<p>Function invoked right after object creation to set up all properties.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-gadget-1a5eb706cfa99841100632bdfa1291fcea"><span id="index-2"></span><span></span><span class="k">virtual</span> <span class="kt">void</span> <span class="n">Terminate</span><span class="p">()</span></pre>
+<p>Function invoked right before object destruction.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-gadget-1ab31e47815a97c7c9775dbe34fc635bff"><span id="index-3"></span><span></span><span class="k">virtual</span> <span class="kt">void</span> <span class="n">GenerateGui</span><span class="p">(</span><a class="reference internal" href="class_hiro_GuiGenerator.html#doxid-classhiro-1-1-gui-generator"><span class="std std-ref">hiro::GuiGenerator</span></a><span></span><span class="o">&amp;</span> <span class="n">gui</span><span class="p">)</span></pre>
+<p>Function invoked right after object initialization to define gui.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-gadget-1aab34793c1e74e64e62b2c0eb25944f92"><span id="index-4"></span><span></span><span class="k">virtual</span> <span class="kt">void</span> <span class="n">Update</span><span class="p">(</span><span class="k">const</span> <span class="kt">float</span> <span class="n">time_delta</span><span class="p">)</span></pre>
+<p>Function invoked each time HIRO context is updated.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-gadget-1a9da1e176f98e5d5f2aaac9ce24baf792"><span id="index-5"></span><span></span><span class="k">virtual</span> <span class="kt">bool</span> <span class="n">FocusCamera</span><span class="p">(</span><span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <span class="n">focus_point</span><span class="p">,</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <span class="n">cam_position</span><span class="p">)</span> <span class="k">const</span></pre>
+<p>Function invoked when user requests to focus camera at this gadget.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>focus_point</p></td>
+<td><p>Point at which the camera should look at.</p></td>
+</tr>
+<tr class="row-even"><td><p>cam_position</p></td>
+<td><p>Position of the camera.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Returns:</p>
+<p>When the camera can be set correctly, the method should return true.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-gadget-1a2a8a3495be636ebb8e2c9c3eeba79cc8"><span id="index-6"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="enum_hiro_EventStatus.html#doxid-namespacehiro-1ae38b69923d5ce1a05fc7ea77caeffd84"><span class="std std-ref">hiro::EventStatus</span></a><span></span> <span class="n">KeyPressed</span><span class="p">(</span><a class="reference internal" href="enum_hiro_Key.html#doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27b"><span class="std std-ref">hiro::Key</span></a><span></span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="class_hiro_ModKeys.html#doxid-classhiro-1-1-mod-keys"><span class="std std-ref">hiro::ModKeys</span></a><span></span><span class="o">&amp;</span> <span class="n">mods</span><span class="p">,</span> <a class="reference internal" href="enum_hiro_EventStatus.html#doxid-namespacehiro-1ae38b69923d5ce1a05fc7ea77caeffd84"><span class="std std-ref">hiro::EventStatus</span></a><span></span> <span class="n">status</span><span class="p">)</span></pre>
+<p>The function invoked after the key press event, triggered by a user.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>key</p></td>
+<td><p>Identifier of key that was pressed.</p></td>
+</tr>
+<tr class="row-even"><td><p>mods</p></td>
+<td><p>Set of modifier keys being held at the time of key press.</p></td>
+</tr>
+<tr class="row-odd"><td><p>status</p></td>
+<td><p>Whether the event was already processed by other object.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Returns:</p>
+<p>When the event was handled, the function should return <a class="reference internal" href="enum_hiro_EventStatus.html#doxid-namespacehiro-1ae38b69923d5ce1a05fc7ea77caeffd84a9d090a4005926e9e2a32e05cbd8c2fc6"><span class="std std-ref">EventStatus::processed</span></a>.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-gadget-1a5291c71b4aa2ffb427bf2ba8f5266903"><span id="index-7"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="enum_hiro_EventStatus.html#doxid-namespacehiro-1ae38b69923d5ce1a05fc7ea77caeffd84"><span class="std std-ref">hiro::EventStatus</span></a><span></span> <span class="n">KeyReleased</span><span class="p">(</span><a class="reference internal" href="enum_hiro_Key.html#doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27b"><span class="std std-ref">hiro::Key</span></a><span></span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="class_hiro_ModKeys.html#doxid-classhiro-1-1-mod-keys"><span class="std std-ref">hiro::ModKeys</span></a><span></span><span class="o">&amp;</span> <span class="n">mods</span><span class="p">,</span> <a class="reference internal" href="enum_hiro_EventStatus.html#doxid-namespacehiro-1ae38b69923d5ce1a05fc7ea77caeffd84"><span class="std std-ref">hiro::EventStatus</span></a><span></span> <span class="n">status</span><span class="p">)</span></pre>
+<p>The function invoked after the key release event, triggered by a user.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>key</p></td>
+<td><p>Identifier of key that was released.</p></td>
+</tr>
+<tr class="row-even"><td><p>mods</p></td>
+<td><p>Set of modifier keys being held at the time of key release.</p></td>
+</tr>
+<tr class="row-odd"><td><p>status</p></td>
+<td><p>Whether the event was already processed by other object.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Returns:</p>
+<p>When the event was handled, the function should return <a class="reference internal" href="enum_hiro_EventStatus.html#doxid-namespacehiro-1ae38b69923d5ce1a05fc7ea77caeffd84a9d090a4005926e9e2a32e05cbd8c2fc6"><span class="std std-ref">EventStatus::processed</span></a>.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-gadget-1a2b8760d0da11bc75ef41b7c7e821132a"><span id="index-8"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="enum_hiro_EventStatus.html#doxid-namespacehiro-1ae38b69923d5ce1a05fc7ea77caeffd84"><span class="std std-ref">hiro::EventStatus</span></a><span></span> <span class="n">MouseButtonPressed</span><span class="p">(</span><a class="reference internal" href="enum_hiro_MouseButton.html#doxid-namespacehiro-1ac10e402e841e732c46666de2ea1c1b79"><span class="std std-ref">hiro::MouseButton</span></a><span></span> <span class="n">button</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="class_hiro_ModKeys.html#doxid-classhiro-1-1-mod-keys"><span class="std std-ref">hiro::ModKeys</span></a><span></span><span class="o">&amp;</span> <span class="n">mods</span><span class="p">,</span> <a class="reference internal" href="enum_hiro_EventStatus.html#doxid-namespacehiro-1ae38b69923d5ce1a05fc7ea77caeffd84"><span class="std std-ref">hiro::EventStatus</span></a><span></span> <span class="n">status</span><span class="p">)</span></pre>
+<p>The function invoked after the mouse button press event, triggered by a user.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>button</p></td>
+<td><p>Identifier of button that was pressed.</p></td>
+</tr>
+<tr class="row-even"><td><p>mods</p></td>
+<td><p>Set of modifier keys being held at the time of button press.</p></td>
+</tr>
+<tr class="row-odd"><td><p>status</p></td>
+<td><p>Whether the event was already processed by other object.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Returns:</p>
+<p>When the event was handled, the function should return <a class="reference internal" href="enum_hiro_EventStatus.html#doxid-namespacehiro-1ae38b69923d5ce1a05fc7ea77caeffd84a9d090a4005926e9e2a32e05cbd8c2fc6"><span class="std std-ref">EventStatus::processed</span></a>.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-gadget-1ad9e1a38ea0180d5012662d1ecfa06a2b"><span id="index-9"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="enum_hiro_EventStatus.html#doxid-namespacehiro-1ae38b69923d5ce1a05fc7ea77caeffd84"><span class="std std-ref">hiro::EventStatus</span></a><span></span> <span class="n">MouseButtonReleased</span><span class="p">(</span><a class="reference internal" href="enum_hiro_MouseButton.html#doxid-namespacehiro-1ac10e402e841e732c46666de2ea1c1b79"><span class="std std-ref">hiro::MouseButton</span></a><span></span> <span class="n">button</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="class_hiro_ModKeys.html#doxid-classhiro-1-1-mod-keys"><span class="std std-ref">hiro::ModKeys</span></a><span></span><span class="o">&amp;</span> <span class="n">mods</span><span class="p">,</span> <a class="reference internal" href="enum_hiro_EventStatus.html#doxid-namespacehiro-1ae38b69923d5ce1a05fc7ea77caeffd84"><span class="std std-ref">hiro::EventStatus</span></a><span></span> <span class="n">status</span><span class="p">)</span></pre>
+<p>The function invoked after the mouse button release event, triggered by a user.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>button</p></td>
+<td><p>Identifier of button that was released.</p></td>
+</tr>
+<tr class="row-even"><td><p>mods</p></td>
+<td><p>Set of modifier keys being held at the time of button release.</p></td>
+</tr>
+<tr class="row-odd"><td><p>status</p></td>
+<td><p>Whether the event was already processed by other object.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Returns:</p>
+<p>When the event was handled, the function should return <a class="reference internal" href="enum_hiro_EventStatus.html#doxid-namespacehiro-1ae38b69923d5ce1a05fc7ea77caeffd84a9d090a4005926e9e2a32e05cbd8c2fc6"><span class="std std-ref">EventStatus::processed</span></a>.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-gadget-1ac1790c9342969ff81232bfbf13b79cdd"><span id="index-10"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="enum_hiro_EventStatus.html#doxid-namespacehiro-1ae38b69923d5ce1a05fc7ea77caeffd84"><span class="std std-ref">hiro::EventStatus</span></a><span></span> <span class="n">MouseWheel</span><span class="p">(</span><span class="kt">float</span> <span class="n">offset</span><span class="p">,</span> <a class="reference internal" href="enum_hiro_EventStatus.html#doxid-namespacehiro-1ae38b69923d5ce1a05fc7ea77caeffd84"><span class="std std-ref">hiro::EventStatus</span></a><span></span> <span class="n">status</span><span class="p">)</span></pre>
+<p>The function invoked after the mouse wheel was interacted with, triggered by a user.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>offset</p></td>
+<td><p>Orientation and intensity of a wheel change.</p></td>
+</tr>
+<tr class="row-even"><td><p>status</p></td>
+<td><p>Whether the event was already processed by other object.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Returns:</p>
+<p>When the event was handled, the function should return <a class="reference internal" href="enum_hiro_EventStatus.html#doxid-namespacehiro-1ae38b69923d5ce1a05fc7ea77caeffd84a9d090a4005926e9e2a32e05cbd8c2fc6"><span class="std std-ref">EventStatus::processed</span></a>.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-gadget-1ab585a371f283f35967741825c3dd1b54"><span id="index-11"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="enum_hiro_EventStatus.html#doxid-namespacehiro-1ae38b69923d5ce1a05fc7ea77caeffd84"><span class="std std-ref">hiro::EventStatus</span></a><span></span> <span class="n">MouseMoved</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">,</span> <span class="kt">float</span> <span class="n">y</span><span class="p">,</span> <a class="reference internal" href="enum_hiro_EventStatus.html#doxid-namespacehiro-1ae38b69923d5ce1a05fc7ea77caeffd84"><span class="std std-ref">hiro::EventStatus</span></a><span></span> <span class="n">status</span><span class="p">)</span></pre>
+<p>The function invoked after the mouse button press event, triggered by a user.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>x</p></td>
+<td><p>Horizontal position of a mouse cursor.</p></td>
+</tr>
+<tr class="row-even"><td><p>y</p></td>
+<td><p>Vertical position of a mouse cursor.</p></td>
+</tr>
+<tr class="row-odd"><td><p>status</p></td>
+<td><p>Whether the event was already processed by other object.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Returns:</p>
+<p>When the event was handled, the function should return <a class="reference internal" href="enum_hiro_EventStatus.html#doxid-namespacehiro-1ae38b69923d5ce1a05fc7ea77caeffd84a9d090a4005926e9e2a32e05cbd8c2fc6"><span class="std std-ref">EventStatus::processed</span></a>.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-gadget-1a1ea8af394cb23f4b5b33ec5aaa0b08de"><span id="index-12"></span><span></span><span class="k">virtual</span> <a class="reference internal" href="enum_hiro_EventStatus.html#doxid-namespacehiro-1ae38b69923d5ce1a05fc7ea77caeffd84"><span class="std std-ref">hiro::EventStatus</span></a><span></span> <span class="n">ViewResized</span><span class="p">(</span><span class="kt">uint32_t</span> <span class="n">width</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">height</span><span class="p">,</span> <a class="reference internal" href="enum_hiro_EventStatus.html#doxid-namespacehiro-1ae38b69923d5ce1a05fc7ea77caeffd84"><span class="std std-ref">hiro::EventStatus</span></a><span></span> <span class="n">status</span><span class="p">)</span></pre>
+<p>The function invoked after the view resolution changes.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>width</p></td>
+<td><p>Horizontal pixel resolution of a view.</p></td>
+</tr>
+<tr class="row-even"><td><p>height</p></td>
+<td><p>Vertical pixel resolution of a view.</p></td>
+</tr>
+<tr class="row-odd"><td><p>status</p></td>
+<td><p>Whether the event was already processed by other object.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Returns:</p>
+<p>When the event was handled, the function should return <a class="reference internal" href="enum_hiro_EventStatus.html#doxid-namespacehiro-1ae38b69923d5ce1a05fc7ea77caeffd84a9d090a4005926e9e2a32e05cbd8c2fc6"><span class="std std-ref">EventStatus::processed</span></a>.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-gadget-1a2f4e0e007f586dca0b0e87349cd16d92"><span id="index-13"></span><span></span><span class="k">virtual</span> <span class="kt">void</span> <span class="n">RenderTexts</span><span class="p">(</span><a class="reference internal" href="class_hiro_draw_TextRenderer.html#doxid-classhiro-1-1draw-1-1-text-renderer"><span class="std std-ref">hiro::draw::TextRenderer</span></a><span></span><span class="o">&amp;</span> <span class="n">t_renderer</span><span class="p">)</span></pre>
+<p>Function called before rendering, to define what texts should be printed on screen.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>t_renderer</p></td>
+<td><p>Text printer used to define texts to be printed.</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-gadget-1acfbb02acb610ec0d95558c581611da18"><span id="index-14"></span><a class="reference internal" href="class_hiro_Camera.html#doxid-classhiro-1-1-camera"><span class="std std-ref">hiro::Camera</span></a><span></span><span class="o">*</span> <span class="n">GetCamera</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Return handle to the camera used to render this.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-gadget-1aa5317d967e4c39d2c01e930b30dd1577"><span id="index-15"></span><span></span><span class="kt">int32_t</span> <span class="n">AddRenderer</span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="namespace_hiro_draw.html#doxid-namespacehiro-1-1draw-1a32115b3c69160fb20f512117c802e0f5"><span class="std std-ref">hiro::draw::PRenderer</span></a><span></span><span class="o">&amp;</span> <span class="n">renderer</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="namespace_hiro_draw.html#doxid-namespacehiro-1-1draw-1a66403c2b89928adf30309388f29d18c9"><span class="std std-ref">hiro::draw::PStyle</span></a><span></span><span class="o">&amp;</span> <span class="n">style</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="n">layer</span> <span class="o">=</span> <span class="mi">0u</span><span class="p">)</span> <span class="k">const</span></pre>
+<p>Insert specified renderer to the list of currently used renderers.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>renderer</p></td>
+<td><p>Renderer to add to the rendering system.</p></td>
+</tr>
+<tr class="row-even"><td><p>style</p></td>
+<td><p>Style used for rendering.</p></td>
+</tr>
+<tr class="row-odd"><td><p>layer</p></td>
+<td><p>Rendering layer used for rendering.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Returns:</p>
+<p>Identifier of currently added renderer.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-gadget-1a4d4c6f80cee67140973eb91d5e99912f"><span id="index-16"></span><span></span><span class="kt">void</span> <span class="n">RemoveRenderer</span><span class="p">(</span><span class="kt">int32_t</span> <span class="n">renderer_id</span><span class="p">)</span> <span class="k">const</span></pre>
+<p>Remove specified renderer from the list of currently used renderers.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>renderer_id</p></td>
+<td><p>Identifier of renderer to be removed.</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-gadget-1aeca46599406868ef17b69588b1c45a4b"><span id="index-17"></span><a class="reference internal" href="struct_hiro_draw_ProjectionParams.html#doxid-structhiro-1-1draw-1-1-projection-params"><span class="std std-ref">hiro::draw::ProjectionParams</span></a><span></span> <span class="n">GetProjectionParams</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Returns projection parameters for view where object exists.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-gadget-1a9c532d5eb0be17c2c70745e8102fee99"><span id="index-18"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">UnitType</span> <span class="o">=</span> <span class="n">Resource</span><span class="o">&gt;</span>
+<span class="k">const</span> <span class="n">UnitType</span><span class="o">*</span> <span class="n">GetResource</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Returns pointer to <a class="reference internal" href="class_hiro_Resource.html#doxid-classhiro-1-1-resource"><span class="std std-ref">Resource</span></a> object that was used to create this object.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-gadget-1ac0a6d69fa1c70a39935391a09e3a6d3f"><span id="index-19"></span><span></span><span class="kt">void</span> <span class="n">SetViewarea</span><span class="p">(</span><span class="n">hiro</span><span class="o">::</span><span class="n">Viewarea</span><span class="o">*</span> <span class="n">viewarea</span><span class="p">)</span></pre>
+<p>Assign Viewarea to this. Not to be called by a user.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-gadget-1aabd17a6855a00b12911d01aff4869778"><span id="index-20"></span><span></span><span class="kt">bool</span> <span class="n">SaveState</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Forces this to save its state.</p>
+<p>State is saved automatically when changes are made to gui. May negatively affect performance when used a lot.</p>
+<p class="rubric">Returns:</p>
+<p>Whether saving was successful.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-gadget-1ad07a64e7e7a1b3a7ea7d1b7bea2d283a"><span id="index-21"></span><span></span><span class="kt">void</span> <span class="n">SetNearFar</span><span class="p">(</span><span class="kt">float</span> <span class="n">near</span><span class="p">,</span> <span class="kt">float</span> <span class="n">far</span><span class="p">)</span> <span class="k">const</span></pre>
+<p>Set near and far values of the viewarea.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-gadget-1a75638476efd46598675ec83c704d90b8"><span id="index-22"></span><span></span><span class="kt">void</span> <span class="n">LoadState</span><span class="p">()</span></pre>
+<p>Loads file stored from previous session. This method calls also ReadFromStream.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-gadget-1a3cf338c38e94db8fba9e0e99296f880b"><span id="index-23"></span><span></span><span class="k">virtual</span> <span class="kt">bool</span> <span class="n">ReadFromStream</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">istream</span><span class="o">&amp;</span> <span class="n">str</span><span class="p">)</span></pre>
+<p>Override this method to read custom state from auto save stream.</p>
+<p>This method is not designed to be called by user directly, it is called automatically by the system. Must be consistent with WriteToStream counterpart method.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-gadget-1a2950f2ae7335a319b9f514370f6d4637"><span id="index-24"></span><span></span><span class="k">virtual</span> <span class="kt">void</span> <span class="n">WriteToStream</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">str</span><span class="p">)</span> <span class="k">const</span></pre>
+<p>Override this method to write custom state to auto save stream.</p>
+<p>This method is not designed to be called by user directly, it is called automatically by the system. Must be consistent with ReadFromStream counterpart method.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-gadget-1a2406732e562de62d53e454db167bf81f"><span id="index-25"></span><span></span><span class="kt">void</span> <span class="n">DrawOnNextUpdate</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Forces system to render on next update frame. Has effect when “optimized rendering” is enabled.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-gadget-1a8b072e01524a3f37fd077e9e2b73040b"><span id="index-26"></span><span></span><span class="k">static</span> <span class="kt">bool</span> <span class="n">ReadStateVersion</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">istream</span><span class="o">&amp;</span> <span class="n">str</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">expected_version</span><span class="p">)</span></pre>
+<p>Helper function for reading version number from input stream.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>str</p></td>
+<td><p>Stream to read version number from.</p></td>
+</tr>
+<tr class="row-even"><td><p>expected_version</p></td>
+<td><p>Version number to compare stream version number to.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Returns:</p>
+<p>Whether the number red is equal to the expected_version.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-gadget-1ac70db6cc0410308b3cc904f4e0ee53d2"><span id="index-27"></span><span></span><span class="k">static</span> <span class="kt">void</span> <span class="n">WriteStateVersion</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">str</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">version</span><span class="p">)</span></pre>
+<p>Helper function for writing version number to output stream.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>str</p></td>
+<td><p>Stream to write version number to.</p></td>
+</tr>
+<tr class="row-even"><td><p>version</p></td>
+<td><p>Version number to write to stream.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Skeletex Research
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

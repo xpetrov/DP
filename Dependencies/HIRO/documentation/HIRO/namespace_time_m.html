@@ -1,0 +1,339 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>namespace time_m &mdash; HIRO 0.4.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/hiro-fav-32.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/target-highlight.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/hiro_theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-sphinx_rtd_theme.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="template struct time_m::ProfilingResult" href="struct_time_m_ProfilingResult.html" />
+    <link rel="prev" title="class std_ext::UnhandledConditionError" href="class_std_ext_UnhandledConditionError.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: rgb(248, 216, 60)" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/hiro-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_0.html">T0: Setting up Visual Studio Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_1.html">T1: Introduction to HIRO GUI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_2.html">T2: Creating Custom Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_3.html">T3: Overview of Gadget Features</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="shader_api.html">Shader API</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="global.html">Global Namespace</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="namespace_cegui_ext.html">namespace cegui_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_dialog.html">namespace dialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_file_types.html">namespace file_types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_fs.html">namespace fs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_func.html">namespace func</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_geom.html">namespace geom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_glm_ext.html">namespace glm_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_hiro.html">namespace hiro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_omp_ext.html">namespace omp_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_std_ext.html">namespace std_ext</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">namespace time_m</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="struct_time_m_ProfilingResult.html">template struct time_m::ProfilingResult</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_time_m_FPSCounter.html">class time_m::FPSCounter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_time_m_FileTimeLogger.html">class time_m::FileTimeLogger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_time_m_StopWatch.html">class time_m::StopWatch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_time_m_TimeLogger.html">class time_m::TimeLogger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#detailed-documentation">Detailed Documentation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#global-functions">Global Functions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_ulog.html">namespace ulog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_uprogress.html">namespace uprogress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_utils.html">namespace utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_Config.html">class Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_IDialogInterface.html">class IDialogInterface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_WxWidgetsDialog.html">class WxWidgetsDialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">HIRO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="global.html">Global Namespace</a> &raquo;</li>
+        
+      <li>namespace time_m</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="namespace-time-m">
+<span id="doxid-namespacetime-m"></span><span id="index-0"></span><h1>namespace time_m<a class="headerlink" href="#namespace-time-m" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Set of functions and structures for measuring time. <a class="reference internal" href="#details-namespacetime-m"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="k">namespace</span> <span class="n">time_m</span> <span class="p">{</span>
+
+<span class="c1">// typedefs</span>
+
+<span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">system_clock</span><span class="o">::</span><span class="n">time_point</span> <span class="doxyrest-code-target target" id="doxid-namespacetime-m-1a065ed8dbfb6252c60ad1e71044e90a14"><span></span><span class="n">DateTime</span></span><span></span><span class="p">;</span>
+
+<span class="c1">// structs</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_time_m_ProfilingResult.html#doxid-structtime-m-1-1-profiling-result"><span class="std std-ref">ProfilingResult</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// classes</span>
+
+<span class="k">class</span> <a class="reference internal" href="class_time_m_FPSCounter.html#doxid-classtime-m-1-1-f-p-s-counter"><span class="std std-ref">FPSCounter</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_time_m_FileTimeLogger.html#doxid-classtime-m-1-1-file-time-logger"><span class="std std-ref">FileTimeLogger</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_time_m_StopWatch.html#doxid-classtime-m-1-1-stop-watch"><span class="std std-ref">StopWatch</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_time_m_TimeLogger.html#doxid-classtime-m-1-1-time-logger"><span class="std std-ref">TimeLogger</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// global functions</span>
+
+<a class="reference internal" href="#doxid-namespacetime-m-1a065ed8dbfb6252c60ad1e71044e90a14"><span class="std std-ref">DateTime</span></a><span></span> <a class="reference internal" href="#doxid-namespacetime-m-1a2dcee64b99c94f0cd33ecd5aae2d58ec"><span class="std std-ref">Now</span></a><span></span><span class="p">();</span>
+<span class="kt">double</span> <a class="reference internal" href="#doxid-namespacetime-m-1adf7e003740575cd05caa9697ffbbc932"><span class="std std-ref">NowMs</span></a><span></span><span class="p">();</span>
+<span class="kt">double</span> <a class="reference internal" href="#doxid-namespacetime-m-1a309eb6dfc6b516f56dbeb104835c50d6"><span class="std std-ref">NowS</span></a><span></span><span class="p">();</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <a class="reference internal" href="#doxid-namespacetime-m-1adf94a5bd657e874e6e6a7dd2aba3f5c2"><span class="std std-ref">ToString</span></a><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="#doxid-namespacetime-m-1a065ed8dbfb6252c60ad1e71044e90a14"><span class="std std-ref">DateTime</span></a><span></span><span class="o">&amp;</span> <span class="n">date_time</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">format</span> <span class="o">=</span> <span class="s">&quot;%Y_%m_%d_%H_%M_%S&quot;</span><span class="p">);</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <a class="reference internal" href="#doxid-namespacetime-m-1acc71f699b3392251d496966cf559de8d"><span class="std std-ref">NowStr</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">format</span> <span class="o">=</span> <span class="s">&quot;%Y_%m_%d_%H_%M_%S&quot;</span><span class="p">);</span>
+<span class="kt">int64_t</span> <a class="reference internal" href="#doxid-namespacetime-m-1a9914439956c085d6a9a18606260e1e0a"><span class="std std-ref">MicrosecondsBetween</span></a><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="#doxid-namespacetime-m-1a065ed8dbfb6252c60ad1e71044e90a14"><span class="std std-ref">DateTime</span></a><span></span><span class="o">&amp;</span> <span class="n">datetime1</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="#doxid-namespacetime-m-1a065ed8dbfb6252c60ad1e71044e90a14"><span class="std std-ref">DateTime</span></a><span></span><span class="o">&amp;</span> <span class="n">datetime2</span><span class="p">);</span>
+<span class="kt">double</span> <a class="reference internal" href="#doxid-namespacetime-m-1af3bd735cb253926f1821f60c8536b4b7"><span class="std std-ref">SecondsBetween</span></a><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="#doxid-namespacetime-m-1a065ed8dbfb6252c60ad1e71044e90a14"><span class="std std-ref">DateTime</span></a><span></span><span class="o">&amp;</span> <span class="n">datetime1</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="#doxid-namespacetime-m-1a065ed8dbfb6252c60ad1e71044e90a14"><span class="std std-ref">DateTime</span></a><span></span><span class="o">&amp;</span> <span class="n">datetime2</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<a class="reference internal" href="struct_time_m_ProfilingResult.html#doxid-structtime-m-1-1-profiling-result"><span class="std std-ref">ProfilingResult</span></a><span></span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacetime-m-1a96a4d10569c1ca75ab0ab669cf8bde1b"><span class="std std-ref">ProfileFunctionRun</span></a><span></span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">function</span><span class="o">&lt;</span><span class="n">T</span><span class="p">()</span><span class="o">&gt;</span> <span class="n">Function</span><span class="p">);</span>
+
+<span class="p">}</span> <span class="c1">// namespace time_m</span></pre>
+</div>
+<div class="section" id="detailed-documentation">
+<span id="details-namespacetime-m"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
+<p>Set of functions and structures for measuring time.</p>
+<div class="section" id="global-functions">
+<h3>Global Functions<a class="headerlink" href="#global-functions" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacetime-m-1a2dcee64b99c94f0cd33ecd5aae2d58ec"><span id="index-1"></span><a class="reference internal" href="#doxid-namespacetime-m-1a065ed8dbfb6252c60ad1e71044e90a14"><span class="std std-ref">DateTime</span></a><span></span> <span class="n">Now</span><span class="p">()</span></pre>
+<p>Returns current time point.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacetime-m-1adf7e003740575cd05caa9697ffbbc932"><span id="index-2"></span><span></span><span class="kt">double</span> <span class="n">NowMs</span><span class="p">()</span></pre>
+<p>Returns current time, as number of milliseconds since epoch start.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacetime-m-1a309eb6dfc6b516f56dbeb104835c50d6"><span id="index-3"></span><span></span><span class="kt">double</span> <span class="n">NowS</span><span class="p">()</span></pre>
+<p>Returns current time, as number of seconds since epoch start.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacetime-m-1adf94a5bd657e874e6e6a7dd2aba3f5c2"><span id="index-4"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">ToString</span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="#doxid-namespacetime-m-1a065ed8dbfb6252c60ad1e71044e90a14"><span class="std std-ref">DateTime</span></a><span></span><span class="o">&amp;</span> <span class="n">date_time</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">format</span> <span class="o">=</span> <span class="s">&quot;%Y_%m_%d_%H_%M_%S&quot;</span><span class="p">)</span></pre>
+<p>Returns specified time in string form.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>date_time</p></td>
+<td><p>The DateTime to be formatted.</p></td>
+</tr>
+<tr class="row-even"><td><p>format</p></td>
+<td><p>Defines string format. For options see documentation of strftime() at <a class="reference external" href="https://en.cppreference.com/w/c/chrono/strftime">https://en.cppreference.com/w/c/chrono/strftime</a>.</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacetime-m-1acc71f699b3392251d496966cf559de8d"><span id="index-5"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">NowStr</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">format</span> <span class="o">=</span> <span class="s">&quot;%Y_%m_%d_%H_%M_%S&quot;</span><span class="p">)</span></pre>
+<p>Returns current time in string form.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>format</p></td>
+<td><p>Defines string format. For options see documentation of strftime() at <a class="reference external" href="https://en.cppreference.com/w/c/chrono/strftime">https://en.cppreference.com/w/c/chrono/strftime</a>.</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacetime-m-1a9914439956c085d6a9a18606260e1e0a"><span id="index-6"></span><span></span><span class="kt">int64_t</span> <span class="n">MicrosecondsBetween</span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="#doxid-namespacetime-m-1a065ed8dbfb6252c60ad1e71044e90a14"><span class="std std-ref">DateTime</span></a><span></span><span class="o">&amp;</span> <span class="n">datetime1</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="#doxid-namespacetime-m-1a065ed8dbfb6252c60ad1e71044e90a14"><span class="std std-ref">DateTime</span></a><span></span><span class="o">&amp;</span> <span class="n">datetime2</span><span class="p">)</span></pre>
+<p>Returns duration between two time points in microseconds.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacetime-m-1af3bd735cb253926f1821f60c8536b4b7"><span id="index-7"></span><span></span><span class="kt">double</span> <span class="n">SecondsBetween</span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="#doxid-namespacetime-m-1a065ed8dbfb6252c60ad1e71044e90a14"><span class="std std-ref">DateTime</span></a><span></span><span class="o">&amp;</span> <span class="n">datetime1</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="#doxid-namespacetime-m-1a065ed8dbfb6252c60ad1e71044e90a14"><span class="std std-ref">DateTime</span></a><span></span><span class="o">&amp;</span> <span class="n">datetime2</span><span class="p">)</span></pre>
+<p>Returns duration between two time points in seconds.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacetime-m-1a96a4d10569c1ca75ab0ab669cf8bde1b"><span id="index-8"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<a class="reference internal" href="struct_time_m_ProfilingResult.html#doxid-structtime-m-1-1-profiling-result"><span class="std std-ref">ProfilingResult</span></a><span></span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">ProfileFunctionRun</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">function</span><span class="o">&lt;</span><span class="n">T</span><span class="p">()</span><span class="o">&gt;</span> <span class="n">Function</span><span class="p">)</span></pre>
+<p>Execute and profile a function.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Skeletex Research
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

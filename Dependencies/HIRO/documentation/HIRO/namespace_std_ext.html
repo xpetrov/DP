@@ -1,0 +1,811 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>namespace std_ext &mdash; HIRO 0.4.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/hiro-fav-32.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/target-highlight.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/hiro_theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-sphinx_rtd_theme.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="template class std_ext::AtomicQueue" href="class_std_ext_AtomicQueue.html" />
+    <link rel="prev" title="namespace omp_ext" href="namespace_omp_ext.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: rgb(248, 216, 60)" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/hiro-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_0.html">T0: Setting up Visual Studio Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_1.html">T1: Introduction to HIRO GUI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_2.html">T2: Creating Custom Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_3.html">T3: Overview of Gadget Features</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="shader_api.html">Shader API</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="global.html">Global Namespace</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="namespace_cegui_ext.html">namespace cegui_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_dialog.html">namespace dialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_file_types.html">namespace file_types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_fs.html">namespace fs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_func.html">namespace func</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_geom.html">namespace geom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_glm_ext.html">namespace glm_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_hiro.html">namespace hiro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_omp_ext.html">namespace omp_ext</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">namespace std_ext</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_std_ext_AtomicQueue.html">template class std_ext::AtomicQueue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_std_ext_AuthenticationError.html">class std_ext::AuthenticationError</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_std_ext_NotImplementedError.html">class std_ext::NotImplementedError</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_std_ext_OutOfBounds.html">class std_ext::OutOfBounds</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_std_ext_UnhandledConditionError.html">class std_ext::UnhandledConditionError</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#detailed-documentation">Detailed Documentation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#global-functions">Global Functions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_time_m.html">namespace time_m</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_ulog.html">namespace ulog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_uprogress.html">namespace uprogress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_utils.html">namespace utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_Config.html">class Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_IDialogInterface.html">class IDialogInterface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_WxWidgetsDialog.html">class WxWidgetsDialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">HIRO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="global.html">Global Namespace</a> &raquo;</li>
+        
+      <li>namespace std_ext</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="namespace-std-ext">
+<span id="doxid-namespacestd-ext"></span><span id="index-0"></span><h1>namespace std_ext<a class="headerlink" href="#namespace-std-ext" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Extensions to the standard libraries. <a class="reference internal" href="#details-namespacestd-ext"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="k">namespace</span> <span class="n">std_ext</span> <span class="p">{</span>
+
+<span class="c1">// classes</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_std_ext_AtomicQueue.html#doxid-classstd-ext-1-1-atomic-queue"><span class="std std-ref">AtomicQueue</span></a><span></span><span class="p">;</span>
+
+<span class="k">class</span> <a class="reference internal" href="class_std_ext_AuthenticationError.html#doxid-classstd-ext-1-1-authentication-error"><span class="std std-ref">AuthenticationError</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_std_ext_NotImplementedError.html#doxid-classstd-ext-1-1-not-implemented-error"><span class="std std-ref">NotImplementedError</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_std_ext_OutOfBounds.html#doxid-classstd-ext-1-1-out-of-bounds"><span class="std std-ref">OutOfBounds</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_std_ext_UnhandledConditionError.html#doxid-classstd-ext-1-1-unhandled-condition-error"><span class="std std-ref">UnhandledConditionError</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// global variables</span>
+
+<span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="doxyrest-code-target target" id="doxid-namespacestd-ext-1ab59df0028782a260447e682aa16eb6f1"><span></span><span class="n">WHITESPACES</span></span><span></span> <span class="o">=</span> <span class="s">&quot; </span><span class="se">\t\n\r\f\v</span><span class="s">&quot;</span><span class="p">;</span>
+
+<span class="c1">// global functions</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">wstring</span> <a class="reference internal" href="#doxid-namespacestd-ext-1a65e6a43cc0f29d7a277a489762c89570"><span class="std std-ref">ToWString</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">text</span><span class="p">);</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <a class="reference internal" href="#doxid-namespacestd-ext-1a1d60d1635ceeb4317b5c24c2ede9ce51"><span class="std std-ref">ToStdString</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">wstring</span><span class="o">&amp;</span> <span class="n">text</span><span class="p">);</span>
+<span class="kt">size_t</span> <a class="reference internal" href="#doxid-namespacestd-ext-1a67ca3eda10d690a5d63fd17a731fec50"><span class="std std-ref">CountOccurrences</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">text</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key_to_search</span><span class="p">);</span>
+<span class="kt">size_t</span> <a class="reference internal" href="#doxid-namespacestd-ext-1a430d4073e893f9bda1079db710e6333f"><span class="std std-ref">CountOccurrences</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">text</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key_to_search</span><span class="p">,</span> <span class="k">const</span> <span class="kt">size_t</span><span class="o">&amp;</span> <span class="n">off</span><span class="p">,</span> <span class="k">const</span> <span class="kt">size_t</span><span class="o">&amp;</span> <span class="n">length</span><span class="p">);</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <a class="reference internal" href="#doxid-namespacestd-ext-1a90f0c57defc1a0203fad2da0492104e9"><span class="std std-ref">Replace</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">text</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key_to_search</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">replace_text</span><span class="p">);</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <a class="reference internal" href="#doxid-namespacestd-ext-1ab3128899a4ca1e3a0c41783fff80d56b"><span class="std std-ref">Replace</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">text</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;&amp;</span> <span class="n">replacement_map</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="kt">void</span> <a class="reference internal" href="#doxid-namespacestd-ext-1a811ce621725036a12501dfa669e1c41e"><span class="std std-ref">Replace</span></a><span></span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">vector</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span> <span class="n">old_elem</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span> <span class="n">new_elem</span><span class="p">);</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <a class="reference internal" href="#doxid-namespacestd-ext-1a86644ac8906a54f915024865cc5c5dd9"><span class="std std-ref">BoolToString</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="kt">bool</span> <span class="n">value</span><span class="p">);</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <a class="reference internal" href="#doxid-namespacestd-ext-1a317ea43eeff871175246f48fc778b2be"><span class="std std-ref">ToStringAutoPrecision</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="kt">double</span> <span class="n">value</span><span class="p">,</span> <span class="kt">int</span> <span class="n">max_digits</span> <span class="o">=</span> <span class="mi">6</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <a class="reference internal" href="#doxid-namespacestd-ext-1a8bccecd2765c2ad1bb2dd56e0a7d5023"><span class="std std-ref">ToStringWithPrecision</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">T</span> <span class="n">a_value</span><span class="p">,</span> <span class="k">const</span> <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">6</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <a class="reference internal" href="#doxid-namespacestd-ext-1aa7e3ef76cf81421f045763a6c820109b"><span class="std std-ref">ToStringWithZeroes</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">T</span> <span class="n">value</span><span class="p">,</span> <span class="k">const</span> <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">6</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <a class="reference internal" href="#doxid-namespacestd-ext-1a05d3dc11c6ff518996233d74924228d0"><span class="std std-ref">ToString</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">container</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">separator</span> <span class="o">=</span> <span class="s">&quot;, &quot;</span><span class="p">);</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <a class="reference internal" href="#doxid-namespacestd-ext-1a0d5a9d7644ee45797e8e016cff37b6c2"><span class="std std-ref">ToString</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;&amp;</span> <span class="n">container</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">separator</span> <span class="o">=</span> <span class="s">&quot;, &quot;</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <a class="reference internal" href="#doxid-namespacestd-ext-1a7e354ff4396d2511ebe4d762620d400e"><span class="std std-ref">ToStringWithThousandSeparators</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">input</span><span class="p">);</span>
+
+<span class="kt">void</span> <a class="reference internal" href="#doxid-namespacestd-ext-1af1f2f0cd3455dd05f4b817130d7d7026"><span class="std std-ref">MakeUppercase</span></a><span></span><span class="p">(</span><span class="kt">char</span><span class="o">*</span> <span class="n">text</span><span class="p">);</span>
+<span class="kt">void</span> <a class="reference internal" href="#doxid-namespacestd-ext-1abb05d66b7fea000e34def1977dc909e3"><span class="std std-ref">MakeUppercase</span></a><span></span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">text</span><span class="p">);</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <a class="reference internal" href="#doxid-namespacestd-ext-1acbdffd228c1f529b63da4040ed3d201d"><span class="std std-ref">Uppercase</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">text</span><span class="p">);</span>
+<span class="kt">void</span> <a class="reference internal" href="#doxid-namespacestd-ext-1ac6fe36cae3992dedd4ecd4047d3a3667"><span class="std std-ref">MakeLowercase</span></a><span></span><span class="p">(</span><span class="kt">char</span><span class="o">*</span> <span class="n">text</span><span class="p">);</span>
+<span class="kt">void</span> <a class="reference internal" href="#doxid-namespacestd-ext-1a176270f3913cfd9875889bc6ff6fbc7f"><span class="std std-ref">MakeLowercase</span></a><span></span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">text</span><span class="p">);</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <a class="reference internal" href="#doxid-namespacestd-ext-1a991716d6618c4d3f6e6dd2868d8f597a"><span class="std std-ref">Lowercase</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">text</span><span class="p">);</span>
+<span class="kt">bool</span> <a class="reference internal" href="#doxid-namespacestd-ext-1a02862b966a9c8b36e175578a8eef2aec"><span class="std std-ref">EndsWith</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">ending</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">text</span><span class="p">);</span>
+<span class="kt">bool</span> <a class="reference internal" href="#doxid-namespacestd-ext-1a15cbbfdfca9680879569bb238b81cc7b"><span class="std std-ref">Contains</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">substring</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">text</span><span class="p">);</span>
+<span class="kt">bool</span> <a class="reference internal" href="#doxid-namespacestd-ext-1a9d0249a8ecda6742df39504785203318"><span class="std std-ref">Contains</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="n">character</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">text</span><span class="p">);</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <a class="reference internal" href="#doxid-namespacestd-ext-1a9a52545dc86c007776b57f00d90ec5d7"><span class="std std-ref">ReplacePatternWithNumber</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">base_string</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">pattern</span><span class="p">,</span> <span class="k">const</span> <span class="kt">int</span> <span class="n">number</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="kt">bool</span> <a class="reference internal" href="#doxid-namespacestd-ext-1ac07c690f90d99f1086284926e85609a6"><span class="std std-ref">Contains</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">element</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">initializer_list</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">list</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Type</span><span class="o">&gt;</span>
+<span class="kt">bool</span> <a class="reference internal" href="#doxid-namespacestd-ext-1a4dd95d212716bfbbd4693ddf980572e1"><span class="std std-ref">Contains</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">Type</span><span class="o">&amp;</span> <span class="n">element</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">vector</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Type</span><span class="o">&gt;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">optional</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacestd-ext-1ae5882a3adf93b9a84e58b6a9fac62e69"><span class="std std-ref">GetIndex</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">Type</span> <span class="n">element</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">vector</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Type</span><span class="o">&gt;</span>
+<span class="kt">bool</span> <a class="reference internal" href="#doxid-namespacestd-ext-1ad0eb6cf56300e245e2f647bc74e4823c"><span class="std std-ref">Contains</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">Type</span> <span class="n">element</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">set</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">set</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T1</span><span class="p">,</span> <span class="k">typename</span> <span class="n">T2</span><span class="o">&gt;</span>
+<span class="kt">bool</span> <a class="reference internal" href="#doxid-namespacestd-ext-1af2eca688e183ef27e8b2325984635fb5"><span class="std std-ref">Contains</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">T1</span> <span class="n">element</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">unordered_set</span><span class="o">&lt;</span><span class="n">T1</span><span class="p">,</span> <span class="n">T2</span><span class="o">&gt;&amp;</span> <span class="n">set</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T1</span><span class="p">,</span> <span class="k">typename</span> <span class="n">T2</span><span class="o">&gt;</span>
+<span class="kt">bool</span> <a class="reference internal" href="#doxid-namespacestd-ext-1a49842785235133081cf21a3cdf74c5d6"><span class="std std-ref">Contains</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">T1</span> <span class="n">element</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">T1</span><span class="p">,</span> <span class="n">T2</span><span class="o">&gt;&amp;</span> <span class="n">map</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T1</span><span class="p">,</span> <span class="k">typename</span> <span class="n">T2</span><span class="o">&gt;</span>
+<span class="kt">bool</span> <a class="reference internal" href="#doxid-namespacestd-ext-1ae36337b29029e19aa65195cbc62bc4cf"><span class="std std-ref">Contains</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">T1</span> <span class="n">element</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">T1</span><span class="p">,</span> <span class="n">T2</span><span class="o">&gt;&amp;</span> <span class="n">map</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Type</span><span class="o">&gt;</span>
+<span class="kt">bool</span> <a class="reference internal" href="#doxid-namespacestd-ext-1a7ac45caafa8dec87d4b8dc753fef1052"><span class="std std-ref">ContainsCommonElement</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">elements1</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">set</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">elements2</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Type</span><span class="o">&gt;</span>
+<span class="kt">void</span> <a class="reference internal" href="#doxid-namespacestd-ext-1ada70d2236e85025cebdbf6ac81f3db14"><span class="std std-ref">SortAndRemoveDuplicates</span></a><span></span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">vec</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Type</span><span class="o">&gt;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacestd-ext-1a93b578c0bd12eb2f2a5e0258f03477b6"><span class="std std-ref">RemoveDuplicates</span></a><span></span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">vector</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Type</span><span class="o">&gt;</span>
+<span class="kt">bool</span> <a class="reference internal" href="#doxid-namespacestd-ext-1ac2a37aa923b5b568e030d93b3f9cff0e"><span class="std std-ref">Erase</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">Type</span><span class="o">&amp;</span> <span class="n">element</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">vector</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Type</span><span class="o">&gt;</span>
+<span class="kt">bool</span> <a class="reference internal" href="#doxid-namespacestd-ext-1a11de5603ae1479987c90b02ac5ca2f3b"><span class="std std-ref">Erase</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">Type</span><span class="o">&amp;</span> <span class="n">element</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">set</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">set</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">IndicesType</span><span class="p">,</span> <span class="k">typename</span> <span class="n">Type</span><span class="o">&gt;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">IndicesType</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacestd-ext-1a8115f777b3d59ad8110d890a6ddff1a7"><span class="std std-ref">CollectIndices</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">vector</span><span class="p">,</span> <span class="k">const</span> <span class="n">Type</span> <span class="n">value</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="k">typename</span> <span class="n">F</span><span class="o">&gt;</span>
+<span class="kt">void</span> <a class="reference internal" href="#doxid-namespacestd-ext-1aeca8e611c0d7d95f83ff2ff8db55bfb5"><span class="std std-ref">Foreach</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">container</span><span class="p">,</span> <span class="k">const</span> <span class="n">F</span><span class="o">&amp;</span> <span class="n">Function</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="k">auto</span> <a class="reference internal" href="#doxid-namespacestd-ext-1ab4f0417eb5714a8688e0d0863f2ee5f6"><span class="std std-ref">MaxIt</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">vector</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="k">auto</span> <a class="reference internal" href="#doxid-namespacestd-ext-1a1abf2f57d3158f13baf1612f7a5821fb"><span class="std std-ref">MinIt</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">vector</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="n">T</span> <a class="reference internal" href="#doxid-namespacestd-ext-1a872d125b27bc847864694ee023a34a85"><span class="std std-ref">Max</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">vector</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="n">T</span> <a class="reference internal" href="#doxid-namespacestd-ext-1a31477ea9a02a876feacf94386b26c882"><span class="std std-ref">Min</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">vector</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="n">T</span> <a class="reference internal" href="#doxid-namespacestd-ext-1ab84057ece90fb501fe52dcbcbe95bdee"><span class="std std-ref">Max</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">T</span> <span class="n">val</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="k">typename</span> <span class="p">...</span> <span class="n">TS</span><span class="o">&gt;</span>
+<span class="n">T</span> <a class="reference internal" href="#doxid-namespacestd-ext-1aa5929f948f902d5d4ca6b725763ae146"><span class="std std-ref">Max</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">T</span> <span class="n">val1</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span> <span class="n">val2</span><span class="p">,</span> <span class="k">const</span> <span class="n">TS</span> <span class="p">...</span> <span class="n">vals</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="n">T</span> <a class="reference internal" href="#doxid-namespacestd-ext-1a3913cef0eaeb8fe4078bbda9fca44af4"><span class="std std-ref">Min</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">T</span> <span class="n">val</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="k">typename</span><span class="p">...</span> <span class="n">TS</span><span class="o">&gt;</span>
+<span class="n">T</span> <a class="reference internal" href="#doxid-namespacestd-ext-1a63e32489fcc5866461343c7a998e7a7c"><span class="std std-ref">Min</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">T</span> <span class="n">val1</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span> <span class="n">val2</span><span class="p">,</span> <span class="k">const</span> <span class="n">TS</span> <span class="p">...</span> <span class="n">vals</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="k">typename</span> <span class="n">F</span><span class="o">&gt;</span>
+<span class="k">auto</span> <a class="reference internal" href="#doxid-namespacestd-ext-1ad62452f1d624a34ecc1a4018a5046946"><span class="std std-ref">Max</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">vector</span><span class="p">,</span> <span class="k">const</span> <span class="n">F</span><span class="o">&amp;</span> <span class="n">Function</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="k">typename</span> <span class="n">F</span><span class="o">&gt;</span>
+<span class="k">auto</span> <a class="reference internal" href="#doxid-namespacestd-ext-1a899eb2bfb6dca9fd992ac97aefb8be49"><span class="std std-ref">Min</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">vector</span><span class="p">,</span> <span class="k">const</span> <span class="n">F</span><span class="o">&amp;</span> <span class="n">Function</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="k">typename</span> <span class="n">F</span><span class="o">&gt;</span>
+<span class="k">auto</span> <a class="reference internal" href="#doxid-namespacestd-ext-1a4639856e6d81b83e39575579248aa69a"><span class="std std-ref">MaxValue</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">vector</span><span class="p">,</span> <span class="k">const</span> <span class="n">F</span><span class="o">&amp;</span> <span class="n">Function</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="k">typename</span> <span class="n">F</span><span class="o">&gt;</span>
+<span class="k">auto</span> <a class="reference internal" href="#doxid-namespacestd-ext-1aa8140457d471db2b7a3c800addc61786"><span class="std std-ref">MinValue</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">vector</span><span class="p">,</span> <span class="k">const</span> <span class="n">F</span><span class="o">&amp;</span> <span class="n">Function</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="k">typename</span> <span class="n">F</span><span class="o">&gt;</span>
+<span class="k">auto</span> <a class="reference internal" href="#doxid-namespacestd-ext-1a360dd633340888e0eaf67d174b50626d"><span class="std std-ref">MiddleValue</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">vector</span><span class="p">,</span> <span class="k">const</span> <span class="n">F</span><span class="o">&amp;</span> <span class="n">Function</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="k">auto</span> <a class="reference internal" href="#doxid-namespacestd-ext-1a07a827356575ac6f21fd0eea2f8aad55"><span class="std std-ref">Accumulate</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">vector</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span> <span class="n">start_value</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="k">auto</span> <a class="reference internal" href="#doxid-namespacestd-ext-1a56fafc1210db4ce7a0571bbdcd0c18c8"><span class="std std-ref">Sum</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">vector</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="k">auto</span> <a class="reference internal" href="#doxid-namespacestd-ext-1a8bf0536090b7b0216281ce350f3f2415"><span class="std std-ref">Average</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">vector</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="k">typename</span> <span class="n">F</span><span class="o">&gt;</span>
+<span class="k">auto</span> <a class="reference internal" href="#doxid-namespacestd-ext-1acfa450bc03f31d132a6bc6fb6d3a15d1"><span class="std std-ref">Accumulate</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">vector</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span> <span class="n">initial_value</span><span class="p">,</span> <span class="k">const</span> <span class="n">F</span><span class="o">&amp;</span> <span class="n">function</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="k">typename</span> <span class="n">F</span><span class="o">&gt;</span>
+<span class="k">auto</span> <a class="reference internal" href="#doxid-namespacestd-ext-1ad56f25a5428eb97ed55f53e6792049ed"><span class="std std-ref">Sum</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">vector</span><span class="p">,</span> <span class="k">const</span> <span class="n">F</span><span class="o">&amp;</span> <span class="n">function</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="k">typename</span> <span class="n">F</span><span class="o">&gt;</span>
+<span class="kt">float</span> <a class="reference internal" href="#doxid-namespacestd-ext-1ad97baf917f9312038fbfecdd3a3e6d1b"><span class="std std-ref">Average</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">vector</span><span class="p">,</span> <span class="k">const</span> <span class="n">F</span><span class="o">&amp;</span> <span class="n">function</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="k">auto</span> <a class="reference internal" href="#doxid-namespacestd-ext-1a8d072076c1f9b4b4cb5c1bd43e12a963"><span class="std std-ref">Median</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">vector</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Type</span><span class="o">&gt;</span>
+<span class="kt">void</span> <a class="reference internal" href="#doxid-namespacestd-ext-1a2c5110ce771c66c2fe895745846b7ddc"><span class="std std-ref">InsertBack</span></a><span></span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">target</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">source</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Type</span><span class="o">&gt;</span>
+<span class="kt">void</span> <a class="reference internal" href="#doxid-namespacestd-ext-1a88ea21e390de7dafa923c687f5dd7f4b"><span class="std std-ref">InsertFront</span></a><span></span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">target</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">source</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">TargerType</span><span class="p">,</span> <span class="k">typename</span> <span class="n">SopurceType</span><span class="o">&gt;</span>
+<span class="kt">void</span> <a class="reference internal" href="#doxid-namespacestd-ext-1ac1e2fbf5a04f892c1a144defa12010b7"><span class="std std-ref">InsertTo</span></a><span></span><span class="p">(</span><span class="n">TargerType</span><span class="o">&amp;</span> <span class="n">target</span><span class="p">,</span> <span class="k">const</span> <span class="n">SopurceType</span><span class="o">&amp;</span> <span class="n">source</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Type</span><span class="o">&gt;</span>
+<span class="kt">void</span> <a class="reference internal" href="#doxid-namespacestd-ext-1a6c979c5e996aae0dc791d7e38b410697"><span class="std std-ref">EmplaceBackUnique</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">Type</span><span class="o">&amp;</span> <span class="n">element</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">vector</span><span class="p">);</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-namespacestd-ext-1ad4995fc7d0f13841cbf123d8ffe62ff8"><span class="std std-ref">TrimBegin</span></a><span></span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">t</span> <span class="o">=</span> <a class="reference internal" href="#doxid-namespacestd-ext-1ab59df0028782a260447e682aa16eb6f1"><span class="std std-ref">WHITESPACES</span></a><span></span><span class="p">);</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-namespacestd-ext-1a9bdfbb7ffb84b19cdbe9f93190ac8a1f"><span class="std std-ref">TrimEnd</span></a><span></span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">t</span> <span class="o">=</span> <a class="reference internal" href="#doxid-namespacestd-ext-1ab59df0028782a260447e682aa16eb6f1"><span class="std std-ref">WHITESPACES</span></a><span></span><span class="p">);</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-namespacestd-ext-1a9acc54500404ca009fa3bf720ba69736"><span class="std std-ref">Trim</span></a><span></span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">t</span> <span class="o">=</span> <a class="reference internal" href="#doxid-namespacestd-ext-1ab59df0028782a260447e682aa16eb6f1"><span class="std std-ref">WHITESPACES</span></a><span></span><span class="p">);</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <a class="reference internal" href="#doxid-namespacestd-ext-1a2023885fa2b738c21e57b0ee8ea890c0"><span class="std std-ref">EndWithASingleSlash</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">);</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacestd-ext-1a9908b74606a5339b36047e67ae5a9870"><span class="std std-ref">Parse</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">text</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">separators</span> <span class="o">=</span> <a class="reference internal" href="#doxid-namespacestd-ext-1ab59df0028782a260447e682aa16eb6f1"><span class="std std-ref">WHITESPACES</span></a><span></span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="kt">void</span> <a class="reference internal" href="#doxid-namespacestd-ext-1a4467de80e7a26143970332c3b775b5fb"><span class="std std-ref">Read</span></a><span></span><span class="p">(</span><span class="n">T</span><span class="o">&amp;</span> <span class="n">val</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">istream</span><span class="o">&amp;</span> <span class="n">str</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="n">T</span> <a class="reference internal" href="#doxid-namespacestd-ext-1ad452805c090c06cc40100271bbc7d256"><span class="std std-ref">Read</span></a><span></span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">istream</span><span class="o">&amp;</span> <span class="n">str</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="kt">void</span> <a class="reference internal" href="#doxid-namespacestd-ext-1a10c0ca7a65d127a3628896f2b7943fb9"><span class="std std-ref">Write</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">T</span> <span class="n">val</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">str</span><span class="p">);</span>
+
+<span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-namespacestd-ext-1a3306af55c593eed6eb177742764b3c8b"><span></span><span class="n">Read</span></span><span></span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">istream</span><span class="o">&amp;</span><span class="p">);</span>
+<span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-namespacestd-ext-1a1b089ebfd81c834da5101fe758b1c433"><span></span><span class="n">Write</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">&amp;</span><span class="p">);</span>
+<span class="kt">void</span> <a class="reference internal" href="#doxid-namespacestd-ext-1a3584755df7d522a3c5f1c0b03099b8f8"><span class="std std-ref">ReadString</span></a><span></span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">text</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">istream</span><span class="o">&amp;</span> <span class="n">str</span><span class="p">);</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <a class="reference internal" href="#doxid-namespacestd-ext-1ab20c2398df910e226b6726f10c3821f6"><span class="std std-ref">ReadString</span></a><span></span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">istream</span><span class="o">&amp;</span> <span class="n">str</span><span class="p">);</span>
+<span class="kt">void</span> <a class="reference internal" href="#doxid-namespacestd-ext-1aeb229168a09320c1109033abc7ead6c5"><span class="std std-ref">WriteString</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">text</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">str</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">C</span><span class="p">,</span> <span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="k">auto</span> <a class="reference internal" href="#doxid-namespacestd-ext-1acf4fe1c13b2b2d3cd78933e8f03d3fb7"><span class="std std-ref">Find</span></a><span></span><span class="p">(</span><span class="n">C</span><span class="o">&amp;</span> <span class="n">container</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">value</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">C</span><span class="p">,</span> <span class="k">class</span> <span class="n">F</span><span class="o">&gt;</span>
+<span class="k">auto</span> <a class="reference internal" href="#doxid-namespacestd-ext-1ad8e5d9a078ec4af6f5828e57d7fa9e07"><span class="std std-ref">Transformed</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">C</span><span class="o">&amp;</span> <span class="n">container</span><span class="p">,</span> <span class="n">F</span> <span class="n">Function</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">C</span><span class="p">,</span> <span class="k">class</span> <span class="n">P</span><span class="o">&gt;</span>
+<span class="k">auto</span> <a class="reference internal" href="#doxid-namespacestd-ext-1a330ac58a836e4216212ba108d1918682"><span class="std std-ref">AllOf</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">C</span><span class="o">&amp;</span> <span class="n">container</span><span class="p">,</span> <span class="k">const</span> <span class="n">P</span><span class="o">&amp;</span> <span class="n">Predicate</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">C</span><span class="p">,</span> <span class="k">class</span> <span class="n">P</span><span class="o">&gt;</span>
+<span class="k">auto</span> <a class="reference internal" href="#doxid-namespacestd-ext-1a53640d31123112a636eeda3849dc9c69"><span class="std std-ref">AnyOf</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">C</span><span class="o">&amp;</span> <span class="n">container</span><span class="p">,</span> <span class="k">const</span> <span class="n">P</span><span class="o">&amp;</span> <span class="n">Predicate</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">C</span><span class="p">,</span> <span class="k">class</span> <span class="n">P</span><span class="o">&gt;</span>
+<span class="k">auto</span> <a class="reference internal" href="#doxid-namespacestd-ext-1aecb44c341d9db6931a18794447036707"><span class="std std-ref">AnyOfW</span></a><span></span><span class="p">(</span><span class="n">C</span><span class="o">&amp;</span> <span class="n">container</span><span class="p">,</span> <span class="k">const</span> <span class="n">P</span><span class="o">&amp;</span> <span class="n">Predicate</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">C</span><span class="p">,</span> <span class="k">class</span> <span class="n">P</span><span class="o">&gt;</span>
+<span class="k">auto</span> <a class="reference internal" href="#doxid-namespacestd-ext-1a49c1a02a81efbf799cd471b05d9d090d"><span class="std std-ref">NoneOf</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">C</span><span class="o">&amp;</span> <span class="n">container</span><span class="p">,</span> <span class="k">const</span> <span class="n">P</span><span class="o">&amp;</span> <span class="n">Predicate</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">C</span><span class="p">,</span> <span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="k">auto</span> <a class="reference internal" href="#doxid-namespacestd-ext-1a210ee4d99947b239f329e0b53902a60b"><span class="std std-ref">Count</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">C</span><span class="o">&amp;</span> <span class="n">container</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">val</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">C</span><span class="p">,</span> <span class="k">class</span> <span class="n">P</span><span class="o">&gt;</span>
+<span class="k">auto</span> <a class="reference internal" href="#doxid-namespacestd-ext-1ace78e83e68f19aefe8adf17b8371c85b"><span class="std std-ref">CountIf</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">C</span><span class="o">&amp;</span> <span class="n">container</span><span class="p">,</span> <span class="k">const</span> <span class="n">P</span><span class="o">&amp;</span> <span class="n">Predicate</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">C</span><span class="p">,</span> <span class="k">class</span> <span class="n">P</span><span class="o">&gt;</span>
+<span class="k">auto</span> <a class="reference internal" href="#doxid-namespacestd-ext-1a9d57cbcf79622e1c1c145093b5591498"><span class="std std-ref">FindIf</span></a><span></span><span class="p">(</span><span class="n">C</span><span class="o">&amp;</span> <span class="n">container</span><span class="p">,</span> <span class="k">const</span> <span class="n">P</span><span class="o">&amp;</span> <span class="n">Predicate</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">C</span><span class="p">,</span> <span class="k">class</span> <span class="n">P</span><span class="o">&gt;</span>
+<span class="k">auto</span> <a class="reference internal" href="#doxid-namespacestd-ext-1a6c30c37185409341587c18952735e03d"><span class="std std-ref">RevFindIf</span></a><span></span><span class="p">(</span><span class="n">C</span><span class="o">&amp;</span> <span class="n">container</span><span class="p">,</span> <span class="k">const</span> <span class="n">P</span><span class="o">&amp;</span> <span class="n">Predicate</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">C</span><span class="p">,</span> <span class="k">class</span> <span class="n">P</span><span class="o">&gt;</span>
+<span class="k">auto</span> <a class="reference internal" href="#doxid-namespacestd-ext-1a8dabd1bef90c921b8e1a4d6cc7b79691"><span class="std std-ref">FindIfPtr</span></a><span></span><span class="p">(</span><span class="n">C</span><span class="o">&amp;</span> <span class="n">container</span><span class="p">,</span> <span class="k">const</span> <span class="n">P</span><span class="o">&amp;</span> <span class="n">Predicate</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">C</span><span class="p">,</span> <span class="k">class</span> <span class="n">P</span><span class="o">&gt;</span>
+<span class="k">auto</span> <a class="reference internal" href="#doxid-namespacestd-ext-1a7ae93d993bb4fa0448971c71c69f13dd"><span class="std std-ref">EraseIf</span></a><span></span><span class="p">(</span><span class="n">C</span><span class="o">&amp;</span> <span class="n">container</span><span class="p">,</span> <span class="k">const</span> <span class="n">P</span><span class="o">&amp;</span> <span class="n">Predicate</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">C</span><span class="p">,</span> <span class="k">class</span> <span class="n">P</span><span class="o">&gt;</span>
+<span class="k">auto</span> <a class="reference internal" href="#doxid-namespacestd-ext-1a12dad2eec1ade1400fd845f1e76494b9"><span class="std std-ref">SelectIf</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">C</span><span class="o">&amp;</span> <span class="n">container</span><span class="p">,</span> <span class="k">const</span> <span class="n">P</span><span class="o">&amp;</span> <span class="n">Predicate</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">C</span><span class="p">,</span> <span class="k">class</span> <span class="n">P</span><span class="o">&gt;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">C</span><span class="p">,</span> <span class="n">C</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacestd-ext-1a88b72152af6f6fbfe86d69dbec2f3225"><span class="std std-ref">Partition</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">C</span><span class="o">&amp;</span> <span class="n">container</span><span class="p">,</span> <span class="k">const</span> <span class="n">P</span><span class="o">&amp;</span> <span class="n">Predicate</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="p">,</span> <span class="k">class</span> <span class="n">P</span><span class="o">&gt;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="p">,</span> <span class="kt">size_t</span><span class="o">&gt;&gt;</span> <a class="reference internal" href="#doxid-namespacestd-ext-1a383a68231236b12bd33c2711bb819371"><span class="std std-ref">FindIntervals</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">vec</span><span class="p">,</span> <span class="k">const</span> <span class="n">P</span><span class="o">&amp;</span> <span class="n">Predicate</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-namespacestd-ext-1a87a49f933da35fa3f0f6b8c0d8978acd"><span></span><span class="n">Joined</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;&amp;</span> <span class="n">vector_of_vectors</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="k">typename</span> <span class="n">F</span><span class="o">&gt;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-namespacestd-ext-1acf04241850fb0382c09ace95b73afb7e"><span></span><span class="n">JoinTransformed</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;&amp;</span> <span class="n">vector_of_vectors</span><span class="p">,</span> <span class="k">const</span> <span class="n">F</span><span class="o">&amp;</span> <span class="n">Function</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">F</span><span class="p">,</span> <span class="k">typename</span> <span class="n">O</span><span class="o">&gt;</span>
+<span class="k">auto</span> <a class="reference internal" href="#doxid-namespacestd-ext-1afa71ec07ca264d05941169dcbbc84028"><span class="std std-ref">Bind1</span></a><span></span><span class="p">(</span><span class="n">F</span> <span class="n">method</span><span class="p">,</span> <span class="n">O</span> <span class="n">object</span><span class="p">);</span>
+
+<span class="kt">bool</span> <a class="reference internal" href="#doxid-namespacestd-ext-1af381e2982cf868ab45cca5d2ad6d9d12"><span class="std std-ref">IsASCII</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">);</span>
+
+<span class="p">}</span> <span class="c1">// namespace std_ext</span></pre>
+</div>
+<div class="section" id="detailed-documentation">
+<span id="details-namespacestd-ext"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
+<p>Extensions to the standard libraries.</p>
+<div class="section" id="global-functions">
+<h3>Global Functions<a class="headerlink" href="#global-functions" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1a65e6a43cc0f29d7a277a489762c89570"><span id="index-1"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">wstring</span> <span class="n">ToWString</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">text</span><span class="p">)</span></pre>
+<p>Convert single-byte std::string to std::wstring.</p>
+<p>#TEMP This will be replaced with QString when we have moved to Qt library.</p>
+<p>This only works if all the characters are single byte, i.e. ASCII or ISO-8859-1. Anything multi-byte will fail miserably, including UTF-8. (<a class="reference external" href="https://stackoverflow.com/a/8969776/2621721">https://stackoverflow.com/a/8969776/2621721</a>)</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1a1d60d1635ceeb4317b5c24c2ede9ce51"><span id="index-2"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">ToStdString</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">wstring</span><span class="o">&amp;</span> <span class="n">text</span><span class="p">)</span></pre>
+<p>Convert std::wstring to std::string.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1a67ca3eda10d690a5d63fd17a731fec50"><span id="index-3"></span><span></span><span class="kt">size_t</span> <span class="n">CountOccurrences</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">text</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key_to_search</span><span class="p">)</span></pre>
+<p>Counts how many of specified key_to_search substrings does text contain.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1a430d4073e893f9bda1079db710e6333f"><span id="index-4"></span><span></span><span class="kt">size_t</span> <span class="n">CountOccurrences</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">text</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key_to_search</span><span class="p">,</span> <span class="k">const</span> <span class="kt">size_t</span><span class="o">&amp;</span> <span class="n">off</span><span class="p">,</span> <span class="k">const</span> <span class="kt">size_t</span><span class="o">&amp;</span> <span class="n">length</span><span class="p">)</span></pre>
+<p>Counts how many of specified key_to_search substrings does text contain in a specific range.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1a90f0c57defc1a0203fad2da0492104e9"><span id="index-5"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">Replace</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">text</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key_to_search</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">replace_text</span><span class="p">)</span></pre>
+<p>Replaces all occurrences of key_to_search with replace_text in specified text.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1ab3128899a4ca1e3a0c41783fff80d56b"><span id="index-6"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">Replace</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">text</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;&amp;</span> <span class="n">replacement_map</span><span class="p">)</span></pre>
+<p>Replaces all occurrences of key_to_search with replace_text in specified text.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>replacement_map</p></td>
+<td><p>Contains pairs of &lt;key_to_search, replace_text&gt;.</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1a811ce621725036a12501dfa669e1c41e"><span id="index-7"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="kt">void</span> <span class="n">Replace</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">vector</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span> <span class="n">old_elem</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span> <span class="n">new_elem</span><span class="p">)</span></pre>
+<p>Replaces all occurrences of old_elem in a vector with a new_elem.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1a86644ac8906a54f915024865cc5c5dd9"><span id="index-8"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">BoolToString</span><span class="p">(</span><span class="k">const</span> <span class="kt">bool</span> <span class="n">value</span><span class="p">)</span></pre>
+<p>Converts bool to string (“true” or “false”).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1a317ea43eeff871175246f48fc778b2be"><span id="index-9"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">ToStringAutoPrecision</span><span class="p">(</span><span class="k">const</span> <span class="kt">double</span> <span class="n">value</span><span class="p">,</span> <span class="kt">int</span> <span class="n">max_digits</span> <span class="o">=</span> <span class="mi">6</span><span class="p">)</span></pre>
+<p>Converts double to string with decimal digits until max_digits are reached.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>value</p></td>
+<td><p>Value which will be converted to string.</p></td>
+</tr>
+<tr class="row-even"><td><p>max_digits</p></td>
+<td><p>Value that represents maximum number of decimal digits that will be converted.</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1a8bccecd2765c2ad1bb2dd56e0a7d5023"><span id="index-10"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">ToStringWithPrecision</span><span class="p">(</span><span class="k">const</span> <span class="n">T</span> <span class="n">a_value</span><span class="p">,</span> <span class="k">const</span> <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">6</span><span class="p">)</span></pre>
+<p>Converts type to string with specified number of decimal digits.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1aa7e3ef76cf81421f045763a6c820109b"><span id="index-11"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">ToStringWithZeroes</span><span class="p">(</span><span class="k">const</span> <span class="n">T</span> <span class="n">value</span><span class="p">,</span> <span class="k">const</span> <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">6</span><span class="p">)</span></pre>
+<p>Converts int to string with zeros at the beginning to match specified number of digits.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1a05d3dc11c6ff518996233d74924228d0"><span id="index-12"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">ToString</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">container</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">separator</span> <span class="o">=</span> <span class="s">&quot;, &quot;</span><span class="p">)</span></pre>
+<p>Converts all values in the vector to a string and joins them using specified separator.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1a0d5a9d7644ee45797e8e016cff37b6c2"><span id="index-13"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">ToString</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;&amp;</span> <span class="n">container</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">separator</span> <span class="o">=</span> <span class="s">&quot;, &quot;</span><span class="p">)</span></pre>
+<p>Joins all values in a string vector using specified separator.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1a7e354ff4396d2511ebe4d762620d400e"><span id="index-14"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">ToStringWithThousandSeparators</span><span class="p">(</span><span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">input</span><span class="p">)</span></pre>
+<p>Converts a numeric value to string using thousand separators.</p>
+<p>Example: 10235 =&gt; “10’235” 1000000000 =&gt; 1’000’000’000</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1af1f2f0cd3455dd05f4b817130d7d7026"><span id="index-15"></span><span></span><span class="kt">void</span> <span class="n">MakeUppercase</span><span class="p">(</span><span class="kt">char</span><span class="o">*</span> <span class="n">text</span><span class="p">)</span></pre>
+<p>Converts text into all uppercase.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1abb05d66b7fea000e34def1977dc909e3"><span id="index-16"></span><span></span><span class="kt">void</span> <span class="n">MakeUppercase</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">text</span><span class="p">)</span></pre>
+<p>Converts text into all uppercase.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1acbdffd228c1f529b63da4040ed3d201d"><span id="index-17"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">Uppercase</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">text</span><span class="p">)</span></pre>
+<p>Converts text into all uppercase.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1ac6fe36cae3992dedd4ecd4047d3a3667"><span id="index-18"></span><span></span><span class="kt">void</span> <span class="n">MakeLowercase</span><span class="p">(</span><span class="kt">char</span><span class="o">*</span> <span class="n">text</span><span class="p">)</span></pre>
+<p>Converts text into all lowercase.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1a176270f3913cfd9875889bc6ff6fbc7f"><span id="index-19"></span><span></span><span class="kt">void</span> <span class="n">MakeLowercase</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">text</span><span class="p">)</span></pre>
+<p>Converts text into all lowercase.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1a991716d6618c4d3f6e6dd2868d8f597a"><span id="index-20"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">Lowercase</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">text</span><span class="p">)</span></pre>
+<p>Converts text into all lowercase.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1a02862b966a9c8b36e175578a8eef2aec"><span id="index-21"></span><span></span><span class="kt">bool</span> <span class="n">EndsWith</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">ending</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">text</span><span class="p">)</span></pre>
+<p>Checks if the text ends with a string.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1a15cbbfdfca9680879569bb238b81cc7b"><span id="index-22"></span><span></span><span class="kt">bool</span> <span class="n">Contains</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">substring</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">text</span><span class="p">)</span></pre>
+<p>Checks if the text contains substring.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1a9d0249a8ecda6742df39504785203318"><span id="index-23"></span><span></span><span class="kt">bool</span> <span class="n">Contains</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="n">character</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">text</span><span class="p">)</span></pre>
+<p>Checks if the text contains character.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1a9a52545dc86c007776b57f00d90ec5d7"><span id="index-24"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">ReplacePatternWithNumber</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">base_string</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">pattern</span><span class="p">,</span> <span class="k">const</span> <span class="kt">int</span> <span class="n">number</span><span class="p">)</span></pre>
+<p>Replaces a patter in specified string with a number.</p>
+<p>Example: (“example-###”, “#”, 2)&gt; “example-002”</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1ac07c690f90d99f1086284926e85609a6"><span id="index-25"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="kt">bool</span> <span class="n">Contains</span><span class="p">(</span><span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">element</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">initializer_list</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">list</span><span class="p">)</span></pre>
+<p>Check if the initializer list contains an element.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1a4dd95d212716bfbbd4693ddf980572e1"><span id="index-26"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Type</span><span class="o">&gt;</span>
+<span class="kt">bool</span> <span class="n">Contains</span><span class="p">(</span><span class="k">const</span> <span class="n">Type</span><span class="o">&amp;</span> <span class="n">element</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">vector</span><span class="p">)</span></pre>
+<p>Check if the vector contains an element.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1ae5882a3adf93b9a84e58b6a9fac62e69"><span id="index-27"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Type</span><span class="o">&gt;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">optional</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="o">&gt;</span> <span class="n">GetIndex</span><span class="p">(</span><span class="k">const</span> <span class="n">Type</span> <span class="n">element</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">vector</span><span class="p">)</span></pre>
+<p>If an element exists in the vector, returns its index.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1ad0eb6cf56300e245e2f647bc74e4823c"><span id="index-28"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Type</span><span class="o">&gt;</span>
+<span class="kt">bool</span> <span class="n">Contains</span><span class="p">(</span><span class="k">const</span> <span class="n">Type</span> <span class="n">element</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">set</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">set</span><span class="p">)</span></pre>
+<p>Check if the set contains an element.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1af2eca688e183ef27e8b2325984635fb5"><span id="index-29"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T1</span><span class="p">,</span> <span class="k">typename</span> <span class="n">T2</span><span class="o">&gt;</span>
+<span class="kt">bool</span> <span class="n">Contains</span><span class="p">(</span><span class="k">const</span> <span class="n">T1</span> <span class="n">element</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">unordered_set</span><span class="o">&lt;</span><span class="n">T1</span><span class="p">,</span> <span class="n">T2</span><span class="o">&gt;&amp;</span> <span class="n">set</span><span class="p">)</span></pre>
+<p>Check if an unordered_set contains an element.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1a49842785235133081cf21a3cdf74c5d6"><span id="index-30"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T1</span><span class="p">,</span> <span class="k">typename</span> <span class="n">T2</span><span class="o">&gt;</span>
+<span class="kt">bool</span> <span class="n">Contains</span><span class="p">(</span><span class="k">const</span> <span class="n">T1</span> <span class="n">element</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">T1</span><span class="p">,</span> <span class="n">T2</span><span class="o">&gt;&amp;</span> <span class="n">map</span><span class="p">)</span></pre>
+<p>Check if the mat contains an element.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1ae36337b29029e19aa65195cbc62bc4cf"><span id="index-31"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T1</span><span class="p">,</span> <span class="k">typename</span> <span class="n">T2</span><span class="o">&gt;</span>
+<span class="kt">bool</span> <span class="n">Contains</span><span class="p">(</span><span class="k">const</span> <span class="n">T1</span> <span class="n">element</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">T1</span><span class="p">,</span> <span class="n">T2</span><span class="o">&gt;&amp;</span> <span class="n">map</span><span class="p">)</span></pre>
+<p>Check if an unordered_map contains an element.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1a7ac45caafa8dec87d4b8dc753fef1052"><span id="index-32"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Type</span><span class="o">&gt;</span>
+<span class="kt">bool</span> <span class="n">ContainsCommonElement</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">elements1</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">set</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">elements2</span><span class="p">)</span></pre>
+<p>Check if there is at least a single common element in two vectors.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1ada70d2236e85025cebdbf6ac81f3db14"><span id="index-33"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Type</span><span class="o">&gt;</span>
+<span class="kt">void</span> <span class="n">SortAndRemoveDuplicates</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">vec</span><span class="p">)</span></pre>
+<p>Sorts the array and removes duplicate elements.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1a93b578c0bd12eb2f2a5e0258f03477b6"><span id="index-34"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Type</span><span class="o">&gt;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span> <span class="n">RemoveDuplicates</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">vector</span><span class="p">)</span></pre>
+<p>Returns vector similar to input, but without duplicate elements.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1ac2a37aa923b5b568e030d93b3f9cff0e"><span id="index-35"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Type</span><span class="o">&gt;</span>
+<span class="kt">bool</span> <span class="n">Erase</span><span class="p">(</span><span class="k">const</span> <span class="n">Type</span><span class="o">&amp;</span> <span class="n">element</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">vector</span><span class="p">)</span></pre>
+<p>Removes an element from the vector. Returns success.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1a11de5603ae1479987c90b02ac5ca2f3b"><span id="index-36"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Type</span><span class="o">&gt;</span>
+<span class="kt">bool</span> <span class="n">Erase</span><span class="p">(</span><span class="k">const</span> <span class="n">Type</span><span class="o">&amp;</span> <span class="n">element</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">set</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">set</span><span class="p">)</span></pre>
+<p>Removes an element with from the set. Returns success.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1a8115f777b3d59ad8110d890a6ddff1a7"><span id="index-37"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">IndicesType</span><span class="p">,</span> <span class="k">typename</span> <span class="n">Type</span><span class="o">&gt;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">IndicesType</span><span class="o">&gt;</span> <span class="n">CollectIndices</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">vector</span><span class="p">,</span> <span class="k">const</span> <span class="n">Type</span> <span class="n">value</span><span class="p">)</span></pre>
+<p>Collect all indices of elements in a vector with a specified value.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1aeca8e611c0d7d95f83ff2ff8db55bfb5"><span id="index-38"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="k">typename</span> <span class="n">F</span><span class="o">&gt;</span>
+<span class="kt">void</span> <span class="n">Foreach</span><span class="p">(</span><span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">container</span><span class="p">,</span> <span class="k">const</span> <span class="n">F</span><span class="o">&amp;</span> <span class="n">Function</span><span class="p">)</span></pre>
+<p>Execute a function for every element in the container.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1ab4f0417eb5714a8688e0d0863f2ee5f6"><span id="index-39"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="k">auto</span> <span class="n">MaxIt</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">vector</span><span class="p">)</span></pre>
+<p>Finds a maximum value in a vector, return an iterator pointing to it.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1a1abf2f57d3158f13baf1612f7a5821fb"><span id="index-40"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="k">auto</span> <span class="n">MinIt</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">vector</span><span class="p">)</span></pre>
+<p>Finds a minimal value in a vector, return an iterator pointing to it.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1a872d125b27bc847864694ee023a34a85"><span id="index-41"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="n">T</span> <span class="n">Max</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">vector</span><span class="p">)</span></pre>
+<p>Finds a maximum value in a vector.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1a31477ea9a02a876feacf94386b26c882"><span id="index-42"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="n">T</span> <span class="n">Min</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">vector</span><span class="p">)</span></pre>
+<p>Finds a minimal value in a vector.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1ab84057ece90fb501fe52dcbcbe95bdee"><span id="index-43"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="n">T</span> <span class="n">Max</span><span class="p">(</span><span class="k">const</span> <span class="n">T</span> <span class="n">val</span><span class="p">)</span></pre>
+<p>Finds a maximum value from a single element. Boundary case for the variadic expansion.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1aa5929f948f902d5d4ca6b725763ae146"><span id="index-44"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="k">typename</span> <span class="p">...</span> <span class="n">TS</span><span class="o">&gt;</span>
+<span class="n">T</span> <span class="n">Max</span><span class="p">(</span><span class="k">const</span> <span class="n">T</span> <span class="n">val1</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span> <span class="n">val2</span><span class="p">,</span> <span class="k">const</span> <span class="n">TS</span> <span class="p">...</span> <span class="n">vals</span><span class="p">)</span></pre>
+<p>Finds a maximum value from variadic argument list.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1a3913cef0eaeb8fe4078bbda9fca44af4"><span id="index-45"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="n">T</span> <span class="n">Min</span><span class="p">(</span><span class="k">const</span> <span class="n">T</span> <span class="n">val</span><span class="p">)</span></pre>
+<p>Finds a minimal value from a single element. Boundary case for the variadic expansion.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1a63e32489fcc5866461343c7a998e7a7c"><span id="index-46"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="k">typename</span><span class="p">...</span> <span class="n">TS</span><span class="o">&gt;</span>
+<span class="n">T</span> <span class="n">Min</span><span class="p">(</span><span class="k">const</span> <span class="n">T</span> <span class="n">val1</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span> <span class="n">val2</span><span class="p">,</span> <span class="k">const</span> <span class="n">TS</span> <span class="p">...</span> <span class="n">vals</span><span class="p">)</span></pre>
+<p>Finds a minimal value from variadic argument list.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1ad62452f1d624a34ecc1a4018a5046946"><span id="index-47"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="k">typename</span> <span class="n">F</span><span class="o">&gt;</span>
+<span class="k">auto</span> <span class="n">Max</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">vector</span><span class="p">,</span> <span class="k">const</span> <span class="n">F</span><span class="o">&amp;</span> <span class="n">Function</span><span class="p">)</span></pre>
+<p>Finds the object in a vector, which when transformed by a function gives a maximum value.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1a899eb2bfb6dca9fd992ac97aefb8be49"><span id="index-48"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="k">typename</span> <span class="n">F</span><span class="o">&gt;</span>
+<span class="k">auto</span> <span class="n">Min</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">vector</span><span class="p">,</span> <span class="k">const</span> <span class="n">F</span><span class="o">&amp;</span> <span class="n">Function</span><span class="p">)</span></pre>
+<p>Finds the object in a vector, which when transformed by a function gives a minimal value.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1a4639856e6d81b83e39575579248aa69a"><span id="index-49"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="k">typename</span> <span class="n">F</span><span class="o">&gt;</span>
+<span class="k">auto</span> <span class="n">MaxValue</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">vector</span><span class="p">,</span> <span class="k">const</span> <span class="n">F</span><span class="o">&amp;</span> <span class="n">Function</span><span class="p">)</span></pre>
+<p>Finds a maximum value transformed by a function in a vector.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1aa8140457d471db2b7a3c800addc61786"><span id="index-50"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="k">typename</span> <span class="n">F</span><span class="o">&gt;</span>
+<span class="k">auto</span> <span class="n">MinValue</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">vector</span><span class="p">,</span> <span class="k">const</span> <span class="n">F</span><span class="o">&amp;</span> <span class="n">Function</span><span class="p">)</span></pre>
+<p>Finds a minimal value transformed by a function in a vector.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1a360dd633340888e0eaf67d174b50626d"><span id="index-51"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="k">typename</span> <span class="n">F</span><span class="o">&gt;</span>
+<span class="k">auto</span> <span class="n">MiddleValue</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">vector</span><span class="p">,</span> <span class="k">const</span> <span class="n">F</span><span class="o">&amp;</span> <span class="n">Function</span><span class="p">)</span></pre>
+<p>Finds a middle (average of min, max) value transformed by a function in a vector.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1a07a827356575ac6f21fd0eea2f8aad55"><span id="index-52"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="k">auto</span> <span class="n">Accumulate</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">vector</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span> <span class="n">start_value</span><span class="p">)</span></pre>
+<p>Wrapper for std::accumulate.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1a56fafc1210db4ce7a0571bbdcd0c18c8"><span id="index-53"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="k">auto</span> <span class="n">Sum</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">vector</span><span class="p">)</span></pre>
+<p>Sum all elements in a vector.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1a8bf0536090b7b0216281ce350f3f2415"><span id="index-54"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="k">auto</span> <span class="n">Average</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">vector</span><span class="p">)</span></pre>
+<p>Compute average element of a vector. In case of empty vector, return 0.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1acfa450bc03f31d132a6bc6fb6d3a15d1"><span id="index-55"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="k">typename</span> <span class="n">F</span><span class="o">&gt;</span>
+<span class="k">auto</span> <span class="n">Accumulate</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">vector</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span> <span class="n">initial_value</span><span class="p">,</span> <span class="k">const</span> <span class="n">F</span><span class="o">&amp;</span> <span class="n">function</span><span class="p">)</span></pre>
+<p>Wrapper for std::accumulate - <a class="reference external" href="https://en.cppreference.com/w/cpp/algorithm/accumulate">https://en.cppreference.com/w/cpp/algorithm/accumulate</a> - values transformed by a function.</p>
+<p>This will make a sum of every element of the input vector transformed by a function plus the initial element.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>vector</p></td>
+<td><p>The input vector (will be transformed by a function).</p></td>
+</tr>
+<tr class="row-even"><td><p>initial_value</p></td>
+<td><p>The initial_value will be added to the resulting sum.</p></td>
+</tr>
+<tr class="row-odd"><td><p>function</p></td>
+<td><p>The function that will transform every element of the vector.</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1ad56f25a5428eb97ed55f53e6792049ed"><span id="index-56"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="k">typename</span> <span class="n">F</span><span class="o">&gt;</span>
+<span class="k">auto</span> <span class="n">Sum</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">vector</span><span class="p">,</span> <span class="k">const</span> <span class="n">F</span><span class="o">&amp;</span> <span class="n">function</span><span class="p">)</span></pre>
+<p>Sum all elements in a vector transformed by a function.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1ad97baf917f9312038fbfecdd3a3e6d1b"><span id="index-57"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="k">typename</span> <span class="n">F</span><span class="o">&gt;</span>
+<span class="kt">float</span> <span class="n">Average</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">vector</span><span class="p">,</span> <span class="k">const</span> <span class="n">F</span><span class="o">&amp;</span> <span class="n">function</span><span class="p">)</span></pre>
+<p>Compute average element of a vector transformed by a function. In case of empty vector, return 0.0f.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1a8d072076c1f9b4b4cb5c1bd43e12a963"><span id="index-58"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="k">auto</span> <span class="n">Median</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">vector</span><span class="p">)</span></pre>
+<p>Compute median value of a vector. In case of empty vector, return 0.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1a2c5110ce771c66c2fe895745846b7ddc"><span id="index-59"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Type</span><span class="o">&gt;</span>
+<span class="kt">void</span> <span class="n">InsertBack</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">target</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">source</span><span class="p">)</span></pre>
+<p>Insert the source vector to the back of target vector.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1a88ea21e390de7dafa923c687f5dd7f4b"><span id="index-60"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Type</span><span class="o">&gt;</span>
+<span class="kt">void</span> <span class="n">InsertFront</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">target</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">source</span><span class="p">)</span></pre>
+<p>Insert the source vector to the front of target vector.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1ac1e2fbf5a04f892c1a144defa12010b7"><span id="index-61"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">TargerType</span><span class="p">,</span> <span class="k">typename</span> <span class="n">SopurceType</span><span class="o">&gt;</span>
+<span class="kt">void</span> <span class="n">InsertTo</span><span class="p">(</span><span class="n">TargerType</span><span class="o">&amp;</span> <span class="n">target</span><span class="p">,</span> <span class="k">const</span> <span class="n">SopurceType</span><span class="o">&amp;</span> <span class="n">source</span><span class="p">)</span></pre>
+<p>Insert the source container to the target container.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1a6c979c5e996aae0dc791d7e38b410697"><span id="index-62"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Type</span><span class="o">&gt;</span>
+<span class="kt">void</span> <span class="n">EmplaceBackUnique</span><span class="p">(</span><span class="k">const</span> <span class="n">Type</span><span class="o">&amp;</span> <span class="n">element</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">vector</span><span class="p">)</span></pre>
+<p>Emplace back an element if it is unique to the vector.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1ad4995fc7d0f13841cbf123d8ffe62ff8"><span id="index-63"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">TrimBegin</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">t</span> <span class="o">=</span> <a class="reference internal" href="#doxid-namespacestd-ext-1ab59df0028782a260447e682aa16eb6f1"><span class="std std-ref">WHITESPACES</span></a><span></span><span class="p">)</span></pre>
+<p>Trims characters from beginning of string (left).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1a9bdfbb7ffb84b19cdbe9f93190ac8a1f"><span id="index-64"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">TrimEnd</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">t</span> <span class="o">=</span> <a class="reference internal" href="#doxid-namespacestd-ext-1ab59df0028782a260447e682aa16eb6f1"><span class="std std-ref">WHITESPACES</span></a><span></span><span class="p">)</span></pre>
+<p>Trims characters from end of string (right).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1a9acc54500404ca009fa3bf720ba69736"><span id="index-65"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">Trim</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">t</span> <span class="o">=</span> <a class="reference internal" href="#doxid-namespacestd-ext-1ab59df0028782a260447e682aa16eb6f1"><span class="std std-ref">WHITESPACES</span></a><span></span><span class="p">)</span></pre>
+<p>Trims from both ends of string (left &amp; right).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1a2023885fa2b738c21e57b0ee8ea890c0"><span id="index-66"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">EndWithASingleSlash</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">)</span></pre>
+<p>Trim the end of a string to removes forward and backward slashes (/, ) and add one single forward slash /.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1a9908b74606a5339b36047e67ae5a9870"><span id="index-67"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">Parse</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">text</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">separators</span> <span class="o">=</span> <a class="reference internal" href="#doxid-namespacestd-ext-1ab59df0028782a260447e682aa16eb6f1"><span class="std std-ref">WHITESPACES</span></a><span></span><span class="p">)</span></pre>
+<p>Parses the input text to sub strings by a given list of separators.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1a4467de80e7a26143970332c3b775b5fb"><span id="index-68"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="kt">void</span> <span class="n">Read</span><span class="p">(</span><span class="n">T</span><span class="o">&amp;</span> <span class="n">val</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">istream</span><span class="o">&amp;</span> <span class="n">str</span><span class="p">)</span></pre>
+<p>Reads a value from the binary stream, number of bytes red is determined by a template type.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1ad452805c090c06cc40100271bbc7d256"><span id="index-69"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="n">T</span> <span class="n">Read</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">istream</span><span class="o">&amp;</span> <span class="n">str</span><span class="p">)</span></pre>
+<p>Reads a value from the binary stream, number of bytes red is determined by a template type.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1a10c0ca7a65d127a3628896f2b7943fb9"><span id="index-70"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="kt">void</span> <span class="n">Write</span><span class="p">(</span><span class="k">const</span> <span class="n">T</span> <span class="n">val</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">str</span><span class="p">)</span></pre>
+<p>Writes a value to the binary stream, bytes written are determined by a template type.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1a3584755df7d522a3c5f1c0b03099b8f8"><span id="index-71"></span><span></span><span class="kt">void</span> <span class="n">ReadString</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">text</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">istream</span><span class="o">&amp;</span> <span class="n">str</span><span class="p">)</span></pre>
+<p>Reads a string from the binary stream.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1ab20c2398df910e226b6726f10c3821f6"><span id="index-72"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">ReadString</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">istream</span><span class="o">&amp;</span> <span class="n">str</span><span class="p">)</span></pre>
+<p>Reads a value from the binary stream, number of bytes red is determined by a template type.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1aeb229168a09320c1109033abc7ead6c5"><span id="index-73"></span><span></span><span class="kt">void</span> <span class="n">WriteString</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">text</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">str</span><span class="p">)</span></pre>
+<p>Writes a value to the binary stream, number of bytes written is determined by a template type.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1acf4fe1c13b2b2d3cd78933e8f03d3fb7"><span id="index-74"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">C</span><span class="p">,</span> <span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="k">auto</span> <span class="n">Find</span><span class="p">(</span><span class="n">C</span><span class="o">&amp;</span> <span class="n">container</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">value</span><span class="p">)</span></pre>
+<p>Simplified wrapper for std::find.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1ad8e5d9a078ec4af6f5828e57d7fa9e07"><span id="index-75"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">C</span><span class="p">,</span> <span class="k">class</span> <span class="n">F</span><span class="o">&gt;</span>
+<span class="k">auto</span> <span class="n">Transformed</span><span class="p">(</span><span class="k">const</span> <span class="n">C</span><span class="o">&amp;</span> <span class="n">container</span><span class="p">,</span> <span class="n">F</span> <span class="n">Function</span><span class="p">)</span></pre>
+<p>Simplified wrapper for std::transform.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1a330ac58a836e4216212ba108d1918682"><span id="index-76"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">C</span><span class="p">,</span> <span class="k">class</span> <span class="n">P</span><span class="o">&gt;</span>
+<span class="k">auto</span> <span class="n">AllOf</span><span class="p">(</span><span class="k">const</span> <span class="n">C</span><span class="o">&amp;</span> <span class="n">container</span><span class="p">,</span> <span class="k">const</span> <span class="n">P</span><span class="o">&amp;</span> <span class="n">Predicate</span><span class="p">)</span></pre>
+<p>Simplified wrapper for std::all_of.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1a53640d31123112a636eeda3849dc9c69"><span id="index-77"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">C</span><span class="p">,</span> <span class="k">class</span> <span class="n">P</span><span class="o">&gt;</span>
+<span class="k">auto</span> <span class="n">AnyOf</span><span class="p">(</span><span class="k">const</span> <span class="n">C</span><span class="o">&amp;</span> <span class="n">container</span><span class="p">,</span> <span class="k">const</span> <span class="n">P</span><span class="o">&amp;</span> <span class="n">Predicate</span><span class="p">)</span></pre>
+<p>Simplified wrapper for std::any_of.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1aecb44c341d9db6931a18794447036707"><span id="index-78"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">C</span><span class="p">,</span> <span class="k">class</span> <span class="n">P</span><span class="o">&gt;</span>
+<span class="k">auto</span> <span class="n">AnyOfW</span><span class="p">(</span><span class="n">C</span><span class="o">&amp;</span> <span class="n">container</span><span class="p">,</span> <span class="k">const</span> <span class="n">P</span><span class="o">&amp;</span> <span class="n">Predicate</span><span class="p">)</span></pre>
+<p>Simplified wrapper for std::any_of (writable).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1a49c1a02a81efbf799cd471b05d9d090d"><span id="index-79"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">C</span><span class="p">,</span> <span class="k">class</span> <span class="n">P</span><span class="o">&gt;</span>
+<span class="k">auto</span> <span class="n">NoneOf</span><span class="p">(</span><span class="k">const</span> <span class="n">C</span><span class="o">&amp;</span> <span class="n">container</span><span class="p">,</span> <span class="k">const</span> <span class="n">P</span><span class="o">&amp;</span> <span class="n">Predicate</span><span class="p">)</span></pre>
+<p>Simplified wrapper for std::none_of.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1a210ee4d99947b239f329e0b53902a60b"><span id="index-80"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">C</span><span class="p">,</span> <span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="k">auto</span> <span class="n">Count</span><span class="p">(</span><span class="k">const</span> <span class="n">C</span><span class="o">&amp;</span> <span class="n">container</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">val</span><span class="p">)</span></pre>
+<p>Simplified wrapper for std::count.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1ace78e83e68f19aefe8adf17b8371c85b"><span id="index-81"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">C</span><span class="p">,</span> <span class="k">class</span> <span class="n">P</span><span class="o">&gt;</span>
+<span class="k">auto</span> <span class="n">CountIf</span><span class="p">(</span><span class="k">const</span> <span class="n">C</span><span class="o">&amp;</span> <span class="n">container</span><span class="p">,</span> <span class="k">const</span> <span class="n">P</span><span class="o">&amp;</span> <span class="n">Predicate</span><span class="p">)</span></pre>
+<p>Simplified wrapper for std::count_if.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1a9d57cbcf79622e1c1c145093b5591498"><span id="index-82"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">C</span><span class="p">,</span> <span class="k">class</span> <span class="n">P</span><span class="o">&gt;</span>
+<span class="k">auto</span> <span class="n">FindIf</span><span class="p">(</span><span class="n">C</span><span class="o">&amp;</span> <span class="n">container</span><span class="p">,</span> <span class="k">const</span> <span class="n">P</span><span class="o">&amp;</span> <span class="n">Predicate</span><span class="p">)</span></pre>
+<p>Simplified wrapper for std::find_if.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1a6c30c37185409341587c18952735e03d"><span id="index-83"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">C</span><span class="p">,</span> <span class="k">class</span> <span class="n">P</span><span class="o">&gt;</span>
+<span class="k">auto</span> <span class="n">RevFindIf</span><span class="p">(</span><span class="n">C</span><span class="o">&amp;</span> <span class="n">container</span><span class="p">,</span> <span class="k">const</span> <span class="n">P</span><span class="o">&amp;</span> <span class="n">Predicate</span><span class="p">)</span></pre>
+<p>Simplified wrapper for reversed std::find_if.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1a8dabd1bef90c921b8e1a4d6cc7b79691"><span id="index-84"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">C</span><span class="p">,</span> <span class="k">class</span> <span class="n">P</span><span class="o">&gt;</span>
+<span class="k">auto</span> <span class="n">FindIfPtr</span><span class="p">(</span><span class="n">C</span><span class="o">&amp;</span> <span class="n">container</span><span class="p">,</span> <span class="k">const</span> <span class="n">P</span><span class="o">&amp;</span> <span class="n">Predicate</span><span class="p">)</span></pre>
+<p>Simplified wrapper for std::find_if that expects a vector of pointers as input and returns a pointer.</p>
+<p>The motivation is instead of returning an iterator to a pointer, to return the pointer itself or null.</p>
+<p class="rubric">Returns:</p>
+<p>Return the pointer itself if found, else it returns null pointer.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1a7ae93d993bb4fa0448971c71c69f13dd"><span id="index-85"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">C</span><span class="p">,</span> <span class="k">class</span> <span class="n">P</span><span class="o">&gt;</span>
+<span class="k">auto</span> <span class="n">EraseIf</span><span class="p">(</span><span class="n">C</span><span class="o">&amp;</span> <span class="n">container</span><span class="p">,</span> <span class="k">const</span> <span class="n">P</span><span class="o">&amp;</span> <span class="n">Predicate</span><span class="p">)</span></pre>
+<p>Simplified wrapper for std::remove_if and std::erase.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1a12dad2eec1ade1400fd845f1e76494b9"><span id="index-86"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">C</span><span class="p">,</span> <span class="k">class</span> <span class="n">P</span><span class="o">&gt;</span>
+<span class="k">auto</span> <span class="n">SelectIf</span><span class="p">(</span><span class="k">const</span> <span class="n">C</span><span class="o">&amp;</span> <span class="n">container</span><span class="p">,</span> <span class="k">const</span> <span class="n">P</span><span class="o">&amp;</span> <span class="n">Predicate</span><span class="p">)</span></pre>
+<p>Copies all elements fulfilling a given condition into a new vector. Uses std::copy_if.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1a88b72152af6f6fbfe86d69dbec2f3225"><span id="index-87"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">C</span><span class="p">,</span> <span class="k">class</span> <span class="n">P</span><span class="o">&gt;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">C</span><span class="p">,</span> <span class="n">C</span><span class="o">&gt;</span> <span class="n">Partition</span><span class="p">(</span><span class="k">const</span> <span class="n">C</span><span class="o">&amp;</span> <span class="n">container</span><span class="p">,</span> <span class="k">const</span> <span class="n">P</span><span class="o">&amp;</span> <span class="n">Predicate</span><span class="p">)</span></pre>
+<p>Partitions all elements based on a given condition.</p>
+<p>Uses std::partition_copy.</p>
+<p class="rubric">Returns:</p>
+<p>A pair of container. The first contains all elements that satisfy the condition, the second all elements that do not.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1a383a68231236b12bd33c2711bb819371"><span id="index-88"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="p">,</span> <span class="k">class</span> <span class="n">P</span><span class="o">&gt;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="p">,</span> <span class="kt">size_t</span><span class="o">&gt;&gt;</span> <span class="n">FindIntervals</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">vec</span><span class="p">,</span> <span class="k">const</span> <span class="n">P</span><span class="o">&amp;</span> <span class="n">Predicate</span><span class="p">)</span></pre>
+<p>Finds all intervals on the vector where a given condition holds.</p>
+<p class="rubric">Returns:</p>
+<p>A vector of interval indices pairs.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1afa71ec07ca264d05941169dcbbc84028"><span id="index-89"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">F</span><span class="p">,</span> <span class="k">typename</span> <span class="n">O</span><span class="o">&gt;</span>
+<span class="k">auto</span> <span class="n">Bind1</span><span class="p">(</span><span class="n">F</span> <span class="n">method</span><span class="p">,</span> <span class="n">O</span> <span class="n">object</span><span class="p">)</span></pre>
+<p>Creates binding for an object method with a single argument.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacestd-ext-1af381e2982cf868ab45cca5d2ad6d9d12"><span id="index-90"></span><span></span><span class="kt">bool</span> <span class="n">IsASCII</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">)</span></pre>
+<p>Check std::string for non-ASCII characters.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Skeletex Research
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

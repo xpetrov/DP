@@ -1,0 +1,393 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Shader API &mdash; HIRO 0.4.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/hiro-fav-32.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/target-highlight.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/hiro_theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-sphinx_rtd_theme.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Global Namespace" href="global.html" />
+    <link rel="prev" title="T3: Overview of Gadget Features" href="tutorial_3.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: rgb(248, 216, 60)" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/hiro-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_0.html">T0: Setting up Visual Studio Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_1.html">T1: Introduction to HIRO GUI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_2.html">T2: Creating Custom Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_3.html">T3: Overview of Gadget Features</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Shader API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#system-uniforms">System Uniforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#custom-uniforms">Custom Uniforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#transformations">Transformations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#api-definitions-glsl">api_definitions.glsl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#api-vertex-glsl">api_vertex.glsl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#api-frag-glsl">api_frag.glsl</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#vertex-shader">Vertex Shader</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fragment-shader">Fragment Shader</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="global.html">Global Namespace</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">HIRO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Shader API</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="shader-api">
+<h1>Shader API<a class="headerlink" href="#shader-api" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="includes">
+<h2>Includes<a class="headerlink" href="#includes" title="Permalink to this headline">¶</a></h2>
+<p>HIRO supports <code class="docutils literal notranslate"><span class="pre">#include</span> <span class="pre">&quot;filename&quot;</span></code> syntax for the mutual inclusion of shader files.
+The specified filename is always relative to the HIRO shader folder (located in the resource directory).</p>
+<p>Main include files for API, that can be used in custom shaders are:</p>
+<ul class="simple">
+<li><p><strong>api_definitions.glsl</strong> Contains general API definitions.</p></li>
+<li><p><strong>api_vert.glsl</strong> Contains vertex-specific API definitions.
+Already includes <em>api_definitions.glsl</em>.</p></li>
+<li><p><strong>api_frag.glsl</strong> Contains fragment-specific API definitions.
+Already includes <em>api_definitions.glsl</em>.</p></li>
+</ul>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>The shader build system does not support include guards.
+When including a file, be careful that the file was not already included in other included files.</p>
+</div>
+</div>
+<div class="section" id="system-uniforms">
+<h2>System Uniforms<a class="headerlink" href="#system-uniforms" title="Permalink to this headline">¶</a></h2>
+<pre class="highlight doxyrest-title-code-block literal-block"><span></span><span class="n">uint</span> <span class="n">SCENE_ID</span><span class="p">;</span></pre>
+<p>Scene index for which the rendering was invoked.
+Managed automatically.</p>
+<pre class="highlight doxyrest-title-code-block literal-block"><span></span><span class="kt">bool</span> <span class="n">USING_INSTANCING</span><span class="p">;</span></pre>
+<p>Whether instanced rendering is enabled.
+Should be set by the user, via uniform binding <code class="docutils literal notranslate"><span class="pre">ULOC_USE_INSTANCING</span></code>.
+See section <a class="reference internal" href="#transformations-label"><span class="std std-ref">Transformations</span></a>. for more detail.</p>
+<pre class="highlight doxyrest-title-code-block literal-block"><span></span><span class="n">mat4</span> <span class="n">INSTANCES</span><span class="p">[</span><span class="n">MAX_INSTANCE_COUNT</span><span class="p">];</span></pre>
+<p>Contains instance matrices.
+Should be set by the user, via uniform binding <code class="docutils literal notranslate"><span class="pre">UBIND_INSTANCING_MATRICES</span></code>.</p>
+<pre class="highlight doxyrest-title-code-block literal-block"><span></span><span class="n">MatAndInv</span> <span class="n">VIEWS</span><span class="p">[</span><span class="n">MAX_CAMERA_COUNT</span><span class="p">];</span></pre>
+<p>Contains view transformations of all cameras registered in the rendering system.
+Managed automatically.</p>
+<pre class="highlight doxyrest-title-code-block literal-block"><span></span><span class="n">SceneData</span> <span class="n">SCENES</span><span class="p">[</span><span class="n">MAX_SCENE_COUNT</span><span class="p">];</span></pre>
+<p>Information about all scenes registered in the rendering system.
+Managed automatically.</p>
+<pre class="highlight doxyrest-title-code-block literal-block"><span></span><span class="n">Light</span> <span class="n">LIGHTS</span><span class="p">[</span><span class="n">MAX_LIGHT_COUNT</span><span class="p">];</span></pre>
+<p>Information about all lights registered in the rendering system.
+Managed automatically.</p>
+</div>
+<div class="section" id="custom-uniforms">
+<h2>Custom Uniforms<a class="headerlink" href="#custom-uniforms" title="Permalink to this headline">¶</a></h2>
+<p>Some uniform locations and uniform buffer (UBO) bindings are reserved for the rendering system.
+The location and binding constants are reflected in both C++ and GLSL code.
+C++ Definitions are located in <strong>ShaderApi.h</strong> and GLSL definitions are in <strong>api_definitions.glsl</strong>.</p>
+<p>For user-defined uniforms, locations must use <code class="docutils literal notranslate"><span class="pre">ULOC_CUSTOM_n</span></code> definitions, where <code class="docutils literal notranslate"><span class="pre">n</span></code> is a specific location.
+Similar applies to UBO bindings. Here, notation <code class="docutils literal notranslate"><span class="pre">UBIND_CUSTOM_n</span></code> is used, where <code class="docutils literal notranslate"><span class="pre">n</span></code> is a binding index.</p>
+<p>An example of use:</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">layout</span> <span class="p">(</span><span class="n">location</span> <span class="o">=</span> <span class="n">ULOC_CUSTOM_0</span><span class="p">)</span> <span class="n">uniform</span> <span class="n">vec3</span> <span class="n">my_uniform</span><span class="p">;</span>
+<span class="n">layout</span> <span class="p">(</span><span class="n">std140</span><span class="p">,</span> <span class="n">binding</span> <span class="o">=</span> <span class="n">UBIND_CUSTOM_0</span><span class="p">)</span> <span class="n">uniform</span> <span class="n">MyStructureBlock</span> <span class="p">{</span> <span class="n">MyStructure</span> <span class="n">my_struct</span><span class="p">;</span> <span class="p">};</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="transformations">
+<span id="transformations-label"></span><h2>Transformations<a class="headerlink" href="#transformations" title="Permalink to this headline">¶</a></h2>
+<p>Rendering system uses several transformation steps to obtain final transformation.</p>
+<div class="figure align-center">
+<img alt="_images/transformations.svg" src="_images/transformations.svg" /></div>
+<p>Pre-instance and instance transformations should be considered only when instancing is enabled.
+Otherwise, only the standard model-view-projection transformation should be used.</p>
+<p>Shader API includes these definitions for getting transformations:</p>
+<div class="section" id="api-definitions-glsl">
+<h3>api_definitions.glsl<a class="headerlink" href="#api-definitions-glsl" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block"><span></span><span class="kt">bool</span> <span class="n">USING_INSTANCING</span><span class="p">;</span></pre>
+<p>Whether instanced rendering is enabled.</p>
+<pre class="highlight doxyrest-title-code-block literal-block"><span></span><span class="n">mat4</span> <span class="n">PRE_INSTANCE_MAT</span><span class="p">;</span>
+<span class="n">mat4</span> <span class="n">PRE_INSTANCE_INV_MAT</span><span class="p">;</span></pre>
+<p>Pre-instancing matrix specified by the user in Renderer and its inverted version.</p>
+<pre class="highlight doxyrest-title-code-block literal-block"><span></span><span class="n">mat4</span> <span class="n">MODEL_MAT</span><span class="p">;</span>
+<span class="n">mat4</span> <span class="n">MODEL_INV_MAT</span><span class="p">;</span></pre>
+<p>Model matrix set via Style.transform and its inverted version.</p>
+<pre class="highlight doxyrest-title-code-block literal-block"><span></span><span class="n">mat4</span> <span class="n">VIEW_MAT</span><span class="p">;</span>
+<span class="n">mat4</span> <span class="n">VIEW_INV_MAT</span><span class="p">;</span></pre>
+<p>View matrix originating from the current camera pose and its inverted version.</p>
+<pre class="highlight doxyrest-title-code-block literal-block"><span></span><span class="n">mat4</span> <span class="n">PROJ_MAT</span><span class="p">;</span>
+<span class="n">mat4</span> <span class="n">PROJ_INV_MAT</span><span class="p">;</span></pre>
+<p>Projection matrix and its inverted version.</p>
+</div>
+<div class="section" id="api-vertex-glsl">
+<h3>api_vertex.glsl<a class="headerlink" href="#api-vertex-glsl" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block"><span></span><span class="n">mat4</span> <span class="nf">GetTransfInstance</span><span class="p">();</span></pre>
+<p>Returns full instance transformation. Returns identity when instancing is disabled.</p>
+<pre class="highlight doxyrest-title-code-block literal-block"><span></span><span class="n">mat4</span> <span class="nf">GetTransfModel</span><span class="p">();</span></pre>
+<p>Returns full instance-model transformation. Instance transformation included only if enabled.</p>
+<pre class="highlight doxyrest-title-code-block literal-block"><span></span><span class="n">mat4</span> <span class="nf">GetTransfView</span><span class="p">();</span></pre>
+<p>Returns full instance-model-view transformation. Instance transformation included only if enabled.</p>
+<pre class="highlight doxyrest-title-code-block literal-block"><span></span><span class="n">mat4</span> <span class="nf">GetTransfProjection</span><span class="p">();</span></pre>
+<p>Returns full instance-model-view-projection transformation. Instance transformation included only if enabled.</p>
+</div>
+<div class="section" id="api-frag-glsl">
+<h3>api_frag.glsl<a class="headerlink" href="#api-frag-glsl" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block"><span></span><span class="n">vec3</span> <span class="n">GetDirectionToLight</span><span class="p">(</span><span class="n">in</span> <span class="n">vec3</span> <span class="n">position_eye</span><span class="p">)</span></pre>
+<p>Returns (camera space) direction from point to light.</p>
+<pre class="highlight doxyrest-title-code-block literal-block"><span></span><span class="kt">bool</span> <span class="n">IsOnDarkSide</span><span class="p">(</span><span class="n">in</span> <span class="n">vec3</span> <span class="n">position_eye</span><span class="p">,</span> <span class="n">in</span> <span class="n">vec3</span> <span class="n">normal_eye</span><span class="p">)</span></pre>
+<p>Check if point is on the surface turned away from the light.</p>
+<pre class="highlight doxyrest-title-code-block literal-block"><span></span><span class="n">vec3</span> <span class="n">Project</span><span class="p">(</span><span class="n">in</span> <span class="n">vec3</span> <span class="n">position_eye</span><span class="p">,</span> <span class="n">in</span> <span class="n">mat4</span> <span class="n">projection</span><span class="p">)</span></pre>
+<p>Returns (camera space) direction from point to light. Resulting projection is in range &lt;0,1&gt; space.</p>
+<pre class="highlight doxyrest-title-code-block literal-block"><span></span><span class="kt">float</span> <span class="nf">TestShadow</span><span class="p">(</span><span class="n">in</span> <span class="n">vec3</span> <span class="n">position_eye</span><span class="p">,</span> <span class="n">in</span> <span class="n">vec3</span> <span class="n">normal_eye</span><span class="p">);</span></pre>
+<p>Checks if there is shadow casted on a specified position.</p>
+<pre class="highlight doxyrest-title-code-block literal-block"><span></span><span class="kt">void</span> <span class="nf">WriteFragment</span><span class="p">(</span><span class="n">in</span> <span class="n">vec3</span> <span class="n">position_eye</span><span class="p">,</span> <span class="n">in</span> <span class="n">vec3</span> <span class="n">normal_eye</span><span class="p">,</span> <span class="n">in</span> <span class="n">Material</span> <span class="n">material</span><span class="p">);</span></pre>
+<p>Writes fragment to deferred buffers, specifying the position and normal of a fragment in camera coordinate space - right after applying view matrix (see section Transformations for more detail).</p>
+<pre class="highlight doxyrest-title-code-block literal-block"><span></span><span class="kt">void</span> <span class="nf">WriteFragment</span><span class="p">(</span><span class="n">in</span> <span class="n">vec3</span> <span class="n">color</span><span class="p">);</span></pre>
+<p>Writes fragment to deferred buffers, that will not be shaded and in the final render, the color will appear unmodified.</p>
+</div>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="vertex-shader">
+<h3>Vertex Shader<a class="headerlink" href="#vertex-shader" title="Permalink to this headline">¶</a></h3>
+<p>Include file <strong>api_vert.glsl</strong> which provides interface functions for vertex shaders.</p>
+<p>An example of a very simple vertex shader:</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">#version 430</span>
+<span class="cp">#include</span> <span class="cpf">&quot;api_vert.glsl&quot;</span><span class="cp"></span>
+
+<span class="n">layout</span> <span class="p">(</span><span class="n">location</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="n">in</span> <span class="n">vec3</span> <span class="n">in_position</span><span class="p">;</span>
+<span class="n">layout</span> <span class="p">(</span><span class="n">location</span> <span class="o">=</span> <span class="n">ULOC_CUSTOM_0</span><span class="p">)</span> <span class="n">uniform</span> <span class="n">vec3</span> <span class="n">color</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">main</span> <span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">out_color</span> <span class="o">=</span> <span class="n">in_color</span><span class="p">;</span>
+  <span class="n">gl_Position</span> <span class="o">=</span> <span class="n">GetTransfProjection</span><span class="p">()</span> <span class="o">*</span> <span class="n">vec4</span><span class="p">(</span><span class="n">in_position</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="fragment-shader">
+<h3>Fragment Shader<a class="headerlink" href="#fragment-shader" title="Permalink to this headline">¶</a></h3>
+<p>The render system uses deferred shading.
+Include file <strong>api_frag.glsl</strong> which provides interface functions for fragment shaders.</p>
+<p>An example of a very simple fragment shader:</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">#version 430</span>
+<span class="cp">#include</span> <span class="cpf">&quot;api_frag.glsl&quot;</span><span class="cp"></span>
+
+<span class="n">layout</span> <span class="p">(</span><span class="n">location</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="n">in</span> <span class="n">vec3</span> <span class="n">in_color</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">WriteFragment</span><span class="p">(</span><span class="n">in_color</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Skeletex Research
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

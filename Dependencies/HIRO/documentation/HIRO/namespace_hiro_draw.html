@@ -1,0 +1,476 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>namespace hiro::draw &mdash; HIRO 0.4.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/hiro-fav-32.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/target-highlight.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/hiro_theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-sphinx_rtd_theme.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="enum hiro::draw::AntiAliasing" href="enum_hiro_draw_AntiAliasing.html" />
+    <link rel="prev" title="namespace hiro" href="namespace_hiro.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: rgb(248, 216, 60)" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/hiro-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_0.html">T0: Setting up Visual Studio Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_1.html">T1: Introduction to HIRO GUI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_2.html">T2: Creating Custom Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_3.html">T3: Overview of Gadget Features</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="shader_api.html">Shader API</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="global.html">Global Namespace</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="namespace_cegui_ext.html">namespace cegui_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_dialog.html">namespace dialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_file_types.html">namespace file_types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_fs.html">namespace fs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_func.html">namespace func</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_geom.html">namespace geom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_glm_ext.html">namespace glm_ext</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="namespace_hiro.html">namespace hiro</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">namespace hiro::draw</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="enum_hiro_draw_AntiAliasing.html">enum hiro::draw::AntiAliasing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_hiro_draw_CameraMode.html">enum hiro::draw::CameraMode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_hiro_draw_ColorSource.html">enum hiro::draw::ColorSource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_hiro_draw_GeometryName.html">enum hiro::draw::GeometryName</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_hiro_draw_GroundGrid.html">enum hiro::draw::GroundGrid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_hiro_draw_PrimitiveName.html">enum hiro::draw::PrimitiveName</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_hiro_draw_TextAlignment.html">enum hiro::draw::TextAlignment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_draw_BillboardStyle.html">struct hiro::draw::BillboardStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_draw_FacesStyle.html">struct hiro::draw::FacesStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_draw_FrustumStyle.html">struct hiro::draw::FrustumStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_draw_Geometry.html">struct hiro::draw::Geometry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_draw_GeometryStyle.html">struct hiro::draw::GeometryStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_draw_GraphStyle.html">struct hiro::draw::GraphStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_draw_ImageStyle.html">struct hiro::draw::ImageStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_draw_LineFieldStyle.html">struct hiro::draw::LineFieldStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_draw_NormalsStyle.html">struct hiro::draw::NormalsStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_draw_PointCloudStyle.html">struct hiro::draw::PointCloudStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_draw_PointsStyle.html">struct hiro::draw::PointsStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_draw_ProjectionParams.html">struct hiro::draw::ProjectionParams</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_draw_SkeletonStyle.html">struct hiro::draw::SkeletonStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_draw_Style.html">struct hiro::draw::Style</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_BillboardRenderer.html">class hiro::draw::BillboardRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_CircleRenderer.html">class hiro::draw::CircleRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_CircleStyle.html">class hiro::draw::CircleStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_ElementRenderer.html">class hiro::draw::ElementRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_FrustumRenderer.html">class hiro::draw::FrustumRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_GeometryRenderer.html">class hiro::draw::GeometryRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_GraphRenderer.html">class hiro::draw::GraphRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_ImageRenderer.html">class hiro::draw::ImageRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_LineFieldRenderer.html">class hiro::draw::LineFieldRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_MeshRenderer.html">class hiro::draw::MeshRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_PointCloudRenderer.html">class hiro::draw::PointCloudRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_PrimitiveDatabase.html">class hiro::draw::PrimitiveDatabase</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_RasterRenderer.html">class hiro::draw::RasterRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_RenderSystem.html">class hiro::draw::RenderSystem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_Renderer.html">class hiro::draw::Renderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_Scene.html">class hiro::draw::Scene</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_SkeletonRenderer.html">class hiro::draw::SkeletonRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_SkinnedMeshRenderer.html">class hiro::draw::SkinnedMeshRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_TextPrinter.html">class hiro::draw::TextPrinter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_TextRenderer.html">class hiro::draw::TextRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_VisualCamera.html">class hiro::draw::VisualCamera</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_VisualCameraController.html">class hiro::draw::VisualCameraController</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro_gui.html">namespace hiro::gui</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro_modules.html">namespace hiro::modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro_shader.html">namespace hiro::shader</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_BoolFunc.html">enum hiro::BoolFunc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_EventStatus.html">enum hiro::EventStatus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_Key.html">enum hiro::Key</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_Mod.html">enum hiro::Mod</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_MouseButton.html">enum hiro::MouseButton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_hiro_ActiveResourceInfo.html">struct hiro::ActiveResourceInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_hiro_ResourceId.html">struct hiro::ResourceId</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Camera.html">class hiro::Camera</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Debugger.html">class hiro::Debugger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Exportable.html">class hiro::Exportable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Gadget.html">class hiro::Gadget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_GuiGenerator.html">class hiro::GuiGenerator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_GuiPanel.html">class hiro::GuiPanel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_ModKeys.html">class hiro::ModKeys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Resource.html">class hiro::Resource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_omp_ext.html">namespace omp_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_std_ext.html">namespace std_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_time_m.html">namespace time_m</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_ulog.html">namespace ulog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_uprogress.html">namespace uprogress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_utils.html">namespace utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_Config.html">class Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_IDialogInterface.html">class IDialogInterface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_WxWidgetsDialog.html">class WxWidgetsDialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">HIRO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="global.html">Global Namespace</a> &raquo;</li>
+        
+          <li><a href="namespace_hiro.html">namespace hiro</a> &raquo;</li>
+        
+      <li>namespace hiro::draw</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="namespace-hiro-draw">
+<span id="doxid-namespacehiro-1-1draw"></span><span id="index-0"></span><h1>namespace hiro::draw<a class="headerlink" href="#namespace-hiro-draw" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Extensions for object visualization. Implements a higher level of OpenGL rendering. <a class="reference internal" href="#details-namespacehiro-1-1draw"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="k">namespace</span> <span class="n">draw</span> <span class="p">{</span>
+
+<span class="c1">// typedefs</span>
+
+<span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="struct_hiro_draw_Style.html#doxid-structhiro-1-1draw-1-1-style"><span class="std std-ref">hiro::draw::Style</span></a><span></span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-namespacehiro-1-1draw-1a66403c2b89928adf30309388f29d18c9"><span></span><span class="n">PStyle</span></span><span></span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="class_hiro_draw_Renderer.html#doxid-classhiro-1-1draw-1-1-renderer"><span class="std std-ref">hiro::draw::Renderer</span></a><span></span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-namespacehiro-1-1draw-1a32115b3c69160fb20f512117c802e0f5"><span></span><span class="n">PRenderer</span></span><span></span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="struct_hiro_draw_BillboardStyle.html#doxid-structhiro-1-1draw-1-1-billboard-style"><span class="std std-ref">BillboardStyle</span></a><span></span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacehiro-1-1draw-1a84d936fccf7c9506ff1b5324cd0f17c1"><span class="std std-ref">PBillboardStyle</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="class_hiro_draw_BillboardRenderer.html#doxid-classhiro-1-1draw-1-1-billboard-renderer"><span class="std std-ref">BillboardRenderer</span></a><span></span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacehiro-1-1draw-1ac80ea227a4121f186969b20a4ce008d9"><span class="std std-ref">PBillboardRenderer</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="class_hiro_draw_CircleStyle.html#doxid-classhiro-1-1draw-1-1-circle-style"><span class="std std-ref">CircleStyle</span></a><span></span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacehiro-1-1draw-1a036b0366d4e40fa32a09dab09ff8c763"><span class="std std-ref">PCircleStyle</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="class_hiro_draw_CircleRenderer.html#doxid-classhiro-1-1draw-1-1-circle-renderer"><span class="std std-ref">CircleRenderer</span></a><span></span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacehiro-1-1draw-1ac4ca468e102ef5a6580a71afebab179e"><span class="std std-ref">PCircleRenderer</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="struct_hiro_draw_FrustumStyle.html#doxid-structhiro-1-1draw-1-1-frustum-style"><span class="std std-ref">hiro::draw::FrustumStyle</span></a><span></span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacehiro-1-1draw-1a7c34ce134ff69372db2c6b494c805fce"><span class="std std-ref">PFrustumStyle</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="class_hiro_draw_FrustumRenderer.html#doxid-classhiro-1-1draw-1-1-frustum-renderer"><span class="std std-ref">hiro::draw::FrustumRenderer</span></a><span></span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacehiro-1-1draw-1acd4c74007bc0a11e74632efd238b654f"><span class="std std-ref">PFrustumRenderer</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="struct_hiro_draw_GeometryStyle.html#doxid-structhiro-1-1draw-1-1-geometry-style"><span class="std std-ref">hiro::draw::GeometryStyle</span></a><span></span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacehiro-1-1draw-1a069b5a323ab4809674695eed84014808"><span class="std std-ref">PGeometryStyle</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="class_hiro_draw_GeometryRenderer.html#doxid-classhiro-1-1draw-1-1-geometry-renderer"><span class="std std-ref">hiro::draw::GeometryRenderer</span></a><span></span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacehiro-1-1draw-1a7ead4cd8d6d18832cab6a8162ce25f1c"><span class="std std-ref">PGeometryRenderer</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="struct_hiro_draw_GraphStyle.html#doxid-structhiro-1-1draw-1-1-graph-style"><span class="std std-ref">hiro::draw::GraphStyle</span></a><span></span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacehiro-1-1draw-1a5250f01609faa195782dc5b69be1bd8c"><span class="std std-ref">PGraphStyle</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="class_hiro_draw_GraphRenderer.html#doxid-classhiro-1-1draw-1-1-graph-renderer"><span class="std std-ref">hiro::draw::GraphRenderer</span></a><span></span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacehiro-1-1draw-1a1d8f8af8111906242bd23db33b30044f"><span class="std std-ref">PGraphRenderer</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="struct_hiro_draw_ImageStyle.html#doxid-structhiro-1-1draw-1-1-image-style"><span class="std std-ref">ImageStyle</span></a><span></span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacehiro-1-1draw-1a11df09cbd96c06624a72e119c8e88c82"><span class="std std-ref">PImageStyle</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="class_hiro_draw_ImageRenderer.html#doxid-classhiro-1-1draw-1-1-image-renderer"><span class="std std-ref">ImageRenderer</span></a><span></span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacehiro-1-1draw-1a637334675249309f1f9ed57577b270ba"><span class="std std-ref">PImageRenderer</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="struct_hiro_draw_LineFieldStyle.html#doxid-structhiro-1-1draw-1-1-line-field-style"><span class="std std-ref">hiro::draw::LineFieldStyle</span></a><span></span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacehiro-1-1draw-1a1c6b2bd2217a69cc2ef0e85260b4c44c"><span class="std std-ref">PLineFieldStyle</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="class_hiro_draw_LineFieldRenderer.html#doxid-classhiro-1-1draw-1-1-line-field-renderer"><span class="std std-ref">hiro::draw::LineFieldRenderer</span></a><span></span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacehiro-1-1draw-1aaa24228a74d583c44827b8747a03e1c5"><span class="std std-ref">PLineFieldRenderer</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="struct_hiro_draw_GeometryStyle.html#doxid-structhiro-1-1draw-1-1-geometry-style"><span class="std std-ref">hiro::draw::GeometryStyle</span></a><span></span> <a class="reference internal" href="#doxid-namespacehiro-1-1draw-1a466e305573e9256109f771505bd1262a"><span class="std std-ref">MeshStyle</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="#doxid-namespacehiro-1-1draw-1a466e305573e9256109f771505bd1262a"><span class="std std-ref">hiro::draw::MeshStyle</span></a><span></span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacehiro-1-1draw-1a00d412ff08f15f293e2c12dbafc8b916"><span class="std std-ref">PMeshStyle</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="class_hiro_draw_MeshRenderer.html#doxid-classhiro-1-1draw-1-1-mesh-renderer"><span class="std std-ref">hiro::draw::MeshRenderer</span></a><span></span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacehiro-1-1draw-1afe7dec42819fe41529555520db19fbe9"><span class="std std-ref">PMeshRenderer</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="struct_hiro_draw_PointCloudStyle.html#doxid-structhiro-1-1draw-1-1-point-cloud-style"><span class="std std-ref">hiro::draw::PointCloudStyle</span></a><span></span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacehiro-1-1draw-1aef137f1fbd12b7c06e2cdf5908ba49e0"><span class="std std-ref">PPointCloudStyle</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="class_hiro_draw_PointCloudRenderer.html#doxid-classhiro-1-1draw-1-1-point-cloud-renderer"><span class="std std-ref">hiro::draw::PointCloudRenderer</span></a><span></span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacehiro-1-1draw-1ad22a97228b50e96239adcd72f230effe"><span class="std std-ref">PPointCloudRenderer</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="struct_hiro_draw_ImageStyle.html#doxid-structhiro-1-1draw-1-1-image-style"><span class="std std-ref">ImageStyle</span></a><span></span> <a class="reference internal" href="#doxid-namespacehiro-1-1draw-1aee0673e0307a5954b22d1fc60c760a36"><span class="std std-ref">RasterStyle</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="#doxid-namespacehiro-1-1draw-1aee0673e0307a5954b22d1fc60c760a36"><span class="std std-ref">hiro::draw::RasterStyle</span></a><span></span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacehiro-1-1draw-1a4c0f938ff6487f92ce47a13e96f388f6"><span class="std std-ref">PRasterStyle</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="class_hiro_draw_RasterRenderer.html#doxid-classhiro-1-1draw-1-1-raster-renderer"><span class="std std-ref">hiro::draw::RasterRenderer</span></a><span></span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacehiro-1-1draw-1aeb562c897020fe45c46ec0ba14073157"><span class="std std-ref">PRasterRenderer</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="struct_hiro_draw_SkeletonStyle.html#doxid-structhiro-1-1draw-1-1-skeleton-style"><span class="std std-ref">hiro::draw::SkeletonStyle</span></a><span></span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacehiro-1-1draw-1a0e5f5969640a0455bbb2d464e6b2f05b"><span class="std std-ref">PSkeletonStyle</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="class_hiro_draw_SkeletonRenderer.html#doxid-classhiro-1-1draw-1-1-skeleton-renderer"><span class="std std-ref">hiro::draw::SkeletonRenderer</span></a><span></span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacehiro-1-1draw-1aa68e4e0b53505ed9b013607e06cb7eac"><span class="std std-ref">PSkeletonRenderer</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="#doxid-namespacehiro-1-1draw-1a466e305573e9256109f771505bd1262a"><span class="std std-ref">hiro::draw::MeshStyle</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespacehiro-1-1draw-1a2fc979a339d95ae7b08cb045adb893ca"><span></span><span class="n">SkinnedMeshStyle</span></span><span></span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="#doxid-namespacehiro-1-1draw-1a2fc979a339d95ae7b08cb045adb893ca"><span class="std std-ref">hiro::draw::SkinnedMeshStyle</span></a><span></span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-namespacehiro-1-1draw-1a3d4f4a7def5b52a45279d97cc7250ec1"><span></span><span class="n">PSkinnedMeshStyle</span></span><span></span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="class_hiro_draw_SkinnedMeshRenderer.html#doxid-classhiro-1-1draw-1-1-skinned-mesh-renderer"><span class="std std-ref">hiro::draw::SkinnedMeshRenderer</span></a><span></span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-namespacehiro-1-1draw-1ab41d9ed92555e172f1e250bf0cb89148"><span></span><span class="n">PSkinnedMeshRenderer</span></span><span></span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="class_hiro_draw_Scene.html#doxid-classhiro-1-1draw-1-1-scene"><span class="std std-ref">hiro::draw::Scene</span></a><span></span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-namespacehiro-1-1draw-1adc75a7fa26dba9b8c723ca1876074ff1"><span></span><span class="n">PScene</span></span><span></span><span class="p">;</span>
+
+<span class="c1">// enums</span>
+
+<span class="k">enum</span> <a class="reference internal" href="enum_hiro_draw_AntiAliasing.html#doxid-namespacehiro-1-1draw-1a3741a9c3e60ef3920aec5ec5688f5c3a"><span class="std std-ref">AntiAliasing</span></a><span></span><span class="p">;</span>
+<span class="k">enum</span> <a class="reference internal" href="enum_hiro_draw_CameraMode.html#doxid-namespacehiro-1-1draw-1a248c8678c132703169af13ebc0da65d3"><span class="std std-ref">CameraMode</span></a><span></span><span class="p">;</span>
+<span class="k">enum</span> <a class="reference internal" href="enum_hiro_draw_ColorSource.html#doxid-namespacehiro-1-1draw-1a3dfff4196744dc96f718b5e46f174dd9"><span class="std std-ref">ColorSource</span></a><span></span><span class="p">;</span>
+<span class="k">enum</span> <a class="reference internal" href="enum_hiro_draw_GeometryName.html#doxid-namespacehiro-1-1draw-1abfd536e9db6423e50dfcb43ed96cde75"><span class="std std-ref">GeometryName</span></a><span></span><span class="p">;</span>
+<span class="k">enum</span> <a class="reference internal" href="enum_hiro_draw_GroundGrid.html#doxid-namespacehiro-1-1draw-1a1ab4c0e8f2d7291c9097174538cbbd09"><span class="std std-ref">GroundGrid</span></a><span></span><span class="p">;</span>
+<span class="k">enum</span> <a class="reference internal" href="enum_hiro_draw_PrimitiveName.html#doxid-namespacehiro-1-1draw-1aa5ba6521b307222b12f9ce64238d6325"><span class="std std-ref">PrimitiveName</span></a><span></span><span class="p">;</span>
+<span class="k">enum</span> <a class="reference internal" href="enum_hiro_draw_TextAlignment.html#doxid-namespacehiro-1-1draw-1af8b1231e73084d4bd9af087e69075dca"><span class="std std-ref">TextAlignment</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// structs</span>
+
+<span class="k">struct</span> <a class="reference internal" href="struct_hiro_draw_BillboardStyle.html#doxid-structhiro-1-1draw-1-1-billboard-style"><span class="std std-ref">BillboardStyle</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_hiro_draw_FacesStyle.html#doxid-structhiro-1-1draw-1-1-faces-style"><span class="std std-ref">FacesStyle</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_hiro_draw_FrustumStyle.html#doxid-structhiro-1-1draw-1-1-frustum-style"><span class="std std-ref">FrustumStyle</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_hiro_draw_Geometry.html#doxid-structhiro-1-1draw-1-1-geometry"><span class="std std-ref">Geometry</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_hiro_draw_GeometryStyle.html#doxid-structhiro-1-1draw-1-1-geometry-style"><span class="std std-ref">GeometryStyle</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_hiro_draw_GraphStyle.html#doxid-structhiro-1-1draw-1-1-graph-style"><span class="std std-ref">GraphStyle</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_hiro_draw_ImageStyle.html#doxid-structhiro-1-1draw-1-1-image-style"><span class="std std-ref">ImageStyle</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_hiro_draw_LineFieldStyle.html#doxid-structhiro-1-1draw-1-1-line-field-style"><span class="std std-ref">LineFieldStyle</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_hiro_draw_NormalsStyle.html#doxid-structhiro-1-1draw-1-1-normals-style"><span class="std std-ref">NormalsStyle</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_hiro_draw_PointCloudStyle.html#doxid-structhiro-1-1draw-1-1-point-cloud-style"><span class="std std-ref">PointCloudStyle</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_hiro_draw_PointsStyle.html#doxid-structhiro-1-1draw-1-1-points-style"><span class="std std-ref">PointsStyle</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_hiro_draw_ProjectionParams.html#doxid-structhiro-1-1draw-1-1-projection-params"><span class="std std-ref">ProjectionParams</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_hiro_draw_SkeletonStyle.html#doxid-structhiro-1-1draw-1-1-skeleton-style"><span class="std std-ref">SkeletonStyle</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_hiro_draw_Style.html#doxid-structhiro-1-1draw-1-1-style"><span class="std std-ref">Style</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// classes</span>
+
+<span class="k">class</span> <a class="reference internal" href="class_hiro_draw_BillboardRenderer.html#doxid-classhiro-1-1draw-1-1-billboard-renderer"><span class="std std-ref">BillboardRenderer</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_hiro_draw_CircleRenderer.html#doxid-classhiro-1-1draw-1-1-circle-renderer"><span class="std std-ref">CircleRenderer</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_hiro_draw_CircleStyle.html#doxid-classhiro-1-1draw-1-1-circle-style"><span class="std std-ref">CircleStyle</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_hiro_draw_ElementRenderer.html#doxid-classhiro-1-1draw-1-1-element-renderer"><span class="std std-ref">ElementRenderer</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_hiro_draw_FrustumRenderer.html#doxid-classhiro-1-1draw-1-1-frustum-renderer"><span class="std std-ref">FrustumRenderer</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_hiro_draw_GeometryRenderer.html#doxid-classhiro-1-1draw-1-1-geometry-renderer"><span class="std std-ref">GeometryRenderer</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_hiro_draw_GraphRenderer.html#doxid-classhiro-1-1draw-1-1-graph-renderer"><span class="std std-ref">GraphRenderer</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_hiro_draw_ImageRenderer.html#doxid-classhiro-1-1draw-1-1-image-renderer"><span class="std std-ref">ImageRenderer</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_hiro_draw_LineFieldRenderer.html#doxid-classhiro-1-1draw-1-1-line-field-renderer"><span class="std std-ref">LineFieldRenderer</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_hiro_draw_MeshRenderer.html#doxid-classhiro-1-1draw-1-1-mesh-renderer"><span class="std std-ref">MeshRenderer</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_hiro_draw_PointCloudRenderer.html#doxid-classhiro-1-1draw-1-1-point-cloud-renderer"><span class="std std-ref">PointCloudRenderer</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_hiro_draw_PrimitiveDatabase.html#doxid-classhiro-1-1draw-1-1-primitive-database"><span class="std std-ref">PrimitiveDatabase</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_hiro_draw_RasterRenderer.html#doxid-classhiro-1-1draw-1-1-raster-renderer"><span class="std std-ref">RasterRenderer</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_hiro_draw_RenderSystem.html#doxid-classhiro-1-1draw-1-1-render-system"><span class="std std-ref">RenderSystem</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_hiro_draw_Renderer.html#doxid-classhiro-1-1draw-1-1-renderer"><span class="std std-ref">Renderer</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_hiro_draw_Scene.html#doxid-classhiro-1-1draw-1-1-scene"><span class="std std-ref">Scene</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_hiro_draw_SkeletonRenderer.html#doxid-classhiro-1-1draw-1-1-skeleton-renderer"><span class="std std-ref">SkeletonRenderer</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_hiro_draw_SkinnedMeshRenderer.html#doxid-classhiro-1-1draw-1-1-skinned-mesh-renderer"><span class="std std-ref">SkinnedMeshRenderer</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_hiro_draw_TextPrinter.html#doxid-classhiro-1-1draw-1-1-text-printer"><span class="std std-ref">TextPrinter</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_hiro_draw_TextRenderer.html#doxid-classhiro-1-1draw-1-1-text-renderer"><span class="std std-ref">TextRenderer</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_hiro_draw_VisualCamera.html#doxid-classhiro-1-1draw-1-1-visual-camera"><span class="std std-ref">VisualCamera</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_hiro_draw_VisualCameraController.html#doxid-classhiro-1-1draw-1-1-visual-camera-controller"><span class="std std-ref">VisualCameraController</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// global variables</span>
+
+<span class="k">const</span> <span class="kt">uint8_t</span> <span class="doxyrest-code-target target" id="doxid-namespacehiro-1-1draw-1aa8e34ff3477832032ae593b85d2ddc71"><span></span><span class="n">DEFAULT_AXIS_OVERLAY_LAYER</span></span><span></span> <span class="o">=</span> <span class="mi">128</span><span class="p">;</span>
+<span class="k">const</span> <span class="kt">uint8_t</span> <span class="doxyrest-code-target target" id="doxid-namespacehiro-1-1draw-1a94274c00ab3d5ad0f335c4f56cc0325d"><span></span><span class="n">DEFAULT_GROUND_OVERLAY_LAYER</span></span><span></span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+<span class="c1">// global functions</span>
+
+<a class="reference internal" href="global.html#doxid-h-i-r-o-d-r-a-w-2include-2-h-i-r-o-d-r-a-w-2-a-p-i-8h-1add606eadf0602a904d1ea88bc928db7d"><span class="std std-ref">HIRO_DRAW_API</span></a><span></span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <a class="reference internal" href="#doxid-namespacehiro-1-1draw-1a804dbf00709d737e6570d2c129535fc8"><span class="std std-ref">ToString</span></a><span></span><span class="p">(</span><a class="reference internal" href="enum_hiro_draw_GeometryName.html#doxid-namespacehiro-1-1draw-1abfd536e9db6423e50dfcb43ed96cde75"><span class="std std-ref">hiro::draw::GeometryName</span></a><span></span> <span class="n">geom</span><span class="p">);</span>
+<a class="reference internal" href="global.html#doxid-h-i-r-o-d-r-a-w-2include-2-h-i-r-o-d-r-a-w-2-a-p-i-8h-1add606eadf0602a904d1ea88bc928db7d"><span class="std std-ref">HIRO_DRAW_API</span></a><span></span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <a class="reference internal" href="#doxid-namespacehiro-1-1draw-1a8a4a7fa1bc6407fa2d1fa96834282a00"><span class="std std-ref">ToString</span></a><span></span><span class="p">(</span><a class="reference internal" href="enum_hiro_draw_PrimitiveName.html#doxid-namespacehiro-1-1draw-1aa5ba6521b307222b12f9ce64238d6325"><span class="std std-ref">hiro::draw::PrimitiveName</span></a><span></span> <span class="n">prim</span><span class="p">);</span>
+
+<span class="p">}</span> <span class="c1">// namespace draw</span></pre>
+</div>
+<div class="section" id="detailed-documentation">
+<span id="details-namespacehiro-1-1draw"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
+<p>Extensions for object visualization. Implements a higher level of OpenGL rendering.</p>
+<div class="section" id="typedefs">
+<h3>Typedefs<a class="headerlink" href="#typedefs" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1draw-1a84d936fccf7c9506ff1b5324cd0f17c1"><span id="index-1"></span><span></span><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="struct_hiro_draw_BillboardStyle.html#doxid-structhiro-1-1draw-1-1-billboard-style"><span class="std std-ref">BillboardStyle</span></a><span></span><span class="o">&gt;</span> <span class="n">PBillboardStyle</span></pre>
+<p>Shared pointer to an object of the type <a class="reference internal" href="struct_hiro_draw_BillboardStyle.html#doxid-structhiro-1-1draw-1-1-billboard-style"><span class="std std-ref">BillboardStyle</span></a>.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1draw-1ac80ea227a4121f186969b20a4ce008d9"><span id="index-2"></span><span></span><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="class_hiro_draw_BillboardRenderer.html#doxid-classhiro-1-1draw-1-1-billboard-renderer"><span class="std std-ref">BillboardRenderer</span></a><span></span><span class="o">&gt;</span> <span class="n">PBillboardRenderer</span></pre>
+<p>Shared pointer to an object of the type <a class="reference internal" href="class_hiro_draw_BillboardRenderer.html#doxid-classhiro-1-1draw-1-1-billboard-renderer"><span class="std std-ref">BillboardRenderer</span></a>.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1draw-1a036b0366d4e40fa32a09dab09ff8c763"><span id="index-3"></span><span></span><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="class_hiro_draw_CircleStyle.html#doxid-classhiro-1-1draw-1-1-circle-style"><span class="std std-ref">CircleStyle</span></a><span></span><span class="o">&gt;</span> <span class="n">PCircleStyle</span></pre>
+<p>Shared pointer to an object of the type <a class="reference internal" href="class_hiro_draw_CircleStyle.html#doxid-classhiro-1-1draw-1-1-circle-style"><span class="std std-ref">CircleStyle</span></a>.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1draw-1ac4ca468e102ef5a6580a71afebab179e"><span id="index-4"></span><span></span><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="class_hiro_draw_CircleRenderer.html#doxid-classhiro-1-1draw-1-1-circle-renderer"><span class="std std-ref">CircleRenderer</span></a><span></span><span class="o">&gt;</span> <span class="n">PCircleRenderer</span></pre>
+<p>Shared pointer to an object of the type <a class="reference internal" href="class_hiro_draw_CircleRenderer.html#doxid-classhiro-1-1draw-1-1-circle-renderer"><span class="std std-ref">CircleRenderer</span></a>.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1draw-1a7c34ce134ff69372db2c6b494c805fce"><span id="index-5"></span><span></span><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="struct_hiro_draw_FrustumStyle.html#doxid-structhiro-1-1draw-1-1-frustum-style"><span class="std std-ref">hiro::draw::FrustumStyle</span></a><span></span><span class="o">&gt;</span> <span class="n">PFrustumStyle</span></pre>
+<p>Shared pointer to an object of the type <a class="reference internal" href="struct_hiro_draw_FrustumStyle.html#doxid-structhiro-1-1draw-1-1-frustum-style"><span class="std std-ref">FrustumStyle</span></a>.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1draw-1acd4c74007bc0a11e74632efd238b654f"><span id="index-6"></span><span></span><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="class_hiro_draw_FrustumRenderer.html#doxid-classhiro-1-1draw-1-1-frustum-renderer"><span class="std std-ref">hiro::draw::FrustumRenderer</span></a><span></span><span class="o">&gt;</span> <span class="n">PFrustumRenderer</span></pre>
+<p>Shared pointer to an object of the type <a class="reference internal" href="class_hiro_draw_FrustumRenderer.html#doxid-classhiro-1-1draw-1-1-frustum-renderer"><span class="std std-ref">FrustumRenderer</span></a>.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1draw-1a069b5a323ab4809674695eed84014808"><span id="index-7"></span><span></span><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="struct_hiro_draw_GeometryStyle.html#doxid-structhiro-1-1draw-1-1-geometry-style"><span class="std std-ref">hiro::draw::GeometryStyle</span></a><span></span><span class="o">&gt;</span> <span class="n">PGeometryStyle</span></pre>
+<p>Shared pointer to an object of the type <a class="reference internal" href="struct_hiro_draw_GeometryStyle.html#doxid-structhiro-1-1draw-1-1-geometry-style"><span class="std std-ref">GeometryStyle</span></a>.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1draw-1a7ead4cd8d6d18832cab6a8162ce25f1c"><span id="index-8"></span><span></span><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="class_hiro_draw_GeometryRenderer.html#doxid-classhiro-1-1draw-1-1-geometry-renderer"><span class="std std-ref">hiro::draw::GeometryRenderer</span></a><span></span><span class="o">&gt;</span> <span class="n">PGeometryRenderer</span></pre>
+<p>Shared pointer to an object of the type <a class="reference internal" href="class_hiro_draw_GeometryRenderer.html#doxid-classhiro-1-1draw-1-1-geometry-renderer"><span class="std std-ref">GeometryRenderer</span></a>.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1draw-1a5250f01609faa195782dc5b69be1bd8c"><span id="index-9"></span><span></span><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="struct_hiro_draw_GraphStyle.html#doxid-structhiro-1-1draw-1-1-graph-style"><span class="std std-ref">hiro::draw::GraphStyle</span></a><span></span><span class="o">&gt;</span> <span class="n">PGraphStyle</span></pre>
+<p>Shared pointer to an object of the type <a class="reference internal" href="struct_hiro_draw_GraphStyle.html#doxid-structhiro-1-1draw-1-1-graph-style"><span class="std std-ref">GraphStyle</span></a>.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1draw-1a1d8f8af8111906242bd23db33b30044f"><span id="index-10"></span><span></span><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="class_hiro_draw_GraphRenderer.html#doxid-classhiro-1-1draw-1-1-graph-renderer"><span class="std std-ref">hiro::draw::GraphRenderer</span></a><span></span><span class="o">&gt;</span> <span class="n">PGraphRenderer</span></pre>
+<p>Shared pointer to an object of the type <a class="reference internal" href="class_hiro_draw_GraphRenderer.html#doxid-classhiro-1-1draw-1-1-graph-renderer"><span class="std std-ref">GraphRenderer</span></a>.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1draw-1a11df09cbd96c06624a72e119c8e88c82"><span id="index-11"></span><span></span><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="struct_hiro_draw_ImageStyle.html#doxid-structhiro-1-1draw-1-1-image-style"><span class="std std-ref">ImageStyle</span></a><span></span><span class="o">&gt;</span> <span class="n">PImageStyle</span></pre>
+<p>Shared pointer to an object of the type <a class="reference internal" href="struct_hiro_draw_ImageStyle.html#doxid-structhiro-1-1draw-1-1-image-style"><span class="std std-ref">ImageStyle</span></a>.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1draw-1a637334675249309f1f9ed57577b270ba"><span id="index-12"></span><span></span><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="class_hiro_draw_ImageRenderer.html#doxid-classhiro-1-1draw-1-1-image-renderer"><span class="std std-ref">ImageRenderer</span></a><span></span><span class="o">&gt;</span> <span class="n">PImageRenderer</span></pre>
+<p>Shared pointer to an object of the type <a class="reference internal" href="class_hiro_draw_ImageRenderer.html#doxid-classhiro-1-1draw-1-1-image-renderer"><span class="std std-ref">ImageRenderer</span></a>.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1draw-1a1c6b2bd2217a69cc2ef0e85260b4c44c"><span id="index-13"></span><span></span><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="struct_hiro_draw_LineFieldStyle.html#doxid-structhiro-1-1draw-1-1-line-field-style"><span class="std std-ref">hiro::draw::LineFieldStyle</span></a><span></span><span class="o">&gt;</span> <span class="n">PLineFieldStyle</span></pre>
+<p>Shared pointer to an object of the type <a class="reference internal" href="struct_hiro_draw_LineFieldStyle.html#doxid-structhiro-1-1draw-1-1-line-field-style"><span class="std std-ref">LineFieldStyle</span></a>.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1draw-1aaa24228a74d583c44827b8747a03e1c5"><span id="index-14"></span><span></span><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="class_hiro_draw_LineFieldRenderer.html#doxid-classhiro-1-1draw-1-1-line-field-renderer"><span class="std std-ref">hiro::draw::LineFieldRenderer</span></a><span></span><span class="o">&gt;</span> <span class="n">PLineFieldRenderer</span></pre>
+<p>Shared pointer to an object of the type <a class="reference internal" href="class_hiro_draw_LineFieldRenderer.html#doxid-classhiro-1-1draw-1-1-line-field-renderer"><span class="std std-ref">LineFieldRenderer</span></a>.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1draw-1a466e305573e9256109f771505bd1262a"><span id="index-15"></span><span></span><span class="k">typedef</span> <a class="reference internal" href="struct_hiro_draw_GeometryStyle.html#doxid-structhiro-1-1draw-1-1-geometry-style"><span class="std std-ref">hiro::draw::GeometryStyle</span></a><span></span> <span class="n">MeshStyle</span></pre>
+<p>Stylization of the rendered mesh.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1draw-1a00d412ff08f15f293e2c12dbafc8b916"><span id="index-16"></span><span></span><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="#doxid-namespacehiro-1-1draw-1a466e305573e9256109f771505bd1262a"><span class="std std-ref">hiro::draw::MeshStyle</span></a><span></span><span class="o">&gt;</span> <span class="n">PMeshStyle</span></pre>
+<p>Shared pointer to an object of the type MeshStyle.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1draw-1afe7dec42819fe41529555520db19fbe9"><span id="index-17"></span><span></span><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="class_hiro_draw_MeshRenderer.html#doxid-classhiro-1-1draw-1-1-mesh-renderer"><span class="std std-ref">hiro::draw::MeshRenderer</span></a><span></span><span class="o">&gt;</span> <span class="n">PMeshRenderer</span></pre>
+<p>Shared pointer to an object of the type <a class="reference internal" href="class_hiro_draw_MeshRenderer.html#doxid-classhiro-1-1draw-1-1-mesh-renderer"><span class="std std-ref">MeshRenderer</span></a>.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1draw-1aef137f1fbd12b7c06e2cdf5908ba49e0"><span id="index-18"></span><span></span><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="struct_hiro_draw_PointCloudStyle.html#doxid-structhiro-1-1draw-1-1-point-cloud-style"><span class="std std-ref">hiro::draw::PointCloudStyle</span></a><span></span><span class="o">&gt;</span> <span class="n">PPointCloudStyle</span></pre>
+<p>Shared pointer to an object of the type <a class="reference internal" href="struct_hiro_draw_PointCloudStyle.html#doxid-structhiro-1-1draw-1-1-point-cloud-style"><span class="std std-ref">PointCloudStyle</span></a>.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1draw-1ad22a97228b50e96239adcd72f230effe"><span id="index-19"></span><span></span><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="class_hiro_draw_PointCloudRenderer.html#doxid-classhiro-1-1draw-1-1-point-cloud-renderer"><span class="std std-ref">hiro::draw::PointCloudRenderer</span></a><span></span><span class="o">&gt;</span> <span class="n">PPointCloudRenderer</span></pre>
+<p>Shared pointer to an object of the type <a class="reference internal" href="class_hiro_draw_PointCloudRenderer.html#doxid-classhiro-1-1draw-1-1-point-cloud-renderer"><span class="std std-ref">PointCloudRenderer</span></a>.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1draw-1aee0673e0307a5954b22d1fc60c760a36"><span id="index-20"></span><span></span><span class="k">typedef</span> <a class="reference internal" href="struct_hiro_draw_ImageStyle.html#doxid-structhiro-1-1draw-1-1-image-style"><span class="std std-ref">ImageStyle</span></a><span></span> <span class="n">RasterStyle</span></pre>
+<p>Structure specifying how the raster should be rendered.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1draw-1a4c0f938ff6487f92ce47a13e96f388f6"><span id="index-21"></span><span></span><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="#doxid-namespacehiro-1-1draw-1aee0673e0307a5954b22d1fc60c760a36"><span class="std std-ref">hiro::draw::RasterStyle</span></a><span></span><span class="o">&gt;</span> <span class="n">PRasterStyle</span></pre>
+<p>Shared pointer to an object of the type RasterStyle.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1draw-1aeb562c897020fe45c46ec0ba14073157"><span id="index-22"></span><span></span><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="class_hiro_draw_RasterRenderer.html#doxid-classhiro-1-1draw-1-1-raster-renderer"><span class="std std-ref">hiro::draw::RasterRenderer</span></a><span></span><span class="o">&gt;</span> <span class="n">PRasterRenderer</span></pre>
+<p>Shared pointer to an object of the type <a class="reference internal" href="class_hiro_draw_RasterRenderer.html#doxid-classhiro-1-1draw-1-1-raster-renderer"><span class="std std-ref">RasterRenderer</span></a>.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1draw-1a0e5f5969640a0455bbb2d464e6b2f05b"><span id="index-23"></span><span></span><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="struct_hiro_draw_SkeletonStyle.html#doxid-structhiro-1-1draw-1-1-skeleton-style"><span class="std std-ref">hiro::draw::SkeletonStyle</span></a><span></span><span class="o">&gt;</span> <span class="n">PSkeletonStyle</span></pre>
+<p>Shared pointer to an object of the type <a class="reference internal" href="struct_hiro_draw_SkeletonStyle.html#doxid-structhiro-1-1draw-1-1-skeleton-style"><span class="std std-ref">SkeletonStyle</span></a>.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1draw-1aa68e4e0b53505ed9b013607e06cb7eac"><span id="index-24"></span><span></span><span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="class_hiro_draw_SkeletonRenderer.html#doxid-classhiro-1-1draw-1-1-skeleton-renderer"><span class="std std-ref">hiro::draw::SkeletonRenderer</span></a><span></span><span class="o">&gt;</span> <span class="n">PSkeletonRenderer</span></pre>
+<p>Shared pointer to an object of the type <a class="reference internal" href="class_hiro_draw_SkeletonRenderer.html#doxid-classhiro-1-1draw-1-1-skeleton-renderer"><span class="std std-ref">SkeletonRenderer</span></a>.</p>
+</div>
+<div class="section" id="global-functions">
+<h3>Global Functions<a class="headerlink" href="#global-functions" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1draw-1a804dbf00709d737e6570d2c129535fc8"><span id="index-25"></span><a class="reference internal" href="global.html#doxid-h-i-r-o-d-r-a-w-2include-2-h-i-r-o-d-r-a-w-2-a-p-i-8h-1add606eadf0602a904d1ea88bc928db7d"><span class="std std-ref">HIRO_DRAW_API</span></a><span></span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">ToString</span><span class="p">(</span><a class="reference internal" href="enum_hiro_draw_GeometryName.html#doxid-namespacehiro-1-1draw-1abfd536e9db6423e50dfcb43ed96cde75"><span class="std std-ref">hiro::draw::GeometryName</span></a><span></span> <span class="n">geom</span><span class="p">)</span></pre>
+<p>Converts <a class="reference internal" href="enum_hiro_draw_GeometryName.html#doxid-namespacehiro-1-1draw-1abfd536e9db6423e50dfcb43ed96cde75"><span class="std std-ref">hiro::draw::GeometryName</span></a> type to the text reprersentation.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacehiro-1-1draw-1a8a4a7fa1bc6407fa2d1fa96834282a00"><span id="index-26"></span><a class="reference internal" href="global.html#doxid-h-i-r-o-d-r-a-w-2include-2-h-i-r-o-d-r-a-w-2-a-p-i-8h-1add606eadf0602a904d1ea88bc928db7d"><span class="std std-ref">HIRO_DRAW_API</span></a><span></span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">ToString</span><span class="p">(</span><a class="reference internal" href="enum_hiro_draw_PrimitiveName.html#doxid-namespacehiro-1-1draw-1aa5ba6521b307222b12f9ce64238d6325"><span class="std std-ref">hiro::draw::PrimitiveName</span></a><span></span> <span class="n">prim</span><span class="p">)</span></pre>
+<p>Converts <a class="reference internal" href="enum_hiro_draw_PrimitiveName.html#doxid-namespacehiro-1-1draw-1aa5ba6521b307222b12f9ce64238d6325"><span class="std std-ref">hiro::draw::PrimitiveName</span></a> type to text reprersentation.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Skeletex Research
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

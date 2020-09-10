@@ -1,0 +1,320 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>namespace func &mdash; HIRO 0.4.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/hiro-fav-32.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/target-highlight.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/hiro_theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-sphinx_rtd_theme.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="namespace geom" href="namespace_geom.html" />
+    <link rel="prev" title="struct fs::FileDirContent" href="struct_fs_FileDirContent.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: rgb(248, 216, 60)" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/hiro-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_0.html">T0: Setting up Visual Studio Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_1.html">T1: Introduction to HIRO GUI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_2.html">T2: Creating Custom Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_3.html">T3: Overview of Gadget Features</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="shader_api.html">Shader API</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="global.html">Global Namespace</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="namespace_cegui_ext.html">namespace cegui_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_dialog.html">namespace dialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_file_types.html">namespace file_types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_fs.html">namespace fs</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">namespace func</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#detailed-documentation">Detailed Documentation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#global-variables">Global Variables</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_geom.html">namespace geom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_glm_ext.html">namespace glm_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_hiro.html">namespace hiro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_omp_ext.html">namespace omp_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_std_ext.html">namespace std_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_time_m.html">namespace time_m</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_ulog.html">namespace ulog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_uprogress.html">namespace uprogress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_utils.html">namespace utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_Config.html">class Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_IDialogInterface.html">class IDialogInterface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_WxWidgetsDialog.html">class WxWidgetsDialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">HIRO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="global.html">Global Namespace</a> &raquo;</li>
+        
+      <li>namespace func</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="namespace-func">
+<span id="doxid-namespacefunc"></span><span id="index-0"></span><h1>namespace func<a class="headerlink" href="#namespace-func" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Contains common lambda functions. <a class="reference internal" href="#details-namespacefunc"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="k">namespace</span> <span class="n">func</span> <span class="p">{</span>
+
+<span class="c1">// global variables</span>
+
+<span class="k">const</span> <span class="k">auto</span> <a class="reference internal" href="#doxid-namespacefunc-1ad7d3ed60528ab2714ce63adcf687f2d7"><span class="std std-ref">GetId</span></a><span></span> <span class="o">=</span> <span class="p">[](</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span><span class="n">obj</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">obj</span><span class="p">.</span><span class="n">GetId</span><span class="p">();</span> <span class="p">};</span>
+<span class="k">const</span> <span class="k">auto</span> <a class="reference internal" href="#doxid-namespacefunc-1a38b23f040bed10eabee3f3902df08d73"><span class="std std-ref">GetPtrId</span></a><span></span> <span class="o">=</span> <span class="p">[](</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span><span class="n">obj</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">obj</span><span class="o">-&gt;</span><a class="reference internal" href="#doxid-namespacefunc-1ad7d3ed60528ab2714ce63adcf687f2d7"><span class="std std-ref">GetId</span></a><span></span><span class="p">();</span> <span class="p">};</span>
+<span class="k">const</span> <span class="k">auto</span> <a class="reference internal" href="#doxid-namespacefunc-1a07b97d5e6ec9a0df7540e5ce1622cd0e"><span class="std std-ref">OptValue</span></a><span></span> <span class="o">=</span> <span class="p">[](</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span><span class="n">obj</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">obj</span><span class="p">.</span><span class="n">value</span><span class="p">();</span> <span class="p">};</span>
+<span class="k">const</span> <span class="k">auto</span> <a class="reference internal" href="#doxid-namespacefunc-1a74512e8f8c4d5a04ca02b4fe4053bc89"><span class="std std-ref">OptHasValue</span></a><span></span> <span class="o">=</span> <span class="p">[](</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span><span class="n">obj</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">obj</span><span class="p">.</span><span class="n">has_value</span><span class="p">();</span> <span class="p">};</span>
+<span class="k">const</span> <span class="k">auto</span> <a class="reference internal" href="#doxid-namespacefunc-1a709cfa586be66d6625b7f69b2f95c0ef"><span class="std std-ref">Is</span></a><span></span> <span class="o">=</span> <span class="p">[](</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span><span class="n">obj</span><span class="p">)</span><span class="o">-&gt;</span><span class="kt">bool</span> <span class="p">{</span> <span class="k">return</span> <span class="n">obj</span><span class="p">;</span> <span class="p">};</span>
+<span class="k">const</span> <span class="k">auto</span> <a class="reference internal" href="#doxid-namespacefunc-1a793f61b36486523f379ec913faa90083"><span class="std std-ref">IsNullptr</span></a><span></span> <span class="o">=</span> <span class="p">[](</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span><span class="n">obj</span><span class="p">)</span><span class="o">-&gt;</span><span class="kt">bool</span> <span class="p">{</span> <span class="k">return</span> <span class="n">obj</span> <span class="o">==</span> <span class="k">nullptr</span><span class="p">;</span> <span class="p">};</span>
+<span class="k">const</span> <span class="k">auto</span> <a class="reference internal" href="#doxid-namespacefunc-1ac6a48e03f550494939efbb0b0ac9c68f"><span class="std std-ref">IsNotNullptr</span></a><span></span> <span class="o">=</span> <span class="p">[](</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span><span class="n">obj</span><span class="p">)</span><span class="o">-&gt;</span><span class="kt">bool</span> <span class="p">{</span> <span class="k">return</span> <span class="n">obj</span> <span class="o">!=</span> <span class="k">nullptr</span><span class="p">;</span> <span class="p">};</span>
+<span class="k">const</span> <span class="k">auto</span> <a class="reference internal" href="#doxid-namespacefunc-1a303b32dbdef374dd3e45e7d268e464af"><span class="std std-ref">IsNotEmpty</span></a><span></span> <span class="o">=</span> <span class="p">[](</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span><span class="n">obj</span><span class="p">)</span><span class="o">-&gt;</span><span class="kt">bool</span> <span class="p">{</span> <span class="k">return</span> <span class="o">!</span><span class="n">obj</span><span class="p">.</span><span class="n">empty</span><span class="p">();</span> <span class="p">};</span>
+<span class="k">const</span> <span class="k">auto</span> <a class="reference internal" href="#doxid-namespacefunc-1a2c70bd0e55609333c896be5ded877633"><span class="std std-ref">GetSize</span></a><span></span> <span class="o">=</span> <span class="p">[](</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span><span class="n">obj</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span> <span class="p">{</span> <span class="k">return</span> <span class="n">obj</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="p">};</span>
+<span class="k">const</span> <span class="k">auto</span> <a class="reference internal" href="#doxid-namespacefunc-1a74249819be22c8ee11ada61013ea8e7c"><span class="std std-ref">GetFirst</span></a><span></span> <span class="o">=</span> <span class="p">[](</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span><span class="n">pair</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">pair</span><span class="p">.</span><span class="n">first</span><span class="p">;</span> <span class="p">};</span>
+<span class="k">const</span> <span class="k">auto</span> <a class="reference internal" href="#doxid-namespacefunc-1afa040d0885e6d07c172992176d5c6e0a"><span class="std std-ref">GetSecond</span></a><span></span> <span class="o">=</span> <span class="p">[](</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span><span class="n">pair</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">pair</span><span class="p">.</span><span class="n">second</span><span class="p">;</span> <span class="p">};</span>
+<span class="k">const</span> <span class="k">auto</span> <a class="reference internal" href="#doxid-namespacefunc-1a024a9bdc0999e666c49b38b3f938edde"><span class="std std-ref">IfNotNull</span></a><span></span> <span class="o">=</span> <span class="p">[](</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span><span class="n">obj_ptr</span><span class="p">,</span> <span class="k">const</span> <span class="k">auto</span> <span class="n">Func</span><span class="p">)</span> <span class="p">{</span> <span class="k">if</span><span class="p">(</span><span class="n">obj_ptr</span> <span class="o">!=</span> <span class="k">nullptr</span><span class="p">)</span> <span class="p">{</span> <span class="n">Func</span><span class="p">(</span><span class="o">*</span><span class="n">obj_ptr</span><span class="p">);</span> <span class="p">}</span> <span class="p">};</span>
+<span class="k">const</span> <span class="k">auto</span> <a class="reference internal" href="#doxid-namespacefunc-1a57ac2119e232f11a3c7f476a518bf58f"><span class="std std-ref">GetX</span></a><span></span> <span class="o">=</span> <span class="p">[](</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span><span class="n">o</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">o</span><span class="p">.</span><span class="n">x</span><span class="p">;</span> <span class="p">};</span>
+<span class="k">const</span> <span class="k">auto</span> <a class="reference internal" href="#doxid-namespacefunc-1a4d94eb46d61b12e34c85e6ef0024cbb8"><span class="std std-ref">GetY</span></a><span></span> <span class="o">=</span> <span class="p">[](</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span><span class="n">o</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">o</span><span class="p">.</span><span class="n">y</span><span class="p">;</span> <span class="p">};</span>
+<span class="k">const</span> <span class="k">auto</span> <a class="reference internal" href="#doxid-namespacefunc-1a0c06fea6efcbf6efa401fe4041d37ea2"><span class="std std-ref">StaticCast</span></a><span></span> <span class="o">=</span> <span class="p">[](</span><span class="k">const</span> <span class="n">TypeIn</span><span class="o">&amp;</span><span class="n">value</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="n">TypeOut</span><span class="o">&gt;</span><span class="p">(</span><span class="n">value</span><span class="p">);</span> <span class="p">};</span>
+
+<span class="p">}</span> <span class="c1">// namespace func</span></pre>
+</div>
+<div class="section" id="detailed-documentation">
+<span id="details-namespacefunc"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
+<p>Contains common lambda functions.</p>
+<div class="section" id="global-variables">
+<h3>Global Variables<a class="headerlink" href="#global-variables" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefunc-1ad7d3ed60528ab2714ce63adcf687f2d7"><span id="index-1"></span><span></span><span class="k">const</span> <span class="k">auto</span> <span class="n">GetId</span> <span class="o">=</span> <span class="p">[](</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span><span class="n">obj</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">obj</span><span class="p">.</span><span class="n">GetId</span><span class="p">();</span> <span class="p">}</span></pre>
+<p>Lambda function that uses ‘GetId’ function to get object’s id.</p>
+<p>Applies to any object that has a <a class="reference internal" href="#doxid-namespacefunc-1ad7d3ed60528ab2714ce63adcf687f2d7"><span class="std std-ref">GetId()</span></a> function.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefunc-1a38b23f040bed10eabee3f3902df08d73"><span id="index-2"></span><span></span><span class="k">const</span> <span class="k">auto</span> <span class="n">GetPtrId</span> <span class="o">=</span> <span class="p">[](</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span><span class="n">obj</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">obj</span><span class="o">-&gt;</span><a class="reference internal" href="#doxid-namespacefunc-1ad7d3ed60528ab2714ce63adcf687f2d7"><span class="std std-ref">GetId</span></a><span></span><span class="p">();</span> <span class="p">}</span></pre>
+<p>Lambda function that uses ‘GetId’ function to get object’s id.</p>
+<p>Applies to any pointer to an object that has a <a class="reference internal" href="#doxid-namespacefunc-1ad7d3ed60528ab2714ce63adcf687f2d7"><span class="std std-ref">GetId()</span></a> function.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefunc-1a07b97d5e6ec9a0df7540e5ce1622cd0e"><span id="index-3"></span><span></span><span class="k">const</span> <span class="k">auto</span> <span class="n">OptValue</span> <span class="o">=</span> <span class="p">[](</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span><span class="n">obj</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">obj</span><span class="p">.</span><span class="n">value</span><span class="p">();</span> <span class="p">}</span></pre>
+<p>Lambda function that gets std::optional’s value.</p>
+<p>Applies to std::optional.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefunc-1a74512e8f8c4d5a04ca02b4fe4053bc89"><span id="index-4"></span><span></span><span class="k">const</span> <span class="k">auto</span> <span class="n">OptHasValue</span> <span class="o">=</span> <span class="p">[](</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span><span class="n">obj</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">obj</span><span class="p">.</span><span class="n">has_value</span><span class="p">();</span> <span class="p">}</span></pre>
+<p>Lambda function that returns whether a std::optional has value.</p>
+<p>Applies to std::optional.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefunc-1a709cfa586be66d6625b7f69b2f95c0ef"><span id="index-5"></span><span></span><span class="k">const</span> <span class="k">auto</span> <span class="n">Is</span> <span class="o">=</span> <span class="p">[](</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span><span class="n">obj</span><span class="p">)</span><span class="o">-&gt;</span><span class="kt">bool</span> <span class="p">{</span> <span class="k">return</span> <span class="n">obj</span><span class="p">;</span> <span class="p">}</span></pre>
+<p>Lambda function that casts the object to bool.</p>
+<p>Applies to all objects that can be cast/compared to bool.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefunc-1a793f61b36486523f379ec913faa90083"><span id="index-6"></span><span></span><span class="k">const</span> <span class="k">auto</span> <span class="n">IsNullptr</span> <span class="o">=</span> <span class="p">[](</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span><span class="n">obj</span><span class="p">)</span><span class="o">-&gt;</span><span class="kt">bool</span> <span class="p">{</span> <span class="k">return</span> <span class="n">obj</span> <span class="o">==</span> <span class="k">nullptr</span><span class="p">;</span> <span class="p">}</span></pre>
+<p>Lambda function that return whether the object is null pointer.</p>
+<p>Applies to pointers.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefunc-1ac6a48e03f550494939efbb0b0ac9c68f"><span id="index-7"></span><span></span><span class="k">const</span> <span class="k">auto</span> <span class="n">IsNotNullptr</span> <span class="o">=</span> <span class="p">[](</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span><span class="n">obj</span><span class="p">)</span><span class="o">-&gt;</span><span class="kt">bool</span> <span class="p">{</span> <span class="k">return</span> <span class="n">obj</span> <span class="o">!=</span> <span class="k">nullptr</span><span class="p">;</span> <span class="p">}</span></pre>
+<p>Lambda function that return whether the object is not a null pointer.</p>
+<p>Applies to pointers.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefunc-1a303b32dbdef374dd3e45e7d268e464af"><span id="index-8"></span><span></span><span class="k">const</span> <span class="k">auto</span> <span class="n">IsNotEmpty</span> <span class="o">=</span> <span class="p">[](</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span><span class="n">obj</span><span class="p">)</span><span class="o">-&gt;</span><span class="kt">bool</span> <span class="p">{</span> <span class="k">return</span> <span class="o">!</span><span class="n">obj</span><span class="p">.</span><span class="n">empty</span><span class="p">();</span> <span class="p">}</span></pre>
+<p>Lambda function that returns whether the object is empty.</p>
+<p>Applies to any object that has a empty() function. (std::vector, std::string…).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefunc-1a2c70bd0e55609333c896be5ded877633"><span id="index-9"></span><span></span><span class="k">const</span> <span class="k">auto</span> <span class="n">GetSize</span> <span class="o">=</span> <span class="p">[](</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span><span class="n">obj</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span> <span class="p">{</span> <span class="k">return</span> <span class="n">obj</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="p">}</span></pre>
+<p>Lambda function that returns the size of an object.</p>
+<p>Applies to any object that has a size() function. (std::vector…).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefunc-1a74249819be22c8ee11ada61013ea8e7c"><span id="index-10"></span><span></span><span class="k">const</span> <span class="k">auto</span> <span class="n">GetFirst</span> <span class="o">=</span> <span class="p">[](</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span><span class="n">pair</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">pair</span><span class="p">.</span><span class="n">first</span><span class="p">;</span> <span class="p">}</span></pre>
+<p>Lambda function that returns the first element in a pair.</p>
+<p>applies to std::pair.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefunc-1afa040d0885e6d07c172992176d5c6e0a"><span id="index-11"></span><span></span><span class="k">const</span> <span class="k">auto</span> <span class="n">GetSecond</span> <span class="o">=</span> <span class="p">[](</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span><span class="n">pair</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">pair</span><span class="p">.</span><span class="n">second</span><span class="p">;</span> <span class="p">}</span></pre>
+<p>Lambda function that returns the second element in a pair.</p>
+<p>applies to std::pair.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefunc-1a024a9bdc0999e666c49b38b3f938edde"><span id="index-12"></span><span></span><span class="k">const</span> <span class="k">auto</span> <span class="n">IfNotNull</span> <span class="o">=</span> <span class="p">[](</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span><span class="n">obj_ptr</span><span class="p">,</span> <span class="k">const</span> <span class="k">auto</span> <span class="n">Func</span><span class="p">)</span> <span class="p">{</span> <span class="k">if</span><span class="p">(</span><span class="n">obj_ptr</span> <span class="o">!=</span> <span class="k">nullptr</span><span class="p">)</span> <span class="p">{</span> <span class="n">Func</span><span class="p">(</span><span class="o">*</span><span class="n">obj_ptr</span><span class="p">);</span> <span class="p">}</span> <span class="p">}</span></pre>
+<p>Lambda function that performs a callback on an if it is nor null. Otherwise it ignores it.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefunc-1a57ac2119e232f11a3c7f476a518bf58f"><span id="index-13"></span><span></span><span class="k">const</span> <span class="k">auto</span> <span class="n">GetX</span> <span class="o">=</span> <span class="p">[](</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span><span class="n">o</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">o</span><span class="p">.</span><span class="n">x</span><span class="p">;</span> <span class="p">}</span></pre>
+<p>Lambda function that return the x value of an object.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefunc-1a4d94eb46d61b12e34c85e6ef0024cbb8"><span id="index-14"></span><span></span><span class="k">const</span> <span class="k">auto</span> <span class="n">GetY</span> <span class="o">=</span> <span class="p">[](</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span><span class="n">o</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">o</span><span class="p">.</span><span class="n">y</span><span class="p">;</span> <span class="p">}</span></pre>
+<p>Lambda function that return the x value of an object.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefunc-1a0c06fea6efcbf6efa401fe4041d37ea2"><span id="index-15"></span><span></span><span class="k">const</span> <span class="k">auto</span> <span class="n">StaticCast</span> <span class="o">=</span> <span class="p">[](</span><span class="k">const</span> <span class="n">TypeIn</span><span class="o">&amp;</span><span class="n">value</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="n">TypeOut</span><span class="o">&gt;</span><span class="p">(</span><span class="n">value</span><span class="p">);</span> <span class="p">}</span></pre>
+<p>StaticCast a value to a different type.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Skeletex Research
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

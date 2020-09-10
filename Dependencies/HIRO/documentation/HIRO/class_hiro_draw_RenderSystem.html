@@ -1,0 +1,440 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>class hiro::draw::RenderSystem &mdash; HIRO 0.4.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/hiro-fav-32.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/target-highlight.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/hiro_theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-sphinx_rtd_theme.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="enum hiro::draw::RenderSystem::Mode" href="enum_hiro_draw_RenderSystem_Mode.html" />
+    <link rel="prev" title="class hiro::draw::RasterRenderer" href="class_hiro_draw_RasterRenderer.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: rgb(248, 216, 60)" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/hiro-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_0.html">T0: Setting up Visual Studio Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_1.html">T1: Introduction to HIRO GUI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_2.html">T2: Creating Custom Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_3.html">T3: Overview of Gadget Features</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="shader_api.html">Shader API</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="global.html">Global Namespace</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="namespace_cegui_ext.html">namespace cegui_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_dialog.html">namespace dialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_file_types.html">namespace file_types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_fs.html">namespace fs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_func.html">namespace func</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_geom.html">namespace geom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_glm_ext.html">namespace glm_ext</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="namespace_hiro.html">namespace hiro</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="namespace_hiro_draw.html">namespace hiro::draw</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="enum_hiro_draw_AntiAliasing.html">enum hiro::draw::AntiAliasing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_hiro_draw_CameraMode.html">enum hiro::draw::CameraMode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_hiro_draw_ColorSource.html">enum hiro::draw::ColorSource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_hiro_draw_GeometryName.html">enum hiro::draw::GeometryName</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_hiro_draw_GroundGrid.html">enum hiro::draw::GroundGrid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_hiro_draw_PrimitiveName.html">enum hiro::draw::PrimitiveName</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_hiro_draw_TextAlignment.html">enum hiro::draw::TextAlignment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_draw_BillboardStyle.html">struct hiro::draw::BillboardStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_draw_FacesStyle.html">struct hiro::draw::FacesStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_draw_FrustumStyle.html">struct hiro::draw::FrustumStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_draw_Geometry.html">struct hiro::draw::Geometry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_draw_GeometryStyle.html">struct hiro::draw::GeometryStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_draw_GraphStyle.html">struct hiro::draw::GraphStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_draw_ImageStyle.html">struct hiro::draw::ImageStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_draw_LineFieldStyle.html">struct hiro::draw::LineFieldStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_draw_NormalsStyle.html">struct hiro::draw::NormalsStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_draw_PointCloudStyle.html">struct hiro::draw::PointCloudStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_draw_PointsStyle.html">struct hiro::draw::PointsStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_draw_ProjectionParams.html">struct hiro::draw::ProjectionParams</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_draw_SkeletonStyle.html">struct hiro::draw::SkeletonStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_draw_Style.html">struct hiro::draw::Style</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_BillboardRenderer.html">class hiro::draw::BillboardRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_CircleRenderer.html">class hiro::draw::CircleRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_CircleStyle.html">class hiro::draw::CircleStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_ElementRenderer.html">class hiro::draw::ElementRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_FrustumRenderer.html">class hiro::draw::FrustumRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_GeometryRenderer.html">class hiro::draw::GeometryRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_GraphRenderer.html">class hiro::draw::GraphRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_ImageRenderer.html">class hiro::draw::ImageRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_LineFieldRenderer.html">class hiro::draw::LineFieldRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_MeshRenderer.html">class hiro::draw::MeshRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_PointCloudRenderer.html">class hiro::draw::PointCloudRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_PrimitiveDatabase.html">class hiro::draw::PrimitiveDatabase</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_RasterRenderer.html">class hiro::draw::RasterRenderer</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">class hiro::draw::RenderSystem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_Renderer.html">class hiro::draw::Renderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_Scene.html">class hiro::draw::Scene</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_SkeletonRenderer.html">class hiro::draw::SkeletonRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_SkinnedMeshRenderer.html">class hiro::draw::SkinnedMeshRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_TextPrinter.html">class hiro::draw::TextPrinter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_TextRenderer.html">class hiro::draw::TextRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_VisualCamera.html">class hiro::draw::VisualCamera</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_VisualCameraController.html">class hiro::draw::VisualCameraController</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_hiro_draw.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_hiro_draw.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro_gui.html">namespace hiro::gui</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro_modules.html">namespace hiro::modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro_shader.html">namespace hiro::shader</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_BoolFunc.html">enum hiro::BoolFunc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_EventStatus.html">enum hiro::EventStatus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_Key.html">enum hiro::Key</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_Mod.html">enum hiro::Mod</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_MouseButton.html">enum hiro::MouseButton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_hiro_ActiveResourceInfo.html">struct hiro::ActiveResourceInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_hiro_ResourceId.html">struct hiro::ResourceId</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Camera.html">class hiro::Camera</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Debugger.html">class hiro::Debugger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Exportable.html">class hiro::Exportable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Gadget.html">class hiro::Gadget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_GuiGenerator.html">class hiro::GuiGenerator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_GuiPanel.html">class hiro::GuiPanel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_ModKeys.html">class hiro::ModKeys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Resource.html">class hiro::Resource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_omp_ext.html">namespace omp_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_std_ext.html">namespace std_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_time_m.html">namespace time_m</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_ulog.html">namespace ulog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_uprogress.html">namespace uprogress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_utils.html">namespace utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_Config.html">class Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_IDialogInterface.html">class IDialogInterface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_WxWidgetsDialog.html">class WxWidgetsDialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">HIRO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="global.html">Global Namespace</a> &raquo;</li>
+        
+          <li><a href="namespace_hiro.html">namespace hiro</a> &raquo;</li>
+        
+          <li><a href="namespace_hiro_draw.html">namespace hiro::draw</a> &raquo;</li>
+        
+      <li>class hiro::draw::RenderSystem</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="class-hiro-draw-rendersystem">
+<span id="doxid-classhiro-1-1draw-1-1-render-system"></span><span id="index-0"></span><h1>class hiro::draw::RenderSystem<a class="headerlink" href="#class-hiro-draw-rendersystem" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Class responsible for rendering loop implementation and its optimization. <a class="reference internal" href="#details-classhiro-1-1draw-1-1-render-system"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;RenderSystem.h&gt;</span><span class="cp"></span>
+
+<span class="k">class</span> <span class="n">RenderSystem</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="c1">// enums</span>
+
+    <span class="k">enum</span> <a class="reference internal" href="enum_hiro_draw_RenderSystem_Mode.html#doxid-classhiro-1-1draw-1-1-render-system-1a2c41d2005ab22cb00b50eb69eff5d5c8"><span class="std std-ref">Mode</span></a><span></span><span class="p">;</span>
+
+    <span class="c1">// structs</span>
+
+    <span class="k">struct</span> <a class="reference internal" href="struct_hiro_draw_RenderSystem_SceneData.html#doxid-structhiro-1-1draw-1-1-render-system-1-1-scene-data"><span class="std std-ref">SceneData</span></a><span></span><span class="p">;</span>
+
+    <span class="c1">// construction</span>
+
+    <span class="doxyrest-code-target target" id="doxid-classhiro-1-1draw-1-1-render-system-1a87298a59873835f73ee9f6c5e819ddb4"><span></span><span class="n">RenderSystem</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">uvec2</span><span class="o">&amp;</span> <span class="n">size</span><span class="p">,</span> <a class="reference internal" href="enum_hiro_draw_RenderSystem_Mode.html#doxid-classhiro-1-1draw-1-1-render-system-1a2c41d2005ab22cb00b50eb69eff5d5c8"><span class="std std-ref">Mode</span></a><span></span> <span class="n">mode</span> <span class="o">=</span> <a class="reference internal" href="enum_hiro_draw_RenderSystem_Mode.html#doxid-classhiro-1-1draw-1-1-render-system-1a2c41d2005ab22cb00b50eb69eff5d5c8a7a842b5490d3593887f252f57459eff1"><span class="std std-ref">Mode::visualizer</span></a><span></span><span class="p">);</span>
+    <a class="reference internal" href="#doxid-classhiro-1-1draw-1-1-render-system-1a615b6520eea0bd6b3d2f89cec579d279"><span class="std std-ref">RenderSystem</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">uvec2</span><span class="o">&amp;</span> <span class="n">size</span><span class="p">,</span> <span class="k">const</span> <span class="n">glw</span><span class="o">::</span><span class="n">PProgramList</span><span class="o">&amp;</span> <span class="n">programlist_ptr</span><span class="p">,</span> <a class="reference internal" href="enum_hiro_draw_RenderSystem_Mode.html#doxid-classhiro-1-1draw-1-1-render-system-1a2c41d2005ab22cb00b50eb69eff5d5c8"><span class="std std-ref">Mode</span></a><span></span> <span class="n">mode</span><span class="p">);</span>
+
+    <span class="c1">// methods</span>
+
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-classhiro-1-1draw-1-1-render-system-1a916960468a6d3577a3d3c9da89cce1ee"><span class="std std-ref">SetFramebufferSize</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">uvec2</span><span class="o">&amp;</span> <span class="n">size</span><span class="p">);</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-classhiro-1-1draw-1-1-render-system-1a02252ab37db74d2d66d3537fb764a441"><span class="std std-ref">SetShaderBuildDirectory</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">directory</span><span class="p">);</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-classhiro-1-1draw-1-1-render-system-1a9d93c3989a47798eb6f3e65f7a9053c1"><span class="std std-ref">SetBackgroundColor</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">cogs</span><span class="o">::</span><span class="n">Color3f</span><span class="o">&amp;</span> <span class="n">color</span><span class="p">);</span>
+    <a class="reference internal" href="class_hiro_draw_TextRenderer.html#doxid-classhiro-1-1draw-1-1-text-renderer"><span class="std std-ref">hiro::draw::TextRenderer</span></a><span></span><span class="o">*</span> <a class="reference internal" href="#doxid-classhiro-1-1draw-1-1-render-system-1adddadd4673208869dc75e4a6807bd3f9"><span class="std std-ref">GetTextRenderer</span></a><span></span><span class="p">();</span>
+    <span class="kt">uint32_t</span> <a class="reference internal" href="#doxid-classhiro-1-1draw-1-1-render-system-1a58b1c731c18a6562cba6645322afca3a"><span class="std std-ref">AddScene</span></a><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="namespace_hiro_draw.html#doxid-namespacehiro-1-1draw-1adc75a7fa26dba9b8c723ca1876074ff1"><span class="std std-ref">hiro::draw::PScene</span></a><span></span><span class="o">&amp;</span> <span class="n">scene</span><span class="p">);</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-classhiro-1-1draw-1-1-render-system-1ab4d9d9c98f0a3b72b8c42cc1153c7d5e"><span class="std std-ref">RemoveScene</span></a><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="namespace_hiro_draw.html#doxid-namespacehiro-1-1draw-1adc75a7fa26dba9b8c723ca1876074ff1"><span class="std std-ref">hiro::draw::PScene</span></a><span></span><span class="o">&amp;</span> <span class="n">scene</span><span class="p">);</span>
+    <a class="reference internal" href="namespace_hiro_draw.html#doxid-namespacehiro-1-1draw-1adc75a7fa26dba9b8c723ca1876074ff1"><span class="std std-ref">hiro::draw::PScene</span></a><span></span> <a class="reference internal" href="#doxid-classhiro-1-1draw-1-1-render-system-1ab28a320d02afe678f2410a0442293291"><span class="std std-ref">GetScene</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="kt">uint32_t</span> <span class="n">scene_id</span><span class="p">);</span>
+    <span class="kt">uint32_t</span> <a class="reference internal" href="#doxid-classhiro-1-1draw-1-1-render-system-1a34cbae0fa3d12605ea29a37fe0b77c32"><span class="std std-ref">AddLight</span></a><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_hiro_shader_Light.html#doxid-structhiro-1-1shader-1-1-light"><span class="std std-ref">hiro::shader::Light</span></a><span></span><span class="o">&amp;</span> <span class="n">light</span><span class="p">);</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-classhiro-1-1draw-1-1-render-system-1a2fccb864a0c4161df7657b06f5284fd6"><span class="std std-ref">SetLight</span></a><span></span><span class="p">(</span><span class="kt">uint32_t</span> <span class="n">light_id</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="struct_hiro_shader_Light.html#doxid-structhiro-1-1shader-1-1-light"><span class="std std-ref">hiro::shader::Light</span></a><span></span><span class="o">&amp;</span> <span class="n">light</span><span class="p">);</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-classhiro-1-1draw-1-1-render-system-1aa7ec6cfcd96a4de430cfb81c6c74e303"><span class="std std-ref">LoadShaders</span></a><span></span><span class="p">();</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-classhiro-1-1draw-1-1-render-system-1aadbcb95eccb2d0bcb5d276bc66259d47"><span class="std std-ref">ReloadShaders</span></a><span></span><span class="p">();</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-classhiro-1-1draw-1-1-render-system-1a5a02195acddb877d29e1f9da20625a3c"><span class="std std-ref">Render</span></a><span></span><span class="p">();</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-classhiro-1-1draw-1-1-render-system-1afc374b1f396264ae4335318daf5c42c7"><span class="std std-ref">SetAntiAliasingMethod</span></a><span></span><span class="p">(</span><a class="reference internal" href="enum_hiro_draw_AntiAliasing.html#doxid-namespacehiro-1-1draw-1a3741a9c3e60ef3920aec5ec5688f5c3a"><span class="std std-ref">AntiAliasing</span></a><span></span> <span class="n">method</span><span class="p">);</span>
+    <a class="reference internal" href="enum_hiro_draw_AntiAliasing.html#doxid-namespacehiro-1-1draw-1a3741a9c3e60ef3920aec5ec5688f5c3a"><span class="std std-ref">AntiAliasing</span></a><span></span> <a class="reference internal" href="#doxid-classhiro-1-1draw-1-1-render-system-1a7a392daae592b056852cc80b42030204"><span class="std std-ref">GetAntiAliasingMethod</span></a><span></span><span class="p">();</span>
+    <span class="n">glm</span><span class="o">::</span><span class="n">uvec2</span> <a class="reference internal" href="#doxid-classhiro-1-1draw-1-1-render-system-1aab1407f97b380c4f7c6fad6adc99f8f1"><span class="std std-ref">GetFrameBufferSize</span></a><span></span><span class="p">();</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-classhiro-1-1draw-1-1-render-system-1a4d4c8b7ab66e03f4542ee420d4dc22a2"><span class="std std-ref">EnableShadowing</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">uvec2</span><span class="o">&amp;</span> <span class="n">shadowmap_buffer_resolution</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">light_areas_outside_shadowmap</span> <span class="o">=</span> <span class="nb">true</span><span class="p">);</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-classhiro-1-1draw-1-1-render-system-1aa9381ac747da0ac16c83c428fb4a1d14"><span class="std std-ref">DisableShadowing</span></a><span></span><span class="p">();</span>
+    <span class="kt">bool</span> <a class="reference internal" href="#doxid-classhiro-1-1draw-1-1-render-system-1a19679d6402dd036e1e3defea66d2e639"><span class="std std-ref">IsShadowingEnabled</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">uint8_t</span> <a class="reference internal" href="#doxid-classhiro-1-1draw-1-1-render-system-1aa7f5ff415add53b84f93c881b4cd9aaa"><span class="std std-ref">GetAxisLayer</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-classhiro-1-1draw-1-1-render-system-1a52fe24b345a830bec69fd4c707dd2bbc"><span class="std std-ref">SetAxisLayer</span></a><span></span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">layer</span><span class="p">);</span>
+    <span class="kt">uint8_t</span> <a class="reference internal" href="#doxid-classhiro-1-1draw-1-1-render-system-1a77a8fd8e428a1041d5d91aee7023ade5"><span class="std std-ref">GetGroundLayer</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-classhiro-1-1draw-1-1-render-system-1a81ae47e4ce6017b388039ecb348f0fae"><span class="std std-ref">SetGroundLayer</span></a><span></span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">layer</span><span class="p">);</span>
+    <span class="n">glw</span><span class="o">::</span><span class="n">PTexture2D</span> <a class="reference internal" href="#doxid-classhiro-1-1draw-1-1-render-system-1a757f6dabf3cf1df37736698128a73736"><span class="std std-ref">GetPositionsAndShininessTex</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="n">glw</span><span class="o">::</span><span class="n">PTexture2D</span> <a class="reference internal" href="#doxid-classhiro-1-1draw-1-1-render-system-1a761b2838777fa8f37ea7a584ccea1808"><span class="std std-ref">GetNormalsAndSpecularTex</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="n">glw</span><span class="o">::</span><span class="n">PTexture2D</span> <a class="reference internal" href="#doxid-classhiro-1-1draw-1-1-render-system-1a249d5eaccee055877393442eb38a4f7e"><span class="std std-ref">GetColorsAndLightingTex</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="n">glw</span><span class="o">::</span><span class="n">PTexture2D</span> <a class="reference internal" href="#doxid-classhiro-1-1draw-1-1-render-system-1a33dbf70d6952c9afeb8790ef8c7659b1"><span class="std std-ref">GetShadowMaskTex</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="n">glw</span><span class="o">::</span><span class="n">PTexture2D</span> <a class="reference internal" href="#doxid-classhiro-1-1draw-1-1-render-system-1a3749c47c0720a834029ef8b3a225c502"><span class="std std-ref">GetShadowmapTex</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="n">glw</span><span class="o">::</span><span class="n">PTexture2D</span> <a class="reference internal" href="#doxid-classhiro-1-1draw-1-1-render-system-1aad43c3fb1f1fc26c11e5df2d16f1127f"><span class="std std-ref">GetLabelTex</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+<span class="p">};</span></pre>
+</div>
+<div class="section" id="detailed-documentation">
+<span id="details-classhiro-1-1draw-1-1-render-system"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
+<p>Class responsible for rendering loop implementation and its optimization.</p>
+<div class="section" id="construction">
+<h3>Construction<a class="headerlink" href="#construction" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1draw-1-1-render-system-1a615b6520eea0bd6b3d2f89cec579d279"><span id="index-1"></span><span></span><span class="n">RenderSystem</span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">uvec2</span><span class="o">&amp;</span> <span class="n">size</span><span class="p">,</span> <span class="k">const</span> <span class="n">glw</span><span class="o">::</span><span class="n">PProgramList</span><span class="o">&amp;</span> <span class="n">programlist_ptr</span><span class="p">,</span> <a class="reference internal" href="enum_hiro_draw_RenderSystem_Mode.html#doxid-classhiro-1-1draw-1-1-render-system-1a2c41d2005ab22cb00b50eb69eff5d5c8"><span class="std std-ref">Mode</span></a><span></span> <span class="n">mode</span><span class="p">)</span></pre>
+<p>Creates instance with shared shader program list.</p>
+</div>
+<div class="section" id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1draw-1-1-render-system-1a916960468a6d3577a3d3c9da89cce1ee"><span id="index-2"></span><span></span><span class="kt">void</span> <span class="n">SetFramebufferSize</span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">uvec2</span><span class="o">&amp;</span> <span class="n">size</span><span class="p">)</span></pre>
+<p>Set up size of output buffer, targeted for render.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1draw-1-1-render-system-1a02252ab37db74d2d66d3537fb764a441"><span id="index-3"></span><span></span><span class="kt">void</span> <span class="n">SetShaderBuildDirectory</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">directory</span><span class="p">)</span></pre>
+<p>Set up directory from where render objects load their shaders.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1draw-1-1-render-system-1a9d93c3989a47798eb6f3e65f7a9053c1"><span id="index-4"></span><span></span><span class="kt">void</span> <span class="n">SetBackgroundColor</span><span class="p">(</span><span class="k">const</span> <span class="n">cogs</span><span class="o">::</span><span class="n">Color3f</span><span class="o">&amp;</span> <span class="n">color</span><span class="p">)</span></pre>
+<p>Set up initial buffer color. Only used if enabled in Render method.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1draw-1-1-render-system-1adddadd4673208869dc75e4a6807bd3f9"><span id="index-5"></span><a class="reference internal" href="class_hiro_draw_TextRenderer.html#doxid-classhiro-1-1draw-1-1-text-renderer"><span class="std std-ref">hiro::draw::TextRenderer</span></a><span></span><span class="o">*</span> <span class="n">GetTextRenderer</span><span class="p">()</span></pre>
+<p>Returns handle to the <a class="reference internal" href="class_hiro_draw_TextRenderer.html#doxid-classhiro-1-1draw-1-1-text-renderer"><span class="std std-ref">TextRenderer</span></a> class.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1draw-1-1-render-system-1a58b1c731c18a6562cba6645322afca3a"><span id="index-6"></span><span></span><span class="kt">uint32_t</span> <span class="n">AddScene</span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="namespace_hiro_draw.html#doxid-namespacehiro-1-1draw-1adc75a7fa26dba9b8c723ca1876074ff1"><span class="std std-ref">hiro::draw::PScene</span></a><span></span><span class="o">&amp;</span> <span class="n">scene</span><span class="p">)</span></pre>
+<p>Add a scene to the list of scenes to be rendered. Returns scene index.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1draw-1-1-render-system-1ab4d9d9c98f0a3b72b8c42cc1153c7d5e"><span id="index-7"></span><span></span><span class="kt">void</span> <span class="n">RemoveScene</span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="namespace_hiro_draw.html#doxid-namespacehiro-1-1draw-1adc75a7fa26dba9b8c723ca1876074ff1"><span class="std std-ref">hiro::draw::PScene</span></a><span></span><span class="o">&amp;</span> <span class="n">scene</span><span class="p">)</span></pre>
+<p>Removes the scene from the list of scenes to be rendered.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1draw-1-1-render-system-1ab28a320d02afe678f2410a0442293291"><span id="index-8"></span><a class="reference internal" href="namespace_hiro_draw.html#doxid-namespacehiro-1-1draw-1adc75a7fa26dba9b8c723ca1876074ff1"><span class="std std-ref">hiro::draw::PScene</span></a><span></span> <span class="n">GetScene</span><span class="p">(</span><span class="k">const</span> <span class="kt">uint32_t</span> <span class="n">scene_id</span><span class="p">)</span></pre>
+<p>Returns scene from the list of scenes to be rendered, by scene index.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1draw-1-1-render-system-1a34cbae0fa3d12605ea29a37fe0b77c32"><span id="index-9"></span><span></span><span class="kt">uint32_t</span> <span class="n">AddLight</span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_hiro_shader_Light.html#doxid-structhiro-1-1shader-1-1-light"><span class="std std-ref">hiro::shader::Light</span></a><span></span><span class="o">&amp;</span> <span class="n">light</span><span class="p">)</span></pre>
+<p>Add light to the renderer, returns index of the added light.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1draw-1-1-render-system-1a2fccb864a0c4161df7657b06f5284fd6"><span id="index-10"></span><span></span><span class="kt">void</span> <span class="n">SetLight</span><span class="p">(</span><span class="kt">uint32_t</span> <span class="n">light_id</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="struct_hiro_shader_Light.html#doxid-structhiro-1-1shader-1-1-light"><span class="std std-ref">hiro::shader::Light</span></a><span></span><span class="o">&amp;</span> <span class="n">light</span><span class="p">)</span></pre>
+<p>Chenge light with the specified id in the renderer.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1draw-1-1-render-system-1aa7ec6cfcd96a4de430cfb81c6c74e303"><span id="index-11"></span><span></span><span class="kt">void</span> <span class="n">LoadShaders</span><span class="p">()</span></pre>
+<p>Loads all not-loaded shaders required by renderer and all objects from added scenes.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1draw-1-1-render-system-1aadbcb95eccb2d0bcb5d276bc66259d47"><span id="index-12"></span><span></span><span class="kt">void</span> <span class="n">ReloadShaders</span><span class="p">()</span></pre>
+<p>Forces reload of all shaders required by renderer and all objects from added scenes.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1draw-1-1-render-system-1a5a02195acddb877d29e1f9da20625a3c"><span id="index-13"></span><span></span><span class="kt">void</span> <span class="n">Render</span><span class="p">()</span></pre>
+<p>Render all objects from all added scenes.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1draw-1-1-render-system-1afc374b1f396264ae4335318daf5c42c7"><span id="index-14"></span><span></span><span class="kt">void</span> <span class="n">SetAntiAliasingMethod</span><span class="p">(</span><a class="reference internal" href="enum_hiro_draw_AntiAliasing.html#doxid-namespacehiro-1-1draw-1a3741a9c3e60ef3920aec5ec5688f5c3a"><span class="std std-ref">AntiAliasing</span></a><span></span> <span class="n">method</span><span class="p">)</span></pre>
+<p>Set whether The renderer should use MSAA. Disabled by default.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1draw-1-1-render-system-1a7a392daae592b056852cc80b42030204"><span id="index-15"></span><a class="reference internal" href="enum_hiro_draw_AntiAliasing.html#doxid-namespacehiro-1-1draw-1a3741a9c3e60ef3920aec5ec5688f5c3a"><span class="std std-ref">AntiAliasing</span></a><span></span> <span class="n">GetAntiAliasingMethod</span><span class="p">()</span></pre>
+<p>Checks whether is MSAA currently in use.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1draw-1-1-render-system-1aab1407f97b380c4f7c6fad6adc99f8f1"><span id="index-16"></span><span></span><span class="n">glm</span><span class="o">::</span><span class="n">uvec2</span> <span class="n">GetFrameBufferSize</span><span class="p">()</span></pre>
+<p>Returns current resolution of render frame buffer.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1draw-1-1-render-system-1a4d4c8b7ab66e03f4542ee420d4dc22a2"><span id="index-17"></span><span></span><span class="kt">void</span> <span class="n">EnableShadowing</span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">uvec2</span><span class="o">&amp;</span> <span class="n">shadowmap_buffer_resolution</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">light_areas_outside_shadowmap</span> <span class="o">=</span> <span class="nb">true</span><span class="p">)</span></pre>
+<p>Enables shadow mapping and initializes shadow map buffer with specified resolution.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1draw-1-1-render-system-1aa9381ac747da0ac16c83c428fb4a1d14"><span id="index-18"></span><span></span><span class="kt">void</span> <span class="n">DisableShadowing</span><span class="p">()</span></pre>
+<p>Disables shadow mapping.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1draw-1-1-render-system-1a19679d6402dd036e1e3defea66d2e639"><span id="index-19"></span><span></span><span class="kt">bool</span> <span class="n">IsShadowingEnabled</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Check if shadow mapping is enabled.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1draw-1-1-render-system-1aa7f5ff415add53b84f93c881b4cd9aaa"><span id="index-20"></span><span></span><span class="kt">uint8_t</span> <span class="n">GetAxisLayer</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Returns the layer on which is axis overlay feature rendered.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1draw-1-1-render-system-1a52fe24b345a830bec69fd4c707dd2bbc"><span id="index-21"></span><span></span><span class="kt">void</span> <span class="n">SetAxisLayer</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">layer</span><span class="p">)</span></pre>
+<p>Changes the layer on which is axis overlay feature rendered. Default is equal to <a class="reference internal" href="namespace_hiro_draw.html#doxid-namespacehiro-1-1draw-1a94274c00ab3d5ad0f335c4f56cc0325d"><span class="std std-ref">hiro::draw::DEFAULT_GROUND_OVERLAY_LAYER</span></a>.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1draw-1-1-render-system-1a77a8fd8e428a1041d5d91aee7023ade5"><span id="index-22"></span><span></span><span class="kt">uint8_t</span> <span class="n">GetGroundLayer</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Returns the layer on which is ground grid overlay feature rendered.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1draw-1-1-render-system-1a81ae47e4ce6017b388039ecb348f0fae"><span id="index-23"></span><span></span><span class="kt">void</span> <span class="n">SetGroundLayer</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">layer</span><span class="p">)</span></pre>
+<p>Changes the layer on which is ground grid overlay feature rendered. Default is equal to <a class="reference internal" href="namespace_hiro_draw.html#doxid-namespacehiro-1-1draw-1aa8e34ff3477832032ae593b85d2ddc71"><span class="std std-ref">hiro::draw::DEFAULT_AXIS_OVERLAY_LAYER</span></a>.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1draw-1-1-render-system-1a757f6dabf3cf1df37736698128a73736"><span id="index-24"></span><span></span><span class="n">glw</span><span class="o">::</span><span class="n">PTexture2D</span> <span class="n">GetPositionsAndShininessTex</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Returns 4-channel texture of position and shininess parameters.</p>
+<p>Stored data is of type float32. First 3 channels are position x, y, z. The last channels is material shininess parameter.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1draw-1-1-render-system-1a761b2838777fa8f37ea7a584ccea1808"><span id="index-25"></span><span></span><span class="n">glw</span><span class="o">::</span><span class="n">PTexture2D</span> <span class="n">GetNormalsAndSpecularTex</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Returns 4-channel texture of normal and intensity parameters.</p>
+<p>Stored data is of type float32. First 3 channels are normal vector x, y, z. The last channels is material specular intensity parameter.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1draw-1-1-render-system-1a249d5eaccee055877393442eb38a4f7e"><span id="index-26"></span><span></span><span class="n">glw</span><span class="o">::</span><span class="n">PTexture2D</span> <span class="n">GetColorsAndLightingTex</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Returns 4-channel texture of color and lighting parameters.</p>
+<p>Stored data is of type uint8. First 3 channels are albedo color r,g,b. The last channels is boolean parameter telling whether lighting is use for the pixel.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1draw-1-1-render-system-1a33dbf70d6952c9afeb8790ef8c7659b1"><span id="index-27"></span><span></span><span class="n">glw</span><span class="o">::</span><span class="n">PTexture2D</span> <span class="n">GetShadowMaskTex</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Returns 1-channel texture of shadow mask.</p>
+<p>Stored data is of type uint8_norm.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1draw-1-1-render-system-1a3749c47c0720a834029ef8b3a225c502"><span id="index-28"></span><span></span><span class="n">glw</span><span class="o">::</span><span class="n">PTexture2D</span> <span class="n">GetShadowmapTex</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>When shadowmapping is enabled, returns shadow depth map.</p>
+<p>This method will return nullptr until EnableShadowing is called.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1draw-1-1-render-system-1aad43c3fb1f1fc26c11e5df2d16f1127f"><span id="index-29"></span><span></span><span class="n">glw</span><span class="o">::</span><span class="n">PTexture2D</span> <span class="n">GetLabelTex</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Returns 1-channel texture representing segmentation labels.</p>
+<p>Stored data is of type uint32.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Skeletex Research
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

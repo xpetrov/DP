@@ -1,0 +1,309 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>class utils::Dictionary::Node &mdash; HIRO 0.4.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/hiro-fav-32.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/target-highlight.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/hiro_theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-sphinx_rtd_theme.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="template class utils::EnumFlags" href="class_utils_EnumFlags.html" />
+    <link rel="prev" title="class utils::Dictionary" href="class_utils_Dictionary.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: rgb(248, 216, 60)" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/hiro-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_0.html">T0: Setting up Visual Studio Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_1.html">T1: Introduction to HIRO GUI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_2.html">T2: Creating Custom Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_3.html">T3: Overview of Gadget Features</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="shader_api.html">Shader API</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="global.html">Global Namespace</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="namespace_cegui_ext.html">namespace cegui_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_dialog.html">namespace dialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_file_types.html">namespace file_types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_fs.html">namespace fs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_func.html">namespace func</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_geom.html">namespace geom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_glm_ext.html">namespace glm_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_hiro.html">namespace hiro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_omp_ext.html">namespace omp_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_std_ext.html">namespace std_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_time_m.html">namespace time_m</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_ulog.html">namespace ulog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_uprogress.html">namespace uprogress</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="namespace_utils.html">namespace utils</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="enum_utils_BaseAxis.html">enum utils::BaseAxis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_utils_Handedness.html">enum utils::Handedness</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_utils_LicenseState.html">enum utils::LicenseState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_utils_Units.html">enum utils::Units</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_utils_IntrinsicParams.html">struct utils::IntrinsicParams</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_utils_Property.html">template struct utils::Property</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_utils_PropertyByValue.html">template struct utils::PropertyByValue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_utils_SpaceDefinition.html">struct utils::SpaceDefinition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_utils_StrongId.html">template struct utils::StrongId</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_utils_StrongOptionalType.html">template struct utils::StrongOptionalType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_utils_StrongType.html">template struct utils::StrongType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_utils_Version.html">struct utils::Version</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_CallbackTimer.html">class utils::CallbackTimer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_ConcurrentBinding.html">template class utils::ConcurrentBinding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_Couple.html">template class utils::Couple</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_DelegatedNotifier.html">template class utils::DelegatedNotifier</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="class_utils_Dictionary.html">class utils::Dictionary</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">class utils::Dictionary::Node</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_utils_Dictionary.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_utils_Dictionary.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_EnumFlags.html">template class utils::EnumFlags</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_EventHandler.html">class utils::EventHandler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_GlmQuatSerializable.html">class utils::GlmQuatSerializable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_GlmVec3Serializable.html">class utils::GlmVec3Serializable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_Identifiable.html">template class utils::Identifiable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_IniParser.html">class utils::IniParser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_Interval.html">class utils::Interval</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_LicenseChecker.html">class utils::LicenseChecker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_LogEntry.html">class utils::LogEntry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_LogReader.html">class utils::LogReader</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_LogWriter.html">class utils::LogWriter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_Logger.html">class utils::Logger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_NamedClass.html">template class utils::NamedClass</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_Notifier.html">template class utils::Notifier</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_OnEnd.html">class utils::OnEnd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_Serializer.html">template class utils::Serializer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_Statistics.html">template class utils::Statistics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_Triplet.html">template class utils::Triplet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_utils.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_utils.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_Config.html">class Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_IDialogInterface.html">class IDialogInterface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_WxWidgetsDialog.html">class WxWidgetsDialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">HIRO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="global.html">Global Namespace</a> &raquo;</li>
+        
+          <li><a href="namespace_utils.html">namespace utils</a> &raquo;</li>
+        
+          <li><a href="class_utils_Dictionary.html">class utils::Dictionary</a> &raquo;</li>
+        
+      <li>class utils::Dictionary::Node</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="class-utils-dictionary-node">
+<span id="doxid-classutils-1-1-dictionary-1-1-node"></span><span id="index-0"></span><h1>class utils::Dictionary::Node<a class="headerlink" href="#class-utils-dictionary-node" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="k">class</span> <span class="n">Node</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="c1">// construction</span>
+
+    <span class="doxyrest-code-target target" id="doxid-classutils-1-1-dictionary-1-1-node-1ae90b02567d5353c5ad146d40e1171c9a"><span></span><span class="n">Node</span></span><span></span><span class="p">();</span>
+    <span class="doxyrest-code-target target" id="doxid-classutils-1-1-dictionary-1-1-node-1a98b1ef4577ca6bc880b64303cd35e713"><span></span><span class="n">Node</span></span><span></span><span class="p">(</span><span class="n">Node</span><span class="o">*</span> <span class="n">parent</span><span class="p">);</span>
+
+    <span class="c1">// methods</span>
+
+    <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-classutils-1-1-dictionary-1-1-node-1a56b842c4849e92d8eda1e024d7415dc9"><span></span><span class="n">ClearAll</span></span><span></span><span class="p">();</span>
+    <span class="k">const</span> <span class="n">Node</span><span class="o">*</span> <span class="doxyrest-code-target target" id="doxid-classutils-1-1-dictionary-1-1-node-1a4553fe533b636731d87b15340475c284"><span></span><span class="n">Find</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">key</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="n">Node</span><span class="o">*</span> <span class="doxyrest-code-target target" id="doxid-classutils-1-1-dictionary-1-1-node-1ac847bd808d6f01effc5914c135f24161"><span></span><span class="n">Find</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">key</span><span class="p">);</span>
+    <span class="n">Node</span><span class="o">*</span> <span class="doxyrest-code-target target" id="doxid-classutils-1-1-dictionary-1-1-node-1a5b50f25c4bd1ac69ee91ad69154c66a0"><span></span><span class="n">CreateOrFind</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">key</span><span class="p">);</span>
+    <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="doxyrest-code-target target" id="doxid-classutils-1-1-dictionary-1-1-node-1a8387140dd3dfa68f22165e4ddbb6fa09"><span></span><span class="n">GetWord</span></span><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-classutils-1-1-dictionary-1-1-node-1af7f8a1f9d890d2f517830b567d27b22d"><span></span><span class="n">SetWord</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">val</span><span class="p">);</span>
+    <span class="kt">bool</span> <span class="doxyrest-code-target target" id="doxid-classutils-1-1-dictionary-1-1-node-1add3dc45dfbc6382efe512f763cd29c3d"><span></span><span class="n">ClearWord</span></span><span></span><span class="p">();</span>
+    <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-classutils-1-1-dictionary-1-1-node-1a92c02b4a5bec8606a6f8a0e7acd88195"><span></span><span class="n">CumulateWords</span></span><span></span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;&amp;</span> <span class="n">result</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">bool</span> <span class="doxyrest-code-target target" id="doxid-classutils-1-1-dictionary-1-1-node-1a87ce0a73662318b0db0723deb5007c3e"><span></span><span class="n">HasAnyChildren</span></span><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-classutils-1-1-dictionary-1-1-node-1a591d0da7b49a709fa1995968d838da54"><span></span><span class="n">DestroyChild</span></span><span></span><span class="p">(</span><span class="n">Node</span><span class="o">*</span> <span class="n">child</span><span class="p">);</span>
+    <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-classutils-1-1-dictionary-1-1-node-1ac0492e0e74d49440c0e3972967205ba9"><span></span><span class="n">CumulateWords</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">key_prefix</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;&amp;</span> <span class="n">result</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+<span class="p">};</span></pre>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Skeletex Research
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

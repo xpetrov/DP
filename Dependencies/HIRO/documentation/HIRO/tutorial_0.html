@@ -1,0 +1,344 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>T0: Setting up Visual Studio Project &mdash; HIRO 0.4.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/hiro-fav-32.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/target-highlight.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/hiro_theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-sphinx_rtd_theme.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="T1: Introduction to HIRO GUI" href="tutorial_1.html" />
+    <link rel="prev" title="Introduction" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: rgb(248, 216, 60)" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/hiro-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">T0: Setting up Visual Studio Project</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#download-and-install-the-ide">Download and install the IDE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-the-project">Create the Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#add-libraries-to-project">Add Libraries to Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#allow-c-17-standard">Allow C++17 Standard</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_1.html">T1: Introduction to HIRO GUI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_2.html">T2: Creating Custom Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_3.html">T3: Overview of Gadget Features</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="shader_api.html">Shader API</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="global.html">Global Namespace</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">HIRO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>T0: Setting up Visual Studio Project</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="t0-setting-up-visual-studio-project">
+<h1>T0: Setting up Visual Studio Project<a class="headerlink" href="#t0-setting-up-visual-studio-project" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="download-and-install-the-ide">
+<h2>Download and install the IDE<a class="headerlink" href="#download-and-install-the-ide" title="Permalink to this headline">¶</a></h2>
+<p>To start to use the library, you will need an editor to write and compile your code.
+We recommend <strong>Microsoft Visual Studio 2019</strong>.</p>
+<ol class="arabic simple">
+<li><p>Download Visual Studio installer from <a class="reference external" href="https://visualstudio.microsoft.com/vs/">here.</a></p></li>
+<li><p>The installer allows you to configure the editor and add modules to it.</p></li>
+<li><p>In the <em>Workloads</em> tab, check the <em>Desktop development with C++</em> option.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you installed VS without the C++ module already, do not bother.
+Run the installer again, in <em>More</em> dropdown select <em>Modify</em> to download and install additional modules.</p>
+</div>
+</div>
+<div class="section" id="create-the-project">
+<h2>Create the Project<a class="headerlink" href="#create-the-project" title="Permalink to this headline">¶</a></h2>
+<p>After starting Visual Studio, choose <strong>Create a new project</strong>.
+Select <em>Empty Project</em>. Here you give a descriptive project name, select project location, name your solution, then click <em>Create</em>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Before progressing further, set the platform from <strong>x86</strong> to <strong>x64</strong> in your top toolbar.
+The libraries for <em>x86</em> configuration are not provided nor supported.</p>
+</div>
+<p>Add your first source file <strong>main.cpp</strong>.
+Navigate to the <em>Solution Explorer</em> panel at the right.
+If the panel is hidden, go to <em>View &gt; Solution Explorer</em>, or <em>Ctrl + Alt + L</em> to open it again.
+Right-click on the  <em>Source Files</em>, and select <em>Add &gt; New Item…</em>.
+In the pop-up window select <em>Visual C++</em>, then <em>C++File (.cpp)</em>.
+Finally, name it <em>main.cpp</em>. Click <em>Add</em>.</p>
+<p>Copy and paste the code block below into <strong>main.cpp</strong> and ignore IntelliSense errors for now.
+We will fix them later.</p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;HIRO/HIRO.h&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">hiro</span><span class="o">::</span><span class="n">SetAssetDirectory</span><span class="p">(</span><span class="s">&quot;./HIRO/resources/&quot;</span><span class="p">);</span>
+  <span class="n">hiro</span><span class="o">::</span><span class="n">SetIntermediateDirectory</span><span class="p">(</span><span class="s">&quot;./temp/&quot;</span><span class="p">);</span>
+
+  <span class="n">hiro</span><span class="o">::</span><span class="n">Initialize</span><span class="p">();</span>
+
+  <span class="k">while</span> <span class="p">(</span><span class="n">hiro</span><span class="o">::</span><span class="n">IsOpen</span><span class="p">())</span>
+  <span class="p">{</span>
+  <span class="n">hiro</span><span class="o">::</span><span class="n">Update</span><span class="p">();</span>
+  <span class="p">}</span>
+
+  <span class="n">hiro</span><span class="o">::</span><span class="n">Terminate</span><span class="p">();</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="add-libraries-to-project">
+<h2>Add Libraries to Project<a class="headerlink" href="#add-libraries-to-project" title="Permalink to this headline">¶</a></h2>
+<p>Download the latest version of HIRO library bundle from the main page <a class="reference internal" href="main.html"><span class="doc">Introduction</span></a>.
+Extract the downloaded zip file and copy the contents (directory <code class="docutils literal notranslate"><span class="pre">HIRO</span></code>, that containing <code class="docutils literal notranslate"><span class="pre">lib</span></code>, <code class="docutils literal notranslate"><span class="pre">bin</span></code>, <code class="docutils literal notranslate"><span class="pre">resources</span></code> etc.) into your project folder.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Whenever you download newer version of library, replace the contents of the library folder.</p>
+</div>
+<p>Right-click on the project name in <em>Solution Explorer</em>.
+Choose the <strong>Properties</strong> option on the bottom of the list.
+At the top, change the <em>Configuration</em> dropdown to <em>All Configurations</em> option.</p>
+<p>We will set up the <strong>include directory</strong> path first.
+Select <em>VC++ Directories</em> in the left menu, then click on row <em>Include Directories</em>.
+Click on the dropdown, then <em>&lt;Edit…&gt;</em> and add <code class="docutils literal notranslate"><span class="pre">HIRO/include</span></code> and <code class="docutils literal notranslate"><span class="pre">HIRO/ThirdParty/include</span></code> folders.</p>
+<p>Now, we will set up the <strong>library directory</strong> path.
+Select <em>VC++ Directories</em> in the left menu, then click on row <em>Library Directories</em>.
+Click on the dropdown, then <em>&lt;Edit…&gt;</em> and add <code class="docutils literal notranslate"><span class="pre">HIRO/lib/$(Configuration)</span></code> and <code class="docutils literal notranslate"><span class="pre">HIRO/ThirdParty/lib/$(Configuration)</span></code> folders.
+The <code class="docutils literal notranslate"><span class="pre">$(Configuration)</span></code> macro ensures, that the libraries used located in the folder that matches the currently selected configuration, in our case <em>Debug</em> or <em>Release</em>.</p>
+<p>The last directory we set is the <strong>binaries directory</strong> path.
+Binaries (<em>.dll</em> files) are linked when the application is started and are searched for in the folder that contains the application <em>.exe</em> file.
+Usually you copy all the <em>.dll</em> files to the same directory where <em>.exe</em> is present, otherwise, it would not find them.
+However, Visual Studio offers a nicer option to use an external folder for binaries.
+Select <em>Debugging</em> in the left menu, then set the <em>Environment</em> path using the string
+<code class="docutils literal notranslate"><span class="pre">PATH=HIRO/bin/$(Configuration);HIRO/ThirdParty/bin/$(Configuration);</span></code></p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Do not forget the <code class="docutils literal notranslate"><span class="pre">;</span></code> mark at the end!</p>
+<p>In every case, you should use <code class="docutils literal notranslate"><span class="pre">/</span></code> rather then <code class="docutils literal notranslate"><span class="pre">\</span></code> to avoid weird path errors.</p>
+</div>
+<p>At last, we set up the <strong>libraries</strong> we wish to use in our project.
+Select <em>Linker &gt; Input</em> in the left menu, then click <em>Additional Dependencies</em>.
+Click on the dropdown, then <em>&lt;Edit…&gt;</em>.
+Add the libraries, <em>each on a separate line</em> as follows: <code class="docutils literal notranslate"><span class="pre">HIRO_msvc141_v0.4.0.lib</span></code> <code class="docutils literal notranslate"><span class="pre">COGS_msvc141_v0.1.0.lib</span></code> <code class="docutils literal notranslate"><span class="pre">glbinding.lib</span></code>.
+Make sure the library versions match the files located in <code class="docutils literal notranslate"><span class="pre">HIRO/lib/Release</span></code> folder.
+Later, if you need any other libraries in your project (such as <code class="docutils literal notranslate"><span class="pre">HIRO_DRAW</span></code> in the following tutorials), add them to this list, otherwise, you get linker errors.</p>
+</div>
+<div class="section" id="allow-c-17-standard">
+<h2>Allow C++17 Standard<a class="headerlink" href="#allow-c-17-standard" title="Permalink to this headline">¶</a></h2>
+<p>HIRO takes advantage of the C++17 features.
+Set the <em>C++</em> version in your project by going to project properties and
+<em>C/C++ &gt; Language &gt; C++ Language Standard &gt; ISO C++17 Standard (/std:c++17)</em></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Current version of release use some of the features deprecated in C++17 standard, as well as advanced features from glm library.
+Therefore, you need to go to <em>C/C++ &gt; Preprocessor &gt; Preprocessor Definitions</em>
+and add in the preprocessor definitions <code class="docutils literal notranslate"><span class="pre">_SILENCE_ALL_CXX17_DEPRECATION_WARNINGS</span></code> and <code class="docutils literal notranslate"><span class="pre">GLM_ENABLE_EXPERIMENTAL</span></code>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Current version of release produces multiple warnings when your project is being built.
+We recommed ignoring this warning in your project by going to <em>C/C++ &gt; Advanced &gt; Disable Specific Warnings</em> and add in <code class="docutils literal notranslate"><span class="pre">4251</span></code>.</p>
+</div>
+<p>Try to run the application, it should compile without any errors.
+Now you are ready to go to the <a class="reference internal" href="tutorial_1.html"><span class="doc">T1: Introduction to HIRO GUI</span></a>.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Skeletex Research
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

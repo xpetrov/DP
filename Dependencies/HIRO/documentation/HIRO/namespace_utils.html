@@ -1,0 +1,479 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>namespace utils &mdash; HIRO 0.4.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/hiro-fav-32.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/target-highlight.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/hiro_theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-sphinx_rtd_theme.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="enum utils::BaseAxis" href="enum_utils_BaseAxis.html" />
+    <link rel="prev" title="namespace uprogress" href="namespace_uprogress.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: rgb(248, 216, 60)" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/hiro-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_0.html">T0: Setting up Visual Studio Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_1.html">T1: Introduction to HIRO GUI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_2.html">T2: Creating Custom Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_3.html">T3: Overview of Gadget Features</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="shader_api.html">Shader API</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="global.html">Global Namespace</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="namespace_cegui_ext.html">namespace cegui_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_dialog.html">namespace dialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_file_types.html">namespace file_types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_fs.html">namespace fs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_func.html">namespace func</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_geom.html">namespace geom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_glm_ext.html">namespace glm_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_hiro.html">namespace hiro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_omp_ext.html">namespace omp_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_std_ext.html">namespace std_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_time_m.html">namespace time_m</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_ulog.html">namespace ulog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_uprogress.html">namespace uprogress</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">namespace utils</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="enum_utils_BaseAxis.html">enum utils::BaseAxis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_utils_Handedness.html">enum utils::Handedness</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_utils_LicenseState.html">enum utils::LicenseState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_utils_Units.html">enum utils::Units</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_utils_IntrinsicParams.html">struct utils::IntrinsicParams</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_utils_Property.html">template struct utils::Property</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_utils_PropertyByValue.html">template struct utils::PropertyByValue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_utils_SpaceDefinition.html">struct utils::SpaceDefinition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_utils_StrongId.html">template struct utils::StrongId</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_utils_StrongOptionalType.html">template struct utils::StrongOptionalType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_utils_StrongType.html">template struct utils::StrongType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_utils_Version.html">struct utils::Version</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_CallbackTimer.html">class utils::CallbackTimer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_ConcurrentBinding.html">template class utils::ConcurrentBinding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_Couple.html">template class utils::Couple</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_DelegatedNotifier.html">template class utils::DelegatedNotifier</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_Dictionary.html">class utils::Dictionary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_EnumFlags.html">template class utils::EnumFlags</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_EventHandler.html">class utils::EventHandler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_GlmQuatSerializable.html">class utils::GlmQuatSerializable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_GlmVec3Serializable.html">class utils::GlmVec3Serializable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_Identifiable.html">template class utils::Identifiable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_IniParser.html">class utils::IniParser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_Interval.html">class utils::Interval</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_LicenseChecker.html">class utils::LicenseChecker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_LogEntry.html">class utils::LogEntry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_LogReader.html">class utils::LogReader</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_LogWriter.html">class utils::LogWriter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_Logger.html">class utils::Logger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_NamedClass.html">template class utils::NamedClass</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_Notifier.html">template class utils::Notifier</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_OnEnd.html">class utils::OnEnd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_Serializer.html">template class utils::Serializer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_Statistics.html">template class utils::Statistics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_Triplet.html">template class utils::Triplet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#detailed-documentation">Detailed Documentation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#global-functions">Global Functions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_Config.html">class Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_IDialogInterface.html">class IDialogInterface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_WxWidgetsDialog.html">class WxWidgetsDialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">HIRO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="global.html">Global Namespace</a> &raquo;</li>
+        
+      <li>namespace utils</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="namespace-utils">
+<span id="doxid-namespaceutils"></span><span id="index-0"></span><h1>namespace utils<a class="headerlink" href="#namespace-utils" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>General namespace for utilities. <a class="reference internal" href="#details-namespaceutils"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="k">namespace</span> <span class="n">utils</span> <span class="p">{</span>
+
+<span class="c1">// typedefs</span>
+
+<span class="k">typedef</span> <a class="reference internal" href="class_utils_Notifier.html#doxid-classutils-1-1-notifier"><span class="std std-ref">Notifier</span></a><span></span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><a class="reference internal" href="enum_utils_LicenseState.html#doxid-namespaceutils-1a4f1a8f85a047ce08863c0aac0f3057fe"><span class="std std-ref">LicenseState</span></a><span></span><span class="o">&gt;</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;&gt;</span> <span class="doxyrest-code-target target" id="doxid-namespaceutils-1a6232d20601695e0d86ed6eb12b59a403"><span></span><span class="n">LicenseNotifier</span></span><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="struct_utils_StrongOptionalType.html#doxid-structutils-1-1-strong-optional-type"><span class="std std-ref">utils::StrongOptionalType</span></a><span></span><span class="o">&lt;</span><span class="kt">float</span><span class="p">,</span> <span class="k">class</span> <a class="reference internal" href="class_utils_LogReader.html#doxid-classutils-1-1-log-reader"><span class="std std-ref">LogReader</span></a><span></span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-namespaceutils-1a861e755a4133ab961fb688b89ee58687"><span></span><span class="n">ProgressPercentage</span></span><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="class_utils_DelegatedNotifier.html#doxid-classutils-1-1-delegated-notifier"><span class="std std-ref">DelegatedNotifier</span></a><span></span><span class="o">&lt;</span><span class="k">const</span> <a class="reference internal" href="enum_utils_LogEntry_Type.html#doxid-classutils-1-1-log-entry-1a7a5b427e25c4d25d6fe45b6c9f904e4a"><span class="std std-ref">LogEntry::Type</span></a><span></span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-namespaceutils-1a649d684196fdb76ad9bbebe25c00426d"><span></span><span class="n">LogEntryNotifier</span></span><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="class_utils_DelegatedNotifier.html#doxid-classutils-1-1-delegated-notifier"><span class="std std-ref">DelegatedNotifier</span></a><span></span><span class="o">&lt;</span><span class="k">const</span> <a class="reference internal" href="#doxid-namespaceutils-1a861e755a4133ab961fb688b89ee58687"><span class="std std-ref">ProgressPercentage</span></a><span></span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-namespaceutils-1a3d401d36b4260ef892cf0dc3a21e3cc3"><span></span><span class="n">ProgressNotifier</span></span><span></span><span class="p">;</span>
+
+<span class="c1">// enums</span>
+
+<span class="k">enum</span> <a class="reference internal" href="enum_utils_BaseAxis.html#doxid-namespaceutils-1ac2ce7fd05b735b96b21d24bbaca13bb9"><span class="std std-ref">BaseAxis</span></a><span></span><span class="p">;</span>
+<span class="k">enum</span> <a class="reference internal" href="enum_utils_Handedness.html#doxid-namespaceutils-1acef6187ddca424be87d0e827c7b9cf42"><span class="std std-ref">Handedness</span></a><span></span><span class="p">;</span>
+<span class="k">enum</span> <a class="reference internal" href="enum_utils_LicenseState.html#doxid-namespaceutils-1a4f1a8f85a047ce08863c0aac0f3057fe"><span class="std std-ref">LicenseState</span></a><span></span><span class="p">;</span>
+<span class="k">enum</span> <a class="reference internal" href="enum_utils_Units.html#doxid-namespaceutils-1a3136590b979fb24d05236b9e0fd6d014"><span class="std std-ref">Units</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// structs</span>
+
+<span class="k">struct</span> <a class="reference internal" href="struct_utils_IntrinsicParams.html#doxid-structutils-1-1-intrinsic-params"><span class="std std-ref">IntrinsicParams</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">C</span><span class="p">,</span> <span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="n">T</span><span class="p">(</span><span class="n">C</span><span class="o">::*</span><span class="p">)()</span> <span class="k">const</span> <span class="n">getter</span><span class="p">,</span> <span class="kt">void</span><span class="p">(</span><span class="n">C</span><span class="o">::*</span><span class="p">)(</span><span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span><span class="p">)</span> <span class="n">setter</span><span class="o">&gt;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_utils_Property.html#doxid-structutils-1-1-property"><span class="std std-ref">Property</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">C</span><span class="p">,</span> <span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="n">T</span><span class="p">(</span><span class="n">C</span><span class="o">::*</span><span class="p">)()</span> <span class="k">const</span> <span class="n">getter</span><span class="p">,</span> <span class="kt">void</span><span class="p">(</span><span class="n">C</span><span class="o">::*</span><span class="p">)(</span><span class="n">T</span><span class="p">)</span> <span class="n">setter</span><span class="o">&gt;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_utils_PropertyByValue.html#doxid-structutils-1-1-property-by-value"><span class="std std-ref">PropertyByValue</span></a><span></span><span class="p">;</span>
+
+<span class="k">struct</span> <a class="reference internal" href="struct_utils_SpaceDefinition.html#doxid-structutils-1-1-space-definition"><span class="std std-ref">SpaceDefinition</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">PhantomType</span><span class="o">&gt;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_utils_StrongId.html#doxid-structutils-1-1-strong-id"><span class="std std-ref">StrongId</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">ValueType</span><span class="p">,</span> <span class="k">typename</span> <span class="n">PhantomType</span><span class="o">&gt;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_utils_StrongOptionalType.html#doxid-structutils-1-1-strong-optional-type"><span class="std std-ref">StrongOptionalType</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">ValueType</span><span class="p">,</span> <span class="k">typename</span> <span class="n">PhantomType</span><span class="o">&gt;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_utils_StrongType.html#doxid-structutils-1-1-strong-type"><span class="std std-ref">StrongType</span></a><span></span><span class="p">;</span>
+
+<span class="k">struct</span> <a class="reference internal" href="struct_utils_Version.html#doxid-structutils-1-1-version"><span class="std std-ref">Version</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// classes</span>
+
+<span class="k">class</span> <a class="reference internal" href="class_utils_CallbackTimer.html#doxid-classutils-1-1-callback-timer"><span class="std std-ref">CallbackTimer</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_utils_ConcurrentBinding.html#doxid-classutils-1-1-concurrent-binding"><span class="std std-ref">ConcurrentBinding</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Type</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_utils_Couple.html#doxid-classutils-1-1-couple"><span class="std std-ref">Couple</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span><span class="p">...</span> <span class="n">Args</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_utils_DelegatedNotifier.html#doxid-classutils-1-1-delegated-notifier"><span class="std std-ref">DelegatedNotifier</span></a><span></span><span class="p">;</span>
+
+<span class="k">class</span> <a class="reference internal" href="class_utils_Dictionary.html#doxid-classutils-1-1-dictionary"><span class="std std-ref">Dictionary</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="p">,</span> <span class="k">class</span> <span class="n">TMask</span> <span class="o">=</span> <span class="kt">uint32_t</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_utils_EnumFlags.html#doxid-classutils-1-1-enum-flags"><span class="std std-ref">EnumFlags</span></a><span></span><span class="p">;</span>
+
+<span class="k">class</span> <a class="reference internal" href="class_utils_EventHandler.html#doxid-classutils-1-1-event-handler"><span class="std std-ref">EventHandler</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_utils_GlmQuatSerializable.html#doxid-classutils-1-1-glm-quat-serializable"><span class="std std-ref">GlmQuatSerializable</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_utils_GlmVec3Serializable.html#doxid-classutils-1-1-glm-vec3-serializable"><span class="std std-ref">GlmVec3Serializable</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">IdType</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_utils_Identifiable.html#doxid-classutils-1-1-identifiable"><span class="std std-ref">Identifiable</span></a><span></span><span class="p">;</span>
+
+<span class="k">class</span> <a class="reference internal" href="class_utils_IniParser.html#doxid-classutils-1-1-ini-parser"><span class="std std-ref">IniParser</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_utils_Interval.html#doxid-classutils-1-1-interval"><span class="std std-ref">Interval</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_utils_LicenseChecker.html#doxid-classutils-1-1-license-checker"><span class="std std-ref">LicenseChecker</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_utils_LogEntry.html#doxid-classutils-1-1-log-entry"><span class="std std-ref">LogEntry</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_utils_LogReader.html#doxid-classutils-1-1-log-reader"><span class="std std-ref">LogReader</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_utils_LogWriter.html#doxid-classutils-1-1-log-writer"><span class="std std-ref">LogWriter</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_utils_Logger.html#doxid-classutils-1-1-logger"><span class="std std-ref">Logger</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_utils_NamedClass.html#doxid-classutils-1-1-named-class"><span class="std std-ref">NamedClass</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span><span class="p">...</span> <span class="n">Args</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_utils_Notifier.html#doxid-classutils-1-1-notifier"><span class="std std-ref">Notifier</span></a><span></span><span class="p">;</span>
+
+<span class="k">class</span> <a class="reference internal" href="class_utils_OnEnd.html#doxid-classutils-1-1-on-end"><span class="std std-ref">OnEnd</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Type</span><span class="p">,</span> <span class="k">typename</span> <span class="n">SerializableType</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_utils_Serializer.html#doxid-classutils-1-1-serializer"><span class="std std-ref">Serializer</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Type</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_utils_Statistics.html#doxid-classutils-1-1-statistics"><span class="std std-ref">Statistics</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Type</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_utils_Triplet.html#doxid-classutils-1-1-triplet"><span class="std std-ref">Triplet</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// global variables</span>
+
+<span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-namespaceutils-1a23e3f94c96a1846d5a09635487d5f070"><span></span><span class="n">CV_MAT_TYPE_TO_STRING</span></span><span></span><span class="p">;</span>
+<span class="k">const</span> <a class="reference internal" href="struct_utils_SpaceDefinition.html#doxid-structutils-1-1-space-definition"><span class="std std-ref">SpaceDefinition</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespaceutils-1a1f281dd9795e21840f721d987871f09f"><span></span><span class="n">PHOXI_MARKER_SPACE</span></span><span></span> <span class="o">=</span> <span class="p">[]()</span>   <span class="p">{</span>     <a class="reference internal" href="struct_utils_SpaceDefinition.html#doxid-structutils-1-1-space-definition"><span class="std std-ref">SpaceDefinition</span></a><span></span> <span class="n">space</span><span class="p">;</span>     <span class="n">space</span><span class="p">.</span><span class="n">up</span> <span class="o">=</span> <a class="reference internal" href="enum_utils_BaseAxis.html#doxid-namespaceutils-1ac2ce7fd05b735b96b21d24bbaca13bb9aafcd6d6e1c171ec7d34bd3bd07e05c5d"><span class="std std-ref">BaseAxis::positive_z</span></a><span></span><span class="p">;</span>     <span class="n">space</span><span class="p">.</span><span class="n">forward</span> <span class="o">=</span> <a class="reference internal" href="enum_utils_BaseAxis.html#doxid-namespaceutils-1ac2ce7fd05b735b96b21d24bbaca13bb9a60fb73ab8480c39e917a9e87d265a629"><span class="std std-ref">BaseAxis::negative_x</span></a><span></span><span class="p">;</span>     <span class="n">space</span><span class="p">.</span><span class="n">units</span> <span class="o">=</span> <a class="reference internal" href="enum_utils_Units.html#doxid-namespaceutils-1a3136590b979fb24d05236b9e0fd6d014ab3cd915d758008bd19d0f2428fbb354a"><span class="std std-ref">Units::mm</span></a><span></span><span class="p">;</span>     <span class="n">space</span><span class="p">.</span><span class="n">handedness</span> <span class="o">=</span> <a class="reference internal" href="enum_utils_Handedness.html#doxid-namespaceutils-1acef6187ddca424be87d0e827c7b9cf42a7c4f29407893c334a6cb7a87bf045c0d"><span class="std std-ref">Handedness::right</span></a><span></span><span class="p">;</span>     <span class="k">return</span> <span class="n">space</span><span class="p">;</span>   <span class="p">}();</span>
+<span class="k">const</span> <a class="reference internal" href="struct_utils_SpaceDefinition.html#doxid-structutils-1-1-space-definition"><span class="std std-ref">SpaceDefinition</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespaceutils-1a52a8bfbdeb59c343d03121169c5f9ed7"><span></span><span class="n">PHOXIDEVICE_MARKER_SPACE</span></span><span></span> <span class="o">=</span> <span class="p">[]()</span>   <span class="p">{</span>     <a class="reference internal" href="struct_utils_SpaceDefinition.html#doxid-structutils-1-1-space-definition"><span class="std std-ref">SpaceDefinition</span></a><span></span> <span class="n">space</span><span class="p">;</span>     <span class="n">space</span><span class="p">.</span><span class="n">up</span> <span class="o">=</span> <a class="reference internal" href="enum_utils_BaseAxis.html#doxid-namespaceutils-1ac2ce7fd05b735b96b21d24bbaca13bb9a4682a36526cc3ba31a408e5889656b41"><span class="std std-ref">BaseAxis::negative_z</span></a><span></span><span class="p">;</span>     <span class="n">space</span><span class="p">.</span><span class="n">forward</span> <span class="o">=</span> <a class="reference internal" href="enum_utils_BaseAxis.html#doxid-namespaceutils-1ac2ce7fd05b735b96b21d24bbaca13bb9a60fb73ab8480c39e917a9e87d265a629"><span class="std std-ref">BaseAxis::negative_x</span></a><span></span><span class="p">;</span>     <span class="n">space</span><span class="p">.</span><span class="n">units</span> <span class="o">=</span> <a class="reference internal" href="enum_utils_Units.html#doxid-namespaceutils-1a3136590b979fb24d05236b9e0fd6d014a6f8f57715090da2632453988d9a1501b"><span class="std std-ref">Units::m</span></a><span></span><span class="p">;</span>     <span class="n">space</span><span class="p">.</span><span class="n">handedness</span> <span class="o">=</span> <a class="reference internal" href="enum_utils_Handedness.html#doxid-namespaceutils-1acef6187ddca424be87d0e827c7b9cf42a7c4f29407893c334a6cb7a87bf045c0d"><span class="std std-ref">Handedness::right</span></a><span></span><span class="p">;</span>     <span class="k">return</span> <span class="n">space</span><span class="p">;</span>   <span class="p">}();</span>
+<span class="k">const</span> <a class="reference internal" href="struct_utils_SpaceDefinition.html#doxid-structutils-1-1-space-definition"><span class="std std-ref">SpaceDefinition</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespaceutils-1a1713cb7ddea77a3d4a5dbbb0e624b818"><span></span><span class="n">COGS_MARKER_SPACE</span></span><span></span> <span class="o">=</span> <span class="p">[]()</span>   <span class="p">{</span>     <a class="reference internal" href="struct_utils_SpaceDefinition.html#doxid-structutils-1-1-space-definition"><span class="std std-ref">SpaceDefinition</span></a><span></span> <span class="n">space</span><span class="p">;</span>     <span class="n">space</span><span class="p">.</span><span class="n">up</span> <span class="o">=</span> <a class="reference internal" href="enum_utils_BaseAxis.html#doxid-namespaceutils-1ac2ce7fd05b735b96b21d24bbaca13bb9a4bb53713895442539a22db888c8ec24e"><span class="std std-ref">BaseAxis::positive_y</span></a><span></span><span class="p">;</span>     <span class="n">space</span><span class="p">.</span><span class="n">forward</span> <span class="o">=</span> <a class="reference internal" href="enum_utils_BaseAxis.html#doxid-namespaceutils-1ac2ce7fd05b735b96b21d24bbaca13bb9aafcd6d6e1c171ec7d34bd3bd07e05c5d"><span class="std std-ref">BaseAxis::positive_z</span></a><span></span><span class="p">;</span>     <span class="n">space</span><span class="p">.</span><span class="n">units</span> <span class="o">=</span> <a class="reference internal" href="enum_utils_Units.html#doxid-namespaceutils-1a3136590b979fb24d05236b9e0fd6d014a6f8f57715090da2632453988d9a1501b"><span class="std std-ref">Units::m</span></a><span></span><span class="p">;</span>     <span class="n">space</span><span class="p">.</span><span class="n">handedness</span> <span class="o">=</span> <a class="reference internal" href="enum_utils_Handedness.html#doxid-namespaceutils-1acef6187ddca424be87d0e827c7b9cf42a7c4f29407893c334a6cb7a87bf045c0d"><span class="std std-ref">Handedness::right</span></a><span></span><span class="p">;</span>     <span class="k">return</span> <span class="n">space</span><span class="p">;</span>   <span class="p">}();</span>
+<span class="k">const</span> <a class="reference internal" href="struct_utils_SpaceDefinition.html#doxid-structutils-1-1-space-definition"><span class="std std-ref">SpaceDefinition</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespaceutils-1a4c8682709019eed92806ce5c68c147fe"><span></span><span class="n">PHOXI_CAMERA_SPACE</span></span><span></span> <span class="o">=</span> <span class="p">[]()</span>   <span class="p">{</span>     <a class="reference internal" href="struct_utils_SpaceDefinition.html#doxid-structutils-1-1-space-definition"><span class="std std-ref">SpaceDefinition</span></a><span></span> <span class="n">space</span><span class="p">;</span>     <span class="n">space</span><span class="p">.</span><span class="n">up</span> <span class="o">=</span> <a class="reference internal" href="enum_utils_BaseAxis.html#doxid-namespaceutils-1ac2ce7fd05b735b96b21d24bbaca13bb9a070bacfa079ac60ebe02f334942fa42f"><span class="std std-ref">BaseAxis::negative_y</span></a><span></span><span class="p">;</span>     <span class="n">space</span><span class="p">.</span><span class="n">forward</span> <span class="o">=</span> <a class="reference internal" href="enum_utils_BaseAxis.html#doxid-namespaceutils-1ac2ce7fd05b735b96b21d24bbaca13bb9aafcd6d6e1c171ec7d34bd3bd07e05c5d"><span class="std std-ref">BaseAxis::positive_z</span></a><span></span><span class="p">;</span>     <span class="n">space</span><span class="p">.</span><span class="n">units</span> <span class="o">=</span> <a class="reference internal" href="enum_utils_Units.html#doxid-namespaceutils-1a3136590b979fb24d05236b9e0fd6d014ab3cd915d758008bd19d0f2428fbb354a"><span class="std std-ref">Units::mm</span></a><span></span><span class="p">;</span>     <span class="n">space</span><span class="p">.</span><span class="n">handedness</span> <span class="o">=</span> <a class="reference internal" href="enum_utils_Handedness.html#doxid-namespaceutils-1acef6187ddca424be87d0e827c7b9cf42a7c4f29407893c334a6cb7a87bf045c0d"><span class="std std-ref">Handedness::right</span></a><span></span><span class="p">;</span>     <span class="k">return</span> <span class="n">space</span><span class="p">;</span>   <span class="p">}();</span>
+<span class="k">const</span> <a class="reference internal" href="struct_utils_SpaceDefinition.html#doxid-structutils-1-1-space-definition"><span class="std std-ref">SpaceDefinition</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-namespaceutils-1a26697e7f6e2303b8b16eb8c3126ffcbc"><span></span><span class="n">COGS_CAMERA_SPACE</span></span><span></span> <span class="o">=</span> <span class="p">[]()</span>   <span class="p">{</span>     <a class="reference internal" href="struct_utils_SpaceDefinition.html#doxid-structutils-1-1-space-definition"><span class="std std-ref">SpaceDefinition</span></a><span></span> <span class="n">space</span><span class="p">;</span>     <span class="n">space</span><span class="p">.</span><span class="n">up</span> <span class="o">=</span> <a class="reference internal" href="enum_utils_BaseAxis.html#doxid-namespaceutils-1ac2ce7fd05b735b96b21d24bbaca13bb9a4bb53713895442539a22db888c8ec24e"><span class="std std-ref">BaseAxis::positive_y</span></a><span></span><span class="p">;</span>     <span class="n">space</span><span class="p">.</span><span class="n">forward</span> <span class="o">=</span> <a class="reference internal" href="enum_utils_BaseAxis.html#doxid-namespaceutils-1ac2ce7fd05b735b96b21d24bbaca13bb9a4682a36526cc3ba31a408e5889656b41"><span class="std std-ref">BaseAxis::negative_z</span></a><span></span><span class="p">;</span>     <span class="n">space</span><span class="p">.</span><span class="n">units</span> <span class="o">=</span> <a class="reference internal" href="enum_utils_Units.html#doxid-namespaceutils-1a3136590b979fb24d05236b9e0fd6d014a6f8f57715090da2632453988d9a1501b"><span class="std std-ref">Units::m</span></a><span></span><span class="p">;</span>     <span class="n">space</span><span class="p">.</span><span class="n">handedness</span> <span class="o">=</span> <a class="reference internal" href="enum_utils_Handedness.html#doxid-namespaceutils-1acef6187ddca424be87d0e827c7b9cf42a7c4f29407893c334a6cb7a87bf045c0d"><span class="std std-ref">Handedness::right</span></a><span></span><span class="p">;</span>     <span class="k">return</span> <span class="n">space</span><span class="p">;</span>   <span class="p">}();</span>
+
+<span class="c1">// global functions</span>
+
+<span class="n">glm</span><span class="o">::</span><span class="n">vec3</span> <a class="reference internal" href="#doxid-namespaceutils-1a73656d93fd3711b58a4d82e5a348c5a8"><span class="std std-ref">BulletToGlmVec</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">btVector3</span><span class="o">&amp;</span> <span class="n">bt_vec</span><span class="p">);</span>
+<span class="n">glm</span><span class="o">::</span><span class="n">quat</span> <a class="reference internal" href="#doxid-namespaceutils-1a57ff39c9d2e3ba9f77add5b65215083a"><span class="std std-ref">BulletToGlmQuat</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">btQuaternion</span><span class="o">&amp;</span> <span class="n">bt_quat</span><span class="p">);</span>
+<span class="n">Eigen</span><span class="o">::</span><span class="n">Vector3d</span> <a class="reference internal" href="#doxid-namespaceutils-1ae62bb8c3da053b34cf17937286d27e5e"><span class="std std-ref">BulletToEigenVec</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">btVector3</span><span class="o">&amp;</span> <span class="n">bt_vec</span><span class="p">);</span>
+<span class="n">Eigen</span><span class="o">::</span><span class="n">Quaterniond</span> <a class="reference internal" href="#doxid-namespaceutils-1ab14d010c3ba9f6d509dcc86ced7a7aa5"><span class="std std-ref">BulletToEigenQuat</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">btQuaternion</span><span class="o">&amp;</span> <span class="n">bt_quat</span><span class="p">);</span>
+<span class="n">btVector3</span> <a class="reference internal" href="#doxid-namespaceutils-1a756d71df4affcbf45ae7b2365c14b702"><span class="std std-ref">GlmToBulletVec</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <span class="n">vec</span><span class="p">);</span>
+<span class="n">btQuaternion</span> <a class="reference internal" href="#doxid-namespaceutils-1ada1dae0843e669867b374540e920f283"><span class="std std-ref">GlmToBulletQuat</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">quat</span><span class="o">&amp;</span> <span class="n">glm_quat</span><span class="p">);</span>
+<span class="kt">bool</span> <a class="reference internal" href="#doxid-namespaceutils-1a3719b959a0160a4d5f4410feea837c52"><span class="std std-ref">HasPermissionToWriteHere</span></a><span></span><span class="p">();</span>
+<span class="n">gl</span><span class="o">::</span><span class="n">GLenum</span> <span class="doxyrest-code-target target" id="doxid-namespaceutils-1a1be8747e8bb1e2f38e28973c58e9f69b"><span></span><span class="n">CvMatTypeToGlType</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="kt">int</span> <span class="n">mat_type</span><span class="p">);</span>
+<span class="kt">unsigned</span> <span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-namespaceutils-1ac80032fce39d67540eca35bc18dbc27d"><span></span><span class="n">GetNumOfChannels</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="kt">int</span> <span class="n">mat_type</span><span class="p">);</span>
+<span class="n">glw</span><span class="o">::</span><span class="n">PTexture2D</span> <span class="doxyrest-code-target target" id="doxid-namespaceutils-1abcf39b2d92486973cb15cd374d097f7e"><span></span><span class="n">MatToTexture</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="n">cv</span><span class="o">::</span><span class="n">Mat</span><span class="o">&amp;</span> <span class="n">image</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">flip_vertically</span><span class="p">);</span>
+<span class="n">cv</span><span class="o">::</span><span class="n">Mat</span> <span class="doxyrest-code-target target" id="doxid-namespaceutils-1af41aae16c4e74d5d85d1d2912a495161"><span></span><span class="n">TextureToMat</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="n">glw</span><span class="o">::</span><span class="n">PTexture2D</span><span class="o">&amp;</span> <span class="n">texture</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">flip_vertically</span><span class="p">,</span> <span class="k">const</span> <span class="kt">int</span> <span class="n">mat_type</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="kt">int</span> <span class="n">m</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="k">typename</span> <span class="n">OutT</span> <span class="o">=</span> <span class="kt">float</span><span class="o">&gt;</span>
+<span class="n">glm</span><span class="o">::</span><span class="n">mat</span><span class="o">&lt;</span><span class="n">m</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">OutT</span><span class="p">,</span> <span class="n">glm</span><span class="o">::</span><span class="n">precision</span><span class="o">::</span><span class="n">highp</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespaceutils-1a35b1882526e02f7ca42e1bce82a5ea9d"><span class="std std-ref">EigenToGlmMat</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">n</span><span class="o">&gt;&amp;</span> <span class="n">em</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="kt">int</span> <span class="n">m</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span><span class="o">&gt;</span>
+<span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">n</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespaceutils-1a9cd7edb9e37a2adc33919a1f65483164"><span class="std std-ref">GlmToEigenMat</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">mat</span><span class="o">&lt;</span><span class="n">m</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="kt">float</span><span class="p">,</span> <span class="n">glm</span><span class="o">::</span><span class="n">precision</span><span class="o">::</span><span class="n">highp</span><span class="o">&gt;&amp;</span> <span class="n">glm_mat</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="kt">int</span> <span class="n">m</span><span class="o">&gt;</span>
+<span class="n">glm</span><span class="o">::</span><span class="n">vec</span><span class="o">&lt;</span><span class="n">m</span><span class="p">,</span> <span class="kt">float</span><span class="p">,</span> <span class="n">glm</span><span class="o">::</span><span class="n">precision</span><span class="o">::</span><span class="n">highp</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespaceutils-1a0c2ecac88c6e5f0ed446a01bf2565fc6"><span class="std std-ref">EigenToGlmVec</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="mi">1</span><span class="o">&gt;&amp;</span> <span class="n">em</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="n">glm</span><span class="o">::</span><span class="n">quat</span> <a class="reference internal" href="#doxid-namespaceutils-1a48b42b4c81ccde502f9702384b30ab03"><span class="std std-ref">EigenToGlmQuat</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">Quaternion</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">q</span><span class="p">);</span>
+
+<span class="n">Eigen</span><span class="o">::</span><span class="n">Vector3d</span> <a class="reference internal" href="#doxid-namespaceutils-1a90fc8fc892d31ba0893e90f8a0622071"><span class="std std-ref">GlmToEigenVec</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <span class="n">glm_vec</span><span class="p">);</span>
+<span class="n">btVector3</span> <a class="reference internal" href="#doxid-namespaceutils-1a99da25117e975a44d63f33d6f57db8f1"><span class="std std-ref">EigenToBulletVec</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">Vector3d</span><span class="o">&amp;</span> <span class="n">eigen_vec</span><span class="p">);</span>
+<span class="n">btQuaternion</span> <a class="reference internal" href="#doxid-namespaceutils-1ad27461398b095205733d78326959f183"><span class="std std-ref">EigenToBulletQuat</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">Quaterniond</span><span class="o">&amp;</span> <span class="n">eigen_quat</span><span class="p">);</span>
+<span class="n">glm</span><span class="o">::</span><span class="n">vec2</span> <a class="reference internal" href="#doxid-namespaceutils-1aa42759aa78eac1785483312b6362ec6e"><span class="std std-ref">GetPrincipalPoint</span></a><span></span><span class="p">(</span><span class="kt">float</span> <span class="n">focal_length</span><span class="p">,</span> <span class="kt">float</span> <span class="n">fovx</span><span class="p">,</span> <span class="kt">float</span> <span class="n">fovy</span><span class="p">);</span>
+<a class="reference internal" href="struct_utils_IntrinsicParams.html#doxid-structutils-1-1-intrinsic-params"><span class="std std-ref">IntrinsicParams</span></a><span></span> <a class="reference internal" href="#doxid-namespaceutils-1aa8ef11f680c06fec082c198902b00b8e"><span class="std std-ref">GetIntrinsicParamsFromResolution</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">uvec2</span><span class="o">&amp;</span> <span class="n">resolution</span><span class="p">,</span> <span class="kt">float</span> <span class="n">fovx</span><span class="p">,</span> <span class="kt">float</span> <span class="n">fovy</span><span class="p">);</span>
+<a class="reference internal" href="struct_utils_IntrinsicParams.html#doxid-structutils-1-1-intrinsic-params"><span class="std std-ref">IntrinsicParams</span></a><span></span> <a class="reference internal" href="#doxid-namespaceutils-1ac60344820ad39ab528fe71dfc394e35f"><span class="std std-ref">GetIntrinsicParamsFromDepth</span></a><span></span><span class="p">(</span><span class="kt">float</span> <span class="n">focal_length</span><span class="p">,</span> <span class="kt">float</span> <span class="n">fovx</span><span class="p">,</span> <span class="kt">float</span> <span class="n">fovy</span><span class="p">);</span>
+<span class="k">static</span> <span class="kt">float</span> <a class="reference internal" href="#doxid-namespaceutils-1a829b0baba52c37eaea963ed6db76151c"><span class="std std-ref">GetUnitConversionRatio</span></a><span></span><span class="p">(</span><a class="reference internal" href="enum_utils_Units.html#doxid-namespaceutils-1a3136590b979fb24d05236b9e0fd6d014"><span class="std std-ref">Units</span></a><span></span> <span class="n">source_units</span><span class="p">,</span> <a class="reference internal" href="enum_utils_Units.html#doxid-namespaceutils-1a3136590b979fb24d05236b9e0fd6d014"><span class="std std-ref">Units</span></a><span></span> <span class="n">target_units</span><span class="p">);</span>
+<span class="k">static</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span> <a class="reference internal" href="#doxid-namespaceutils-1adcb5284dc0bb1f3f7fc7eba0dab094b3"><span class="std std-ref">BaseAxisToVec3</span></a><span></span><span class="p">(</span><a class="reference internal" href="enum_utils_BaseAxis.html#doxid-namespaceutils-1ac2ce7fd05b735b96b21d24bbaca13bb9"><span class="std std-ref">BaseAxis</span></a><span></span> <span class="n">axis</span><span class="p">);</span>
+<span class="k">static</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec4</span> <a class="reference internal" href="#doxid-namespaceutils-1af8fa87f83c0dc83e7ddc8215e633f5d5"><span class="std std-ref">BaseAxisToVec4</span></a><span></span><span class="p">(</span><a class="reference internal" href="enum_utils_BaseAxis.html#doxid-namespaceutils-1ac2ce7fd05b735b96b21d24bbaca13bb9"><span class="std std-ref">BaseAxis</span></a><span></span> <span class="n">axis</span><span class="p">,</span> <span class="kt">float</span> <span class="n">w</span> <span class="o">=</span> <span class="mf">0.0f</span><span class="p">);</span>
+<span class="k">static</span> <span class="kt">bool</span> <span class="doxyrest-code-target target" id="doxid-namespaceutils-1ae43a43b3a74f0998885de9da9e03b31e"><span></span><span class="n">AreCollinear</span></span><span></span><span class="p">(</span><a class="reference internal" href="enum_utils_BaseAxis.html#doxid-namespaceutils-1ac2ce7fd05b735b96b21d24bbaca13bb9"><span class="std std-ref">BaseAxis</span></a><span></span> <span class="n">axis_a</span><span class="p">,</span> <a class="reference internal" href="enum_utils_BaseAxis.html#doxid-namespaceutils-1ac2ce7fd05b735b96b21d24bbaca13bb9"><span class="std std-ref">BaseAxis</span></a><span></span> <span class="n">axis_b</span><span class="p">);</span>
+<span class="kt">bool</span> <span class="doxyrest-code-target target" id="doxid-namespaceutils-1afc1e57bbee990e59d5161e43d6525e2e"><span></span><span class="k">operator</span><span class="o">&lt;</span></span><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_utils_Version.html#doxid-structutils-1-1-version"><span class="std std-ref">Version</span></a><span></span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="struct_utils_Version.html#doxid-structutils-1-1-version"><span class="std std-ref">Version</span></a><span></span><span class="o">&amp;</span> <span class="n">b</span><span class="p">);</span>
+<span class="kt">bool</span> <span class="doxyrest-code-target target" id="doxid-namespaceutils-1a82023bbd434ffdda320c93f6fafea7ad"><span></span><span class="k">operator</span><span class="o">&gt;</span></span><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_utils_Version.html#doxid-structutils-1-1-version"><span class="std std-ref">Version</span></a><span></span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="struct_utils_Version.html#doxid-structutils-1-1-version"><span class="std std-ref">Version</span></a><span></span><span class="o">&amp;</span> <span class="n">b</span><span class="p">);</span>
+<span class="kt">bool</span> <span class="doxyrest-code-target target" id="doxid-namespaceutils-1a16dc8b959b6b9354c53f30f9ffd684ab"><span></span><span class="k">operator</span><span class="o">&lt;=</span></span><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_utils_Version.html#doxid-structutils-1-1-version"><span class="std std-ref">Version</span></a><span></span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="struct_utils_Version.html#doxid-structutils-1-1-version"><span class="std std-ref">Version</span></a><span></span><span class="o">&amp;</span> <span class="n">b</span><span class="p">);</span>
+<span class="kt">bool</span> <span class="doxyrest-code-target target" id="doxid-namespaceutils-1a2c61e44f1e0e3f491b23e3c318bcfaf4"><span></span><span class="k">operator</span><span class="o">&gt;=</span></span><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_utils_Version.html#doxid-structutils-1-1-version"><span class="std std-ref">Version</span></a><span></span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="struct_utils_Version.html#doxid-structutils-1-1-version"><span class="std std-ref">Version</span></a><span></span><span class="o">&amp;</span> <span class="n">b</span><span class="p">);</span>
+<span class="kt">bool</span> <span class="doxyrest-code-target target" id="doxid-namespaceutils-1a9a82ee1f4a3e9d9ac90013c14f6c9529"><span></span><span class="k">operator</span><span class="o">==</span></span><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_utils_Version.html#doxid-structutils-1-1-version"><span class="std std-ref">Version</span></a><span></span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="struct_utils_Version.html#doxid-structutils-1-1-version"><span class="std std-ref">Version</span></a><span></span><span class="o">&amp;</span> <span class="n">b</span><span class="p">);</span>
+<span class="kt">bool</span> <span class="doxyrest-code-target target" id="doxid-namespaceutils-1acc1dbeffe44a5f534ba7782389063a6d"><span></span><span class="k">operator</span><span class="o">!=</span></span><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_utils_Version.html#doxid-structutils-1-1-version"><span class="std std-ref">Version</span></a><span></span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="struct_utils_Version.html#doxid-structutils-1-1-version"><span class="std std-ref">Version</span></a><span></span><span class="o">&amp;</span> <span class="n">b</span><span class="p">);</span>
+
+<span class="p">}</span> <span class="c1">// namespace utils</span></pre>
+</div>
+<div class="section" id="detailed-documentation">
+<span id="details-namespaceutils"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
+<p>General namespace for utilities.</p>
+<div class="section" id="global-functions">
+<h3>Global Functions<a class="headerlink" href="#global-functions" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceutils-1a73656d93fd3711b58a4d82e5a348c5a8"><span id="index-1"></span><span></span><span class="n">glm</span><span class="o">::</span><span class="n">vec3</span> <span class="n">BulletToGlmVec</span><span class="p">(</span><span class="k">const</span> <span class="n">btVector3</span><span class="o">&amp;</span> <span class="n">bt_vec</span><span class="p">)</span></pre>
+<p>Converts bullet vector to glm vector.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceutils-1a57ff39c9d2e3ba9f77add5b65215083a"><span id="index-2"></span><span></span><span class="n">glm</span><span class="o">::</span><span class="n">quat</span> <span class="n">BulletToGlmQuat</span><span class="p">(</span><span class="k">const</span> <span class="n">btQuaternion</span><span class="o">&amp;</span> <span class="n">bt_quat</span><span class="p">)</span></pre>
+<p>Converts bullet quaternion to glm quaternion.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceutils-1ae62bb8c3da053b34cf17937286d27e5e"><span id="index-3"></span><span></span><span class="n">Eigen</span><span class="o">::</span><span class="n">Vector3d</span> <span class="n">BulletToEigenVec</span><span class="p">(</span><span class="k">const</span> <span class="n">btVector3</span><span class="o">&amp;</span> <span class="n">bt_vec</span><span class="p">)</span></pre>
+<p>Converts bullet vector to Eigen vector.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceutils-1ab14d010c3ba9f6d509dcc86ced7a7aa5"><span id="index-4"></span><span></span><span class="n">Eigen</span><span class="o">::</span><span class="n">Quaterniond</span> <span class="n">BulletToEigenQuat</span><span class="p">(</span><span class="k">const</span> <span class="n">btQuaternion</span><span class="o">&amp;</span> <span class="n">bt_quat</span><span class="p">)</span></pre>
+<p>Converts bullet quaternion to Eigen quaternion.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceutils-1a756d71df4affcbf45ae7b2365c14b702"><span id="index-5"></span><span></span><span class="n">btVector3</span> <span class="n">GlmToBulletVec</span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <span class="n">vec</span><span class="p">)</span></pre>
+<p>Converts glm vector to bullet vector.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceutils-1ada1dae0843e669867b374540e920f283"><span id="index-6"></span><span></span><span class="n">btQuaternion</span> <span class="n">GlmToBulletQuat</span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">quat</span><span class="o">&amp;</span> <span class="n">glm_quat</span><span class="p">)</span></pre>
+<p>Converts glm quaternion to bullet quaternion.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceutils-1a3719b959a0160a4d5f4410feea837c52"><span id="index-7"></span><span></span><span class="kt">bool</span> <span class="n">HasPermissionToWriteHere</span><span class="p">()</span></pre>
+<p>Function returns if the current user has the right to write into the project directory.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceutils-1a35b1882526e02f7ca42e1bce82a5ea9d"><span id="index-8"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="kt">int</span> <span class="n">m</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="k">typename</span> <span class="n">OutT</span> <span class="o">=</span> <span class="kt">float</span><span class="o">&gt;</span>
+<span class="n">glm</span><span class="o">::</span><span class="n">mat</span><span class="o">&lt;</span><span class="n">m</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">OutT</span><span class="p">,</span> <span class="n">glm</span><span class="o">::</span><span class="n">precision</span><span class="o">::</span><span class="n">highp</span><span class="o">&gt;</span> <span class="n">EigenToGlmMat</span><span class="p">(</span><span class="k">const</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">n</span><span class="o">&gt;&amp;</span> <span class="n">em</span><span class="p">)</span></pre>
+<p>Converts Eigen matrix to glm matrix.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceutils-1a9cd7edb9e37a2adc33919a1f65483164"><span id="index-9"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="kt">int</span> <span class="n">m</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span><span class="o">&gt;</span>
+<span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">n</span><span class="o">&gt;</span> <span class="n">GlmToEigenMat</span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">mat</span><span class="o">&lt;</span><span class="n">m</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="kt">float</span><span class="p">,</span> <span class="n">glm</span><span class="o">::</span><span class="n">precision</span><span class="o">::</span><span class="n">highp</span><span class="o">&gt;&amp;</span> <span class="n">glm_mat</span><span class="p">)</span></pre>
+<p>Converts Eigen matrix to glm matrix.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceutils-1a0c2ecac88c6e5f0ed446a01bf2565fc6"><span id="index-10"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="kt">int</span> <span class="n">m</span><span class="o">&gt;</span>
+<span class="n">glm</span><span class="o">::</span><span class="n">vec</span><span class="o">&lt;</span><span class="n">m</span><span class="p">,</span> <span class="kt">float</span><span class="p">,</span> <span class="n">glm</span><span class="o">::</span><span class="n">precision</span><span class="o">::</span><span class="n">highp</span><span class="o">&gt;</span> <span class="n">EigenToGlmVec</span><span class="p">(</span><span class="k">const</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="mi">1</span><span class="o">&gt;&amp;</span> <span class="n">em</span><span class="p">)</span></pre>
+<p>Converts Eigen matrix to glm vector.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceutils-1a48b42b4c81ccde502f9702384b30ab03"><span id="index-11"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="n">glm</span><span class="o">::</span><span class="n">quat</span> <span class="n">EigenToGlmQuat</span><span class="p">(</span><span class="k">const</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">Quaternion</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">q</span><span class="p">)</span></pre>
+<p>Converts Eigen quaternion to glm quaternion.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceutils-1a90fc8fc892d31ba0893e90f8a0622071"><span id="index-12"></span><span></span><span class="n">Eigen</span><span class="o">::</span><span class="n">Vector3d</span> <span class="n">GlmToEigenVec</span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <span class="n">glm_vec</span><span class="p">)</span></pre>
+<p>Converts glm vector to Eigen vector.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceutils-1a99da25117e975a44d63f33d6f57db8f1"><span id="index-13"></span><span></span><span class="n">btVector3</span> <span class="n">EigenToBulletVec</span><span class="p">(</span><span class="k">const</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">Vector3d</span><span class="o">&amp;</span> <span class="n">eigen_vec</span><span class="p">)</span></pre>
+<p>Converts Eigen vector to bullet vector.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceutils-1ad27461398b095205733d78326959f183"><span id="index-14"></span><span></span><span class="n">btQuaternion</span> <span class="n">EigenToBulletQuat</span><span class="p">(</span><span class="k">const</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">Quaterniond</span><span class="o">&amp;</span> <span class="n">eigen_quat</span><span class="p">)</span></pre>
+<p>Converts Eigen quaternion to bullet quaternion.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceutils-1aa42759aa78eac1785483312b6362ec6e"><span id="index-15"></span><span></span><span class="n">glm</span><span class="o">::</span><span class="n">vec2</span> <span class="n">GetPrincipalPoint</span><span class="p">(</span><span class="kt">float</span> <span class="n">focal_length</span><span class="p">,</span> <span class="kt">float</span> <span class="n">fovx</span><span class="p">,</span> <span class="kt">float</span> <span class="n">fovy</span><span class="p">)</span></pre>
+<p>Returns intrinsic cx, cy parameters for defined projection depth and field of view angles.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceutils-1aa8ef11f680c06fec082c198902b00b8e"><span id="index-16"></span><a class="reference internal" href="struct_utils_IntrinsicParams.html#doxid-structutils-1-1-intrinsic-params"><span class="std std-ref">IntrinsicParams</span></a><span></span> <span class="n">GetIntrinsicParamsFromResolution</span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">uvec2</span><span class="o">&amp;</span> <span class="n">resolution</span><span class="p">,</span> <span class="kt">float</span> <span class="n">fovx</span><span class="p">,</span> <span class="kt">float</span> <span class="n">fovy</span><span class="p">)</span></pre>
+<p>Calculates intrinsic projection parameters from resolution and field of view angles.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceutils-1ac60344820ad39ab528fe71dfc394e35f"><span id="index-17"></span><a class="reference internal" href="struct_utils_IntrinsicParams.html#doxid-structutils-1-1-intrinsic-params"><span class="std std-ref">IntrinsicParams</span></a><span></span> <span class="n">GetIntrinsicParamsFromDepth</span><span class="p">(</span><span class="kt">float</span> <span class="n">focal_length</span><span class="p">,</span> <span class="kt">float</span> <span class="n">fovx</span><span class="p">,</span> <span class="kt">float</span> <span class="n">fovy</span><span class="p">)</span></pre>
+<p>Calculates intrinsic projection parameters from projection depth and field of view angles.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceutils-1a829b0baba52c37eaea963ed6db76151c"><span id="index-18"></span><span></span><span class="k">static</span> <span class="kt">float</span> <span class="n">GetUnitConversionRatio</span><span class="p">(</span><a class="reference internal" href="enum_utils_Units.html#doxid-namespaceutils-1a3136590b979fb24d05236b9e0fd6d014"><span class="std std-ref">Units</span></a><span></span> <span class="n">source_units</span><span class="p">,</span> <a class="reference internal" href="enum_utils_Units.html#doxid-namespaceutils-1a3136590b979fb24d05236b9e0fd6d014"><span class="std std-ref">Units</span></a><span></span> <span class="n">target_units</span><span class="p">)</span></pre>
+<p>Gets ratio that describes relation between two provided units. target_value = source_value * ratio.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceutils-1adcb5284dc0bb1f3f7fc7eba0dab094b3"><span id="index-19"></span><span></span><span class="k">static</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span> <span class="n">BaseAxisToVec3</span><span class="p">(</span><a class="reference internal" href="enum_utils_BaseAxis.html#doxid-namespaceutils-1ac2ce7fd05b735b96b21d24bbaca13bb9"><span class="std std-ref">BaseAxis</span></a><span></span> <span class="n">axis</span><span class="p">)</span></pre>
+<p>Converts base axis to vec3.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceutils-1af8fa87f83c0dc83e7ddc8215e633f5d5"><span id="index-20"></span><span></span><span class="k">static</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec4</span> <span class="n">BaseAxisToVec4</span><span class="p">(</span><a class="reference internal" href="enum_utils_BaseAxis.html#doxid-namespaceutils-1ac2ce7fd05b735b96b21d24bbaca13bb9"><span class="std std-ref">BaseAxis</span></a><span></span> <span class="n">axis</span><span class="p">,</span> <span class="kt">float</span> <span class="n">w</span> <span class="o">=</span> <span class="mf">0.0f</span><span class="p">)</span></pre>
+<p>Converts base axis to vec4, with possible custom w element value.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Skeletex Research
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

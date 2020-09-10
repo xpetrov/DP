@@ -1,0 +1,389 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>enum hiro::Key &mdash; HIRO 0.4.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/hiro-fav-32.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/target-highlight.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/hiro_theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-sphinx_rtd_theme.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="enum hiro::Mod" href="enum_hiro_Mod.html" />
+    <link rel="prev" title="enum hiro::EventStatus" href="enum_hiro_EventStatus.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: rgb(248, 216, 60)" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/hiro-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_0.html">T0: Setting up Visual Studio Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_1.html">T1: Introduction to HIRO GUI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_2.html">T2: Creating Custom Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_3.html">T3: Overview of Gadget Features</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="shader_api.html">Shader API</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="global.html">Global Namespace</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="namespace_cegui_ext.html">namespace cegui_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_dialog.html">namespace dialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_file_types.html">namespace file_types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_fs.html">namespace fs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_func.html">namespace func</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_geom.html">namespace geom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_glm_ext.html">namespace glm_ext</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="namespace_hiro.html">namespace hiro</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro_draw.html">namespace hiro::draw</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro_gui.html">namespace hiro::gui</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro_modules.html">namespace hiro::modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro_shader.html">namespace hiro::shader</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_BoolFunc.html">enum hiro::BoolFunc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_EventStatus.html">enum hiro::EventStatus</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">enum hiro::Key</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_Mod.html">enum hiro::Mod</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_MouseButton.html">enum hiro::MouseButton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_hiro_ActiveResourceInfo.html">struct hiro::ActiveResourceInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_hiro_ResourceId.html">struct hiro::ResourceId</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Camera.html">class hiro::Camera</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Debugger.html">class hiro::Debugger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Exportable.html">class hiro::Exportable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Gadget.html">class hiro::Gadget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_GuiGenerator.html">class hiro::GuiGenerator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_GuiPanel.html">class hiro::GuiPanel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_ModKeys.html">class hiro::ModKeys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Resource.html">class hiro::Resource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_omp_ext.html">namespace omp_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_std_ext.html">namespace std_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_time_m.html">namespace time_m</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_ulog.html">namespace ulog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_uprogress.html">namespace uprogress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_utils.html">namespace utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_Config.html">class Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_IDialogInterface.html">class IDialogInterface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_WxWidgetsDialog.html">class WxWidgetsDialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">HIRO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="global.html">Global Namespace</a> &raquo;</li>
+        
+          <li><a href="namespace_hiro.html">namespace hiro</a> &raquo;</li>
+        
+      <li>enum hiro::Key</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="enum-hiro-key">
+<span id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27b"></span><span id="index-0"></span><h1>enum hiro::Key<a class="headerlink" href="#enum-hiro-key" title="Permalink to this headline">¶</a></h1>
+<p>Key names.</p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;Input.h&gt;</span><span class="cp"></span>
+
+<span class="k">enum</span> <span class="n">Key</span> <span class="p">{</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27baad921d60486366258809553a3db49a4a"><span></span><span class="n">unknown</span></span><span></span>       <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27baff2364a0be3d20e46cc69efb36afe9a5"><span></span><span class="n">space</span></span><span></span>         <span class="o">=</span> <span class="mi">32</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba5bb3d7fe3608daf56c6301d00c582897"><span></span><span class="n">apostrophe</span></span><span></span>    <span class="o">=</span> <span class="mi">39</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27bab6d00dc1ba038e5901cd6c06b2daa192"><span></span><span class="n">comma</span></span><span></span>         <span class="o">=</span> <span class="mi">44</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27badabe6e597b70e5760826aea1dcc564f7"><span></span><span class="n">minus</span></span><span></span>         <span class="o">=</span> <span class="mi">45</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27baa0acfa46d86f7610b2c73dbb28f64701"><span></span><span class="n">period</span></span><span></span>        <span class="o">=</span> <span class="mi">46</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba9fbbaa4cc515bc46e0c12e82a31df736"><span></span><span class="n">slash</span></span><span></span>         <span class="o">=</span> <span class="mi">47</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba28d61f7b1f07d88c18f1068410d140b5"><span></span><span class="n">k0</span></span><span></span>            <span class="o">=</span> <span class="mi">48</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27bab637b17af08aced8850c18cccde915da"><span></span><span class="n">k1</span></span><span></span>            <span class="o">=</span> <span class="mi">49</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba61620957a1443c946a143cf99a7d24fa"><span></span><span class="n">k2</span></span><span></span>            <span class="o">=</span> <span class="mi">50</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27baf7ab469d1dc79166fc874dadcc0dd854"><span></span><span class="n">k3</span></span><span></span>            <span class="o">=</span> <span class="mi">51</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27bac90b440e841a6b82e1f9b3299164296b"><span></span><span class="n">k4</span></span><span></span>            <span class="o">=</span> <span class="mi">52</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba97b2f1edf640580f66056cc4bfcf6335"><span></span><span class="n">k5</span></span><span></span>            <span class="o">=</span> <span class="mi">53</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba4d693a8619963f7750462b678770e604"><span></span><span class="n">k6</span></span><span></span>            <span class="o">=</span> <span class="mi">54</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba0219e2f70fd952718097b6a19a33046c"><span></span><span class="n">k7</span></span><span></span>            <span class="o">=</span> <span class="mi">55</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba0304e80268763562dd0b89268dbd0d33"><span></span><span class="n">k8</span></span><span></span>            <span class="o">=</span> <span class="mi">56</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba533f4c9b5413d9ecbf6284f110a9789a"><span></span><span class="n">k9</span></span><span></span>            <span class="o">=</span> <span class="mi">57</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba77b7e24bb3642a4b9d3081d393785273"><span></span><span class="n">semicolon</span></span><span></span>     <span class="o">=</span> <span class="mi">59</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba465289687a70db7aa7217cc240c29f0f"><span></span><span class="n">equal</span></span><span></span>         <span class="o">=</span> <span class="mi">61</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba0cc175b9c0f1b6a831c399e269772661"><span></span><span class="n">a</span></span><span></span>             <span class="o">=</span> <span class="mi">65</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba92eb5ffee6ae2fec3ad71c777531578f"><span></span><span class="n">b</span></span><span></span>             <span class="o">=</span> <span class="mi">66</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba4a8a08f09d37b73795649038408b5f33"><span></span><span class="n">c</span></span><span></span>             <span class="o">=</span> <span class="mi">67</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba8277e0910d750195b448797616e091ad"><span></span><span class="n">d</span></span><span></span>             <span class="o">=</span> <span class="mi">68</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27bae1671797c52e15f763380b45e841ec32"><span></span><span class="n">e</span></span><span></span>             <span class="o">=</span> <span class="mi">69</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba8fa14cdd754f91cc6554c9e71929cce7"><span></span><span class="n">f</span></span><span></span>             <span class="o">=</span> <span class="mi">70</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27bab2f5ff47436671b6e533d8dc3614845d"><span></span><span class="n">g</span></span><span></span>             <span class="o">=</span> <span class="mi">71</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba2510c39011c5be704182423e3a695e91"><span></span><span class="n">h</span></span><span></span>             <span class="o">=</span> <span class="mi">72</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba865c0c0b4ab0e063e5caa3387c1a8741"><span></span><span class="n">i</span></span><span></span>             <span class="o">=</span> <span class="mi">73</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba363b122c528f54df4a0446b6bab05515"><span></span><span class="n">j</span></span><span></span>             <span class="o">=</span> <span class="mi">74</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba8ce4b16b22b58894aa86c421e8759df3"><span></span><span class="n">k</span></span><span></span>             <span class="o">=</span> <span class="mi">75</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba2db95e8e1a9267b7a1188556b2013b33"><span></span><span class="n">l</span></span><span></span>             <span class="o">=</span> <span class="mi">76</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba6f8f57715090da2632453988d9a1501b"><span></span><span class="n">m</span></span><span></span>             <span class="o">=</span> <span class="mi">77</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba7b8b965ad4bca0e41ab51de7b31363a1"><span></span><span class="n">n</span></span><span></span>             <span class="o">=</span> <span class="mi">78</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27bad95679752134a2d9eb61dbd7b91c4bcc"><span></span><span class="n">o</span></span><span></span>             <span class="o">=</span> <span class="mi">79</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba83878c91171338902e0fe0fb97a8c47a"><span></span><span class="n">p</span></span><span></span>             <span class="o">=</span> <span class="mi">80</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba7694f4a66316e53c8cdd9d9954bd611d"><span></span><span class="n">q</span></span><span></span>             <span class="o">=</span> <span class="mi">81</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba4b43b0aee35624cd95b910189b3dc231"><span></span><span class="n">r</span></span><span></span>             <span class="o">=</span> <span class="mi">82</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba03c7c0ace395d80182db07ae2c30f034"><span></span><span class="n">s</span></span><span></span>             <span class="o">=</span> <span class="mi">83</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27bae358efa489f58062f10dd7316b65649e"><span></span><span class="n">t</span></span><span></span>             <span class="o">=</span> <span class="mi">84</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba7b774effe4a349c6dd82ad4f4f21d34c"><span></span><span class="n">u</span></span><span></span>             <span class="o">=</span> <span class="mi">85</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba9e3669d19b675bd57058fd4664205d2a"><span></span><span class="n">v</span></span><span></span>             <span class="o">=</span> <span class="mi">86</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27baf1290186a5d0b1ceab27f4e77c0c5d68"><span></span><span class="n">w</span></span><span></span>             <span class="o">=</span> <span class="mi">87</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba9dd4e461268c8034f5c8564e155c67a6"><span></span><span class="n">x</span></span><span></span>             <span class="o">=</span> <span class="mi">88</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba415290769594460e2e485922904f345d"><span></span><span class="n">y</span></span><span></span>             <span class="o">=</span> <span class="mi">89</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27bafbade9e36a3f36d3d676c1b808451dd7"><span></span><span class="n">z</span></span><span></span>             <span class="o">=</span> <span class="mi">90</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba1476759ce86d46d41e079a8584b7a4f9"><span></span><span class="n">left_bracket</span></span><span></span>  <span class="o">=</span> <span class="mi">91</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27bac57aeddaffce62fead6be61022eb1340"><span></span><span class="n">backslash</span></span><span></span>     <span class="o">=</span> <span class="mi">92</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba7ffe0bf6f1b9c2223bda0e8a37dffe78"><span></span><span class="n">right_bracket</span></span><span></span> <span class="o">=</span> <span class="mi">93</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27bad4df32b0683e0452732936c7bfea16f1"><span></span><span class="n">grave_accent</span></span><span></span>  <span class="o">=</span> <span class="mi">96</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba3b4e3897bf1c020f256131191aa473b8"><span></span><span class="n">world_1</span></span><span></span>       <span class="o">=</span> <span class="mi">161</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba3c1f841152a5962dbe261658ec3b4ad9"><span></span><span class="n">world_2</span></span><span></span>       <span class="o">=</span> <span class="mi">162</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27bae0ebc3c409070d07f1df0f2f4132509e"><span></span><span class="n">escape</span></span><span></span>        <span class="o">=</span> <span class="mi">256</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27bae2a7106f1cc8bb1e1318df70aa0a3540"><span></span><span class="n">enter</span></span><span></span>         <span class="o">=</span> <span class="mi">257</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27bae7f8cbd87d347be881cba92dad128518"><span></span><span class="n">tab</span></span><span></span>           <span class="o">=</span> <span class="mi">258</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba5528770f4bce9c9b0ce9bbb8645aef45"><span></span><span class="n">backspace</span></span><span></span>     <span class="o">=</span> <span class="mi">259</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27bae0df5f3dfd2650ae5be9993434e2b2c0"><span></span><span class="n">insert</span></span><span></span>        <span class="o">=</span> <span class="mi">260</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27bad2bcc286168bf8e040885c5cb7b6df13"><span></span><span class="n">del</span></span><span></span>           <span class="o">=</span> <span class="mi">261</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba7c4f29407893c334a6cb7a87bf045c0d"><span></span><span class="n">right</span></span><span></span>         <span class="o">=</span> <span class="mi">262</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba811882fecd5c7618d7099ebbd39ea254"><span></span><span class="n">left</span></span><span></span>          <span class="o">=</span> <span class="mi">263</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba74e8333ad11685ff3bdae589c8f6e34d"><span></span><span class="n">down</span></span><span></span>          <span class="o">=</span> <span class="mi">264</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba46c48bec0d282018b9d167eef7711b2c"><span></span><span class="n">up</span></span><span></span>            <span class="o">=</span> <span class="mi">265</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27baf8e72578226499b7311f292f1deba130"><span></span><span class="n">page_up</span></span><span></span>       <span class="o">=</span> <span class="mi">266</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27bad8a0a6a1d9f3b78b1af0293cf6ac5dd7"><span></span><span class="n">page_down</span></span><span></span>     <span class="o">=</span> <span class="mi">267</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba106a6c241b8797f52e1e77317b96a201"><span></span><span class="n">home</span></span><span></span>          <span class="o">=</span> <span class="mi">268</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba7f021a1415b86f2d013b2618fb31ae53"><span></span><span class="n">end</span></span><span></span>           <span class="o">=</span> <span class="mi">269</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba5605274e348d557ceb0f9ea356fa93e7"><span></span><span class="n">caps_lock</span></span><span></span>     <span class="o">=</span> <span class="mi">280</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba52752d17cb8e9c551c3a736c45e1ddf1"><span></span><span class="n">scroll_lock</span></span><span></span>   <span class="o">=</span> <span class="mi">281</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba16269f180edc6317f3cc3d8860984b98"><span></span><span class="n">num_lock</span></span><span></span>      <span class="o">=</span> <span class="mi">282</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba58f26ac305986a702312d42b4dd87761"><span></span><span class="n">print_screen</span></span><span></span>  <span class="o">=</span> <span class="mi">283</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27baec1b81965109165de6b38cd92c1e39f9"><span></span><span class="n">pause</span></span><span></span>         <span class="o">=</span> <span class="mi">284</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27babd19836ddb62c11c55ab251ccaca5645"><span></span><span class="n">f1</span></span><span></span>            <span class="o">=</span> <span class="mi">290</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba3667f6a0c97490758d7dc9659d01ea34"><span></span><span class="n">f2</span></span><span></span>            <span class="o">=</span> <span class="mi">291</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba1779cf3aa50c413afc7e05adb7e1b0de"><span></span><span class="n">f3</span></span><span></span>            <span class="o">=</span> <span class="mi">292</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba6e1fcd704528ad8bf6d6bbedb9210096"><span></span><span class="n">f4</span></span><span></span>            <span class="o">=</span> <span class="mi">293</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba74ce2e1a498f2fa27b5542040be774dc"><span></span><span class="n">f5</span></span><span></span>            <span class="o">=</span> <span class="mi">294</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba64e4cda19b3f3ea4a7a56b5ba8cc33ca"><span></span><span class="n">f6</span></span><span></span>            <span class="o">=</span> <span class="mi">295</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba6c664eeed34d9c29a711bdb374831b49"><span></span><span class="n">f7</span></span><span></span>            <span class="o">=</span> <span class="mi">296</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba581c3010417303e1ee4c0657d76318d0"><span></span><span class="n">f8</span></span><span></span>            <span class="o">=</span> <span class="mi">297</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba6506f0388343a1f09fd708fb15c5ade9"><span></span><span class="n">f9</span></span><span></span>            <span class="o">=</span> <span class="mi">298</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba82b5f6802b727b0d948d38cbccd48904"><span></span><span class="n">f10</span></span><span></span>           <span class="o">=</span> <span class="mi">299</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27baf344a40a52a94ab7903e6b35896b543e"><span></span><span class="n">f11</span></span><span></span>           <span class="o">=</span> <span class="mi">300</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba8039b4e0e6fe78bee7d3e5cfbfa343f0"><span></span><span class="n">f12</span></span><span></span>           <span class="o">=</span> <span class="mi">301</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba89b45ff321063b749efc5b5b3aa79930"><span></span><span class="n">f13</span></span><span></span>           <span class="o">=</span> <span class="mi">302</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba1323fd7c68edb36766c982e6343cfdb4"><span></span><span class="n">f14</span></span><span></span>           <span class="o">=</span> <span class="mi">303</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27bad3c8a0832878a5e1d4e873e57b7f4238"><span></span><span class="n">f15</span></span><span></span>           <span class="o">=</span> <span class="mi">304</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27baa2449b6477c1fef79be4202906486876"><span></span><span class="n">f16</span></span><span></span>           <span class="o">=</span> <span class="mi">305</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27bafe397f3f6f24b8500bc9c5f356384020"><span></span><span class="n">f17</span></span><span></span>           <span class="o">=</span> <span class="mi">306</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27bad60ea3899962ccffb8e5c7893e7eddd7"><span></span><span class="n">f18</span></span><span></span>           <span class="o">=</span> <span class="mi">307</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba599f127bd63e32d6fd5457f9f1fa1e14"><span></span><span class="n">f19</span></span><span></span>           <span class="o">=</span> <span class="mi">308</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba3ad32b999fe4b4b2f6229acc5630e97b"><span></span><span class="n">f20</span></span><span></span>           <span class="o">=</span> <span class="mi">309</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27bafc698bd6eba4453d16fc4acb4abf4a5a"><span></span><span class="n">f21</span></span><span></span>           <span class="o">=</span> <span class="mi">310</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba186381290b21833e0f1761ff4a87d4ba"><span></span><span class="n">f22</span></span><span></span>           <span class="o">=</span> <span class="mi">311</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba8ea5d22eba2d75b7651304f4dcde8eee"><span></span><span class="n">f23</span></span><span></span>           <span class="o">=</span> <span class="mi">312</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27baffa04600c43d9c24762433fd7c4f55a3"><span></span><span class="n">f24</span></span><span></span>           <span class="o">=</span> <span class="mi">313</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba559afd0979bb51e7532980fc12ca3f4e"><span></span><span class="n">f25</span></span><span></span>           <span class="o">=</span> <span class="mi">314</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27bae0c312b77becbf0db3eb95684e1f3c6b"><span></span><span class="n">num_0</span></span><span></span>         <span class="o">=</span> <span class="mi">320</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba4c633d95b2042a69a9dc84b9722da1a6"><span></span><span class="n">num_1</span></span><span></span>         <span class="o">=</span> <span class="mi">321</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27badb78bf0468d4b67878a3a7c35d0e614e"><span></span><span class="n">num_2</span></span><span></span>         <span class="o">=</span> <span class="mi">322</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27bad3a014e638e1b7083e1e4a4d1cfd24f3"><span></span><span class="n">num_3</span></span><span></span>         <span class="o">=</span> <span class="mi">323</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba62088c3e7bd037a4060a13a5c6e5ada3"><span></span><span class="n">num_4</span></span><span></span>         <span class="o">=</span> <span class="mi">324</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba73ae0dab45d507710e73573b1f546815"><span></span><span class="n">num_5</span></span><span></span>         <span class="o">=</span> <span class="mi">325</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27bae3e5156208b092bf0f531359a384851f"><span></span><span class="n">num_6</span></span><span></span>         <span class="o">=</span> <span class="mi">326</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba310c3f5034d8b9fbd370840e6e1b6c6b"><span></span><span class="n">num_7</span></span><span></span>         <span class="o">=</span> <span class="mi">327</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba761ae972118562072e8808d6244159fd"><span></span><span class="n">num_8</span></span><span></span>         <span class="o">=</span> <span class="mi">328</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba92b019d256f53072b91d5d4316e7ba6b"><span></span><span class="n">num_9</span></span><span></span>         <span class="o">=</span> <span class="mi">329</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27bac776e80af1edf111028767e6d590f738"><span></span><span class="n">num_decimal</span></span><span></span>   <span class="o">=</span> <span class="mi">330</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba5458ba52034f9ddea0548110ff4d5685"><span></span><span class="n">num_divide</span></span><span></span>    <span class="o">=</span> <span class="mi">331</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27baf603f5927e87d957b1644efbd3f6f90d"><span></span><span class="n">num_multiply</span></span><span></span>  <span class="o">=</span> <span class="mi">332</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27baca50c23f0ade890edb9247f76b4187c4"><span></span><span class="n">num_subtract</span></span><span></span>  <span class="o">=</span> <span class="mi">333</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba03931a317e49be686fee8f10bb8a5d56"><span></span><span class="n">num_add</span></span><span></span>       <span class="o">=</span> <span class="mi">334</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba6385a93b4508a90687a0e38b48ac47b8"><span></span><span class="n">num_enter</span></span><span></span>     <span class="o">=</span> <span class="mi">335</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba613047388e2bd3a678ea734cef7f74cc"><span></span><span class="n">num_equal</span></span><span></span>     <span class="o">=</span> <span class="mi">336</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba50628fab62b5a54a5f0a7e7c7b4f157b"><span></span><span class="n">left_shift</span></span><span></span>    <span class="o">=</span> <span class="mi">340</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27bae31c29a406e855ae968bcfd47c55c1b8"><span></span><span class="n">left_control</span></span><span></span>  <span class="o">=</span> <span class="mi">341</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba217c34bd52ebbf6dbb13f7f6d7e7f53f"><span></span><span class="n">left_alt</span></span><span></span>      <span class="o">=</span> <span class="mi">342</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27bad6918048b140d7c7194665e76d39168d"><span></span><span class="n">left_super</span></span><span></span>    <span class="o">=</span> <span class="mi">343</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba4ee719aaa47e6583842088cf8e6ee8d0"><span></span><span class="n">right_shift</span></span><span></span>   <span class="o">=</span> <span class="mi">344</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba796376b16624346a60c77f88043bf037"><span></span><span class="n">right_control</span></span><span></span> <span class="o">=</span> <span class="mi">345</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27bac868ec4aff5290f22227b0da117cbcc1"><span></span><span class="n">right_alt</span></span><span></span>     <span class="o">=</span> <span class="mi">346</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27baeaba95a6893cb395387611692d4b954e"><span></span><span class="n">right_super</span></span><span></span>   <span class="o">=</span> <span class="mi">347</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-namespacehiro-1aadc0477badeb1f3b88cda070da66e27ba8d6ab84ca2af9fccd4e4048694176ebf"><span></span><span class="n">menu</span></span><span></span>          <span class="o">=</span> <span class="mi">348</span><span class="p">,</span>
+<span class="p">};</span></pre>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Skeletex Research
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

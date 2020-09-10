@@ -1,0 +1,305 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>template struct geom::TTriangle &mdash; HIRO 0.4.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/hiro-fav-32.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/target-highlight.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/hiro_theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-sphinx_rtd_theme.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="struct geom::Triangle2" href="struct_geom_Triangle2.html" />
+    <link rel="prev" title="template struct geom::TSphere" href="struct_geom_TSphere.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: rgb(248, 216, 60)" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/hiro-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_0.html">T0: Setting up Visual Studio Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_1.html">T1: Introduction to HIRO GUI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_2.html">T2: Creating Custom Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_3.html">T3: Overview of Gadget Features</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="shader_api.html">Shader API</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="global.html">Global Namespace</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="namespace_cegui_ext.html">namespace cegui_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_dialog.html">namespace dialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_file_types.html">namespace file_types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_fs.html">namespace fs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_func.html">namespace func</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="namespace_geom.html">namespace geom</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="namespace_geom_quadrics.html">namespace geom::quadrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_geom_Axis.html">enum geom::Axis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_geom_Capsule.html">struct geom::Capsule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_geom_CollisionResult.html">struct geom::CollisionResult</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_geom_ConicalCapsule.html">struct geom::ConicalCapsule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_geom_Graph.html">struct geom::Graph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_geom_HalfPlane.html">struct geom::HalfPlane</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_geom_Line.html">template struct geom::Line</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_geom_LineSegment.html">template struct geom::LineSegment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_geom_LineSegment2.html">struct geom::LineSegment2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_geom_LineSegment3.html">struct geom::LineSegment3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_geom_Plane.html">struct geom::Plane</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_geom_Ray.html">template struct geom::Ray</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_geom_TAabb.html">template struct geom::TAabb</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_geom_TRect.html">template struct geom::TRect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_geom_TSphere.html">template struct geom::TSphere</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">template struct geom::TTriangle</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="struct_geom_Triangle2.html">struct geom::Triangle2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_geom_Triangle3.html">struct geom::Triangle3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_geom_KalmanFilterObject.html">class geom::KalmanFilterObject</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_geom.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_geom.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_glm_ext.html">namespace glm_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_hiro.html">namespace hiro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_omp_ext.html">namespace omp_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_std_ext.html">namespace std_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_time_m.html">namespace time_m</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_ulog.html">namespace ulog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_uprogress.html">namespace uprogress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_utils.html">namespace utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_Config.html">class Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_IDialogInterface.html">class IDialogInterface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_WxWidgetsDialog.html">class WxWidgetsDialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">HIRO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="global.html">Global Namespace</a> &raquo;</li>
+        
+          <li><a href="namespace_geom.html">namespace geom</a> &raquo;</li>
+        
+      <li>template struct geom::TTriangle</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="template-struct-geom-ttriangle">
+<span id="doxid-structgeom-1-1-t-triangle"></span><span id="index-0"></span><h1>template struct geom::TTriangle<a class="headerlink" href="#template-struct-geom-ttriangle" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Template triangle in an arbitrary dimension. <a class="reference internal" href="#details-structgeom-1-1-t-triangle"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;GeometryStructures.h&gt;</span><span class="cp"></span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="kt">size_t</span> <span class="n">D</span><span class="o">&gt;</span>
+<span class="k">struct</span> <span class="n">TTriangle</span> <span class="p">{</span>
+    <span class="c1">// typedefs</span>
+
+    <span class="k">typedef</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec</span><span class="o">&lt;</span><span class="n">D</span><span class="p">,</span> <span class="kt">float</span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-structgeom-1-1-t-triangle-1af6b7ee39face1001f71b549fa5d06b00"><span></span><span class="n">Vec</span></span><span></span><span class="p">;</span>
+
+    <span class="c1">// fields</span>
+
+    <a class="reference internal" href="#doxid-structgeom-1-1-t-triangle-1af6b7ee39face1001f71b549fa5d06b00"><span class="std std-ref">Vec</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-structgeom-1-1-t-triangle-1a72ced0d66737e6171c03eca274c48a81"><span></span><span class="n">points</span></span><span></span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+
+    <span class="c1">// methods</span>
+
+    <a class="reference internal" href="#doxid-structgeom-1-1-t-triangle-1af6b7ee39face1001f71b549fa5d06b00"><span class="std std-ref">Vec</span></a><span></span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-structgeom-1-1-t-triangle-1a41fb303a51ec4b78800f1085543a2659"><span class="std std-ref">operator[]</span></a><span></span><span class="p">(</span><span class="kt">size_t</span> <span class="n">point_id</span><span class="p">);</span>
+    <span class="k">const</span> <a class="reference internal" href="#doxid-structgeom-1-1-t-triangle-1af6b7ee39face1001f71b549fa5d06b00"><span class="std std-ref">Vec</span></a><span></span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-structgeom-1-1-t-triangle-1a3bea783edd3b5083fcc2649a476544f0"><span class="std std-ref">operator[]</span></a><span></span><span class="p">(</span><span class="kt">size_t</span> <span class="n">point_id</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="#doxid-structgeom-1-1-t-triangle-1af6b7ee39face1001f71b549fa5d06b00"><span class="std std-ref">Vec</span></a><span></span> <a class="reference internal" href="#doxid-structgeom-1-1-t-triangle-1a28d5a426dd681edbc41cf1e863f422aa"><span class="std std-ref">GetCentroid</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+<span class="p">};</span></pre>
+</div>
+<div class="section" id="detailed-documentation">
+<span id="details-structgeom-1-1-t-triangle"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
+<p>Template triangle in an arbitrary dimension.</p>
+<div class="section" id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-structgeom-1-1-t-triangle-1a41fb303a51ec4b78800f1085543a2659"><span id="index-1"></span><a class="reference internal" href="#doxid-structgeom-1-1-t-triangle-1af6b7ee39face1001f71b549fa5d06b00"><span class="std std-ref">Vec</span></a><span></span><span class="o">&amp;</span> <span class="k">operator</span><span class="p">[](</span><span class="kt">size_t</span> <span class="n">point_id</span><span class="p">)</span></pre>
+<p>Returns point with a specified index. Calling Triangle[0] is equivalent to Triangle.points[0].</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-structgeom-1-1-t-triangle-1a3bea783edd3b5083fcc2649a476544f0"><span id="index-2"></span><span></span><span class="k">const</span> <a class="reference internal" href="#doxid-structgeom-1-1-t-triangle-1af6b7ee39face1001f71b549fa5d06b00"><span class="std std-ref">Vec</span></a><span></span><span class="o">&amp;</span> <span class="k">operator</span><span class="p">[](</span><span class="kt">size_t</span> <span class="n">point_id</span><span class="p">)</span> <span class="k">const</span></pre>
+<p>Returns point with a specified index. Calling Triangle[0] is equivalent to Triangle.points[0].</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-structgeom-1-1-t-triangle-1a28d5a426dd681edbc41cf1e863f422aa"><span id="index-3"></span><a class="reference internal" href="#doxid-structgeom-1-1-t-triangle-1af6b7ee39face1001f71b549fa5d06b00"><span class="std std-ref">Vec</span></a><span></span> <span class="n">GetCentroid</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Returns a centroid of the three triangle points.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Skeletex Research
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

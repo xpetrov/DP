@@ -1,0 +1,484 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>namespace glm_ext &mdash; HIRO 0.4.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/hiro-fav-32.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/target-highlight.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/hiro_theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-sphinx_rtd_theme.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="template class glm_ext::TransMat" href="class_glm_ext_TransMat.html" />
+    <link rel="prev" title="class geom::KalmanFilterObject" href="class_geom_KalmanFilterObject.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: rgb(248, 216, 60)" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/hiro-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_0.html">T0: Setting up Visual Studio Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_1.html">T1: Introduction to HIRO GUI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_2.html">T2: Creating Custom Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_3.html">T3: Overview of Gadget Features</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="shader_api.html">Shader API</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="global.html">Global Namespace</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="namespace_cegui_ext.html">namespace cegui_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_dialog.html">namespace dialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_file_types.html">namespace file_types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_fs.html">namespace fs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_func.html">namespace func</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_geom.html">namespace geom</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">namespace glm_ext</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_glm_ext_TransMat.html">template class glm_ext::TransMat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#detailed-documentation">Detailed Documentation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#typedefs">Typedefs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#global-functions">Global Functions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_hiro.html">namespace hiro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_omp_ext.html">namespace omp_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_std_ext.html">namespace std_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_time_m.html">namespace time_m</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_ulog.html">namespace ulog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_uprogress.html">namespace uprogress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_utils.html">namespace utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_Config.html">class Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_IDialogInterface.html">class IDialogInterface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_WxWidgetsDialog.html">class WxWidgetsDialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">HIRO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="global.html">Global Namespace</a> &raquo;</li>
+        
+      <li>namespace glm_ext</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="namespace-glm-ext">
+<span id="doxid-namespaceglm-ext"></span><span id="index-0"></span><h1>namespace glm_ext<a class="headerlink" href="#namespace-glm-ext" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Extensions to the glm library. <a class="reference internal" href="#details-namespaceglm-ext"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="k">namespace</span> <span class="n">glm_ext</span> <span class="p">{</span>
+
+<span class="c1">// typedefs</span>
+
+<span class="k">typedef</span> <a class="reference internal" href="class_glm_ext_TransMat.html#doxid-classglm-ext-1-1-trans-mat"><span class="std std-ref">TransMat</span></a><span></span><span class="o">&lt;</span><span class="mi">3</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespaceglm-ext-1a5129ab074ae3c91ec03fdd5a0e632846"><span class="std std-ref">TransMat3</span></a><span></span><span class="p">;</span>
+<span class="k">typedef</span> <a class="reference internal" href="class_glm_ext_TransMat.html#doxid-classglm-ext-1-1-trans-mat"><span class="std std-ref">TransMat</span></a><span></span><span class="o">&lt;</span><span class="mi">4</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespaceglm-ext-1abb00c17b6cd7d068fa7eef293f0ddc7d"><span class="std std-ref">TransMat4</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// classes</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="kt">int</span> <span class="n">N</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_glm_ext_TransMat.html#doxid-classglm-ext-1-1-trans-mat"><span class="std std-ref">TransMat</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// global functions</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="kt">int</span> <span class="n">N</span><span class="p">,</span> <span class="k">typename</span> <span class="n">genType</span><span class="o">&gt;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <a class="reference internal" href="#doxid-namespaceglm-ext-1ad87a6616c350b971b089b9dd86e90df8"><span class="std std-ref">to_string</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span> <span class="n">genType</span><span class="p">,</span> <span class="n">glm</span><span class="o">::</span><span class="n">highp</span><span class="o">&gt;&amp;</span> <span class="n">vec</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">delim</span> <span class="o">=</span> <span class="s">&quot;, &quot;</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="kt">int</span> <span class="n">N</span><span class="p">,</span> <span class="kt">int</span> <span class="n">M</span><span class="p">,</span> <span class="k">typename</span> <span class="n">genType</span><span class="o">&gt;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <a class="reference internal" href="#doxid-namespaceglm-ext-1aba350f81dc7e65abd0feb5717fb84dcb"><span class="std std-ref">to_string</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">mat</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span> <span class="n">M</span><span class="p">,</span> <span class="n">genType</span><span class="p">,</span> <span class="n">glm</span><span class="o">::</span><span class="n">highp</span><span class="o">&gt;&amp;</span> <span class="n">mat</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">delim_col</span> <span class="o">=</span> <span class="s">&quot;, &quot;</span><span class="p">);</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <a class="reference internal" href="#doxid-namespaceglm-ext-1a51cf94fb952a3a6c403e1914673f7ef6"><span class="std std-ref">to_string</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">quat</span><span class="o">&amp;</span> <span class="n">q</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">delim</span> <span class="o">=</span> <span class="s">&quot;, &quot;</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="kt">int</span> <span class="n">N</span><span class="p">,</span> <span class="k">typename</span> <span class="n">genType</span><span class="o">&gt;</span>
+<span class="kt">bool</span> <a class="reference internal" href="#doxid-namespaceglm-ext-1aea489397b7d25f5bd45ba7ff8a4835bf"><span class="std std-ref">parse_string</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">str</span><span class="p">,</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span> <span class="n">genType</span><span class="p">,</span> <span class="n">glm</span><span class="o">::</span><span class="n">highp</span><span class="o">&gt;&amp;</span> <span class="n">out_vec</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">delim</span> <span class="o">=</span> <span class="s">&quot;, &quot;</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="kt">int</span> <span class="n">N</span><span class="p">,</span> <span class="kt">int</span> <span class="n">M</span><span class="p">,</span> <span class="k">typename</span> <span class="n">genType</span><span class="o">&gt;</span>
+<span class="kt">bool</span> <a class="reference internal" href="#doxid-namespaceglm-ext-1a43be440cbf849723c386d86057e1b84a"><span class="std std-ref">parse_string</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">str</span><span class="p">,</span> <span class="n">glm</span><span class="o">::</span><span class="n">mat</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span> <span class="n">M</span><span class="p">,</span> <span class="n">genType</span><span class="p">,</span> <span class="n">glm</span><span class="o">::</span><span class="n">highp</span><span class="o">&gt;&amp;</span> <span class="n">out_mat</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">delim_col</span> <span class="o">=</span> <span class="s">&quot;, &quot;</span><span class="p">);</span>
+
+<span class="kt">bool</span> <a class="reference internal" href="#doxid-namespaceglm-ext-1ace8f846375e3dee677001573b801d2f4"><span class="std std-ref">parse_string</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">str</span><span class="p">,</span> <span class="n">glm</span><span class="o">::</span><span class="n">quat</span><span class="o">&amp;</span> <span class="n">out_quat</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">delim</span> <span class="o">=</span> <span class="s">&quot;, &quot;</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">genType</span><span class="o">&gt;</span>
+<span class="n">genType</span> <a class="reference internal" href="#doxid-namespaceglm-ext-1af92b37b19f67921e5c02be132e8afebb"><span class="std std-ref">sqr</span></a><span></span><span class="p">(</span><span class="n">genType</span> <span class="n">value</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Type</span><span class="p">,</span> <span class="n">glm</span><span class="o">::</span><span class="n">length_t</span> <span class="n">N</span><span class="o">&gt;</span>
+<span class="n">Type</span> <a class="reference internal" href="#doxid-namespaceglm-ext-1acddd1b58acda9d94ca36f7a19adeac84"><span class="std std-ref">min</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span> <span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">vec</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Type</span><span class="p">,</span> <span class="n">glm</span><span class="o">::</span><span class="n">length_t</span> <span class="n">N</span><span class="o">&gt;</span>
+<span class="n">Type</span> <a class="reference internal" href="#doxid-namespaceglm-ext-1a0f3b52e33e4481167292606fcf9dccb5"><span class="std std-ref">max</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span> <span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">vec</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">genType</span><span class="o">&gt;</span>
+<span class="n">genType</span> <a class="reference internal" href="#doxid-namespaceglm-ext-1ab497e892bcb317b173d18d703831d377"><span class="std std-ref">min</span></a><span></span><span class="p">(</span><span class="n">genType</span> <span class="n">p1</span><span class="p">,</span> <span class="n">genType</span> <span class="n">p2</span><span class="p">,</span> <span class="n">genType</span> <span class="n">p3</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">genType</span><span class="o">&gt;</span>
+<span class="n">genType</span> <a class="reference internal" href="#doxid-namespaceglm-ext-1abee6d18185b42974b0dee051b59fecf0"><span class="std std-ref">max</span></a><span></span><span class="p">(</span><span class="n">genType</span> <span class="n">p1</span><span class="p">,</span> <span class="n">genType</span> <span class="n">p2</span><span class="p">,</span> <span class="n">genType</span> <span class="n">p3</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">genType</span><span class="o">&gt;</span>
+<span class="n">genType</span> <a class="reference internal" href="#doxid-namespaceglm-ext-1a63dd27678f31236fd0cfb372c2d4036b"><span class="std std-ref">Clamp01</span></a><span></span><span class="p">(</span><span class="n">genType</span> <span class="n">x</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="kt">int</span> <span class="n">N</span><span class="o">&gt;</span>
+<span class="kt">bool</span> <a class="reference internal" href="#doxid-namespaceglm-ext-1ae980c5af160a4a647166ab4129ef1d7e"><span class="std std-ref">IsNormalized</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span> <span class="kt">float</span><span class="o">&gt;&amp;</span> <span class="n">vector</span><span class="p">);</span>
+
+<span class="kt">bool</span> <a class="reference internal" href="#doxid-namespaceglm-ext-1ac7510375cc3a16649a12824ca9b659d0"><span class="std std-ref">AreEqual</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="kt">float</span> <span class="n">val1</span><span class="p">,</span> <span class="k">const</span> <span class="kt">float</span> <span class="n">val2</span><span class="p">,</span> <span class="k">const</span> <span class="kt">float</span> <span class="n">epsilon</span> <span class="o">=</span> <span class="n">FLT_EPSILON</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="kt">int</span> <span class="n">N</span><span class="o">&gt;</span>
+<span class="kt">bool</span> <a class="reference internal" href="#doxid-namespaceglm-ext-1abd1e3a4192cdd7872588dc37308fcdcc"><span class="std std-ref">AreEqual</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span> <span class="kt">float</span><span class="o">&gt;&amp;</span> <span class="n">vec1</span><span class="p">,</span> <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span> <span class="kt">float</span><span class="o">&gt;&amp;</span> <span class="n">vec2</span><span class="p">,</span> <span class="k">const</span> <span class="kt">float</span> <span class="n">epsilon</span> <span class="o">=</span> <span class="n">FLT_EPSILON</span><span class="p">);</span>
+
+<span class="kt">bool</span> <a class="reference internal" href="#doxid-namespaceglm-ext-1ae09bd8ccc4c040d6118bb6bb31875f9f"><span class="std std-ref">AreEqual</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">quat</span><span class="o">&amp;</span> <span class="n">q1</span><span class="p">,</span> <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">quat</span><span class="o">&amp;</span> <span class="n">q2</span><span class="p">,</span> <span class="k">const</span> <span class="kt">float</span> <span class="n">epsilon</span> <span class="o">=</span> <span class="n">FLT_EPSILON</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="kt">int</span> <span class="n">N</span><span class="p">,</span> <span class="kt">int</span> <span class="n">M</span><span class="o">&gt;</span>
+<span class="kt">bool</span> <a class="reference internal" href="#doxid-namespaceglm-ext-1ae41a7b966c3e3bff87a1b509e9da56df"><span class="std std-ref">AreEqual</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">mat</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span> <span class="n">M</span><span class="p">,</span> <span class="kt">float</span><span class="o">&gt;&amp;</span> <span class="n">mat1</span><span class="p">,</span> <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">mat</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span> <span class="n">M</span><span class="p">,</span> <span class="kt">float</span><span class="o">&gt;&amp;</span> <span class="n">mat2</span><span class="p">,</span> <span class="k">const</span> <span class="kt">float</span> <span class="n">epsilon</span> <span class="o">=</span> <span class="n">FLT_EPSILON</span><span class="p">);</span>
+
+<span class="kt">bool</span> <a class="reference internal" href="#doxid-namespaceglm-ext-1a55a41d811de2ee5778deee0a9f82e3f8"><span class="std std-ref">IsZero</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="kt">float</span> <span class="n">val</span><span class="p">,</span> <span class="k">const</span> <span class="kt">float</span> <span class="n">epsilon</span> <span class="o">=</span> <span class="n">FLT_EPSILON</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="k">typename</span><span class="p">...</span> <span class="n">TS</span><span class="o">&gt;</span>
+<span class="kt">bool</span> <a class="reference internal" href="#doxid-namespaceglm-ext-1a3f13f677215cbc43a7cc9ca931cee2da"><span class="std std-ref">AllEqual</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="kt">float</span> <span class="n">precision</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span> <span class="n">a</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span> <span class="n">b</span><span class="p">,</span> <span class="k">const</span> <span class="n">TS</span> <span class="p">...</span> <span class="n">elements</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="k">typename</span><span class="p">...</span> <span class="n">TS</span><span class="o">&gt;</span>
+<span class="kt">bool</span> <a class="reference internal" href="#doxid-namespaceglm-ext-1a3362a18575a7e762bbfdc4c7a252a234"><span class="std std-ref">AllEqual</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="kt">float</span> <span class="n">precision</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span> <span class="n">a</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="kt">int</span> <span class="n">N</span><span class="p">,</span> <span class="kt">int</span> <span class="n">M</span><span class="p">,</span> <span class="k">typename</span> <span class="n">genType</span><span class="o">&gt;</span>
+<span class="kt">bool</span> <a class="reference internal" href="#doxid-namespaceglm-ext-1afa28996958c1f21d7c5996523bcf0a18"><span class="std std-ref">IsAnyNan</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">mat</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span> <span class="n">M</span><span class="p">,</span> <span class="n">genType</span><span class="p">,</span> <span class="n">glm</span><span class="o">::</span><span class="n">highp</span><span class="o">&gt;&amp;</span> <span class="n">mat</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Type</span><span class="p">,</span> <span class="n">glm</span><span class="o">::</span><span class="n">length_t</span> <span class="n">N</span><span class="o">&gt;</span>
+<span class="kt">bool</span> <a class="reference internal" href="#doxid-namespaceglm-ext-1a442d4ec6ded5b7abd7250f7c76c47c4e"><span class="std std-ref">IsZero</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span> <span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">vec</span><span class="p">,</span> <span class="k">const</span> <span class="kt">float</span> <span class="n">epsilon</span> <span class="o">=</span> <span class="n">FLT_EPSILON</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="kt">int</span> <span class="n">N</span><span class="o">&gt;</span>
+<span class="kt">bool</span> <a class="reference internal" href="#doxid-namespaceglm-ext-1ace7a857ecb6252554a861682f3bbc7a8"><span class="std std-ref">IsLess</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span> <span class="kt">float</span><span class="o">&gt;&amp;</span> <span class="n">vec1</span><span class="p">,</span> <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span> <span class="kt">float</span><span class="o">&gt;&amp;</span> <span class="n">vec2</span><span class="p">,</span> <span class="k">const</span> <span class="kt">float</span> <span class="n">epsilon</span> <span class="o">=</span> <span class="n">FLT_EPSILON</span><span class="p">);</span>
+
+<span class="kt">bool</span> <a class="reference internal" href="#doxid-namespaceglm-ext-1a529d24d8aba49106e0061fd6361924b9"><span class="std std-ref">IsLess</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="kt">float</span> <span class="n">val1</span><span class="p">,</span> <span class="k">const</span> <span class="kt">float</span> <span class="n">val2</span><span class="p">,</span> <span class="k">const</span> <span class="kt">float</span> <span class="n">epsilon</span> <span class="o">=</span> <span class="n">FLT_EPSILON</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="kt">int</span> <span class="n">N</span><span class="o">&gt;</span>
+<span class="kt">bool</span> <a class="reference internal" href="#doxid-namespaceglm-ext-1a1989d81a66823ab4cf0fe09227ec75f7"><span class="std std-ref">IsLequal</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span> <span class="kt">float</span><span class="o">&gt;&amp;</span> <span class="n">vec1</span><span class="p">,</span> <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span> <span class="kt">float</span><span class="o">&gt;&amp;</span> <span class="n">vec2</span><span class="p">,</span> <span class="k">const</span> <span class="kt">float</span> <span class="n">epsilon</span> <span class="o">=</span> <span class="n">FLT_EPSILON</span><span class="p">);</span>
+
+<span class="kt">bool</span> <a class="reference internal" href="#doxid-namespaceglm-ext-1a9892810e741a0b7add5a8c956f9fefb4"><span class="std std-ref">IsLequal</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="kt">float</span> <span class="n">val1</span><span class="p">,</span> <span class="k">const</span> <span class="kt">float</span> <span class="n">val2</span><span class="p">,</span> <span class="k">const</span> <span class="kt">float</span> <span class="n">epsilon</span> <span class="o">=</span> <span class="n">FLT_EPSILON</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="kt">int</span> <span class="n">N</span><span class="o">&gt;</span>
+<span class="kt">bool</span> <a class="reference internal" href="#doxid-namespaceglm-ext-1a0bb6a6729491a29199bcc478ecc7c5f5"><span class="std std-ref">IsGreater</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span> <span class="kt">float</span><span class="o">&gt;&amp;</span> <span class="n">vec1</span><span class="p">,</span> <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span> <span class="kt">float</span><span class="o">&gt;&amp;</span> <span class="n">vec2</span><span class="p">,</span> <span class="k">const</span> <span class="kt">float</span> <span class="n">epsilon</span> <span class="o">=</span> <span class="n">FLT_EPSILON</span><span class="p">);</span>
+
+<span class="kt">bool</span> <a class="reference internal" href="#doxid-namespaceglm-ext-1a253cfadbf8eeb21d4d8efe382d577fe7"><span class="std std-ref">IsGreater</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="kt">float</span> <span class="n">val1</span><span class="p">,</span> <span class="k">const</span> <span class="kt">float</span> <span class="n">val2</span><span class="p">,</span> <span class="k">const</span> <span class="kt">float</span> <span class="n">epsilon</span> <span class="o">=</span> <span class="n">FLT_EPSILON</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="kt">int</span> <span class="n">N</span><span class="o">&gt;</span>
+<span class="kt">bool</span> <a class="reference internal" href="#doxid-namespaceglm-ext-1aa08df7783a43caf41f0203dd920c4452"><span class="std std-ref">IsGequal</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span> <span class="kt">float</span><span class="o">&gt;&amp;</span> <span class="n">vec1</span><span class="p">,</span> <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span> <span class="kt">float</span><span class="o">&gt;&amp;</span> <span class="n">vec2</span><span class="p">,</span> <span class="k">const</span> <span class="kt">float</span> <span class="n">epsilon</span> <span class="o">=</span> <span class="n">FLT_EPSILON</span><span class="p">);</span>
+
+<span class="kt">bool</span> <a class="reference internal" href="#doxid-namespaceglm-ext-1afcf463ca28acda708fb0c5c41d87f7db"><span class="std std-ref">IsGequal</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="kt">float</span> <span class="n">val1</span><span class="p">,</span> <span class="k">const</span> <span class="kt">float</span> <span class="n">val2</span><span class="p">,</span> <span class="k">const</span> <span class="kt">float</span> <span class="n">epsilon</span> <span class="o">=</span> <span class="n">FLT_EPSILON</span><span class="p">);</span>
+<span class="kt">int</span> <a class="reference internal" href="#doxid-namespaceglm-ext-1a6889ec8a198b3a7222f063c65a629938"><span class="std std-ref">doti</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">ivec2</span><span class="o">&amp;</span> <span class="n">x</span><span class="p">,</span> <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">ivec2</span><span class="o">&amp;</span> <span class="n">y</span><span class="p">);</span>
+<span class="kt">float</span> <a class="reference internal" href="#doxid-namespaceglm-ext-1a00fd552df7f5ba5c73c6f7f495cba612"><span class="std std-ref">map</span></a><span></span><span class="p">(</span><span class="kt">float</span> <span class="n">val</span><span class="p">,</span> <span class="kt">float</span> <span class="n">in_min</span><span class="p">,</span> <span class="kt">float</span> <span class="n">in_max</span><span class="p">,</span> <span class="kt">float</span> <span class="n">out_min</span><span class="p">,</span> <span class="kt">float</span> <span class="n">out_max</span><span class="p">);</span>
+<span class="kt">float</span> <a class="reference internal" href="#doxid-namespaceglm-ext-1a89048e45afc4452dd1581d89c2288bb8"><span class="std std-ref">Gaussian</span></a><span></span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">,</span> <span class="kt">float</span> <span class="n">mean</span><span class="p">,</span> <span class="kt">float</span> <span class="n">sigma</span><span class="p">);</span>
+<span class="kt">float</span> <a class="reference internal" href="#doxid-namespaceglm-ext-1a3fe35ede249f7b761ccfec3941ce7dd9"><span class="std std-ref">Rand01</span></a><span></span><span class="p">(</span><span class="kt">int</span> <span class="n">precision</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">);</span>
+<span class="kt">float</span> <a class="reference internal" href="#doxid-namespaceglm-ext-1a9f8c174a3138fd2446fc54dfcdd2a7c0"><span class="std std-ref">RandomInRange</span></a><span></span><span class="p">(</span><span class="kt">float</span> <span class="n">min</span><span class="p">,</span> <span class="kt">float</span> <span class="n">max</span><span class="p">,</span> <span class="kt">int</span> <span class="n">precision</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">);</span>
+<span class="n">glm</span><span class="o">::</span><span class="n">vec3</span> <span class="doxyrest-code-target target" id="doxid-namespaceglm-ext-1aa7cdc6a6493d071f2688a5881b1d9cb9"><span></span><span class="n">RandomVec3</span></span><span></span><span class="p">();</span>
+<span class="n">glm</span><span class="o">::</span><span class="n">quat</span> <span class="doxyrest-code-target target" id="doxid-namespaceglm-ext-1abb29a347cdaefb9ee93a0604b6b41711"><span></span><span class="n">RandomQuat</span></span><span></span><span class="p">();</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="kt">bool</span> <span class="doxyrest-code-target target" id="doxid-namespaceglm-ext-1a0fbae1b36b1bb4b25e935a77d81a8314"><span></span><span class="n">IsInRange</span></span><span></span><span class="p">(</span><span class="n">T</span> <span class="n">value</span><span class="p">,</span> <span class="n">T</span> <span class="n">min</span><span class="p">,</span> <span class="n">T</span> <span class="n">max</span><span class="p">);</span>
+
+<span class="p">}</span> <span class="c1">// namespace glm_ext</span></pre>
+</div>
+<div class="section" id="detailed-documentation">
+<span id="details-namespaceglm-ext"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
+<p>Extensions to the glm library.</p>
+<div class="section" id="typedefs">
+<h3>Typedefs<a class="headerlink" href="#typedefs" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceglm-ext-1a5129ab074ae3c91ec03fdd5a0e632846"><span id="index-1"></span><span></span><span class="k">typedef</span> <a class="reference internal" href="class_glm_ext_TransMat.html#doxid-classglm-ext-1-1-trans-mat"><span class="std std-ref">TransMat</span></a><span></span><span class="o">&lt;</span><span class="mi">3</span><span class="o">&gt;</span> <span class="n">TransMat3</span></pre>
+<p>Wrapper glm::mat3 holding matrix and its inverse.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceglm-ext-1abb00c17b6cd7d068fa7eef293f0ddc7d"><span id="index-2"></span><span></span><span class="k">typedef</span> <a class="reference internal" href="class_glm_ext_TransMat.html#doxid-classglm-ext-1-1-trans-mat"><span class="std std-ref">TransMat</span></a><span></span><span class="o">&lt;</span><span class="mi">4</span><span class="o">&gt;</span> <span class="n">TransMat4</span></pre>
+<p>Wrapper glm::mat4 holding matrix and its inverse.</p>
+</div>
+<div class="section" id="global-functions">
+<h3>Global Functions<a class="headerlink" href="#global-functions" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceglm-ext-1ad87a6616c350b971b089b9dd86e90df8"><span id="index-3"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="kt">int</span> <span class="n">N</span><span class="p">,</span> <span class="k">typename</span> <span class="n">genType</span><span class="o">&gt;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">to_string</span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span> <span class="n">genType</span><span class="p">,</span> <span class="n">glm</span><span class="o">::</span><span class="n">highp</span><span class="o">&gt;&amp;</span> <span class="n">vec</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">delim</span> <span class="o">=</span> <span class="s">&quot;, &quot;</span><span class="p">)</span></pre>
+<p>Converts the input vector into a string with predefined delimiter.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceglm-ext-1aba350f81dc7e65abd0feb5717fb84dcb"><span id="index-4"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="kt">int</span> <span class="n">N</span><span class="p">,</span> <span class="kt">int</span> <span class="n">M</span><span class="p">,</span> <span class="k">typename</span> <span class="n">genType</span><span class="o">&gt;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">to_string</span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">mat</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span> <span class="n">M</span><span class="p">,</span> <span class="n">genType</span><span class="p">,</span> <span class="n">glm</span><span class="o">::</span><span class="n">highp</span><span class="o">&gt;&amp;</span> <span class="n">mat</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">delim_col</span> <span class="o">=</span> <span class="s">&quot;, &quot;</span><span class="p">)</span></pre>
+<p>Converts matrix into a string using defined delimiters.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceglm-ext-1a51cf94fb952a3a6c403e1914673f7ef6"><span id="index-5"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">to_string</span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">quat</span><span class="o">&amp;</span> <span class="n">q</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">delim</span> <span class="o">=</span> <span class="s">&quot;, &quot;</span><span class="p">)</span></pre>
+<p>Converts the input quaternion into a string with predefined delimiter.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceglm-ext-1aea489397b7d25f5bd45ba7ff8a4835bf"><span id="index-6"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="kt">int</span> <span class="n">N</span><span class="p">,</span> <span class="k">typename</span> <span class="n">genType</span><span class="o">&gt;</span>
+<span class="kt">bool</span> <span class="n">parse_string</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">str</span><span class="p">,</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span> <span class="n">genType</span><span class="p">,</span> <span class="n">glm</span><span class="o">::</span><span class="n">highp</span><span class="o">&gt;&amp;</span> <span class="n">out_vec</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">delim</span> <span class="o">=</span> <span class="s">&quot;, &quot;</span><span class="p">)</span></pre>
+<p>Parses a string to a glm vector using defined delimiters or fails.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceglm-ext-1a43be440cbf849723c386d86057e1b84a"><span id="index-7"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="kt">int</span> <span class="n">N</span><span class="p">,</span> <span class="kt">int</span> <span class="n">M</span><span class="p">,</span> <span class="k">typename</span> <span class="n">genType</span><span class="o">&gt;</span>
+<span class="kt">bool</span> <span class="n">parse_string</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">str</span><span class="p">,</span> <span class="n">glm</span><span class="o">::</span><span class="n">mat</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span> <span class="n">M</span><span class="p">,</span> <span class="n">genType</span><span class="p">,</span> <span class="n">glm</span><span class="o">::</span><span class="n">highp</span><span class="o">&gt;&amp;</span> <span class="n">out_mat</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">delim_col</span> <span class="o">=</span> <span class="s">&quot;, &quot;</span><span class="p">)</span></pre>
+<p>Parses a string to a matrix using defined delimiters or fails.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceglm-ext-1ace8f846375e3dee677001573b801d2f4"><span id="index-8"></span><span></span><span class="kt">bool</span> <span class="n">parse_string</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">str</span><span class="p">,</span> <span class="n">glm</span><span class="o">::</span><span class="n">quat</span><span class="o">&amp;</span> <span class="n">out_quat</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">delim</span> <span class="o">=</span> <span class="s">&quot;, &quot;</span><span class="p">)</span></pre>
+<p>Parses a string to a glm quaternion using defined delimiters or fails.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceglm-ext-1af92b37b19f67921e5c02be132e8afebb"><span id="index-9"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">genType</span><span class="o">&gt;</span>
+<span class="n">genType</span> <span class="n">sqr</span><span class="p">(</span><span class="n">genType</span> <span class="n">value</span><span class="p">)</span></pre>
+<p>Returns square of a value or vector.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceglm-ext-1acddd1b58acda9d94ca36f7a19adeac84"><span id="index-10"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Type</span><span class="p">,</span> <span class="n">glm</span><span class="o">::</span><span class="n">length_t</span> <span class="n">N</span><span class="o">&gt;</span>
+<span class="n">Type</span> <span class="n">min</span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span> <span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">vec</span><span class="p">)</span></pre>
+<p>Returns minimal value component of a vector.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceglm-ext-1a0f3b52e33e4481167292606fcf9dccb5"><span id="index-11"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Type</span><span class="p">,</span> <span class="n">glm</span><span class="o">::</span><span class="n">length_t</span> <span class="n">N</span><span class="o">&gt;</span>
+<span class="n">Type</span> <span class="n">max</span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span> <span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">vec</span><span class="p">)</span></pre>
+<p>Returns maximal value component of a vector.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceglm-ext-1ab497e892bcb317b173d18d703831d377"><span id="index-12"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">genType</span><span class="o">&gt;</span>
+<span class="n">genType</span> <span class="n">min</span><span class="p">(</span><span class="n">genType</span> <span class="n">p1</span><span class="p">,</span> <span class="n">genType</span> <span class="n">p2</span><span class="p">,</span> <span class="n">genType</span> <span class="n">p3</span><span class="p">)</span></pre>
+<p>Returns minimum of three values or individual vector components.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceglm-ext-1abee6d18185b42974b0dee051b59fecf0"><span id="index-13"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">genType</span><span class="o">&gt;</span>
+<span class="n">genType</span> <span class="n">max</span><span class="p">(</span><span class="n">genType</span> <span class="n">p1</span><span class="p">,</span> <span class="n">genType</span> <span class="n">p2</span><span class="p">,</span> <span class="n">genType</span> <span class="n">p3</span><span class="p">)</span></pre>
+<p>Returns maximum of three values or individual vector components.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceglm-ext-1a63dd27678f31236fd0cfb372c2d4036b"><span id="index-14"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">genType</span><span class="o">&gt;</span>
+<span class="n">genType</span> <span class="n">Clamp01</span><span class="p">(</span><span class="n">genType</span> <span class="n">x</span><span class="p">)</span></pre>
+<p>Clamps a value or individual vector components to the range 0-1.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceglm-ext-1ae980c5af160a4a647166ab4129ef1d7e"><span id="index-15"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="kt">int</span> <span class="n">N</span><span class="o">&gt;</span>
+<span class="kt">bool</span> <span class="n">IsNormalized</span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span> <span class="kt">float</span><span class="o">&gt;&amp;</span> <span class="n">vector</span><span class="p">)</span></pre>
+<p>Returns true if vector is normalized in &lt;0,1&gt; interval.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceglm-ext-1ac7510375cc3a16649a12824ca9b659d0"><span id="index-16"></span><span></span><span class="kt">bool</span> <span class="n">AreEqual</span><span class="p">(</span><span class="k">const</span> <span class="kt">float</span> <span class="n">val1</span><span class="p">,</span> <span class="k">const</span> <span class="kt">float</span> <span class="n">val2</span><span class="p">,</span> <span class="k">const</span> <span class="kt">float</span> <span class="n">epsilon</span> <span class="o">=</span> <span class="n">FLT_EPSILON</span><span class="p">)</span></pre>
+<p>Returns true if two values are equal within defined epsilon threshold.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceglm-ext-1abd1e3a4192cdd7872588dc37308fcdcc"><span id="index-17"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="kt">int</span> <span class="n">N</span><span class="o">&gt;</span>
+<span class="kt">bool</span> <span class="n">AreEqual</span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span> <span class="kt">float</span><span class="o">&gt;&amp;</span> <span class="n">vec1</span><span class="p">,</span> <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span> <span class="kt">float</span><span class="o">&gt;&amp;</span> <span class="n">vec2</span><span class="p">,</span> <span class="k">const</span> <span class="kt">float</span> <span class="n">epsilon</span> <span class="o">=</span> <span class="n">FLT_EPSILON</span><span class="p">)</span></pre>
+<p>Returns true if all components of two vectors are equal within defined epsilon threshold.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceglm-ext-1ae09bd8ccc4c040d6118bb6bb31875f9f"><span id="index-18"></span><span></span><span class="kt">bool</span> <span class="n">AreEqual</span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">quat</span><span class="o">&amp;</span> <span class="n">q1</span><span class="p">,</span> <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">quat</span><span class="o">&amp;</span> <span class="n">q2</span><span class="p">,</span> <span class="k">const</span> <span class="kt">float</span> <span class="n">epsilon</span> <span class="o">=</span> <span class="n">FLT_EPSILON</span><span class="p">)</span></pre>
+<p>Returns true if two quaternions are equal within defined epsilon threshold.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceglm-ext-1ae41a7b966c3e3bff87a1b509e9da56df"><span id="index-19"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="kt">int</span> <span class="n">N</span><span class="p">,</span> <span class="kt">int</span> <span class="n">M</span><span class="o">&gt;</span>
+<span class="kt">bool</span> <span class="n">AreEqual</span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">mat</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span> <span class="n">M</span><span class="p">,</span> <span class="kt">float</span><span class="o">&gt;&amp;</span> <span class="n">mat1</span><span class="p">,</span> <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">mat</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span> <span class="n">M</span><span class="p">,</span> <span class="kt">float</span><span class="o">&gt;&amp;</span> <span class="n">mat2</span><span class="p">,</span> <span class="k">const</span> <span class="kt">float</span> <span class="n">epsilon</span> <span class="o">=</span> <span class="n">FLT_EPSILON</span><span class="p">)</span></pre>
+<p>Returns true if all elements of two matrices are equal within defined epsilon threshold.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceglm-ext-1a55a41d811de2ee5778deee0a9f82e3f8"><span id="index-20"></span><span></span><span class="kt">bool</span> <span class="n">IsZero</span><span class="p">(</span><span class="k">const</span> <span class="kt">float</span> <span class="n">val</span><span class="p">,</span> <span class="k">const</span> <span class="kt">float</span> <span class="n">epsilon</span> <span class="o">=</span> <span class="n">FLT_EPSILON</span><span class="p">)</span></pre>
+<p>Returns true if a value is equal to zero within defined epsilon threshold.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceglm-ext-1a3f13f677215cbc43a7cc9ca931cee2da"><span id="index-21"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="k">typename</span><span class="p">...</span> <span class="n">TS</span><span class="o">&gt;</span>
+<span class="kt">bool</span> <span class="n">AllEqual</span><span class="p">(</span><span class="k">const</span> <span class="kt">float</span> <span class="n">precision</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span> <span class="n">a</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span> <span class="n">b</span><span class="p">,</span> <span class="k">const</span> <span class="n">TS</span> <span class="p">...</span> <span class="n">elements</span><span class="p">)</span></pre>
+<p>Checks a variable number of elements for equality with a given precision.</p>
+<p>Since the number of elements is variadic, the precision argument must be specified first.</p>
+<p>Performs comparison on consecutive elements.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceglm-ext-1a3362a18575a7e762bbfdc4c7a252a234"><span id="index-22"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="k">typename</span><span class="p">...</span> <span class="n">TS</span><span class="o">&gt;</span>
+<span class="kt">bool</span> <span class="n">AllEqual</span><span class="p">(</span><span class="k">const</span> <span class="kt">float</span> <span class="n">precision</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span> <span class="n">a</span><span class="p">)</span></pre>
+<p>Checks a variable number of elements for equality with a given precision. Boundary case for the variadic number of elements case.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceglm-ext-1afa28996958c1f21d7c5996523bcf0a18"><span id="index-23"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="kt">int</span> <span class="n">N</span><span class="p">,</span> <span class="kt">int</span> <span class="n">M</span><span class="p">,</span> <span class="k">typename</span> <span class="n">genType</span><span class="o">&gt;</span>
+<span class="kt">bool</span> <span class="n">IsAnyNan</span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">mat</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span> <span class="n">M</span><span class="p">,</span> <span class="n">genType</span><span class="p">,</span> <span class="n">glm</span><span class="o">::</span><span class="n">highp</span><span class="o">&gt;&amp;</span> <span class="n">mat</span><span class="p">)</span></pre>
+<p>Return whether any element in the matrix is NaN.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceglm-ext-1a442d4ec6ded5b7abd7250f7c76c47c4e"><span id="index-24"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Type</span><span class="p">,</span> <span class="n">glm</span><span class="o">::</span><span class="n">length_t</span> <span class="n">N</span><span class="o">&gt;</span>
+<span class="kt">bool</span> <span class="n">IsZero</span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span> <span class="n">Type</span><span class="o">&gt;&amp;</span> <span class="n">vec</span><span class="p">,</span> <span class="k">const</span> <span class="kt">float</span> <span class="n">epsilon</span> <span class="o">=</span> <span class="n">FLT_EPSILON</span><span class="p">)</span></pre>
+<p>Returns true if all components of vector are equal to zero within defined epsilon threshold.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceglm-ext-1ace7a857ecb6252554a861682f3bbc7a8"><span id="index-25"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="kt">int</span> <span class="n">N</span><span class="o">&gt;</span>
+<span class="kt">bool</span> <span class="n">IsLess</span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span> <span class="kt">float</span><span class="o">&gt;&amp;</span> <span class="n">vec1</span><span class="p">,</span> <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span> <span class="kt">float</span><span class="o">&gt;&amp;</span> <span class="n">vec2</span><span class="p">,</span> <span class="k">const</span> <span class="kt">float</span> <span class="n">epsilon</span> <span class="o">=</span> <span class="n">FLT_EPSILON</span><span class="p">)</span></pre>
+<p>Returns true if all components of vec1 are less then vec2 within defined epsilon threshold.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceglm-ext-1a529d24d8aba49106e0061fd6361924b9"><span id="index-26"></span><span></span><span class="kt">bool</span> <span class="n">IsLess</span><span class="p">(</span><span class="k">const</span> <span class="kt">float</span> <span class="n">val1</span><span class="p">,</span> <span class="k">const</span> <span class="kt">float</span> <span class="n">val2</span><span class="p">,</span> <span class="k">const</span> <span class="kt">float</span> <span class="n">epsilon</span> <span class="o">=</span> <span class="n">FLT_EPSILON</span><span class="p">)</span></pre>
+<p>Returns true if val1 is less then val2 within defined epsilon threshold.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceglm-ext-1a1989d81a66823ab4cf0fe09227ec75f7"><span id="index-27"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="kt">int</span> <span class="n">N</span><span class="o">&gt;</span>
+<span class="kt">bool</span> <span class="n">IsLequal</span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span> <span class="kt">float</span><span class="o">&gt;&amp;</span> <span class="n">vec1</span><span class="p">,</span> <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span> <span class="kt">float</span><span class="o">&gt;&amp;</span> <span class="n">vec2</span><span class="p">,</span> <span class="k">const</span> <span class="kt">float</span> <span class="n">epsilon</span> <span class="o">=</span> <span class="n">FLT_EPSILON</span><span class="p">)</span></pre>
+<p>Returns true if all components of vec1 are less or equal then vec2 within defined epsilon threshold.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceglm-ext-1a9892810e741a0b7add5a8c956f9fefb4"><span id="index-28"></span><span></span><span class="kt">bool</span> <span class="n">IsLequal</span><span class="p">(</span><span class="k">const</span> <span class="kt">float</span> <span class="n">val1</span><span class="p">,</span> <span class="k">const</span> <span class="kt">float</span> <span class="n">val2</span><span class="p">,</span> <span class="k">const</span> <span class="kt">float</span> <span class="n">epsilon</span> <span class="o">=</span> <span class="n">FLT_EPSILON</span><span class="p">)</span></pre>
+<p>Returns true if val1 is less or equal then val2 within defined epsilon threshold.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceglm-ext-1a0bb6a6729491a29199bcc478ecc7c5f5"><span id="index-29"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="kt">int</span> <span class="n">N</span><span class="o">&gt;</span>
+<span class="kt">bool</span> <span class="n">IsGreater</span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span> <span class="kt">float</span><span class="o">&gt;&amp;</span> <span class="n">vec1</span><span class="p">,</span> <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span> <span class="kt">float</span><span class="o">&gt;&amp;</span> <span class="n">vec2</span><span class="p">,</span> <span class="k">const</span> <span class="kt">float</span> <span class="n">epsilon</span> <span class="o">=</span> <span class="n">FLT_EPSILON</span><span class="p">)</span></pre>
+<p>Returns true if all components of vec1 are grater then vec2 within defined epsilon threshold.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceglm-ext-1a253cfadbf8eeb21d4d8efe382d577fe7"><span id="index-30"></span><span></span><span class="kt">bool</span> <span class="n">IsGreater</span><span class="p">(</span><span class="k">const</span> <span class="kt">float</span> <span class="n">val1</span><span class="p">,</span> <span class="k">const</span> <span class="kt">float</span> <span class="n">val2</span><span class="p">,</span> <span class="k">const</span> <span class="kt">float</span> <span class="n">epsilon</span> <span class="o">=</span> <span class="n">FLT_EPSILON</span><span class="p">)</span></pre>
+<p>Returns true if val1 is greater then val2 within defined epsilon threshold.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceglm-ext-1aa08df7783a43caf41f0203dd920c4452"><span id="index-31"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="kt">int</span> <span class="n">N</span><span class="o">&gt;</span>
+<span class="kt">bool</span> <span class="n">IsGequal</span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span> <span class="kt">float</span><span class="o">&gt;&amp;</span> <span class="n">vec1</span><span class="p">,</span> <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span> <span class="kt">float</span><span class="o">&gt;&amp;</span> <span class="n">vec2</span><span class="p">,</span> <span class="k">const</span> <span class="kt">float</span> <span class="n">epsilon</span> <span class="o">=</span> <span class="n">FLT_EPSILON</span><span class="p">)</span></pre>
+<p>Returns true if all components of vec1 are grater or equal then vec2 within defined epsilon threshold.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceglm-ext-1afcf463ca28acda708fb0c5c41d87f7db"><span id="index-32"></span><span></span><span class="kt">bool</span> <span class="n">IsGequal</span><span class="p">(</span><span class="k">const</span> <span class="kt">float</span> <span class="n">val1</span><span class="p">,</span> <span class="k">const</span> <span class="kt">float</span> <span class="n">val2</span><span class="p">,</span> <span class="k">const</span> <span class="kt">float</span> <span class="n">epsilon</span> <span class="o">=</span> <span class="n">FLT_EPSILON</span><span class="p">)</span></pre>
+<p>Returns true if val1 is greater or equal then val2 within defined epsilon threshold.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceglm-ext-1a6889ec8a198b3a7222f063c65a629938"><span id="index-33"></span><span></span><span class="kt">int</span> <span class="n">doti</span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">ivec2</span><span class="o">&amp;</span> <span class="n">x</span><span class="p">,</span> <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">ivec2</span><span class="o">&amp;</span> <span class="n">y</span><span class="p">)</span></pre>
+<p>Dot product of two integer vectors.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceglm-ext-1a00fd552df7f5ba5c73c6f7f495cba612"><span id="index-34"></span><span></span><span class="kt">float</span> <span class="n">map</span><span class="p">(</span><span class="kt">float</span> <span class="n">val</span><span class="p">,</span> <span class="kt">float</span> <span class="n">in_min</span><span class="p">,</span> <span class="kt">float</span> <span class="n">in_max</span><span class="p">,</span> <span class="kt">float</span> <span class="n">out_min</span><span class="p">,</span> <span class="kt">float</span> <span class="n">out_max</span><span class="p">)</span></pre>
+<p>Function that maps the input value in the input interval into an output value inside the output interval.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceglm-ext-1a89048e45afc4452dd1581d89c2288bb8"><span id="index-35"></span><span></span><span class="kt">float</span> <span class="n">Gaussian</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">,</span> <span class="kt">float</span> <span class="n">mean</span><span class="p">,</span> <span class="kt">float</span> <span class="n">sigma</span><span class="p">)</span></pre>
+<p>Calculates function value f(x) of normal distribution function.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>x</p></td>
+<td><p>Value for which to calculate functional value.</p></td>
+</tr>
+<tr class="row-even"><td><p>mean</p></td>
+<td><p>Mean value of normal distribution function.</p></td>
+</tr>
+<tr class="row-odd"><td><p>sigma</p></td>
+<td><p>Standard deviation of distribution. Note: interval &lt;-3*sigma, 3*sigma&gt; around mean value covers 99.72% of gauss distribution.</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceglm-ext-1a3fe35ede249f7b761ccfec3941ce7dd9"><span id="index-36"></span><span></span><span class="kt">float</span> <span class="n">Rand01</span><span class="p">(</span><span class="kt">int</span> <span class="n">precision</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">)</span></pre>
+<p>Returns random number in interval &lt;0,1&gt;, with specified precision (defaults to 3 digits).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespaceglm-ext-1a9f8c174a3138fd2446fc54dfcdd2a7c0"><span id="index-37"></span><span></span><span class="kt">float</span> <span class="n">RandomInRange</span><span class="p">(</span><span class="kt">float</span> <span class="n">min</span><span class="p">,</span> <span class="kt">float</span> <span class="n">max</span><span class="p">,</span> <span class="kt">int</span> <span class="n">precision</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">)</span></pre>
+<p>Returns random number in specified interval, with specified precision (defaults to 3 digits).</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Skeletex Research
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,350 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>class hiro::GuiPanel &mdash; HIRO 0.4.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/hiro-fav-32.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/target-highlight.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/hiro_theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-sphinx_rtd_theme.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="class hiro::ModKeys" href="class_hiro_ModKeys.html" />
+    <link rel="prev" title="class hiro::GuiGenerator" href="class_hiro_GuiGenerator.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: rgb(248, 216, 60)" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/hiro-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_0.html">T0: Setting up Visual Studio Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_1.html">T1: Introduction to HIRO GUI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_2.html">T2: Creating Custom Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_3.html">T3: Overview of Gadget Features</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="shader_api.html">Shader API</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="global.html">Global Namespace</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="namespace_cegui_ext.html">namespace cegui_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_dialog.html">namespace dialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_file_types.html">namespace file_types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_fs.html">namespace fs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_func.html">namespace func</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_geom.html">namespace geom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_glm_ext.html">namespace glm_ext</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="namespace_hiro.html">namespace hiro</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro_draw.html">namespace hiro::draw</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro_gui.html">namespace hiro::gui</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro_modules.html">namespace hiro::modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro_shader.html">namespace hiro::shader</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_BoolFunc.html">enum hiro::BoolFunc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_EventStatus.html">enum hiro::EventStatus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_Key.html">enum hiro::Key</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_Mod.html">enum hiro::Mod</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_MouseButton.html">enum hiro::MouseButton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_hiro_ActiveResourceInfo.html">struct hiro::ActiveResourceInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_hiro_ResourceId.html">struct hiro::ResourceId</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Camera.html">class hiro::Camera</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Debugger.html">class hiro::Debugger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Exportable.html">class hiro::Exportable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Gadget.html">class hiro::Gadget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_GuiGenerator.html">class hiro::GuiGenerator</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">class hiro::GuiPanel</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_ModKeys.html">class hiro::ModKeys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Resource.html">class hiro::Resource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_omp_ext.html">namespace omp_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_std_ext.html">namespace std_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_time_m.html">namespace time_m</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_ulog.html">namespace ulog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_uprogress.html">namespace uprogress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_utils.html">namespace utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_Config.html">class Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_IDialogInterface.html">class IDialogInterface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_WxWidgetsDialog.html">class WxWidgetsDialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">HIRO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="global.html">Global Namespace</a> &raquo;</li>
+        
+          <li><a href="namespace_hiro.html">namespace hiro</a> &raquo;</li>
+        
+      <li>class hiro::GuiPanel</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="class-hiro-guipanel">
+<span id="doxid-classhiro-1-1-gui-panel"></span><span id="index-0"></span><h1>class hiro::GuiPanel<a class="headerlink" href="#class-hiro-guipanel" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Base class for panels in gui system. <a class="reference internal" href="#details-classhiro-1-1-gui-panel"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;GuiPanel.h&gt;</span><span class="cp"></span>
+
+<span class="k">class</span> <span class="n">GuiPanel</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="c1">// construction</span>
+
+    <span class="doxyrest-code-target target" id="doxid-classhiro-1-1-gui-panel-1adf1ee84cac0540ee41d0e66ce28df27a"><span></span><span class="n">GuiPanel</span></span><span></span><span class="p">();</span>
+    <span class="k">virtual</span> <span class="doxyrest-code-target target" id="doxid-classhiro-1-1-gui-panel-1abc61485cd8d96793988a57c2156c5541"><span></span><span class="o">~</span><span class="n">GuiPanel</span></span><span></span><span class="p">();</span>
+
+    <span class="c1">// methods</span>
+
+    <span class="k">virtual</span> <span class="kt">void</span> <a class="reference internal" href="#doxid-classhiro-1-1-gui-panel-1a86eca4f38f1f02abee17bc0b7ac782c8"><span class="std std-ref">SetHeight</span></a><span></span><span class="p">(</span><span class="kt">uint32_t</span> <span class="n">pixel_height</span><span class="p">);</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-classhiro-1-1-gui-panel-1ae62ec7e027ec08db299e767d83c7b374"><span class="std std-ref">SetCallbackClose</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">function</span><span class="o">&lt;</span><span class="kt">void</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="o">&gt;&amp;</span> <span class="n">callback</span><span class="p">);</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-classhiro-1-1-gui-panel-1abccad361cd629e38b78f899d99fec601"><span class="std std-ref">SetCallbackPin</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">function</span><span class="o">&lt;</span><span class="kt">void</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="o">&gt;&amp;</span> <span class="n">callback</span><span class="p">);</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-classhiro-1-1-gui-panel-1ad4c2cc22dfff6f6d7e0e392174642cd4"><span class="std std-ref">Embed</span></a><span></span><span class="p">(</span><span class="n">CEGUI</span><span class="o">::</span><span class="n">VerticalLayoutContainer</span><span class="o">*</span> <span class="n">parent_containter</span><span class="p">);</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-classhiro-1-1-gui-panel-1ac9669fde29640ef10df4c899df82b5ae"><span class="std std-ref">SetVisible</span></a><span></span><span class="p">(</span><span class="kt">bool</span> <span class="n">visible</span><span class="p">);</span>
+    <span class="kt">bool</span> <span class="doxyrest-code-target target" id="doxid-classhiro-1-1-gui-panel-1af8f8ec417d5523b7df321a093818a27f"><span></span><span class="n">IsVisible</span></span><span></span><span class="p">();</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-classhiro-1-1-gui-panel-1ac5cc0168f9dc7318676c027c3ab5db31"><span class="std std-ref">SetCallbackFocus</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">CEGUI</span><span class="o">::</span><span class="n">Event</span><span class="o">::</span><span class="n">Subscriber</span><span class="o">&amp;</span> <span class="n">subscriber</span><span class="p">);</span>
+    <span class="n">CEGUI</span><span class="o">::</span><span class="n">Window</span><span class="o">*</span> <a class="reference internal" href="#doxid-classhiro-1-1-gui-panel-1a00dc927b11820469d657db9a849f9754"><span class="std std-ref">GetWidget</span></a><span></span><span class="p">();</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-classhiro-1-1-gui-panel-1a1c96ef245d3d82cac73d7484de626333"><span class="std std-ref">SetTitle</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">title</span><span class="p">);</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-classhiro-1-1-gui-panel-1a75708778efc2ce092dbb027cd1c8e0a4"><span class="std std-ref">SetFocusButtonEnabled</span></a><span></span><span class="p">(</span><span class="kt">bool</span> <span class="n">enabled</span><span class="p">);</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-classhiro-1-1-gui-panel-1ad9c088a1ae255dded9bcddee8ea50d24"><span class="std std-ref">SetPinButtonEnabled</span></a><span></span><span class="p">(</span><span class="kt">bool</span> <span class="n">enabled</span><span class="p">);</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-classhiro-1-1-gui-panel-1ae236353c3d179906bcf0bbf3123a845f"><span class="std std-ref">SetCloseButtonEnabled</span></a><span></span><span class="p">(</span><span class="kt">bool</span> <span class="n">enabled</span><span class="p">);</span>
+
+<span class="k">protected</span><span class="o">:</span>
+    <span class="c1">// fields</span>
+
+    <span class="k">static</span> <span class="k">const</span> <span class="kt">float</span> <span class="doxyrest-code-target target" id="doxid-classhiro-1-1-gui-panel-1af0f7b1dbee522246e239321b6b9424a4"><span></span><span class="n">DEFAULT_LEFT_MARGIN</span></span><span></span><span class="p">;</span>
+    <span class="k">static</span> <span class="k">const</span> <span class="kt">float</span> <span class="doxyrest-code-target target" id="doxid-classhiro-1-1-gui-panel-1ac351e1801cece824e8c4a7c9ae9ba833"><span></span><span class="n">DEFAULT_BOTTOM_MARGIN</span></span><span></span><span class="p">;</span>
+
+    <span class="c1">// methods</span>
+
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-classhiro-1-1-gui-panel-1aac7cde366573fb8a3e5a4d5c639dc371"><span class="std std-ref">CreateClientWindow</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">layout_xml</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">);</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-classhiro-1-1-gui-panel-1a0a7aea88022f6a4cc1d319a0f27de8aa"><span class="std std-ref">SetClientWindow</span></a><span></span><span class="p">(</span><span class="n">CEGUI</span><span class="o">::</span><span class="n">Window</span><span class="o">*</span> <span class="n">client_window</span><span class="p">);</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-classhiro-1-1-gui-panel-1aad43e75bf17f30f01c1d497ec2388b0b"><span class="std std-ref">SetHeaderColor</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">cogs</span><span class="o">::</span><span class="n">Color4hex</span><span class="o">&amp;</span> <span class="n">color</span><span class="p">);</span>
+    <span class="n">CEGUI</span><span class="o">::</span><span class="n">Window</span><span class="o">*</span> <a class="reference internal" href="#doxid-classhiro-1-1-gui-panel-1a542659698f483934e5951288d6979c2a"><span class="std std-ref">GetClientWindow</span></a><span></span><span class="p">();</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-classhiro-1-1-gui-panel-1aa89e04030c5b2089c0e99beef9e36472"><span class="std std-ref">SetMargins</span></a><span></span><span class="p">(</span><span class="kt">float</span> <span class="n">left</span><span class="p">,</span> <span class="kt">float</span> <span class="n">bottom</span><span class="p">);</span>
+<span class="p">};</span></pre>
+</div>
+<div class="section" id="detailed-documentation">
+<span id="details-classhiro-1-1-gui-panel"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
+<p>Base class for panels in gui system.</p>
+<div class="section" id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-gui-panel-1a86eca4f38f1f02abee17bc0b7ac782c8"><span id="index-1"></span><span></span><span class="k">virtual</span> <span class="kt">void</span> <span class="n">SetHeight</span><span class="p">(</span><span class="kt">uint32_t</span> <span class="n">pixel_height</span><span class="p">)</span></pre>
+<p>Sets the height of panel to the new value in pixels.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-gui-panel-1ae62ec7e027ec08db299e767d83c7b374"><span id="index-2"></span><span></span><span class="kt">void</span> <span class="n">SetCallbackClose</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">function</span><span class="o">&lt;</span><span class="kt">void</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="o">&gt;&amp;</span> <span class="n">callback</span><span class="p">)</span></pre>
+<p>Sets callback which is evoked when user requests panel to close.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-gui-panel-1abccad361cd629e38b78f899d99fec601"><span id="index-3"></span><span></span><span class="kt">void</span> <span class="n">SetCallbackPin</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">function</span><span class="o">&lt;</span><span class="kt">void</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="o">&gt;&amp;</span> <span class="n">callback</span><span class="p">)</span></pre>
+<p>Sets callback which is evoked when user requests panel to pin.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-gui-panel-1ad4c2cc22dfff6f6d7e0e392174642cd4"><span id="index-4"></span><span></span><span class="kt">void</span> <span class="n">Embed</span><span class="p">(</span><span class="n">CEGUI</span><span class="o">::</span><span class="n">VerticalLayoutContainer</span><span class="o">*</span> <span class="n">parent_containter</span><span class="p">)</span></pre>
+<p>Places this to the children list of specified container.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-gui-panel-1ac9669fde29640ef10df4c899df82b5ae"><span id="index-5"></span><span></span><span class="kt">void</span> <span class="n">SetVisible</span><span class="p">(</span><span class="kt">bool</span> <span class="n">visible</span><span class="p">)</span></pre>
+<p>Toggles visibility for this panel. Adds and removes it to/from parent container.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-gui-panel-1ac5cc0168f9dc7318676c027c3ab5db31"><span id="index-6"></span><span></span><span class="kt">void</span> <span class="n">SetCallbackFocus</span><span class="p">(</span><span class="k">const</span> <span class="n">CEGUI</span><span class="o">::</span><span class="n">Event</span><span class="o">::</span><span class="n">Subscriber</span><span class="o">&amp;</span> <span class="n">subscriber</span><span class="p">)</span></pre>
+<p>Sets callback which is evoked when user requests panel to focus.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-gui-panel-1a00dc927b11820469d657db9a849f9754"><span id="index-7"></span><span></span><span class="n">CEGUI</span><span class="o">::</span><span class="n">Window</span><span class="o">*</span> <span class="n">GetWidget</span><span class="p">()</span></pre>
+<p>Returns pointer to the frame window.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-gui-panel-1a1c96ef245d3d82cac73d7484de626333"><span id="index-8"></span><span></span><span class="kt">void</span> <span class="n">SetTitle</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">title</span><span class="p">)</span></pre>
+<p>Sets the title name in the header.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-gui-panel-1a75708778efc2ce092dbb027cd1c8e0a4"><span id="index-9"></span><span></span><span class="kt">void</span> <span class="n">SetFocusButtonEnabled</span><span class="p">(</span><span class="kt">bool</span> <span class="n">enabled</span><span class="p">)</span></pre>
+<p>Enables/disables focus button in the header. Initially disabled.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-gui-panel-1ad9c088a1ae255dded9bcddee8ea50d24"><span id="index-10"></span><span></span><span class="kt">void</span> <span class="n">SetPinButtonEnabled</span><span class="p">(</span><span class="kt">bool</span> <span class="n">enabled</span><span class="p">)</span></pre>
+<p>Enables/disables pin button in the header. Initially disabled.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-gui-panel-1ae236353c3d179906bcf0bbf3123a845f"><span id="index-11"></span><span></span><span class="kt">void</span> <span class="n">SetCloseButtonEnabled</span><span class="p">(</span><span class="kt">bool</span> <span class="n">enabled</span><span class="p">)</span></pre>
+<p>Enables/disables close button in the header. Initially enabled.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-gui-panel-1aac7cde366573fb8a3e5a4d5c639dc371"><span id="index-12"></span><span></span><span class="kt">void</span> <span class="n">CreateClientWindow</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">layout_xml</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">)</span></pre>
+<p>Creates custom client window element in the panel body.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-gui-panel-1a0a7aea88022f6a4cc1d319a0f27de8aa"><span id="index-13"></span><span></span><span class="kt">void</span> <span class="n">SetClientWindow</span><span class="p">(</span><span class="n">CEGUI</span><span class="o">::</span><span class="n">Window</span><span class="o">*</span> <span class="n">client_window</span><span class="p">)</span></pre>
+<p>Sets custom client window element in the panel body.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-gui-panel-1aad43e75bf17f30f01c1d497ec2388b0b"><span id="index-14"></span><span></span><span class="kt">void</span> <span class="n">SetHeaderColor</span><span class="p">(</span><span class="k">const</span> <span class="n">cogs</span><span class="o">::</span><span class="n">Color4hex</span><span class="o">&amp;</span> <span class="n">color</span><span class="p">)</span></pre>
+<p>Changes color of the header bar.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-gui-panel-1a542659698f483934e5951288d6979c2a"><span id="index-15"></span><span></span><span class="n">CEGUI</span><span class="o">::</span><span class="n">Window</span><span class="o">*</span> <span class="n">GetClientWindow</span><span class="p">()</span></pre>
+<p>Returns pointer to the client window in the panel body.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-gui-panel-1aa89e04030c5b2089c0e99beef9e36472"><span id="index-16"></span><span></span><span class="kt">void</span> <span class="n">SetMargins</span><span class="p">(</span><span class="kt">float</span> <span class="n">left</span><span class="p">,</span> <span class="kt">float</span> <span class="n">bottom</span><span class="p">)</span></pre>
+<p>Sets left and bottom margins for this.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Skeletex Research
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

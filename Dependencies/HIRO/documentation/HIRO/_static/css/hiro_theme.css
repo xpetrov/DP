@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Saira+Extra+Condensed&display=swap');
+
+/* Title */
+
+.wy-side-nav-search>div.version {
+    color: #000;
+}
+
+.wy-side-nav-search input[type=text] {
+    border-color: #34313140;
+}
+
+
+/* Sidebar */
+
+.wy-menu-vertical header,
+.wy-menu-vertical p.caption {
+    color: rgb(248, 216, 60);
+}
+
+.wy-nav-top,
+.wy-nav-top a {
+    background-color: rgb(248, 216, 60);
+    color: #000;
+}
+
+
+/* Download buttons */
+
+a.release_download {
+    display: inline-block;
+    margin: 0;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    background-color: #6F6DB3;
+    color: #FFFFFF;
+    font-variant: small-caps;
+    text-align: center;
+    text-decoration: none;
+    padding: 0.2em 1.6em;
+    letter-spacing: 0.1em;
+	box-shadow: 3px 3px 10px #00000033;
+	border: 0.4em solid rgb(248, 216, 60, 0);
+}
+
+a.release_download.alt {
+    background-color: #514E94;
+}
+
+a.release_download:hover {
+    border-color: rgb(248, 216, 60);
+}
+
+a.release_download h1 {
+    font-family: 'Saira Extra Condensed', sans-serif;
+    display: block;
+    font-size: 2em;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+a.release_download h2 {
+    font-family: 'Saira Extra Condensed', sans-serif;
+    text-transform: uppercase;
+    display: block;
+    font-size: 1.1em;
+    margin: 0;
+    font-weight: normal;
+}
+
+a.release_download .release_version {
+    color: rgb(248, 216, 60);
+    text-shadow: 0px 0px 3px #00000044;
+}
+
+a.release_download .release_flag {
+    text-transform: uppercase;
+    font-size: 0.6em;
+}
+
+
+/* Function titles */
+
+.rst-content pre.doxyrest-title-code-block {
+    font-size: 14px !important;
+    background-color: rgba(248, 216, 60, 0.4) !important;
+    border-top-color: rgb(248, 216, 60) !important;
+}
+
+.rst-content pre.doxyrest-overview-code-block {
+    background-color: #f0f0f0 !important;
+}

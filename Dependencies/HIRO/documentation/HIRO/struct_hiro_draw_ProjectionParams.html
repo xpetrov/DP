@@ -1,0 +1,386 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>struct hiro::draw::ProjectionParams &mdash; HIRO 0.4.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/hiro-fav-32.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/target-highlight.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/hiro_theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-sphinx_rtd_theme.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="struct hiro::draw::SkeletonStyle" href="struct_hiro_draw_SkeletonStyle.html" />
+    <link rel="prev" title="struct hiro::draw::PointsStyle" href="struct_hiro_draw_PointsStyle.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: rgb(248, 216, 60)" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/hiro-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_0.html">T0: Setting up Visual Studio Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_1.html">T1: Introduction to HIRO GUI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_2.html">T2: Creating Custom Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_3.html">T3: Overview of Gadget Features</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="shader_api.html">Shader API</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="global.html">Global Namespace</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="namespace_cegui_ext.html">namespace cegui_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_dialog.html">namespace dialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_file_types.html">namespace file_types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_fs.html">namespace fs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_func.html">namespace func</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_geom.html">namespace geom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_glm_ext.html">namespace glm_ext</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="namespace_hiro.html">namespace hiro</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="namespace_hiro_draw.html">namespace hiro::draw</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="enum_hiro_draw_AntiAliasing.html">enum hiro::draw::AntiAliasing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_hiro_draw_CameraMode.html">enum hiro::draw::CameraMode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_hiro_draw_ColorSource.html">enum hiro::draw::ColorSource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_hiro_draw_GeometryName.html">enum hiro::draw::GeometryName</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_hiro_draw_GroundGrid.html">enum hiro::draw::GroundGrid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_hiro_draw_PrimitiveName.html">enum hiro::draw::PrimitiveName</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_hiro_draw_TextAlignment.html">enum hiro::draw::TextAlignment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_draw_BillboardStyle.html">struct hiro::draw::BillboardStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_draw_FacesStyle.html">struct hiro::draw::FacesStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_draw_FrustumStyle.html">struct hiro::draw::FrustumStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_draw_Geometry.html">struct hiro::draw::Geometry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_draw_GeometryStyle.html">struct hiro::draw::GeometryStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_draw_GraphStyle.html">struct hiro::draw::GraphStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_draw_ImageStyle.html">struct hiro::draw::ImageStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_draw_LineFieldStyle.html">struct hiro::draw::LineFieldStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_draw_NormalsStyle.html">struct hiro::draw::NormalsStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_draw_PointCloudStyle.html">struct hiro::draw::PointCloudStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_draw_PointsStyle.html">struct hiro::draw::PointsStyle</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">struct hiro::draw::ProjectionParams</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_draw_SkeletonStyle.html">struct hiro::draw::SkeletonStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_draw_Style.html">struct hiro::draw::Style</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_BillboardRenderer.html">class hiro::draw::BillboardRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_CircleRenderer.html">class hiro::draw::CircleRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_CircleStyle.html">class hiro::draw::CircleStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_ElementRenderer.html">class hiro::draw::ElementRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_FrustumRenderer.html">class hiro::draw::FrustumRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_GeometryRenderer.html">class hiro::draw::GeometryRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_GraphRenderer.html">class hiro::draw::GraphRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_ImageRenderer.html">class hiro::draw::ImageRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_LineFieldRenderer.html">class hiro::draw::LineFieldRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_MeshRenderer.html">class hiro::draw::MeshRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_PointCloudRenderer.html">class hiro::draw::PointCloudRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_PrimitiveDatabase.html">class hiro::draw::PrimitiveDatabase</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_RasterRenderer.html">class hiro::draw::RasterRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_RenderSystem.html">class hiro::draw::RenderSystem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_Renderer.html">class hiro::draw::Renderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_Scene.html">class hiro::draw::Scene</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_SkeletonRenderer.html">class hiro::draw::SkeletonRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_SkinnedMeshRenderer.html">class hiro::draw::SkinnedMeshRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_TextPrinter.html">class hiro::draw::TextPrinter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_TextRenderer.html">class hiro::draw::TextRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_VisualCamera.html">class hiro::draw::VisualCamera</a></li>
+<li class="toctree-l4"><a class="reference internal" href="class_hiro_draw_VisualCameraController.html">class hiro::draw::VisualCameraController</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_hiro_draw.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_hiro_draw.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro_gui.html">namespace hiro::gui</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro_modules.html">namespace hiro::modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro_shader.html">namespace hiro::shader</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_BoolFunc.html">enum hiro::BoolFunc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_EventStatus.html">enum hiro::EventStatus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_Key.html">enum hiro::Key</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_Mod.html">enum hiro::Mod</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_MouseButton.html">enum hiro::MouseButton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_hiro_ActiveResourceInfo.html">struct hiro::ActiveResourceInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_hiro_ResourceId.html">struct hiro::ResourceId</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Camera.html">class hiro::Camera</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Debugger.html">class hiro::Debugger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Exportable.html">class hiro::Exportable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Gadget.html">class hiro::Gadget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_GuiGenerator.html">class hiro::GuiGenerator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_GuiPanel.html">class hiro::GuiPanel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_ModKeys.html">class hiro::ModKeys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Resource.html">class hiro::Resource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_omp_ext.html">namespace omp_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_std_ext.html">namespace std_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_time_m.html">namespace time_m</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_ulog.html">namespace ulog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_uprogress.html">namespace uprogress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_utils.html">namespace utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_Config.html">class Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_IDialogInterface.html">class IDialogInterface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_WxWidgetsDialog.html">class WxWidgetsDialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">HIRO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="global.html">Global Namespace</a> &raquo;</li>
+        
+          <li><a href="namespace_hiro.html">namespace hiro</a> &raquo;</li>
+        
+          <li><a href="namespace_hiro_draw.html">namespace hiro::draw</a> &raquo;</li>
+        
+      <li>struct hiro::draw::ProjectionParams</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="struct-hiro-draw-projectionparams">
+<span id="doxid-structhiro-1-1draw-1-1-projection-params"></span><span id="index-0"></span><h1>struct hiro::draw::ProjectionParams<a class="headerlink" href="#struct-hiro-draw-projectionparams" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Projection, camera and viewport parameters. <a class="reference internal" href="#details-structhiro-1-1draw-1-1-projection-params"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;Scene.h&gt;</span><span class="cp"></span>
+
+<span class="k">struct</span> <span class="n">ProjectionParams</span> <span class="p">{</span>
+    <span class="c1">// fields</span>
+
+    <span class="kt">int32_t</span> <a class="reference internal" href="#doxid-structhiro-1-1draw-1-1-projection-params-1ab1d44cc2c44c61859be7349786193ee9"><span class="std std-ref">top</span></a><span></span><span class="p">;</span>
+    <span class="kt">int32_t</span> <a class="reference internal" href="#doxid-structhiro-1-1draw-1-1-projection-params-1a60ea17e397af1d6af0cc7a5bf95b41a1"><span class="std std-ref">left</span></a><span></span><span class="p">;</span>
+    <span class="kt">int32_t</span> <a class="reference internal" href="#doxid-structhiro-1-1draw-1-1-projection-params-1afa39db62be1ec619cc9d90fcb44dc81e"><span class="std std-ref">bottom</span></a><span></span><span class="p">;</span>
+    <span class="kt">int32_t</span> <a class="reference internal" href="#doxid-structhiro-1-1draw-1-1-projection-params-1a9daade6fa072552f6c962a25ce529076"><span class="std std-ref">right</span></a><span></span><span class="p">;</span>
+    <span class="kt">float</span> <a class="reference internal" href="#doxid-structhiro-1-1draw-1-1-projection-params-1a4b4f0dcb5fcac5670fd7c7ca59a69761"><span class="std std-ref">fov_x</span></a><span></span><span class="p">;</span>
+    <span class="kt">float</span> <a class="reference internal" href="#doxid-structhiro-1-1draw-1-1-projection-params-1afd22fa3b3b3412f56b0db49da0ed62f3"><span class="std std-ref">fov_y</span></a><span></span><span class="p">;</span>
+    <span class="kt">float</span> <a class="reference internal" href="#doxid-structhiro-1-1draw-1-1-projection-params-1a27ef98a806acd509cebb6d262ba25d2b"><span class="std std-ref">near_distance</span></a><span></span><span class="p">;</span>
+    <span class="kt">float</span> <a class="reference internal" href="#doxid-structhiro-1-1draw-1-1-projection-params-1afbfa1d09ea5679c3c56c2e2bed693d96"><span class="std std-ref">far_distance</span></a><span></span><span class="p">;</span>
+    <a class="reference internal" href="namespace_glm_ext.html#doxid-namespaceglm-ext-1abb00c17b6cd7d068fa7eef293f0ddc7d"><span class="std std-ref">glm_ext::TransMat4</span></a><span></span> <a class="reference internal" href="#doxid-structhiro-1-1draw-1-1-projection-params-1a935cc3f9dc2bff8f92e31627e360cf07"><span class="std std-ref">view</span></a><span></span><span class="p">;</span>
+    <a class="reference internal" href="namespace_glm_ext.html#doxid-namespaceglm-ext-1abb00c17b6cd7d068fa7eef293f0ddc7d"><span class="std std-ref">glm_ext::TransMat4</span></a><span></span> <a class="reference internal" href="#doxid-structhiro-1-1draw-1-1-projection-params-1ae2fbec285cf8776cec183ffdd2faade7"><span class="std std-ref">proj</span></a><span></span><span class="p">;</span>
+    <span class="kt">float</span> <a class="reference internal" href="#doxid-structhiro-1-1draw-1-1-projection-params-1a858c6aed15c0ccb3e926adf30300d54d"><span class="std std-ref">width</span></a><span></span><span class="p">;</span>
+    <span class="kt">float</span> <a class="reference internal" href="#doxid-structhiro-1-1draw-1-1-projection-params-1a1af8e40fbbba0bb298eb650d987fcd8a"><span class="std std-ref">height</span></a><span></span><span class="p">;</span>
+    <span class="kt">float</span> <a class="reference internal" href="#doxid-structhiro-1-1draw-1-1-projection-params-1a5bf1e7552176e5965022e09f4a5ebc2c"><span class="std std-ref">aspect</span></a><span></span><span class="p">;</span>
+
+    <span class="c1">// methods</span>
+
+    <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span> <a class="reference internal" href="#doxid-structhiro-1-1draw-1-1-projection-params-1a2684a3d9a65e8c938241c5944e4d82ba"><span class="std std-ref">CastRay</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec2</span><span class="o">&amp;</span> <span class="n">clip_coords</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="n">glm</span><span class="o">::</span><span class="n">vec2</span> <a class="reference internal" href="#doxid-structhiro-1-1draw-1-1-projection-params-1a0e71e185677c8ecc543c29fd17c57898"><span class="std std-ref">ScreenToClipCoords</span></a><span></span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">,</span> <span class="kt">float</span> <span class="n">y</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+<span class="p">};</span></pre>
+</div>
+<div class="section" id="detailed-documentation">
+<span id="details-structhiro-1-1draw-1-1-projection-params"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
+<p>Projection, camera and viewport parameters.</p>
+<div class="section" id="fields">
+<h3>Fields<a class="headerlink" href="#fields" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-structhiro-1-1draw-1-1-projection-params-1ab1d44cc2c44c61859be7349786193ee9"><span id="index-1"></span><span></span><span class="kt">int32_t</span> <span class="n">top</span></pre>
+<p>Viewport offset from the top window border. In pixels.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-structhiro-1-1draw-1-1-projection-params-1a60ea17e397af1d6af0cc7a5bf95b41a1"><span id="index-2"></span><span></span><span class="kt">int32_t</span> <span class="n">left</span></pre>
+<p>Viewport offset from the left window border. In pixels.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-structhiro-1-1draw-1-1-projection-params-1afa39db62be1ec619cc9d90fcb44dc81e"><span id="index-3"></span><span></span><span class="kt">int32_t</span> <span class="n">bottom</span></pre>
+<p>Viewport offset from the bottom window border. In pixels.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-structhiro-1-1draw-1-1-projection-params-1a9daade6fa072552f6c962a25ce529076"><span id="index-4"></span><span></span><span class="kt">int32_t</span> <span class="n">right</span></pre>
+<p>Viewport offset from the right window border. In pixels.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-structhiro-1-1draw-1-1-projection-params-1a4b4f0dcb5fcac5670fd7c7ca59a69761"><span id="index-5"></span><span></span><span class="kt">float</span> <span class="n">fov_x</span></pre>
+<p>Horizontal view angle. In radians.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-structhiro-1-1draw-1-1-projection-params-1afd22fa3b3b3412f56b0db49da0ed62f3"><span id="index-6"></span><span></span><span class="kt">float</span> <span class="n">fov_y</span></pre>
+<p>Vertical view angle, In radians.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-structhiro-1-1draw-1-1-projection-params-1a27ef98a806acd509cebb6d262ba25d2b"><span id="index-7"></span><span></span><span class="kt">float</span> <span class="n">near_distance</span></pre>
+<p>Distance to near projection plane.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-structhiro-1-1draw-1-1-projection-params-1afbfa1d09ea5679c3c56c2e2bed693d96"><span id="index-8"></span><span></span><span class="kt">float</span> <span class="n">far_distance</span></pre>
+<p>Distance to far projection plane.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-structhiro-1-1draw-1-1-projection-params-1a935cc3f9dc2bff8f92e31627e360cf07"><span id="index-9"></span><a class="reference internal" href="namespace_glm_ext.html#doxid-namespaceglm-ext-1abb00c17b6cd7d068fa7eef293f0ddc7d"><span class="std std-ref">glm_ext::TransMat4</span></a><span></span> <span class="n">view</span></pre>
+<p><a class="reference internal" href="class_hiro_Camera.html#doxid-classhiro-1-1-camera"><span class="std std-ref">Camera</span></a> view matrix.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-structhiro-1-1draw-1-1-projection-params-1ae2fbec285cf8776cec183ffdd2faade7"><span id="index-10"></span><a class="reference internal" href="namespace_glm_ext.html#doxid-namespaceglm-ext-1abb00c17b6cd7d068fa7eef293f0ddc7d"><span class="std std-ref">glm_ext::TransMat4</span></a><span></span> <span class="n">proj</span></pre>
+<p>Projection matrix.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-structhiro-1-1draw-1-1-projection-params-1a858c6aed15c0ccb3e926adf30300d54d"><span id="index-11"></span><span></span><span class="kt">float</span> <span class="n">width</span></pre>
+<p>Horizontal pixel resolution of viewport.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-structhiro-1-1draw-1-1-projection-params-1a1af8e40fbbba0bb298eb650d987fcd8a"><span id="index-12"></span><span></span><span class="kt">float</span> <span class="n">height</span></pre>
+<p>Vertical pixel resolution of viewport.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-structhiro-1-1draw-1-1-projection-params-1a5bf1e7552176e5965022e09f4a5ebc2c"><span id="index-13"></span><span></span><span class="kt">float</span> <span class="n">aspect</span></pre>
+<p>Aspect ratio of a viewport (width/height);.</p>
+</div>
+<div class="section" id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-structhiro-1-1draw-1-1-projection-params-1a2684a3d9a65e8c938241c5944e4d82ba"><span id="index-14"></span><span></span><span class="n">glm</span><span class="o">::</span><span class="n">vec3</span> <span class="n">CastRay</span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec2</span><span class="o">&amp;</span> <span class="n">clip_coords</span><span class="p">)</span> <span class="k">const</span></pre>
+<p>Computes the direction of a ray casted form camera at a given 2D coordinates.</p>
+<p>clip_coords 2D coordinate in clip space used for ray generation. If you wish to convert screen coordinates to clip coordinates, see ScreenToClipCoords.</p>
+<p class="rubric">Returns:</p>
+<p>Direction of a generated ray. A starting position of a ray is usually camera position.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-structhiro-1-1draw-1-1-projection-params-1a0e71e185677c8ecc543c29fd17c57898"><span id="index-15"></span><span></span><span class="n">glm</span><span class="o">::</span><span class="n">vec2</span> <span class="n">ScreenToClipCoords</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">,</span> <span class="kt">float</span> <span class="n">y</span><span class="p">)</span> <span class="k">const</span></pre>
+<p>Converts screen coordinates to clip coordinates.</p>
+<p>Screen coordinates are in pixels and are generated for example by mouse events. Clip coordinates are in the range -1.0 and 1.0 range and relative to the viewport.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Skeletex Research
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

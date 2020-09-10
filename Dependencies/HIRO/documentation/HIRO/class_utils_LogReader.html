@@ -1,0 +1,351 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>class utils::LogReader &mdash; HIRO 0.4.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/hiro-fav-32.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/target-highlight.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/hiro_theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-sphinx_rtd_theme.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="class utils::LogWriter" href="class_utils_LogWriter.html" />
+    <link rel="prev" title="enum utils::LogEntry::Type" href="enum_utils_LogEntry_Type.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: rgb(248, 216, 60)" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/hiro-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_0.html">T0: Setting up Visual Studio Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_1.html">T1: Introduction to HIRO GUI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_2.html">T2: Creating Custom Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_3.html">T3: Overview of Gadget Features</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="shader_api.html">Shader API</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="global.html">Global Namespace</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="namespace_cegui_ext.html">namespace cegui_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_dialog.html">namespace dialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_file_types.html">namespace file_types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_fs.html">namespace fs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_func.html">namespace func</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_geom.html">namespace geom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_glm_ext.html">namespace glm_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_hiro.html">namespace hiro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_omp_ext.html">namespace omp_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_std_ext.html">namespace std_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_time_m.html">namespace time_m</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_ulog.html">namespace ulog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_uprogress.html">namespace uprogress</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="namespace_utils.html">namespace utils</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="enum_utils_BaseAxis.html">enum utils::BaseAxis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_utils_Handedness.html">enum utils::Handedness</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_utils_LicenseState.html">enum utils::LicenseState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_utils_Units.html">enum utils::Units</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_utils_IntrinsicParams.html">struct utils::IntrinsicParams</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_utils_Property.html">template struct utils::Property</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_utils_PropertyByValue.html">template struct utils::PropertyByValue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_utils_SpaceDefinition.html">struct utils::SpaceDefinition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_utils_StrongId.html">template struct utils::StrongId</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_utils_StrongOptionalType.html">template struct utils::StrongOptionalType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_utils_StrongType.html">template struct utils::StrongType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_utils_Version.html">struct utils::Version</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_CallbackTimer.html">class utils::CallbackTimer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_ConcurrentBinding.html">template class utils::ConcurrentBinding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_Couple.html">template class utils::Couple</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_DelegatedNotifier.html">template class utils::DelegatedNotifier</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_Dictionary.html">class utils::Dictionary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_EnumFlags.html">template class utils::EnumFlags</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_EventHandler.html">class utils::EventHandler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_GlmQuatSerializable.html">class utils::GlmQuatSerializable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_GlmVec3Serializable.html">class utils::GlmVec3Serializable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_Identifiable.html">template class utils::Identifiable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_IniParser.html">class utils::IniParser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_Interval.html">class utils::Interval</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_LicenseChecker.html">class utils::LicenseChecker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_LogEntry.html">class utils::LogEntry</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">class utils::LogReader</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_LogWriter.html">class utils::LogWriter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_Logger.html">class utils::Logger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_NamedClass.html">template class utils::NamedClass</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_Notifier.html">template class utils::Notifier</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_OnEnd.html">class utils::OnEnd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_Serializer.html">template class utils::Serializer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_Statistics.html">template class utils::Statistics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_Triplet.html">template class utils::Triplet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_utils.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_utils.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_Config.html">class Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_IDialogInterface.html">class IDialogInterface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_WxWidgetsDialog.html">class WxWidgetsDialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">HIRO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="global.html">Global Namespace</a> &raquo;</li>
+        
+          <li><a href="namespace_utils.html">namespace utils</a> &raquo;</li>
+        
+      <li>class utils::LogReader</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="class-utils-logreader">
+<span id="doxid-classutils-1-1-log-reader"></span><span id="index-0"></span><h1>class utils::LogReader<a class="headerlink" href="#class-utils-logreader" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Log - accumulate typed messages reported by the application. Includes percentage value in range &lt;0,1&gt;. <a class="reference internal" href="#details-classutils-1-1-log-reader"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;LogReader.h&gt;</span><span class="cp"></span>
+
+<span class="k">class</span> <span class="n">LogReader</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="c1">// construction</span>
+
+    <span class="doxyrest-code-target target" id="doxid-classutils-1-1-log-reader-1acdbcf0cd6e25e77d1d8cea0d77583a7e"><span></span><span class="n">LogReader</span></span><span></span><span class="p">();</span>
+    <span class="doxyrest-code-target target" id="doxid-classutils-1-1-log-reader-1a65a78b32e42d1a34b85ce497622c5b1a"><span></span><span class="n">LogReader</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="n">LogReader</span><span class="o">&amp;</span><span class="p">);</span>
+    <span class="doxyrest-code-target target" id="doxid-classutils-1-1-log-reader-1a78d48b6779b4bfc572039760c5dc1f00"><span></span><span class="n">LogReader</span></span><span></span><span class="p">(</span><span class="n">LogReader</span><span class="o">&amp;&amp;</span><span class="p">);</span>
+    <span class="doxyrest-code-target target" id="doxid-classutils-1-1-log-reader-1a73426a8608a485a0762db3ea0840d4c5"><span></span><span class="o">~</span><span class="n">LogReader</span></span><span></span><span class="p">();</span>
+
+    <span class="c1">// methods</span>
+
+    <span class="n">LogReader</span><span class="o">&amp;</span> <span class="doxyrest-code-target target" id="doxid-classutils-1-1-log-reader-1a7e844e488ccdb4c85bcf56fc44a96d49"><span></span><span class="k">operator</span><span class="o">=</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="n">LogReader</span><span class="o">&amp;</span><span class="p">);</span>
+    <span class="n">LogReader</span><span class="o">&amp;</span> <span class="doxyrest-code-target target" id="doxid-classutils-1-1-log-reader-1aee87f0b320bf35a00935781ba57078db"><span></span><span class="k">operator</span><span class="o">=</span></span><span></span><span class="p">(</span><span class="n">LogReader</span><span class="o">&amp;&amp;</span><span class="p">);</span>
+    <span class="kt">bool</span> <a class="reference internal" href="#doxid-classutils-1-1-log-reader-1a1e4775f05393b01dff1ede981cc62659"><span class="std std-ref">IsPercentageEnabled</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">float</span> <a class="reference internal" href="#doxid-classutils-1-1-log-reader-1ac0827f56817217deaa2b4a5aacd0ee1e"><span class="std std-ref">GetPercentage</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-classutils-1-1-log-reader-1a69413836d08387f56ffdc03a2c083087"><span class="std std-ref">SetOutputStream</span></a><span></span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">*</span> <span class="n">output_log_stream</span><span class="p">);</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">*</span> <a class="reference internal" href="#doxid-classutils-1-1-log-reader-1af94cd26bac7d9b9827a3bc45dae36ed9"><span class="std std-ref">GetOutputStream</span></a><span></span><span class="p">();</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="class_utils_LogEntry.html#doxid-classutils-1-1-log-entry"><span class="std std-ref">LogEntry</span></a><span></span><span class="o">&gt;&gt;</span> <a class="reference internal" href="#doxid-classutils-1-1-log-reader-1a84ef6c002272232e6d20f58703243b49"><span class="std std-ref">ViewUnread</span></a><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="class_utils_EnumFlags.html#doxid-classutils-1-1-enum-flags"><span class="std std-ref">utils::EnumFlags</span></a><span></span><span class="o">&lt;</span><a class="reference internal" href="enum_utils_LogEntry_Type.html#doxid-classutils-1-1-log-entry-1a7a5b427e25c4d25d6fe45b6c9f904e4a"><span class="std std-ref">LogEntry::Type</span></a><span></span><span class="o">&gt;&amp;</span> <span class="n">types</span> <span class="o">=</span> <a class="reference internal" href="class_utils_LogEntry.html#doxid-classutils-1-1-log-entry-1a62d7527cefb89237289813f6d0372d25"><span class="std std-ref">LogEntry::GetWECTypes</span></a><span></span><span class="p">())</span> <span class="k">const</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">string</span> <a class="reference internal" href="#doxid-classutils-1-1-log-reader-1a7743da5fe3f84c91d94afc36793a746c"><span class="std std-ref">ViewUnreadToString</span></a><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="class_utils_EnumFlags.html#doxid-classutils-1-1-enum-flags"><span class="std std-ref">utils::EnumFlags</span></a><span></span><span class="o">&lt;</span><a class="reference internal" href="enum_utils_LogEntry_Type.html#doxid-classutils-1-1-log-entry-1a7a5b427e25c4d25d6fe45b6c9f904e4a"><span class="std std-ref">LogEntry::Type</span></a><span></span><span class="o">&gt;&amp;</span> <span class="n">types</span> <span class="o">=</span> <a class="reference internal" href="class_utils_LogEntry.html#doxid-classutils-1-1-log-entry-1ab702eb11d88663927d8ad8c2b6e41efe"><span class="std std-ref">LogEntry::GetIWECTypes</span></a><span></span><span class="p">())</span> <span class="k">const</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="class_utils_LogEntry.html#doxid-classutils-1-1-log-entry"><span class="std std-ref">LogEntry</span></a><span></span><span class="o">&gt;&gt;</span> <a class="reference internal" href="#doxid-classutils-1-1-log-reader-1ab20e5fc7c7d5098f4103c0d87da04954"><span class="std std-ref">ReadUnread</span></a><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="class_utils_EnumFlags.html#doxid-classutils-1-1-enum-flags"><span class="std std-ref">utils::EnumFlags</span></a><span></span><span class="o">&lt;</span><a class="reference internal" href="enum_utils_LogEntry_Type.html#doxid-classutils-1-1-log-entry-1a7a5b427e25c4d25d6fe45b6c9f904e4a"><span class="std std-ref">LogEntry::Type</span></a><span></span><span class="o">&gt;&amp;</span> <span class="n">types</span><span class="p">);</span>
+
+<span class="k">protected</span><span class="o">:</span>
+    <span class="c1">// fields</span>
+
+    <span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">*</span> <span class="doxyrest-code-target target" id="doxid-classutils-1-1-log-reader-1a5db6a94f60035547d2722ec5a88b6b79"><span></span><span class="n">output_stream_</span></span><span></span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">;</span>
+    <a class="reference internal" href="namespace_utils.html#doxid-namespaceutils-1a861e755a4133ab961fb688b89ee58687"><span class="std std-ref">ProgressPercentage</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-classutils-1-1-log-reader-1a9137c5cb35cd12c8bcb6d4c0f83169db"><span></span><span class="n">percentage_</span></span><span></span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">mutex</span> <span class="doxyrest-code-target target" id="doxid-classutils-1-1-log-reader-1a7efbb3043dd0118d5bf66e85ed897438"><span></span><span class="n">percentage_access_</span></span><span></span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="class_utils_LogEntry.html#doxid-classutils-1-1-log-entry"><span class="std std-ref">LogEntry</span></a><span></span><span class="o">&gt;&gt;</span> <a class="reference internal" href="#doxid-classutils-1-1-log-reader-1a6860dccfff87141ea80e1a69e4f3c035"><span class="std std-ref">log_entries_</span></a><span></span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">mutex</span> <a class="reference internal" href="#doxid-classutils-1-1-log-reader-1adc48a658d7633679623824b847353b84"><span class="std std-ref">log_access_</span></a><span></span><span class="p">;</span>
+<span class="p">};</span></pre>
+</div>
+<div class="section" id="detailed-documentation">
+<span id="details-classutils-1-1-log-reader"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
+<p>Log - accumulate typed messages reported by the application. Includes percentage value in range &lt;0,1&gt;.</p>
+<p>Is not a singleton. Multiple individual components of the application may have their own log.</p>
+<p>Includes the functionality to inform about progress of processing functions. Whenever a function is run, this class provides thread-safe getters which can be used to inform user about current state of the function.</p>
+<div class="section" id="fields">
+<h3>Fields<a class="headerlink" href="#fields" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classutils-1-1-log-reader-1a6860dccfff87141ea80e1a69e4f3c035"><span id="index-1"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="class_utils_LogEntry.html#doxid-classutils-1-1-log-entry"><span class="std std-ref">LogEntry</span></a><span></span><span class="o">&gt;&gt;</span> <span class="n">log_entries_</span></pre>
+<p>Saved log entries.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classutils-1-1-log-reader-1adc48a658d7633679623824b847353b84"><span id="index-2"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">mutex</span> <span class="n">log_access_</span></pre>
+<p>mutex to ensure thread safety of the Log.</p>
+</div>
+<div class="section" id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classutils-1-1-log-reader-1a1e4775f05393b01dff1ede981cc62659"><span id="index-3"></span><span></span><span class="kt">bool</span> <span class="n">IsPercentageEnabled</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Returns true if percentage is currently enabled. Some processing functions may not support percentage values.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classutils-1-1-log-reader-1ac0827f56817217deaa2b4a5aacd0ee1e"><span id="index-4"></span><span></span><span class="kt">float</span> <span class="n">GetPercentage</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Returns current percentage value of progress in range 0, 1.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classutils-1-1-log-reader-1a69413836d08387f56ffdc03a2c083087"><span id="index-5"></span><span></span><span class="kt">void</span> <span class="n">SetOutputStream</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">*</span> <span class="n">output_log_stream</span><span class="p">)</span></pre>
+<p>Allows user to specify custom output stream to receive verbose information about progress. Default value is nullptr.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classutils-1-1-log-reader-1af94cd26bac7d9b9827a3bc45dae36ed9"><span id="index-6"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">*</span> <span class="n">GetOutputStream</span><span class="p">()</span></pre>
+<p>Returns pointer to currently active output stream.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classutils-1-1-log-reader-1a84ef6c002272232e6d20f58703243b49"><span id="index-7"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="class_utils_LogEntry.html#doxid-classutils-1-1-log-entry"><span class="std std-ref">LogEntry</span></a><span></span><span class="o">&gt;&gt;</span> <span class="n">ViewUnread</span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="class_utils_EnumFlags.html#doxid-classutils-1-1-enum-flags"><span class="std std-ref">utils::EnumFlags</span></a><span></span><span class="o">&lt;</span><a class="reference internal" href="enum_utils_LogEntry_Type.html#doxid-classutils-1-1-log-entry-1a7a5b427e25c4d25d6fe45b6c9f904e4a"><span class="std std-ref">LogEntry::Type</span></a><span></span><span class="o">&gt;&amp;</span> <span class="n">types</span> <span class="o">=</span> <a class="reference internal" href="class_utils_LogEntry.html#doxid-classutils-1-1-log-entry-1a62d7527cefb89237289813f6d0372d25"><span class="std std-ref">LogEntry::GetWECTypes</span></a><span></span><span class="p">())</span> <span class="k">const</span></pre>
+<p>Get all unread messages specified by their types and return them.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classutils-1-1-log-reader-1a7743da5fe3f84c91d94afc36793a746c"><span id="index-8"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">ViewUnreadToString</span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="class_utils_EnumFlags.html#doxid-classutils-1-1-enum-flags"><span class="std std-ref">utils::EnumFlags</span></a><span></span><span class="o">&lt;</span><a class="reference internal" href="enum_utils_LogEntry_Type.html#doxid-classutils-1-1-log-entry-1a7a5b427e25c4d25d6fe45b6c9f904e4a"><span class="std std-ref">LogEntry::Type</span></a><span></span><span class="o">&gt;&amp;</span> <span class="n">types</span> <span class="o">=</span> <a class="reference internal" href="class_utils_LogEntry.html#doxid-classutils-1-1-log-entry-1ab702eb11d88663927d8ad8c2b6e41efe"><span class="std std-ref">LogEntry::GetIWECTypes</span></a><span></span><span class="p">())</span> <span class="k">const</span></pre>
+<p>Get all unread messages specified by their types and return them and output as std::string.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classutils-1-1-log-reader-1ab20e5fc7c7d5098f4103c0d87da04954"><span id="index-9"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><a class="reference internal" href="class_utils_LogEntry.html#doxid-classutils-1-1-log-entry"><span class="std std-ref">LogEntry</span></a><span></span><span class="o">&gt;&gt;</span> <span class="n">ReadUnread</span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="class_utils_EnumFlags.html#doxid-classutils-1-1-enum-flags"><span class="std std-ref">utils::EnumFlags</span></a><span></span><span class="o">&lt;</span><a class="reference internal" href="enum_utils_LogEntry_Type.html#doxid-classutils-1-1-log-entry-1a7a5b427e25c4d25d6fe45b6c9f904e4a"><span class="std std-ref">LogEntry::Type</span></a><span></span><span class="o">&gt;&amp;</span> <span class="n">types</span><span class="p">)</span></pre>
+<p>Get all unread messages specified by their types, set them to read, and return them.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Skeletex Research
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

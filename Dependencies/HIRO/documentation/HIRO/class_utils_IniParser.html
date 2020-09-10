@@ -1,0 +1,383 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>class utils::IniParser &mdash; HIRO 0.4.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/hiro-fav-32.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/target-highlight.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/hiro_theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-sphinx_rtd_theme.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="class utils::Interval" href="class_utils_Interval.html" />
+    <link rel="prev" title="template class utils::Identifiable" href="class_utils_Identifiable.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: rgb(248, 216, 60)" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/hiro-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_0.html">T0: Setting up Visual Studio Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_1.html">T1: Introduction to HIRO GUI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_2.html">T2: Creating Custom Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_3.html">T3: Overview of Gadget Features</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="shader_api.html">Shader API</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="global.html">Global Namespace</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="namespace_cegui_ext.html">namespace cegui_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_dialog.html">namespace dialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_file_types.html">namespace file_types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_fs.html">namespace fs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_func.html">namespace func</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_geom.html">namespace geom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_glm_ext.html">namespace glm_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_hiro.html">namespace hiro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_omp_ext.html">namespace omp_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_std_ext.html">namespace std_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_time_m.html">namespace time_m</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_ulog.html">namespace ulog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_uprogress.html">namespace uprogress</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="namespace_utils.html">namespace utils</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="enum_utils_BaseAxis.html">enum utils::BaseAxis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_utils_Handedness.html">enum utils::Handedness</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_utils_LicenseState.html">enum utils::LicenseState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_utils_Units.html">enum utils::Units</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_utils_IntrinsicParams.html">struct utils::IntrinsicParams</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_utils_Property.html">template struct utils::Property</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_utils_PropertyByValue.html">template struct utils::PropertyByValue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_utils_SpaceDefinition.html">struct utils::SpaceDefinition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_utils_StrongId.html">template struct utils::StrongId</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_utils_StrongOptionalType.html">template struct utils::StrongOptionalType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_utils_StrongType.html">template struct utils::StrongType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_utils_Version.html">struct utils::Version</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_CallbackTimer.html">class utils::CallbackTimer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_ConcurrentBinding.html">template class utils::ConcurrentBinding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_Couple.html">template class utils::Couple</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_DelegatedNotifier.html">template class utils::DelegatedNotifier</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_Dictionary.html">class utils::Dictionary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_EnumFlags.html">template class utils::EnumFlags</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_EventHandler.html">class utils::EventHandler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_GlmQuatSerializable.html">class utils::GlmQuatSerializable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_GlmVec3Serializable.html">class utils::GlmVec3Serializable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_Identifiable.html">template class utils::Identifiable</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">class utils::IniParser</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_Interval.html">class utils::Interval</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_LicenseChecker.html">class utils::LicenseChecker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_LogEntry.html">class utils::LogEntry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_LogReader.html">class utils::LogReader</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_LogWriter.html">class utils::LogWriter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_Logger.html">class utils::Logger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_NamedClass.html">template class utils::NamedClass</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_Notifier.html">template class utils::Notifier</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_OnEnd.html">class utils::OnEnd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_Serializer.html">template class utils::Serializer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_Statistics.html">template class utils::Statistics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_utils_Triplet.html">template class utils::Triplet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_utils.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_utils.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_Config.html">class Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_IDialogInterface.html">class IDialogInterface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_WxWidgetsDialog.html">class WxWidgetsDialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">HIRO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="global.html">Global Namespace</a> &raquo;</li>
+        
+          <li><a href="namespace_utils.html">namespace utils</a> &raquo;</li>
+        
+      <li>class utils::IniParser</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="class-utils-iniparser">
+<span id="doxid-classutils-1-1-ini-parser"></span><span id="index-0"></span><h1>class utils::IniParser<a class="headerlink" href="#class-utils-iniparser" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;IniParser.h&gt;</span><span class="cp"></span>
+
+<span class="k">class</span> <span class="n">IniParser</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="c1">// construction</span>
+
+    <span class="doxyrest-code-target target" id="doxid-classutils-1-1-ini-parser-1aad19e0ef7f4e779a56e798b55895511e"><span></span><span class="n">IniParser</span></span><span></span><span class="p">();</span>
+    <span class="doxyrest-code-target target" id="doxid-classutils-1-1-ini-parser-1addeffcec84aeb18116f2ddf047feae94"><span></span><span class="n">IniParser</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">filename</span><span class="p">);</span>
+
+    <span class="c1">// methods</span>
+
+    <span class="n">std</span><span class="o">::</span><span class="n">string</span> <a class="reference internal" href="#doxid-classutils-1-1-ini-parser-1a5a571432996e9b39e0c8f6a368176a0b"><span class="std std-ref">PopErrorLog</span></a><span></span><span class="p">();</span>
+    <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">unordered_set</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;&amp;</span> <a class="reference internal" href="#doxid-classutils-1-1-ini-parser-1ad997f65779adeb060656fe3412947824"><span class="std std-ref">GetUnreadableRecords</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">bool</span> <a class="reference internal" href="#doxid-classutils-1-1-ini-parser-1a284f6e9e1808377898acede47236c8d1"><span class="std std-ref">LoadFile</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">file_name</span><span class="p">);</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-classutils-1-1-ini-parser-1a780775f862030a68acb81e9d7d020e58"><span class="std std-ref">Clear</span></a><span></span><span class="p">();</span>
+    <span class="kt">bool</span> <a class="reference internal" href="#doxid-classutils-1-1-ini-parser-1a0e3558a38df7d99336e35275948f9660"><span class="std std-ref">Exists</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">string</span> <a class="reference internal" href="#doxid-classutils-1-1-ini-parser-1a37ca4fbd2f7434f3ff554d1dac54881e"><span class="std std-ref">GetStr</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">default_val</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">bool</span> <a class="reference internal" href="#doxid-classutils-1-1-ini-parser-1a6c9894d1cccdd8493a19e3871ea7bc5c"><span class="std std-ref">GetBool</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <span class="kt">bool</span> <span class="n">default_val</span> <span class="o">=</span> <span class="nb">false</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">size_t</span> <a class="reference internal" href="#doxid-classutils-1-1-ini-parser-1a645dc97d428a8c0d4c42e203ea9cb3e6"><span class="std std-ref">GetSizeT</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <span class="kt">size_t</span> <span class="n">default_val</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+
+    <span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Type</span><span class="o">&gt;</span>
+    <span class="n">Type</span> <a class="reference internal" href="#doxid-classutils-1-1-ini-parser-1abb333dd2fdd6cdf53f1e0f33ec51fa48"><span class="std std-ref">GetUint</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <span class="n">Type</span> <span class="n">default_val</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+
+    <span class="kt">int</span> <a class="reference internal" href="#doxid-classutils-1-1-ini-parser-1ae8a13732f3dd92cb9455f92be3d18c59"><span class="std std-ref">GetInt</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <span class="kt">int</span> <span class="n">default_val</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">float</span> <a class="reference internal" href="#doxid-classutils-1-1-ini-parser-1a9b55a1b9ec9cc72564f7f63581ea15ee"><span class="std std-ref">GetFloat</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <span class="kt">float</span> <span class="n">default_val</span> <span class="o">=</span> <span class="mf">0.0f</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">double</span> <a class="reference internal" href="#doxid-classutils-1-1-ini-parser-1a180f835b4799a77c099ebb3e151e36f7"><span class="std std-ref">GetDouble</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <span class="kt">double</span> <span class="n">default_val</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+
+    <span class="k">template</span> <span class="o">&lt;</span><span class="n">glm</span><span class="o">::</span><span class="n">length_t</span> <span class="n">N</span><span class="p">,</span> <span class="k">typename</span> <span class="n">Type</span><span class="o">&gt;</span>
+    <span class="n">glm</span><span class="o">::</span><span class="n">vec</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span> <span class="n">Type</span><span class="p">,</span> <span class="n">glm</span><span class="o">::</span><span class="n">highp</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-classutils-1-1-ini-parser-1acfad91a09f3bab202e9b02955e2ae044"><span class="std std-ref">GetVec</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span> <span class="n">Type</span><span class="p">,</span> <span class="n">glm</span><span class="o">::</span><span class="n">highp</span><span class="o">&gt;</span> <span class="n">default_val</span> <span class="o">=</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span> <span class="n">Type</span><span class="p">,</span> <span class="n">glm</span><span class="o">::</span><span class="n">highp</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span>
+
+    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-classutils-1-1-ini-parser-1ac17578935d0572243f927ef130c53f44"><span class="std std-ref">GetFloatArray</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;&amp;</span> <span class="n">default_val</span> <span class="o">=</span> <span class="p">{})</span> <span class="k">const</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-classutils-1-1-ini-parser-1a3e963f472cf5ab5ed558f04c7977b38e"><span class="std std-ref">GetIntArray</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">default_val</span> <span class="o">=</span> <span class="p">{})</span> <span class="k">const</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-classutils-1-1-ini-parser-1a83d40f24f6c93f33d63eb7941a0012d0"><span class="std std-ref">GetBoolArray</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;&amp;</span> <span class="n">default_val</span> <span class="o">=</span> <span class="p">{})</span> <span class="k">const</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-classutils-1-1-ini-parser-1a2cc8f4c5e356d49f42ec54db0a795cbe"><span class="std std-ref">GetArray</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;&amp;</span> <span class="n">default_val</span> <span class="o">=</span> <span class="p">{})</span> <span class="k">const</span><span class="p">;</span>
+
+<span class="k">protected</span><span class="o">:</span>
+    <span class="c1">// typedefs</span>
+
+    <span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-classutils-1-1-ini-parser-1aa184be64204ef77aaaf8979494af20ec"><span></span><span class="n">Record</span></span><span></span><span class="p">;</span>
+
+    <span class="c1">// fields</span>
+
+    <span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-classutils-1-1-ini-parser-1ab2ed7e147e007d1e8ad5c4ebf26a48e5"><span></span><span class="n">replacement_map_</span></span><span></span><span class="p">;</span>
+    <span class="k">const</span> <span class="kt">bool</span> <span class="doxyrest-code-target target" id="doxid-classutils-1-1-ini-parser-1a2c0dd0e6aa18cf24f9120e7f9e4b224a"><span></span><span class="n">is_replacement_map_enabled_</span></span><span></span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+    <a class="reference internal" href="class_utils_Dictionary.html#doxid-classutils-1-1-dictionary"><span class="std std-ref">utils::Dictionary</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-classutils-1-1-ini-parser-1ae08248b8d0384ef27b5bcd9c7b562452"><span></span><span class="n">dictionary_</span></span><span></span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="doxyrest-code-target target" id="doxid-classutils-1-1-ini-parser-1adcbdd588cd4c286a6433c53b18e3eca3"><span></span><span class="n">error_log_</span></span><span></span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">unordered_set</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-classutils-1-1-ini-parser-1ad462cd5a8edcb012cd077d483bc65657"><span></span><span class="n">unreadable_records_</span></span><span></span><span class="p">;</span>
+
+    <span class="c1">// methods</span>
+
+    <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-classutils-1-1-ini-parser-1a0d9e8fcebc467ab3735006df58641a9f"><span></span><span class="n">LogStandardError</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">val</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="k">virtual</span> <a class="reference internal" href="#doxid-classutils-1-1-ini-parser-1aa184be64204ef77aaaf8979494af20ec"><span class="std std-ref">Record</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-classutils-1-1-ini-parser-1acf40d4013c11fae881ba2bdfd49a8aca"><span></span><span class="n">GetRecord</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">line</span><span class="p">);</span>
+<span class="p">};</span></pre>
+</div>
+<div class="section" id="detailed-documentation">
+<span id="details-classutils-1-1-ini-parser"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classutils-1-1-ini-parser-1a5a571432996e9b39e0c8f6a368176a0b"><span id="index-1"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">PopErrorLog</span><span class="p">()</span></pre>
+<p>Returns the error log as a string.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classutils-1-1-ini-parser-1ad997f65779adeb060656fe3412947824"><span id="index-2"></span><span></span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">unordered_set</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;&amp;</span> <span class="n">GetUnreadableRecords</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Get skipped unreadable (most likely non-ASCII) records.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classutils-1-1-ini-parser-1a284f6e9e1808377898acede47236c8d1"><span id="index-3"></span><span></span><span class="kt">bool</span> <span class="n">LoadFile</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">file_name</span><span class="p">)</span></pre>
+<p>Reads INI values from a file.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classutils-1-1-ini-parser-1a780775f862030a68acb81e9d7d020e58"><span id="index-4"></span><span></span><span class="kt">void</span> <span class="n">Clear</span><span class="p">()</span></pre>
+<p>Clears config data.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classutils-1-1-ini-parser-1a0e3558a38df7d99336e35275948f9660"><span id="index-5"></span><span></span><span class="kt">bool</span> <span class="n">Exists</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">)</span> <span class="k">const</span></pre>
+<p>If the key does exist in the singletons data, returns true.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classutils-1-1-ini-parser-1a37ca4fbd2f7434f3ff554d1dac54881e"><span id="index-6"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">GetStr</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">default_val</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">)</span> <span class="k">const</span></pre>
+<p>Returns a string value for the key, if the exists.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classutils-1-1-ini-parser-1a6c9894d1cccdd8493a19e3871ea7bc5c"><span id="index-7"></span><span></span><span class="kt">bool</span> <span class="n">GetBool</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <span class="kt">bool</span> <span class="n">default_val</span> <span class="o">=</span> <span class="nb">false</span><span class="p">)</span> <span class="k">const</span></pre>
+<p>Returns a bool value for the key if the key does exist.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classutils-1-1-ini-parser-1a645dc97d428a8c0d4c42e203ea9cb3e6"><span id="index-8"></span><span></span><span class="kt">size_t</span> <span class="n">GetSizeT</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <span class="kt">size_t</span> <span class="n">default_val</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="k">const</span></pre>
+<p>Returns a size_t value for the key if the key does exist.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classutils-1-1-ini-parser-1abb333dd2fdd6cdf53f1e0f33ec51fa48"><span id="index-9"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Type</span><span class="o">&gt;</span>
+<span class="n">Type</span> <span class="n">GetUint</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <span class="n">Type</span> <span class="n">default_val</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="k">const</span></pre>
+<p>Returns a uint value for the key if the key does exist.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classutils-1-1-ini-parser-1ae8a13732f3dd92cb9455f92be3d18c59"><span id="index-10"></span><span></span><span class="kt">int</span> <span class="n">GetInt</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <span class="kt">int</span> <span class="n">default_val</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="k">const</span></pre>
+<p>Returns an int value for the key if the key does exist.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classutils-1-1-ini-parser-1a9b55a1b9ec9cc72564f7f63581ea15ee"><span id="index-11"></span><span></span><span class="kt">float</span> <span class="n">GetFloat</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <span class="kt">float</span> <span class="n">default_val</span> <span class="o">=</span> <span class="mf">0.0f</span><span class="p">)</span> <span class="k">const</span></pre>
+<p>Returns an float value for the key if the key does exist.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classutils-1-1-ini-parser-1a180f835b4799a77c099ebb3e151e36f7"><span id="index-12"></span><span></span><span class="kt">double</span> <span class="n">GetDouble</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <span class="kt">double</span> <span class="n">default_val</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">)</span> <span class="k">const</span></pre>
+<p>Returns a double value for the key if the key does exist.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classutils-1-1-ini-parser-1acfad91a09f3bab202e9b02955e2ae044"><span id="index-13"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="n">glm</span><span class="o">::</span><span class="n">length_t</span> <span class="n">N</span><span class="p">,</span> <span class="k">typename</span> <span class="n">Type</span><span class="o">&gt;</span>
+<span class="n">glm</span><span class="o">::</span><span class="n">vec</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span> <span class="n">Type</span><span class="p">,</span> <span class="n">glm</span><span class="o">::</span><span class="n">highp</span><span class="o">&gt;</span> <span class="n">GetVec</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span> <span class="n">Type</span><span class="p">,</span> <span class="n">glm</span><span class="o">::</span><span class="n">highp</span><span class="o">&gt;</span> <span class="n">default_val</span> <span class="o">=</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span> <span class="n">Type</span><span class="p">,</span> <span class="n">glm</span><span class="o">::</span><span class="n">highp</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span></pre>
+<p>Returns a glm::vec value for the key if the key does exist.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classutils-1-1-ini-parser-1ac17578935d0572243f927ef130c53f44"><span id="index-14"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span> <span class="n">GetFloatArray</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;&amp;</span> <span class="n">default_val</span> <span class="o">=</span> <span class="p">{})</span> <span class="k">const</span></pre>
+<p>Returns a std::vector&lt;float&gt; value for the key if the key does exist.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classutils-1-1-ini-parser-1a3e963f472cf5ab5ed558f04c7977b38e"><span id="index-15"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">GetIntArray</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">default_val</span> <span class="o">=</span> <span class="p">{})</span> <span class="k">const</span></pre>
+<p>Returns a std::vector&lt;int&gt; value for the key if the key does exist.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classutils-1-1-ini-parser-1a83d40f24f6c93f33d63eb7941a0012d0"><span id="index-16"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span> <span class="n">GetBoolArray</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;&amp;</span> <span class="n">default_val</span> <span class="o">=</span> <span class="p">{})</span> <span class="k">const</span></pre>
+<p>Returns a std::vector&lt;bool&gt; value for the key if the key does exist.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classutils-1-1-ini-parser-1a2cc8f4c5e356d49f42ec54db0a795cbe"><span id="index-17"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">GetArray</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;&amp;</span> <span class="n">default_val</span> <span class="o">=</span> <span class="p">{})</span> <span class="k">const</span></pre>
+<p>Returns a std::vector&lt;std::string&gt; value for the key if the key does exist.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Skeletex Research
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

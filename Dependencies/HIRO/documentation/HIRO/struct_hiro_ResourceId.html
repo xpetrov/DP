@@ -1,0 +1,343 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>struct hiro::ResourceId &mdash; HIRO 0.4.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/hiro-fav-32.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/target-highlight.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/hiro_theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-sphinx_rtd_theme.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="class hiro::Camera" href="class_hiro_Camera.html" />
+    <link rel="prev" title="struct hiro::ActiveResourceInfo" href="struct_hiro_ActiveResourceInfo.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: rgb(248, 216, 60)" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/hiro-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_0.html">T0: Setting up Visual Studio Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_1.html">T1: Introduction to HIRO GUI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_2.html">T2: Creating Custom Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_3.html">T3: Overview of Gadget Features</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="shader_api.html">Shader API</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="global.html">Global Namespace</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="namespace_cegui_ext.html">namespace cegui_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_dialog.html">namespace dialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_file_types.html">namespace file_types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_fs.html">namespace fs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_func.html">namespace func</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_geom.html">namespace geom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_glm_ext.html">namespace glm_ext</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="namespace_hiro.html">namespace hiro</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro_draw.html">namespace hiro::draw</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro_gui.html">namespace hiro::gui</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro_modules.html">namespace hiro::modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro_shader.html">namespace hiro::shader</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_BoolFunc.html">enum hiro::BoolFunc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_EventStatus.html">enum hiro::EventStatus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_Key.html">enum hiro::Key</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_Mod.html">enum hiro::Mod</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_MouseButton.html">enum hiro::MouseButton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_hiro_ActiveResourceInfo.html">struct hiro::ActiveResourceInfo</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">struct hiro::ResourceId</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Camera.html">class hiro::Camera</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Debugger.html">class hiro::Debugger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Exportable.html">class hiro::Exportable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Gadget.html">class hiro::Gadget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_GuiGenerator.html">class hiro::GuiGenerator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_GuiPanel.html">class hiro::GuiPanel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_ModKeys.html">class hiro::ModKeys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Resource.html">class hiro::Resource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_omp_ext.html">namespace omp_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_std_ext.html">namespace std_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_time_m.html">namespace time_m</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_ulog.html">namespace ulog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_uprogress.html">namespace uprogress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_utils.html">namespace utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_Config.html">class Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_IDialogInterface.html">class IDialogInterface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_WxWidgetsDialog.html">class WxWidgetsDialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">HIRO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="global.html">Global Namespace</a> &raquo;</li>
+        
+          <li><a href="namespace_hiro.html">namespace hiro</a> &raquo;</li>
+        
+      <li>struct hiro::ResourceId</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="struct-hiro-resourceid">
+<span id="doxid-structhiro-1-1-resource-id"></span><span id="index-0"></span><h1>struct hiro::ResourceId<a class="headerlink" href="#struct-hiro-resourceid" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Unique identifier for every <a class="reference internal" href="class_hiro_Resource.html#doxid-classhiro-1-1-resource"><span class="std std-ref">Resource</span></a> object. <a class="reference internal" href="#details-structhiro-1-1-resource-id"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;ResourceId.h&gt;</span><span class="cp"></span>
+
+<span class="k">struct</span> <span class="n">ResourceId</span> <span class="p">{</span>
+    <span class="c1">// fields</span>
+
+    <span class="k">static</span> <span class="k">const</span> <span class="n">hiro</span><span class="o">::</span><span class="n">ResourceId</span> <a class="reference internal" href="#doxid-structhiro-1-1-resource-id-1a8952de6c6a3dd6ea33aacde1e6298406"><span class="std std-ref">INVALID</span></a><span></span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">string</span> <a class="reference internal" href="#doxid-structhiro-1-1-resource-id-1a8d5ded06c118bdcf89f103005358936d"><span class="std std-ref">name</span></a><span></span> <span class="p">{</span> <span class="s">&quot;&quot;</span> <span class="p">};</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">string</span> <a class="reference internal" href="#doxid-structhiro-1-1-resource-id-1a7f84688c36bb4d1a30bd2ca0860d0f83"><span class="std std-ref">category</span></a><span></span> <span class="p">{</span> <span class="s">&quot;&quot;</span> <span class="p">};</span>
+
+    <span class="c1">// construction</span>
+
+    <a class="reference internal" href="#doxid-structhiro-1-1-resource-id-1ae0133df0dce5186184b04cc0bafb5a36"><span class="std std-ref">ResourceId</span></a><span></span><span class="p">();</span>
+    <a class="reference internal" href="#doxid-structhiro-1-1-resource-id-1a300d20e094db45558a5474140cd30605"><span class="std std-ref">ResourceId</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">name</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">categ</span><span class="p">);</span>
+    <a class="reference internal" href="#doxid-structhiro-1-1-resource-id-1adf3ea517afa4974432c27b4b5431076a"><span class="std std-ref">ResourceId</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">string_id</span><span class="p">);</span>
+
+    <span class="c1">// methods</span>
+
+    <span class="n">std</span><span class="o">::</span><span class="n">string</span> <a class="reference internal" href="#doxid-structhiro-1-1-resource-id-1a86a1370663f3f0d9a6aee3acf342b19b"><span class="std std-ref">ToString</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">bool</span> <a class="reference internal" href="#doxid-structhiro-1-1-resource-id-1a727884ac3e31bd01fc5bb9347d035a6d"><span class="std std-ref">IsValid</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-structhiro-1-1-resource-id-1ac0e87f9b7c02925140b261a9a9896a31"><span class="std std-ref">Invalidate</span></a><span></span><span class="p">();</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">string</span> <a class="reference internal" href="#doxid-structhiro-1-1-resource-id-1acc1837fb6efc6ab2a9afc153b7781c2a"><span class="std std-ref">GetNameWithoutPath</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">string</span> <a class="reference internal" href="#doxid-structhiro-1-1-resource-id-1a544743fce99a367be9e40df6797a75f5"><span class="std std-ref">GetNamePath</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">bool</span> <a class="reference internal" href="#doxid-structhiro-1-1-resource-id-1a3a6b15f2eb4b3b066438885e9b995243"><span class="std std-ref">operator==</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">hiro</span><span class="o">::</span><span class="n">ResourceId</span><span class="o">&amp;</span> <span class="n">other</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">bool</span> <a class="reference internal" href="#doxid-structhiro-1-1-resource-id-1aad8d41e3537f0df02514d6a673f522e7"><span class="std std-ref">operator!=</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">hiro</span><span class="o">::</span><span class="n">ResourceId</span><span class="o">&amp;</span> <span class="n">other</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">bool</span> <a class="reference internal" href="#doxid-structhiro-1-1-resource-id-1a781cf4cc8b007ed0cad99ca2e17201e6"><span class="std std-ref">operator&lt;</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">hiro</span><span class="o">::</span><span class="n">ResourceId</span><span class="o">&amp;</span> <span class="n">other</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+<span class="p">};</span></pre>
+</div>
+<div class="section" id="detailed-documentation">
+<span id="details-structhiro-1-1-resource-id"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
+<p>Unique identifier for every <a class="reference internal" href="class_hiro_Resource.html#doxid-classhiro-1-1-resource"><span class="std std-ref">Resource</span></a> object.</p>
+<p>Name of identifier can be composed of a hierarchy, where each hierarchy object is separated by “/”. For example “group/subgroup/item”. Can be equivalently represented by an id string in format “category:name”.</p>
+<div class="section" id="fields">
+<h3>Fields<a class="headerlink" href="#fields" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-structhiro-1-1-resource-id-1a8952de6c6a3dd6ea33aacde1e6298406"><span id="index-1"></span><span></span><span class="k">static</span> <span class="k">const</span> <span class="n">hiro</span><span class="o">::</span><span class="n">ResourceId</span> <span class="n">INVALID</span></pre>
+<p>Denotes invalid identifier.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-structhiro-1-1-resource-id-1a8d5ded06c118bdcf89f103005358936d"><span id="index-2"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">name</span> <span class="p">{</span> <span class="s">&quot;&quot;</span> <span class="p">}</span></pre>
+<p>Name of a specific <a class="reference internal" href="class_hiro_Resource.html#doxid-classhiro-1-1-resource"><span class="std std-ref">Resource</span></a>.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-structhiro-1-1-resource-id-1a7f84688c36bb4d1a30bd2ca0860d0f83"><span id="index-3"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">category</span> <span class="p">{</span> <span class="s">&quot;&quot;</span> <span class="p">}</span></pre>
+<p>Unique identifier for each <a class="reference internal" href="class_hiro_Resource.html#doxid-classhiro-1-1-resource"><span class="std std-ref">Resource</span></a> class derivate.</p>
+</div>
+<div class="section" id="construction">
+<h3>Construction<a class="headerlink" href="#construction" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-structhiro-1-1-resource-id-1ae0133df0dce5186184b04cc0bafb5a36"><span id="index-4"></span><span></span><span class="n">ResourceId</span><span class="p">()</span></pre>
+<p>Creates an invalid identifier.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-structhiro-1-1-resource-id-1a300d20e094db45558a5474140cd30605"><span id="index-5"></span><span></span><span class="n">ResourceId</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">name</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">categ</span><span class="p">)</span></pre>
+<p>Creates an identifier with specified name and category.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-structhiro-1-1-resource-id-1adf3ea517afa4974432c27b4b5431076a"><span id="index-6"></span><span></span><span class="n">ResourceId</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">string_id</span><span class="p">)</span></pre>
+<p>Creates an identifier from id string.</p>
+</div>
+<div class="section" id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-structhiro-1-1-resource-id-1a86a1370663f3f0d9a6aee3acf342b19b"><span id="index-7"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">ToString</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Converts this to id string.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-structhiro-1-1-resource-id-1a727884ac3e31bd01fc5bb9347d035a6d"><span id="index-8"></span><span></span><span class="kt">bool</span> <span class="n">IsValid</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Checks if this is a valid identifier.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-structhiro-1-1-resource-id-1ac0e87f9b7c02925140b261a9a9896a31"><span id="index-9"></span><span></span><span class="kt">void</span> <span class="n">Invalidate</span><span class="p">()</span></pre>
+<p>Makes this identifier invalid.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-structhiro-1-1-resource-id-1acc1837fb6efc6ab2a9afc153b7781c2a"><span id="index-10"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">GetNameWithoutPath</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Returns name stripped of hierarchy.</p>
+<p>For example, returns “item” when full name is “group/subgroup/item”.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-structhiro-1-1-resource-id-1a544743fce99a367be9e40df6797a75f5"><span id="index-11"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">GetNamePath</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Returns only hierarchy without a name.</p>
+<p>For example, returns “group/subgroup” when full name is “group/subgroup/item”.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-structhiro-1-1-resource-id-1a3a6b15f2eb4b3b066438885e9b995243"><span id="index-12"></span><span></span><span class="kt">bool</span> <span class="k">operator</span><span class="o">==</span><span class="p">(</span><span class="k">const</span> <span class="n">hiro</span><span class="o">::</span><span class="n">ResourceId</span><span class="o">&amp;</span> <span class="n">other</span><span class="p">)</span> <span class="k">const</span></pre>
+<p>Checks whether the provided identifier is equivalent.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-structhiro-1-1-resource-id-1aad8d41e3537f0df02514d6a673f522e7"><span id="index-13"></span><span></span><span class="kt">bool</span> <span class="k">operator</span><span class="o">!=</span><span class="p">(</span><span class="k">const</span> <span class="n">hiro</span><span class="o">::</span><span class="n">ResourceId</span><span class="o">&amp;</span> <span class="n">other</span><span class="p">)</span> <span class="k">const</span></pre>
+<p>Checks whether the provided identifier is different.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-structhiro-1-1-resource-id-1a781cf4cc8b007ed0cad99ca2e17201e6"><span id="index-14"></span><span></span><span class="kt">bool</span> <span class="k">operator</span><span class="o">&lt;</span><span class="p">(</span><span class="k">const</span> <span class="n">hiro</span><span class="o">::</span><span class="n">ResourceId</span><span class="o">&amp;</span> <span class="n">other</span><span class="p">)</span> <span class="k">const</span></pre>
+<p>Checks whether the provided identifier ordering rank is higher.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Skeletex Research
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

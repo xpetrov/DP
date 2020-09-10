@@ -1,0 +1,324 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>class Config &mdash; HIRO 0.4.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/hiro-fav-32.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/target-highlight.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/hiro_theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-sphinx_rtd_theme.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="class IDialogInterface" href="class_IDialogInterface.html" />
+    <link rel="prev" title="template class utils::Triplet" href="class_utils_Triplet.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: rgb(248, 216, 60)" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/hiro-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_0.html">T0: Setting up Visual Studio Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_1.html">T1: Introduction to HIRO GUI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_2.html">T2: Creating Custom Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_3.html">T3: Overview of Gadget Features</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="shader_api.html">Shader API</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="global.html">Global Namespace</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="namespace_cegui_ext.html">namespace cegui_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_dialog.html">namespace dialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_file_types.html">namespace file_types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_fs.html">namespace fs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_func.html">namespace func</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_geom.html">namespace geom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_glm_ext.html">namespace glm_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_hiro.html">namespace hiro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_omp_ext.html">namespace omp_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_std_ext.html">namespace std_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_time_m.html">namespace time_m</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_ulog.html">namespace ulog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_uprogress.html">namespace uprogress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_utils.html">namespace utils</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">class Config</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#detailed-documentation">Detailed Documentation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#methods">Methods</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_IDialogInterface.html">class IDialogInterface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_WxWidgetsDialog.html">class WxWidgetsDialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">HIRO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="global.html">Global Namespace</a> &raquo;</li>
+        
+      <li>class Config</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="class-config">
+<span id="doxid-class-config"></span><span id="index-0"></span><h1>class Config<a class="headerlink" href="#class-config" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Singleton for holding and requesting configuration file parameters. <a class="reference internal" href="#details-class-config"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;Config.h&gt;</span><span class="cp"></span>
+
+<span class="k">class</span> <span class="n">Config</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="c1">// methods</span>
+
+    <span class="k">static</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <a class="reference internal" href="#doxid-class-config-1a84e6afa3032e1ca469f661e84d4a9367"><span class="std std-ref">PopErrorLog</span></a><span></span><span class="p">();</span>
+    <span class="k">static</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">unordered_set</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;&amp;</span> <a class="reference internal" href="#doxid-class-config-1a3c0b3949d4b4e6ddc924408605fb2a0f"><span class="std std-ref">GetUnreadableRecords</span></a><span></span><span class="p">();</span>
+    <span class="k">static</span> <span class="kt">bool</span> <a class="reference internal" href="#doxid-class-config-1ac9b82e8052faf0c42f422bb0682e81d2"><span class="std std-ref">LoadFile</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">file_name</span><span class="p">);</span>
+    <span class="k">static</span> <span class="kt">void</span> <a class="reference internal" href="#doxid-class-config-1a61f62879e1e1f0d9d0ca4200c6cf20aa"><span class="std std-ref">Clear</span></a><span></span><span class="p">();</span>
+    <span class="k">static</span> <span class="kt">bool</span> <a class="reference internal" href="#doxid-class-config-1a80db68163283596b8f0585e7eb5c3f6d"><span class="std std-ref">Exists</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">);</span>
+    <span class="k">static</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <a class="reference internal" href="#doxid-class-config-1a1a360a4b4e25a16d2886cc00a2c21f7b"><span class="std std-ref">GetStr</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">default_val</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">);</span>
+    <span class="k">static</span> <span class="kt">bool</span> <a class="reference internal" href="#doxid-class-config-1a5dfff8a5555b19c1e7654c19d4f85571"><span class="std std-ref">GetBool</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <span class="kt">bool</span> <span class="n">default_val</span> <span class="o">=</span> <span class="nb">false</span><span class="p">);</span>
+    <span class="k">static</span> <span class="kt">size_t</span> <a class="reference internal" href="#doxid-class-config-1a881689fe4ad70516649737114b832636"><span class="std std-ref">GetSizeT</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <span class="kt">size_t</span> <span class="n">default_val</span> <span class="o">=</span> <span class="mi">0</span><span class="p">);</span>
+
+    <span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+    <span class="k">static</span> <span class="n">T</span> <a class="reference internal" href="#doxid-class-config-1a8cd4ba2adfdbc58e7dfab3f3f78c0af4"><span class="std std-ref">GetUint</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span> <span class="n">default_val</span> <span class="o">=</span> <span class="mi">0</span><span class="p">);</span>
+
+    <span class="k">static</span> <span class="kt">int</span> <a class="reference internal" href="#doxid-class-config-1adea5b36b7f5275da1c89b04721d1c7e6"><span class="std std-ref">GetInt</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <span class="kt">int</span> <span class="n">default_val</span> <span class="o">=</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="k">static</span> <span class="kt">float</span> <a class="reference internal" href="#doxid-class-config-1a863503fe48234fcfd55c5ced518fce53"><span class="std std-ref">GetFloat</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <span class="kt">float</span> <span class="n">default_val</span> <span class="o">=</span> <span class="mf">0.0f</span><span class="p">);</span>
+    <span class="k">static</span> <span class="kt">double</span> <a class="reference internal" href="#doxid-class-config-1ac22c7fd01870f290c7b9af2754302ab9"><span class="std std-ref">GetDouble</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <span class="kt">double</span> <span class="n">default_val</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">);</span>
+
+    <span class="k">template</span> <span class="o">&lt;</span><span class="n">glm</span><span class="o">::</span><span class="n">length_t</span> <span class="n">N</span><span class="p">,</span> <span class="k">typename</span> <span class="n">Type</span><span class="o">&gt;</span>
+    <span class="k">static</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span> <span class="n">Type</span><span class="p">,</span> <span class="n">glm</span><span class="o">::</span><span class="n">highp</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-class-config-1a0f09619c928c24b2d6c3e4c2e2caebfe"><span class="std std-ref">GetVec</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span> <span class="n">Type</span><span class="p">,</span> <span class="n">glm</span><span class="o">::</span><span class="n">highp</span><span class="o">&gt;</span> <span class="n">default_val</span> <span class="o">=</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span> <span class="n">Type</span><span class="p">,</span> <span class="n">glm</span><span class="o">::</span><span class="n">highp</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span>
+
+    <span class="k">static</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-class-config-1a8ada90ebb1622832419ddf54f0bde953"><span class="std std-ref">GetArray</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;&amp;</span> <span class="n">default_val</span> <span class="o">=</span> <span class="p">{});</span>
+    <span class="k">static</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-class-config-1ac9d8d3492d0037c1e9e3cb1ceba387c8"><span class="std std-ref">GetFloatArray</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;&amp;</span> <span class="n">default_val</span> <span class="o">=</span> <span class="p">{});</span>
+    <span class="k">static</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-class-config-1acff3987fce889b801005a13b4d7c2911"><span class="std std-ref">GetIntArray</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">default_val</span> <span class="o">=</span> <span class="p">{});</span>
+    <span class="k">static</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-class-config-1a1e48d4967ea60a78568e87445f32e998"><span class="std std-ref">GetBoolArray</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;&amp;</span> <span class="n">default_val</span> <span class="o">=</span> <span class="p">{});</span>
+<span class="p">};</span></pre>
+</div>
+<div class="section" id="detailed-documentation">
+<span id="details-class-config"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
+<p>Singleton for holding and requesting configuration file parameters.</p>
+<div class="section" id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-config-1a84e6afa3032e1ca469f661e84d4a9367"><span id="index-1"></span><span></span><span class="k">static</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">PopErrorLog</span><span class="p">()</span></pre>
+<p>Returns the error log as a string.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-config-1a3c0b3949d4b4e6ddc924408605fb2a0f"><span id="index-2"></span><span></span><span class="k">static</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">unordered_set</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;&amp;</span> <span class="n">GetUnreadableRecords</span><span class="p">()</span></pre>
+<p>Get skipped unreadable (most likely non-ASCII) records.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-config-1ac9b82e8052faf0c42f422bb0682e81d2"><span id="index-3"></span><span></span><span class="k">static</span> <span class="kt">bool</span> <span class="n">LoadFile</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">file_name</span><span class="p">)</span></pre>
+<p>Loads config file into the config singleton.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-config-1a61f62879e1e1f0d9d0ca4200c6cf20aa"><span id="index-4"></span><span></span><span class="k">static</span> <span class="kt">void</span> <span class="n">Clear</span><span class="p">()</span></pre>
+<p>Clears config data.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-config-1a80db68163283596b8f0585e7eb5c3f6d"><span id="index-5"></span><span></span><span class="k">static</span> <span class="kt">bool</span> <span class="n">Exists</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">)</span></pre>
+<p>If the key does exist in the singletons data, returns true.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-config-1a1a360a4b4e25a16d2886cc00a2c21f7b"><span id="index-6"></span><span></span><span class="k">static</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">GetStr</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">default_val</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">)</span></pre>
+<p>Returns a string value for the key, if the exists.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-config-1a5dfff8a5555b19c1e7654c19d4f85571"><span id="index-7"></span><span></span><span class="k">static</span> <span class="kt">bool</span> <span class="n">GetBool</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <span class="kt">bool</span> <span class="n">default_val</span> <span class="o">=</span> <span class="nb">false</span><span class="p">)</span></pre>
+<p>Returns a bool value for the key if the key does exist.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-config-1a881689fe4ad70516649737114b832636"><span id="index-8"></span><span></span><span class="k">static</span> <span class="kt">size_t</span> <span class="n">GetSizeT</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <span class="kt">size_t</span> <span class="n">default_val</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span></pre>
+<p>Returns a size_t value for the key if the key does exist.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-config-1a8cd4ba2adfdbc58e7dfab3f3f78c0af4"><span id="index-9"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="k">static</span> <span class="n">T</span> <span class="n">GetUint</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span> <span class="n">default_val</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span></pre>
+<p>Returns an unsigned integer value for the key if the key does exist.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-config-1adea5b36b7f5275da1c89b04721d1c7e6"><span id="index-10"></span><span></span><span class="k">static</span> <span class="kt">int</span> <span class="n">GetInt</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <span class="kt">int</span> <span class="n">default_val</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span></pre>
+<p>Returns an int value for the key if the key does exist.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-config-1a863503fe48234fcfd55c5ced518fce53"><span id="index-11"></span><span></span><span class="k">static</span> <span class="kt">float</span> <span class="n">GetFloat</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <span class="kt">float</span> <span class="n">default_val</span> <span class="o">=</span> <span class="mf">0.0f</span><span class="p">)</span></pre>
+<p>Returns an float value for the key if the key does exist.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-config-1ac22c7fd01870f290c7b9af2754302ab9"><span id="index-12"></span><span></span><span class="k">static</span> <span class="kt">double</span> <span class="n">GetDouble</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <span class="kt">double</span> <span class="n">default_val</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">)</span></pre>
+<p>Returns a double value for the key if the key does exist.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-config-1a0f09619c928c24b2d6c3e4c2e2caebfe"><span id="index-13"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="n">glm</span><span class="o">::</span><span class="n">length_t</span> <span class="n">N</span><span class="p">,</span> <span class="k">typename</span> <span class="n">Type</span><span class="o">&gt;</span>
+<span class="k">static</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span> <span class="n">Type</span><span class="p">,</span> <span class="n">glm</span><span class="o">::</span><span class="n">highp</span><span class="o">&gt;</span> <span class="n">GetVec</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span> <span class="n">Type</span><span class="p">,</span> <span class="n">glm</span><span class="o">::</span><span class="n">highp</span><span class="o">&gt;</span> <span class="n">default_val</span> <span class="o">=</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec</span><span class="o">&lt;</span><span class="n">N</span><span class="p">,</span> <span class="n">Type</span><span class="p">,</span> <span class="n">glm</span><span class="o">::</span><span class="n">highp</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span></pre>
+<p>Returns a glm::vec value for the key if the key does exist.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-config-1a8ada90ebb1622832419ddf54f0bde953"><span id="index-14"></span><span></span><span class="k">static</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">GetArray</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;&amp;</span> <span class="n">default_val</span> <span class="o">=</span> <span class="p">{})</span></pre>
+<p>Returns a std::vector&lt;std::string&gt; value for the key if the key does exist.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-config-1ac9d8d3492d0037c1e9e3cb1ceba387c8"><span id="index-15"></span><span></span><span class="k">static</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span> <span class="n">GetFloatArray</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;&amp;</span> <span class="n">default_val</span> <span class="o">=</span> <span class="p">{})</span></pre>
+<p>Returns a std::vector&lt;float&gt; value for the key if the key does exist.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-config-1acff3987fce889b801005a13b4d7c2911"><span id="index-16"></span><span></span><span class="k">static</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">GetIntArray</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">default_val</span> <span class="o">=</span> <span class="p">{})</span></pre>
+<p>Returns a std::vector&lt;int&gt; value for the key if the key does exist.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-config-1a1e48d4967ea60a78568e87445f32e998"><span id="index-17"></span><span></span><span class="k">static</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span> <span class="n">GetBoolArray</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;&amp;</span> <span class="n">default_val</span> <span class="o">=</span> <span class="p">{})</span></pre>
+<p>Returns a std::vector&lt;bool&gt; value for the key if the key does exist.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Skeletex Research
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,319 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>template struct geom::TRect &mdash; HIRO 0.4.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/hiro-fav-32.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/target-highlight.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/hiro_theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-sphinx_rtd_theme.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="template struct geom::TSphere" href="struct_geom_TSphere.html" />
+    <link rel="prev" title="template struct geom::TAabb" href="struct_geom_TAabb.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: rgb(248, 216, 60)" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/hiro-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_0.html">T0: Setting up Visual Studio Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_1.html">T1: Introduction to HIRO GUI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_2.html">T2: Creating Custom Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_3.html">T3: Overview of Gadget Features</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="shader_api.html">Shader API</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="global.html">Global Namespace</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="namespace_cegui_ext.html">namespace cegui_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_dialog.html">namespace dialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_file_types.html">namespace file_types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_fs.html">namespace fs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_func.html">namespace func</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="namespace_geom.html">namespace geom</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="namespace_geom_quadrics.html">namespace geom::quadrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_geom_Axis.html">enum geom::Axis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_geom_Capsule.html">struct geom::Capsule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_geom_CollisionResult.html">struct geom::CollisionResult</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_geom_ConicalCapsule.html">struct geom::ConicalCapsule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_geom_Graph.html">struct geom::Graph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_geom_HalfPlane.html">struct geom::HalfPlane</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_geom_Line.html">template struct geom::Line</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_geom_LineSegment.html">template struct geom::LineSegment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_geom_LineSegment2.html">struct geom::LineSegment2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_geom_LineSegment3.html">struct geom::LineSegment3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_geom_Plane.html">struct geom::Plane</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_geom_Ray.html">template struct geom::Ray</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_geom_TAabb.html">template struct geom::TAabb</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">template struct geom::TRect</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="struct_geom_TSphere.html">template struct geom::TSphere</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_geom_TTriangle.html">template struct geom::TTriangle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_geom_Triangle2.html">struct geom::Triangle2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_geom_Triangle3.html">struct geom::Triangle3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_geom_KalmanFilterObject.html">class geom::KalmanFilterObject</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_geom.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_geom.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_glm_ext.html">namespace glm_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_hiro.html">namespace hiro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_omp_ext.html">namespace omp_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_std_ext.html">namespace std_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_time_m.html">namespace time_m</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_ulog.html">namespace ulog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_uprogress.html">namespace uprogress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_utils.html">namespace utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_Config.html">class Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_IDialogInterface.html">class IDialogInterface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_WxWidgetsDialog.html">class WxWidgetsDialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">HIRO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="global.html">Global Namespace</a> &raquo;</li>
+        
+          <li><a href="namespace_geom.html">namespace geom</a> &raquo;</li>
+        
+      <li>template struct geom::TRect</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="template-struct-geom-trect">
+<span id="doxid-structgeom-1-1-t-rect"></span><span id="index-0"></span><h1>template struct geom::TRect<a class="headerlink" href="#template-struct-geom-trect" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<p>Template rectangle in an arbitrary dimension.</p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;GeometryStructures.h&gt;</span><span class="cp"></span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="k">struct</span> <span class="n">TRect</span> <span class="p">{</span>
+    <span class="c1">// typedefs</span>
+
+    <span class="k">typedef</span> <span class="n">glm</span><span class="o">::</span><span class="n">tvec2</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-structgeom-1-1-t-rect-1add420a28049465f8b1d0c4db5fb223f3"><span></span><span class="n">Vec2</span></span><span></span><span class="p">;</span>
+
+    <span class="c1">// fields</span>
+
+    <a class="reference internal" href="#doxid-structgeom-1-1-t-rect-1add420a28049465f8b1d0c4db5fb223f3"><span class="std std-ref">Vec2</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-structgeom-1-1-t-rect-1ad8419e2a7a6eef5ad53900587e61fdff"><span></span><span class="n">position</span></span><span></span> <span class="o">=</span> <a class="reference internal" href="#doxid-structgeom-1-1-t-rect-1add420a28049465f8b1d0c4db5fb223f3"><span class="std std-ref">Vec2</span></a><span></span><span class="p">((</span><span class="n">T</span><span class="p">)</span><span class="mi">0</span><span class="p">);</span>
+    <a class="reference internal" href="#doxid-structgeom-1-1-t-rect-1add420a28049465f8b1d0c4db5fb223f3"><span class="std std-ref">Vec2</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-structgeom-1-1-t-rect-1a158843c79ad9670a217295947a23693e"><span></span><span class="n">position2</span></span><span></span> <span class="o">=</span> <a class="reference internal" href="#doxid-structgeom-1-1-t-rect-1add420a28049465f8b1d0c4db5fb223f3"><span class="std std-ref">Vec2</span></a><span></span><span class="p">((</span><span class="n">T</span><span class="p">)</span><span class="mi">0</span><span class="p">);</span>
+    <a class="reference internal" href="struct_utils_PropertyByValue.html#doxid-structutils-1-1-property-by-value"><span class="std std-ref">utils::PropertyByValue</span></a><span></span><span class="o">&lt;</span><span class="n">TRect</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span><span class="o">&amp;</span><span class="n">TRect</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><a class="reference internal" href="#doxid-structgeom-1-1-t-rect-1adb04710bca0c5af6be9db2b60324f2d0"><span class="std std-ref">GetX</span></a><span></span><span class="p">,</span><span class="o">&amp;</span><span class="n">TRect</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><a class="reference internal" href="#doxid-structgeom-1-1-t-rect-1a7c75c260418eec959f8d340c151cdef8"><span class="std std-ref">SetX</span></a><span></span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-structgeom-1-1-t-rect-1a1bc0a15f022109b06da9233750e8a4fa"><span></span><span class="n">x</span></span><span></span><span class="p">;</span>
+    <a class="reference internal" href="struct_utils_PropertyByValue.html#doxid-structutils-1-1-property-by-value"><span class="std std-ref">utils::PropertyByValue</span></a><span></span><span class="o">&lt;</span><span class="n">TRect</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span><span class="o">&amp;</span><span class="n">TRect</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><a class="reference internal" href="#doxid-structgeom-1-1-t-rect-1a8537ba22836cd0e0ad9b2e0282b7344f"><span class="std std-ref">GetY</span></a><span></span><span class="p">,</span><span class="o">&amp;</span><span class="n">TRect</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><a class="reference internal" href="#doxid-structgeom-1-1-t-rect-1a8a0d68cdf6ca0ee1c57a8a1de3a3c99d"><span class="std std-ref">SetY</span></a><span></span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-structgeom-1-1-t-rect-1a80866dcd745f8ec59926158ec09f55c4"><span></span><span class="n">y</span></span><span></span><span class="p">;</span>
+    <a class="reference internal" href="struct_utils_PropertyByValue.html#doxid-structutils-1-1-property-by-value"><span class="std std-ref">utils::PropertyByValue</span></a><span></span><span class="o">&lt;</span><span class="n">TRect</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span><span class="o">&amp;</span><span class="n">TRect</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><a class="reference internal" href="#doxid-structgeom-1-1-t-rect-1a5b554d0b864775536e111e4e409834a2"><span class="std std-ref">GetWidth</span></a><span></span><span class="p">,</span><span class="o">&amp;</span><span class="n">TRect</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><a class="reference internal" href="#doxid-structgeom-1-1-t-rect-1ae59166926088d91f2fb41695a3457bb7"><span class="std std-ref">SetWidth</span></a><span></span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-structgeom-1-1-t-rect-1a3e382a26ea8e6fe79d48499432ff8e54"><span></span><span class="n">width</span></span><span></span><span class="p">;</span>
+    <a class="reference internal" href="struct_utils_PropertyByValue.html#doxid-structutils-1-1-property-by-value"><span class="std std-ref">utils::PropertyByValue</span></a><span></span><span class="o">&lt;</span><span class="n">TRect</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span><span class="o">&amp;</span><span class="n">TRect</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><a class="reference internal" href="#doxid-structgeom-1-1-t-rect-1a577194f7e7a1b6483a5d9aba3ce34721"><span class="std std-ref">GetHeight</span></a><span></span><span class="p">,</span><span class="o">&amp;</span><span class="n">TRect</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><a class="reference internal" href="#doxid-structgeom-1-1-t-rect-1a7808d00e68350bfc3b9d82a37e40380f"><span class="std std-ref">SetHeight</span></a><span></span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-structgeom-1-1-t-rect-1af304fa6ff2db16fe7fa60ed941fa8679"><span></span><span class="n">height</span></span><span></span><span class="p">;</span>
+    <a class="reference internal" href="struct_utils_PropertyByValue.html#doxid-structutils-1-1-property-by-value"><span class="std std-ref">utils::PropertyByValue</span></a><span></span><span class="o">&lt;</span><span class="n">TRect</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span><span class="o">&amp;</span><span class="n">TRect</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><a class="reference internal" href="#doxid-structgeom-1-1-t-rect-1ae59701dd805313e001511f67cb6310e7"><span class="std std-ref">GetX2</span></a><span></span><span class="p">,</span><span class="o">&amp;</span><span class="n">TRect</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><a class="reference internal" href="#doxid-structgeom-1-1-t-rect-1a3fc25c926b7b39d7278169a0ea4e8f63"><span class="std std-ref">SetX2</span></a><span></span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-structgeom-1-1-t-rect-1a04214dcd0bb979f2b55eb97e604b7c26"><span></span><span class="n">x2</span></span><span></span><span class="p">;</span>
+    <a class="reference internal" href="struct_utils_PropertyByValue.html#doxid-structutils-1-1-property-by-value"><span class="std std-ref">utils::PropertyByValue</span></a><span></span><span class="o">&lt;</span><span class="n">TRect</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span><span class="o">&amp;</span><span class="n">TRect</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><a class="reference internal" href="#doxid-structgeom-1-1-t-rect-1a4ab603b61351a4d74f9ae7f1d3fff4c8"><span class="std std-ref">GetY2</span></a><span></span><span class="p">,</span><span class="o">&amp;</span><span class="n">TRect</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><a class="reference internal" href="#doxid-structgeom-1-1-t-rect-1a32a4fc254f3b3df3a7727f0b6ab0d7b1"><span class="std std-ref">SetY2</span></a><span></span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-structgeom-1-1-t-rect-1aee214fa4139d64f6fcee95fff7b06c22"><span></span><span class="n">y2</span></span><span></span><span class="p">;</span>
+    <a class="reference internal" href="struct_utils_Property.html#doxid-structutils-1-1-property"><span class="std std-ref">utils::Property</span></a><span></span><span class="o">&lt;</span><span class="n">TRect</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">,</span> <a class="reference internal" href="#doxid-structgeom-1-1-t-rect-1add420a28049465f8b1d0c4db5fb223f3"><span class="std std-ref">Vec2</span></a><span></span><span class="p">,</span><span class="o">&amp;</span><span class="n">TRect</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><a class="reference internal" href="#doxid-structgeom-1-1-t-rect-1a590018cd932a92227f37eb517f928df4"><span class="std std-ref">GetSize</span></a><span></span><span class="p">,</span><span class="o">&amp;</span><span class="n">TRect</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><a class="reference internal" href="#doxid-structgeom-1-1-t-rect-1a3d42b0143628a7ae3917d1a9f553b811"><span class="std std-ref">SetSize</span></a><span></span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-structgeom-1-1-t-rect-1a6d6b53bca93a81dda6336e766f978505"><span></span><span class="n">size</span></span><span></span><span class="p">;</span>
+
+    <span class="c1">// construction</span>
+
+    <span class="doxyrest-code-target target" id="doxid-structgeom-1-1-t-rect-1a15910fc028f8478d75c58b82e8c14bbb"><span></span><span class="n">TRect</span></span><span></span><span class="p">();</span>
+    <span class="doxyrest-code-target target" id="doxid-structgeom-1-1-t-rect-1ae0d5392fd14d0f8f40b0ef980a403faf"><span></span><span class="n">TRect</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="n">T</span> <span class="n">x1</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span> <span class="n">y1</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span> <span class="n">x2</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span> <span class="n">y2</span><span class="p">);</span>
+    <span class="doxyrest-code-target target" id="doxid-structgeom-1-1-t-rect-1a4a020d83bbadc3611368b360e2a0af46"><span></span><span class="n">TRect</span></span><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="#doxid-structgeom-1-1-t-rect-1add420a28049465f8b1d0c4db5fb223f3"><span class="std std-ref">Vec2</span></a><span></span><span class="o">&amp;</span> <span class="n">point1</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="#doxid-structgeom-1-1-t-rect-1add420a28049465f8b1d0c4db5fb223f3"><span class="std std-ref">Vec2</span></a><span></span><span class="o">&amp;</span> <span class="n">point2</span><span class="p">);</span>
+    <span class="doxyrest-code-target target" id="doxid-structgeom-1-1-t-rect-1a5464bc6802f41809c3e12170b8bf4f0b"><span></span><span class="n">TRect</span></span><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="#doxid-structgeom-1-1-t-rect-1add420a28049465f8b1d0c4db5fb223f3"><span class="std std-ref">Vec2</span></a><span></span><span class="o">&amp;</span> <span class="n">top_left_origin</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span> <span class="n">size_width</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span> <span class="n">size_height</span><span class="p">);</span>
+
+    <span class="c1">// methods</span>
+
+    <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-structgeom-1-1-t-rect-1a3d42b0143628a7ae3917d1a9f553b811"><span></span><span class="n">SetSize</span></span><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="#doxid-structgeom-1-1-t-rect-1add420a28049465f8b1d0c4db5fb223f3"><span class="std std-ref">Vec2</span></a><span></span><span class="o">&amp;</span> <span class="n">new_size</span><span class="p">);</span>
+    <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-structgeom-1-1-t-rect-1ac3f340b0ecd3887a841a116066a6aa71"><span></span><span class="n">Set</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="n">TRect</span><span class="o">&amp;</span> <span class="n">rect</span><span class="p">);</span>
+    <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-structgeom-1-1-t-rect-1a5b4ca1795c5d8ed48760a20e92b44be8"><span></span><span class="n">Set</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="n">T</span> <span class="n">t_x1</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span> <span class="n">t_y1</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span> <span class="n">t_x2</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span> <span class="n">t_y2</span><span class="p">);</span>
+    <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-structgeom-1-1-t-rect-1a53a391ca185ea83c4bacd5237ef27559"><span></span><span class="n">Set</span></span><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="#doxid-structgeom-1-1-t-rect-1add420a28049465f8b1d0c4db5fb223f3"><span class="std std-ref">Vec2</span></a><span></span><span class="o">&amp;</span> <span class="n">point1</span><span class="p">,</span> <span class="k">const</span> <a class="reference internal" href="#doxid-structgeom-1-1-t-rect-1add420a28049465f8b1d0c4db5fb223f3"><span class="std std-ref">Vec2</span></a><span></span><span class="o">&amp;</span> <span class="n">point2</span><span class="p">);</span>
+    <a class="reference internal" href="#doxid-structgeom-1-1-t-rect-1add420a28049465f8b1d0c4db5fb223f3"><span class="std std-ref">Vec2</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-structgeom-1-1-t-rect-1a590018cd932a92227f37eb517f928df4"><span></span><span class="n">GetSize</span></span><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="n">T</span> <span class="doxyrest-code-target target" id="doxid-structgeom-1-1-t-rect-1adb04710bca0c5af6be9db2b60324f2d0"><span></span><span class="n">GetX</span></span><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="n">T</span> <span class="doxyrest-code-target target" id="doxid-structgeom-1-1-t-rect-1a8537ba22836cd0e0ad9b2e0282b7344f"><span></span><span class="n">GetY</span></span><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="n">T</span> <span class="doxyrest-code-target target" id="doxid-structgeom-1-1-t-rect-1a5b554d0b864775536e111e4e409834a2"><span></span><span class="n">GetWidth</span></span><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="n">T</span> <span class="doxyrest-code-target target" id="doxid-structgeom-1-1-t-rect-1a577194f7e7a1b6483a5d9aba3ce34721"><span></span><span class="n">GetHeight</span></span><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="n">T</span> <span class="doxyrest-code-target target" id="doxid-structgeom-1-1-t-rect-1ae59701dd805313e001511f67cb6310e7"><span></span><span class="n">GetX2</span></span><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="n">T</span> <span class="doxyrest-code-target target" id="doxid-structgeom-1-1-t-rect-1a4ab603b61351a4d74f9ae7f1d3fff4c8"><span></span><span class="n">GetY2</span></span><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-structgeom-1-1-t-rect-1a7c75c260418eec959f8d340c151cdef8"><span></span><span class="n">SetX</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="n">T</span> <span class="n">value</span><span class="p">);</span>
+    <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-structgeom-1-1-t-rect-1a8a0d68cdf6ca0ee1c57a8a1de3a3c99d"><span></span><span class="n">SetY</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="n">T</span> <span class="n">value</span><span class="p">);</span>
+    <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-structgeom-1-1-t-rect-1ae59166926088d91f2fb41695a3457bb7"><span></span><span class="n">SetWidth</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="n">T</span> <span class="n">value</span><span class="p">);</span>
+    <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-structgeom-1-1-t-rect-1a7808d00e68350bfc3b9d82a37e40380f"><span></span><span class="n">SetHeight</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="n">T</span> <span class="n">value</span><span class="p">);</span>
+    <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-structgeom-1-1-t-rect-1a3fc25c926b7b39d7278169a0ea4e8f63"><span></span><span class="n">SetX2</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="n">T</span> <span class="n">value</span><span class="p">);</span>
+    <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-structgeom-1-1-t-rect-1a32a4fc254f3b3df3a7727f0b6ab0d7b1"><span></span><span class="n">SetY2</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="n">T</span> <span class="n">value</span><span class="p">);</span>
+    <a class="reference internal" href="#doxid-structgeom-1-1-t-rect-1add420a28049465f8b1d0c4db5fb223f3"><span class="std std-ref">Vec2</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-structgeom-1-1-t-rect-1a9df2f6751c7ad63b9c170aa1eb8562e5"><span></span><span class="n">Center</span></span><span></span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">bool</span> <span class="doxyrest-code-target target" id="doxid-structgeom-1-1-t-rect-1a183ef410a096bcf365c7b73bcbea336a"><span></span><span class="n">Contains</span></span><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="#doxid-structgeom-1-1-t-rect-1add420a28049465f8b1d0c4db5fb223f3"><span class="std std-ref">Vec2</span></a><span></span><span class="o">&amp;</span> <span class="n">point</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="n">T</span> <span class="doxyrest-code-target target" id="doxid-structgeom-1-1-t-rect-1a2ee1469d057f49bbba886a2b4fc91e13"><span></span><span class="n">Area</span></span><span></span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+<span class="p">};</span></pre>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Skeletex Research
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

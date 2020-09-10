@@ -1,0 +1,393 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>class hiro::Camera &mdash; HIRO 0.4.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/hiro-fav-32.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/target-highlight.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/hiro_theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-sphinx_rtd_theme.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="struct hiro::Camera::Pose" href="struct_hiro_Camera_Pose.html" />
+    <link rel="prev" title="struct hiro::ResourceId" href="struct_hiro_ResourceId.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: rgb(248, 216, 60)" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/hiro-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_0.html">T0: Setting up Visual Studio Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_1.html">T1: Introduction to HIRO GUI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_2.html">T2: Creating Custom Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_3.html">T3: Overview of Gadget Features</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="shader_api.html">Shader API</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="global.html">Global Namespace</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="namespace_cegui_ext.html">namespace cegui_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_dialog.html">namespace dialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_file_types.html">namespace file_types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_fs.html">namespace fs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_func.html">namespace func</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_geom.html">namespace geom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_glm_ext.html">namespace glm_ext</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="namespace_hiro.html">namespace hiro</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro_draw.html">namespace hiro::draw</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro_gui.html">namespace hiro::gui</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro_modules.html">namespace hiro::modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro_shader.html">namespace hiro::shader</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_BoolFunc.html">enum hiro::BoolFunc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_EventStatus.html">enum hiro::EventStatus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_Key.html">enum hiro::Key</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_Mod.html">enum hiro::Mod</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_hiro_MouseButton.html">enum hiro::MouseButton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_hiro_ActiveResourceInfo.html">struct hiro::ActiveResourceInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_hiro_ResourceId.html">struct hiro::ResourceId</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">class hiro::Camera</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="struct_hiro_Camera_Pose.html">struct hiro::Camera::Pose</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Debugger.html">class hiro::Debugger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Exportable.html">class hiro::Exportable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Gadget.html">class hiro::Gadget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_GuiGenerator.html">class hiro::GuiGenerator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_GuiPanel.html">class hiro::GuiPanel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_ModKeys.html">class hiro::ModKeys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_hiro_Resource.html">class hiro::Resource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="namespace_hiro.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_omp_ext.html">namespace omp_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_std_ext.html">namespace std_ext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_time_m.html">namespace time_m</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_ulog.html">namespace ulog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_uprogress.html">namespace uprogress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_utils.html">namespace utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_Config.html">class Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_IDialogInterface.html">class IDialogInterface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_WxWidgetsDialog.html">class WxWidgetsDialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">HIRO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="global.html">Global Namespace</a> &raquo;</li>
+        
+          <li><a href="namespace_hiro.html">namespace hiro</a> &raquo;</li>
+        
+      <li>class hiro::Camera</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="class-hiro-camera">
+<span id="doxid-classhiro-1-1-camera"></span><span id="index-0"></span><h1>class hiro::Camera<a class="headerlink" href="#class-hiro-camera" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Denotes view on a scene. <a class="reference internal" href="#details-classhiro-1-1-camera"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;Camera.h&gt;</span><span class="cp"></span>
+
+<span class="k">class</span> <span class="n">Camera</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="c1">// structs</span>
+
+    <span class="k">struct</span> <a class="reference internal" href="struct_hiro_Camera_Pose.html#doxid-structhiro-1-1-camera-1-1-pose"><span class="std std-ref">Pose</span></a><span></span><span class="p">;</span>
+
+    <span class="c1">// construction</span>
+
+    <span class="doxyrest-code-target target" id="doxid-classhiro-1-1-camera-1a5706d8ae25f629e3dfdc5d7af08c722a"><span></span><span class="n">Camera</span></span><span></span><span class="p">(</span><a class="reference internal" href="class_hiro_draw_Scene.html#doxid-classhiro-1-1draw-1-1-scene"><span class="std std-ref">hiro::draw::Scene</span></a><span></span><span class="o">*</span> <span class="n">scene</span><span class="p">);</span>
+    <span class="doxyrest-code-target target" id="doxid-classhiro-1-1-camera-1af1770d485f625292e06beba65c3bb91a"><span></span><span class="n">Camera</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="n">hiro</span><span class="o">::</span><span class="n">Camera</span><span class="o">&amp;</span> <span class="n">cp</span><span class="p">);</span>
+    <span class="doxyrest-code-target target" id="doxid-classhiro-1-1-camera-1ad693b369dfe4e929419bc4b3c6cebf5d"><span></span><span class="o">~</span><span class="n">Camera</span></span><span></span><span class="p">();</span>
+
+    <span class="c1">// methods</span>
+
+    <span class="n">Camera</span><span class="o">&amp;</span> <span class="doxyrest-code-target target" id="doxid-classhiro-1-1-camera-1af7d626a1b3c066ad7dc6d91e3b33a183"><span></span><span class="k">operator</span><span class="o">=</span></span><span></span><span class="p">(</span><span class="k">const</span> <span class="n">hiro</span><span class="o">::</span><span class="n">Camera</span><span class="o">&amp;</span> <span class="n">cp</span><span class="p">);</span>
+    <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span> <a class="reference internal" href="#doxid-classhiro-1-1-camera-1a57c2b603543032a638206ead61b9b6dd"><span class="std std-ref">GetPosition</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-classhiro-1-1-camera-1aa0be1b8621452e36bb5a0bc045bb5426"><span class="std std-ref">SetPosition</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <span class="n">camera_position</span><span class="p">);</span>
+    <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span> <a class="reference internal" href="#doxid-classhiro-1-1-camera-1a16b6286b59594ca9fc4fdea335ab67d5"><span class="std std-ref">GetTarget</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-classhiro-1-1-camera-1a93fd9592ff4f2a35be1623d97ad8379a"><span class="std std-ref">SetTarget</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <span class="n">poi</span><span class="p">);</span>
+    <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span> <a class="reference internal" href="#doxid-classhiro-1-1-camera-1a7dc21cacbd3f8f8f7997e4660519ccdf"><span class="std std-ref">GetForward</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span> <a class="reference internal" href="#doxid-classhiro-1-1-camera-1a5a5f0afbc7b47bc6754af5212d7a8845"><span class="std std-ref">GetRight</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span> <a class="reference internal" href="#doxid-classhiro-1-1-camera-1adb8f21cd5d16d799c71a5bba4991a13d"><span class="std std-ref">GetUp</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-classhiro-1-1-camera-1a43c5b2f43b2241c2ae325fac98c80a27"><span class="std std-ref">AlignUp</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <span class="n">up</span><span class="p">);</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-classhiro-1-1-camera-1a203c697607b201373a302260477cf72c"><span class="std std-ref">Zoom</span></a><span></span><span class="p">(</span><span class="kt">float</span> <span class="n">factor</span><span class="p">);</span>
+    <span class="kt">bool</span> <a class="reference internal" href="#doxid-classhiro-1-1-camera-1a1143a966aeeb8d478aaaeef5055234c7"><span class="std std-ref">IsFixedRotationEnabled</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-classhiro-1-1-camera-1a7e83ad764a116c99a9697ea09d9e86e3"><span class="std std-ref">SetFixedRotationEnabled</span></a><span></span><span class="p">(</span><span class="kt">bool</span> <span class="n">state</span><span class="p">);</span>
+    <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-classhiro-1-1-camera-1abc3de406e7cd4c46c5eacba147f78943"><span class="std std-ref">GetFixedRotationAxis</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-classhiro-1-1-camera-1afc4f6014264a7c389dd7a8b1e138939a"><span class="std std-ref">SetFixedRotationAxis</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <span class="n">axis</span><span class="p">);</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-classhiro-1-1-camera-1ad40edcbb14ebd197094dc4a792db3b49"><span class="std std-ref">ScreenRotate</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec2</span><span class="o">&amp;</span> <span class="n">last_mouse_pos</span><span class="p">,</span> <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec2</span><span class="o">&amp;</span> <span class="n">mouse_pos</span><span class="p">);</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-classhiro-1-1-camera-1a6972b3bfeebf207bc4b4033953f788d2"><span class="std std-ref">ScreenRoll</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec2</span><span class="o">&amp;</span> <span class="n">last_mouse_pos</span><span class="p">,</span> <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec2</span><span class="o">&amp;</span> <span class="n">mouse_pos</span><span class="p">);</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-classhiro-1-1-camera-1aa518fe6c0dfdc22e08354943df373520"><span class="std std-ref">ScreenMove</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec2</span><span class="o">&amp;</span> <span class="n">last_mouse_pos</span><span class="p">,</span> <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec2</span><span class="o">&amp;</span> <span class="n">mouse_pos</span><span class="p">);</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-classhiro-1-1-camera-1a3be5ee3aecc7b15488086edd253e87e6"><span class="std std-ref">ScreenDolly</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec2</span><span class="o">&amp;</span> <span class="n">last_mouse_pos</span><span class="p">,</span> <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec2</span><span class="o">&amp;</span> <span class="n">mouse_pos</span><span class="p">);</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-classhiro-1-1-camera-1aa5a32804bcd9f1cde5ada24cb1913aa5"><span class="std std-ref">SubscribeChange</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">function</span><span class="o">&lt;</span><span class="kt">void</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="o">&gt;&amp;</span> <span class="n">callback</span><span class="p">);</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-classhiro-1-1-camera-1a1e07f6e85aaf00f54dbe904d93163852"><span class="std std-ref">CopyView</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">hiro</span><span class="o">::</span><span class="n">Camera</span><span class="o">&amp;</span> <span class="n">source_camera</span><span class="p">);</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-classhiro-1-1-camera-1ab857e333de1d99f3d2188ceab48accdd"><span class="std std-ref">ReadFromStream</span></a><span></span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">istream</span><span class="o">&amp;</span> <span class="n">str</span><span class="p">);</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-classhiro-1-1-camera-1abbb6e940e35877fc7b63d68c861a5c4b"><span class="std std-ref">WriteToStream</span></a><span></span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">str</span><span class="p">);</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-classhiro-1-1-camera-1af958495ff13342bdd51cf66051636f1a"><span class="std std-ref">Reset</span></a><span></span><span class="p">();</span>
+    <a class="reference internal" href="struct_hiro_Camera_Pose.html#doxid-structhiro-1-1-camera-1-1-pose"><span class="std std-ref">hiro::Camera::Pose</span></a><span></span> <a class="reference internal" href="#doxid-classhiro-1-1-camera-1a736dd7239aa18e9c106dd4cada9aaa3f"><span class="std std-ref">GetPose</span></a><span></span><span class="p">();</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-classhiro-1-1-camera-1a1f24ba8cd5b7de1b14291cd2f9b88070"><span class="std std-ref">SetPose</span></a><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_hiro_Camera_Pose.html#doxid-structhiro-1-1-camera-1-1-pose"><span class="std std-ref">hiro::Camera::Pose</span></a><span></span><span class="o">&amp;</span> <span class="n">pose</span><span class="p">);</span>
+    <span class="n">cogs</span><span class="o">::</span><span class="n">Frustum</span> <a class="reference internal" href="#doxid-classhiro-1-1-camera-1a933d0f7773f196d36049e18116cdadd2"><span class="std std-ref">ComputeViewFrustum</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="k">const</span> <a class="reference internal" href="namespace_glm_ext.html#doxid-namespaceglm-ext-1abb00c17b6cd7d068fa7eef293f0ddc7d"><span class="std std-ref">glm_ext::TransMat4</span></a><span></span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-classhiro-1-1-camera-1a622150b543c18d20b35c60109734c8e1"><span class="std std-ref">GetViewMatrix</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+<span class="p">};</span></pre>
+</div>
+<div class="section" id="detailed-documentation">
+<span id="details-classhiro-1-1-camera"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
+<p>Denotes view on a scene.</p>
+<p><a class="reference internal" href="#doxid-classhiro-1-1-camera"><span class="std std-ref">Camera</span></a> pose is denoted by two points: camera position and “target” point. While both points can be set individually, the forward direction of the camera is always oriented towards the target.</p>
+<p>The camera can rotate in two modes. Free rotation and fixed rotation, denoted by property “fixed rotation enabled”. When the camera uses fixed rotation, up direction is always aligned with fixed rotation axis, that can be also set manually.</p>
+<div class="section" id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-camera-1a57c2b603543032a638206ead61b9b6dd"><span id="index-1"></span><span></span><span class="n">glm</span><span class="o">::</span><span class="n">vec3</span> <span class="n">GetPosition</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Returns the position of the camera.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-camera-1aa0be1b8621452e36bb5a0bc045bb5426"><span id="index-2"></span><span></span><span class="kt">void</span> <span class="n">SetPosition</span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <span class="n">camera_position</span><span class="p">)</span></pre>
+<p>Set position of the camera. The view direction is corrected automatically.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-camera-1a16b6286b59594ca9fc4fdea335ab67d5"><span id="index-3"></span><span></span><span class="n">glm</span><span class="o">::</span><span class="n">vec3</span> <span class="n">GetTarget</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Returns point of interest.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-camera-1a93fd9592ff4f2a35be1623d97ad8379a"><span id="index-4"></span><span></span><span class="kt">void</span> <span class="n">SetTarget</span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <span class="n">poi</span><span class="p">)</span></pre>
+<p>Changes point of interest. The view direction is corrected automatically.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-camera-1a7dc21cacbd3f8f8f7997e4660519ccdf"><span id="index-5"></span><span></span><span class="n">glm</span><span class="o">::</span><span class="n">vec3</span> <span class="n">GetForward</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Returns forward direction.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-camera-1a5a5f0afbc7b47bc6754af5212d7a8845"><span id="index-6"></span><span></span><span class="n">glm</span><span class="o">::</span><span class="n">vec3</span> <span class="n">GetRight</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Returns right direction.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-camera-1adb8f21cd5d16d799c71a5bba4991a13d"><span id="index-7"></span><span></span><span class="n">glm</span><span class="o">::</span><span class="n">vec3</span> <span class="n">GetUp</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Returns up direction.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-camera-1a43c5b2f43b2241c2ae325fac98c80a27"><span id="index-8"></span><span></span><span class="kt">void</span> <span class="n">AlignUp</span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <span class="n">up</span><span class="p">)</span></pre>
+<p>Aligns up direction of camera to match the specified vector.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-camera-1a203c697607b201373a302260477cf72c"><span id="index-9"></span><span></span><span class="kt">void</span> <span class="n">Zoom</span><span class="p">(</span><span class="kt">float</span> <span class="n">factor</span><span class="p">)</span></pre>
+<p>Modulates distance of camera position to target.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>factor</p></td>
+<td><p>A factor by which the distance is multiplied.</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-camera-1a1143a966aeeb8d478aaaeef5055234c7"><span id="index-10"></span><span></span><span class="kt">bool</span> <span class="n">IsFixedRotationEnabled</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Checks whether fixed rotation mode is enabled.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-camera-1a7e83ad764a116c99a9697ea09d9e86e3"><span id="index-11"></span><span></span><span class="kt">void</span> <span class="n">SetFixedRotationEnabled</span><span class="p">(</span><span class="kt">bool</span> <span class="n">state</span><span class="p">)</span></pre>
+<p>Set whether to enable fixed rotation mode. By default disabled.</p>
+<p>Axis of fixed rotation can be specified using SetFixedRotationAxis function.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-camera-1abc3de406e7cd4c46c5eacba147f78943"><span id="index-12"></span><span></span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <span class="n">GetFixedRotationAxis</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Returns axis of fixed rotation.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-camera-1afc4f6014264a7c389dd7a8b1e138939a"><span id="index-13"></span><span></span><span class="kt">void</span> <span class="n">SetFixedRotationAxis</span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="o">&amp;</span> <span class="n">axis</span><span class="p">)</span></pre>
+<p>Sets fixed rotation axis to specified. By default Y axis.</p>
+<p>Used only when fixed rotation enabled using SetFixedRotationEnabled function.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-camera-1ad40edcbb14ebd197094dc4a792db3b49"><span id="index-14"></span><span></span><span class="kt">void</span> <span class="n">ScreenRotate</span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec2</span><span class="o">&amp;</span> <span class="n">last_mouse_pos</span><span class="p">,</span> <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec2</span><span class="o">&amp;</span> <span class="n">mouse_pos</span><span class="p">)</span></pre>
+<p>Rotates the camera using mouse movement over screen.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-camera-1a6972b3bfeebf207bc4b4033953f788d2"><span id="index-15"></span><span></span><span class="kt">void</span> <span class="n">ScreenRoll</span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec2</span><span class="o">&amp;</span> <span class="n">last_mouse_pos</span><span class="p">,</span> <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec2</span><span class="o">&amp;</span> <span class="n">mouse_pos</span><span class="p">)</span></pre>
+<p>Rotates around view direction, counter-clockwise using mouse movement over screen.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-camera-1aa518fe6c0dfdc22e08354943df373520"><span id="index-16"></span><span></span><span class="kt">void</span> <span class="n">ScreenMove</span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec2</span><span class="o">&amp;</span> <span class="n">last_mouse_pos</span><span class="p">,</span> <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec2</span><span class="o">&amp;</span> <span class="n">mouse_pos</span><span class="p">)</span></pre>
+<p>Moves camera left and up relatively using mouse movement over screen.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-camera-1a3be5ee3aecc7b15488086edd253e87e6"><span id="index-17"></span><span></span><span class="kt">void</span> <span class="n">ScreenDolly</span><span class="p">(</span><span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec2</span><span class="o">&amp;</span> <span class="n">last_mouse_pos</span><span class="p">,</span> <span class="k">const</span> <span class="n">glm</span><span class="o">::</span><span class="n">vec2</span><span class="o">&amp;</span> <span class="n">mouse_pos</span><span class="p">)</span></pre>
+<p>Moves forward using mouse movement over screen.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-camera-1aa5a32804bcd9f1cde5ada24cb1913aa5"><span id="index-18"></span><span></span><span class="kt">void</span> <span class="n">SubscribeChange</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">function</span><span class="o">&lt;</span><span class="kt">void</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="o">&gt;&amp;</span> <span class="n">callback</span><span class="p">)</span></pre>
+<p>Sets up callback function, called every time a scene camera changes it’s state.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-camera-1a1e07f6e85aaf00f54dbe904d93163852"><span id="index-19"></span><span></span><span class="kt">void</span> <span class="n">CopyView</span><span class="p">(</span><span class="k">const</span> <span class="n">hiro</span><span class="o">::</span><span class="n">Camera</span><span class="o">&amp;</span> <span class="n">source_camera</span><span class="p">)</span></pre>
+<p>Sets up camera pose to exactly match the source camera.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-camera-1ab857e333de1d99f3d2188ceab48accdd"><span id="index-20"></span><span></span><span class="kt">void</span> <span class="n">ReadFromStream</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">istream</span><span class="o">&amp;</span> <span class="n">str</span><span class="p">)</span></pre>
+<p>Loads camera pose from stream.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-camera-1abbb6e940e35877fc7b63d68c861a5c4b"><span id="index-21"></span><span></span><span class="kt">void</span> <span class="n">WriteToStream</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">str</span><span class="p">)</span></pre>
+<p>Saves camera pose to stream.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-camera-1af958495ff13342bdd51cf66051636f1a"><span id="index-22"></span><span></span><span class="kt">void</span> <span class="n">Reset</span><span class="p">()</span></pre>
+<p>Resets camera pose to an initial state.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-camera-1a736dd7239aa18e9c106dd4cada9aaa3f"><span id="index-23"></span><a class="reference internal" href="struct_hiro_Camera_Pose.html#doxid-structhiro-1-1-camera-1-1-pose"><span class="std std-ref">hiro::Camera::Pose</span></a><span></span> <span class="n">GetPose</span><span class="p">()</span></pre>
+<p>Returns current camera pose.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-camera-1a1f24ba8cd5b7de1b14291cd2f9b88070"><span id="index-24"></span><span></span><span class="kt">void</span> <span class="n">SetPose</span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="struct_hiro_Camera_Pose.html#doxid-structhiro-1-1-camera-1-1-pose"><span class="std std-ref">hiro::Camera::Pose</span></a><span></span><span class="o">&amp;</span> <span class="n">pose</span><span class="p">)</span></pre>
+<p>Sets camera pose.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-camera-1a933d0f7773f196d36049e18116cdadd2"><span id="index-25"></span><span></span><span class="n">cogs</span><span class="o">::</span><span class="n">Frustum</span> <span class="n">ComputeViewFrustum</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Computes the camera’s view frustum.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-classhiro-1-1-camera-1a622150b543c18d20b35c60109734c8e1"><span id="index-26"></span><span></span><span class="k">const</span> <a class="reference internal" href="namespace_glm_ext.html#doxid-namespaceglm-ext-1abb00c17b6cd7d068fa7eef293f0ddc7d"><span class="std std-ref">glm_ext::TransMat4</span></a><span></span><span class="o">&amp;</span> <span class="n">GetViewMatrix</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Returns current view matrix.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Skeletex Research
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
